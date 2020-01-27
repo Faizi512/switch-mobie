@@ -1,0 +1,120 @@
+.w-195{
+	width: 195px;
+}
+.container {
+  max-width: 1140px;
+}
+.navbar-header {
+  display: flex;
+  flex: 0 0 100%;
+}
+
+.box-bg {
+  box-shadow: 0 1px 3px 0 #bfbfbf;
+  background-color: #fff;
+  border-radius: 10px;
+  border: 1px solid #d7dde2;
+  padding: 1rem;
+}
+
+.phone-img img {
+  max-height: 275px !important;
+  max-width: 170px !important;
+}
+.bold {
+  font-size: 16px;
+  font-weight: 700;
+  color: #001b2b;
+}
+
+.option-button {
+  position: relative;
+  border-radius: 4px;
+  width: 100%;
+  padding: 16px;
+  background-color: #fff;
+  border: 1px solid #f0fbff;
+  font-size: 16px;
+  box-shadow: 0 1px 3px 0 #bfbfbf;
+}
+
+.deal-info-desktop-network {
+  background-color: #f5f9fc;
+  display: block;
+  display: -webkit-box;
+  display: flex;
+  text-align: center;
+  width: 130px;
+  height: 83px;
+  float: left;
+  -webkit-box-align: center;
+  align-items: center;
+  padding: 8px;
+}
+.horizonatal-box-img {
+  width: 170px;
+}
+.bg-light {
+  background: #f5f9fc;
+}
+
+.mobile {
+  display: none !important;
+}
+@media only screen and (max-width: 768px) {
+
+  .details {
+    margin: 0 auto;
+  }
+
+  .mobile-price {
+    border-radius: 11px;
+    box-shadow: 0 1px 3px 0 #bfbfbf;
+  }
+  .mobile-price .detail-box {
+    margin-top: 0px !important;
+  }
+  .offer-padding {
+    padding: 45px 40px;
+  }
+ 
+  .deals-list .main-div {
+    margin: 0 auto;
+    max-width: 96%;
+  }
+  .actions button {
+    margin-bottom: 1rem;
+  }
+  .features .box {
+    margin-bottom: 1rem;
+  }
+}
+@media only screen and (max-width: 767px) {
+  .main-div .img {
+    width: 50%;
+  }
+  .content-inner {
+    padding: 10px;
+  }
+}
+@media only screen and (max-width: 520px) {
+  .mobile {
+    display: block !important;
+  }
+  .desktop {
+    display: none !important;
+  }
+  .loader {
+    display: block !important;
+  }
+  .top-bg {
+    display: flex !important;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .img-review{
+    width: 155px;
+    height: 40px;
+  }
+}

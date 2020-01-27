@@ -1,0 +1,32 @@
+.offers-background {
+  background: linear-gradient(-80deg, #00c6fb 0, #005bea 100%);
+  height: auto;
+  .offer-padding {
+	  padding: 45px 0px;
+	  .fm_h {
+	 	 	font-family: Heebo;
+		}
+	}
+	.low-price {
+	  margin-top: -52px;
+	}
+}
+
+@media only screen and (max-width: 768px) {
+
+	.low-price-div {
+    text-align: center;
+    .low-price {
+	    margin-top: 0;
+	    width: 300px;
+	    position: absolute;
+	    right: 0;
+	    bottom: 0;
+	  }
+  }  
+}
+@media only screen and (max-width: 520px) {
+  .low-price {
+    position: relative;
+  }
+}

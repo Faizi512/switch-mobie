@@ -1,0 +1,35 @@
+.networks-box {
+  min-height: 100%;
+  background: #ffffff;
+  border-radius: 4px;
+  border: 1px solid #d7dde2;
+  padding: 1rem;
+  box-shadow: 0 0 0 0 #d7dde2;
+  -webkit-transition: box-shadow 200ms ease-in-out, border 200ms ease-in-out;
+  transition: box-shadow 200ms ease-in-out, border 200ms ease-in-out;
+  display: block;
+  -webkit-text-decoration: inherit;
+  text-decoration: inherit;
+  color: inherit;
+  min-height: auto;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  height: 100px;
+  padding: 25px;
+  .network-log {
+    max-width: 100%;
+    max-height: 100%;
+    width: auto;
+    height: auto;
+  }
+}

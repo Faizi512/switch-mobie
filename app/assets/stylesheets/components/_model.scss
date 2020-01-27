@@ -1,0 +1,85 @@
+.modal-body{
+    z-index:99999 !important;
+  .close-btn{
+    position: absolute;
+    z-index: 2;
+    right: 1rem;
+    top: 1rem;
+    color: white;
+    opacity: 1;
+    &:hover{
+      color: white;
+    }
+  }
+  .success-banner{
+    background: url(../images/success.png) rgba(20, 20, 20, 0.3);
+    background-size:cover;
+    background-blend-mode: multiply;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    flex-direction: column;
+    color: white;
+    font-weight: 800;
+  }
+  .top-bg {
+    position: relative;
+    height: 316px;
+    background: url('../images/02.jpg');
+    background-position: center;
+    clip-path: polygon(
+      0 0,
+      100% 0,
+      100% 100%,
+      0 calc(100% - 5vw)
+    );
+    /* change the calc height to a percentage height to get alternate responsive behavior*/
+    .loader{
+      display: none;
+    }
+  }
+  .bottom-bg {
+    margin-top: -5vw;
+    background: linear-gradient( 120deg, #99E2FF 0%, #99E2FF 70%, #66d4ff 70%, #66d4ff 100% );
+    height: 272px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    h2{
+      color: #21482a;
+    }
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  .success-banner{
+    display: none;
+  }
+  
+  .success-inner{
+    padding-left: 15px !important;
+    padding-right: 15px !important;
+
+    .top-bg{
+      background-image: url(../images/success.png);
+      background-repeat: no-repeat;
+      background-size: cover;
+      height: 350px;
+    }
+  }
+}
+
+@media only screen and (max-width: 520px) {
+  .top-bg{
+    display: flex ;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    .loader{
+      display: block;
+    }
+  }
+}

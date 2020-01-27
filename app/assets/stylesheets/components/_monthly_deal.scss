@@ -1,0 +1,52 @@
+.box-bg {
+  box-shadow: 0 1px 3px 0 #bfbfbf;
+  background-color: #fff;
+  border-radius: 10px;
+  border: 1px solid #d7dde2;
+  padding: 1rem;
+  .promotion {
+	  color: #000;
+	  background-color: #f7d849;
+	  box-shadow: 0 0 5px 2px rgba(0, 0, 0, 0.25), 0 0 1px 0 rgba(0, 0, 0, 0.15);
+	  padding: 0.625rem;
+	  text-align: center;
+	  margin-bottom: 1.25rem;
+	  position: relative;
+	  font-weight: 700;
+	  width: calc(100% + 2rem);
+	  right: 1rem;
+	  position: relative;
+	}
+	.phone-img img {
+	  max-height: 275px !important;
+	  max-width: 170px !important;
+	}
+	.option-button {
+	  position: relative;
+	  border-radius: 4px;
+	  width: 100%;
+	  padding: 16px;
+	  background-color: #fff;
+	  border: 1px solid #f0fbff;
+	  font-size: 16px;
+	  box-shadow: 0 1px 3px 0 #bfbfbf;
+	  
+	}
+
+}
+
+@media only screen and (max-width: 768px) {
+
+	.details {
+    margin: 0 auto;
+    .mobile-price {
+	    border-radius: 11px;
+	    box-shadow: 0 1px 3px 0 #bfbfbf;
+	    .detail-box {
+		    margin-top: 0px !important;
+		  }
+	  }
+  
+  }
+
+}
