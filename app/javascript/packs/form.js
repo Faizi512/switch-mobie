@@ -175,7 +175,6 @@ var currentTab = 0;
 
       window.Parsley.addValidator('validemail', {
         validateString: function(value){
-                  debugger
           var xhr = $.ajax('https://go.webformsubmit.com/dukeleads/restapi/v1.2/validate/email?key=50f64816a3eda24ab9ecf6c265cae858&value='+$('.email').val())
           return xhr.then(function(json) {
             if (json.status == "Valid") {

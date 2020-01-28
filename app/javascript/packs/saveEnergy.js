@@ -93,9 +93,6 @@ function getData() {
 
 }
 
-
-
-
 function postData() {
     getData();
     var e = JSON.parse(localStorage.getItem("data"));
@@ -114,8 +111,6 @@ function postData() {
 
     })
 }
-
-
 
 function getUrlParameter(sParam) {
     var sPageURL = window.location.search.substring(1),
