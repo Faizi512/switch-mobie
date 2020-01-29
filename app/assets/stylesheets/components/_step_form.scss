@@ -34,11 +34,10 @@ input[type=number]::-webkit-outer-spin-button {
       padding: 0;
       color: #1b0e65;
       font-weight: 600;
-      span{
-        .text-blue{
-          color: #3ebbe9;
-        }
+      .text-blue{
+        color: #3ebbe9;
       }
+      
     }   
   }
   .modal-body{

@@ -1,5 +1,6 @@
-$(document).ready(function(){
+$(document).on('turbolinks:load',function(){
   $('.open-form ').click(function() {
+        event.preventDefault();
     $('#deal-form-modal').modal('show')
     $('.clock').hide()
       

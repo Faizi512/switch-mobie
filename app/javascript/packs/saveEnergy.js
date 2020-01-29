@@ -1,4 +1,4 @@
-$(document).ready(function(){
+$(document).on('turbolinks:load',function(){
   validate()
   $(function(){
     $('.name').text(getUrlParameter('firstname'))
