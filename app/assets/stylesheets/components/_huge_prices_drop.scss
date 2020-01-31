@@ -13,7 +13,11 @@
 }
 
 @media only screen and (max-width: 768px) {
-
+  .offers-background {
+    .offer-padding {
+        padding: 45px 40px;
+    }
+  }
 	.low-price-div {
     text-align: center;
     .low-price {
@@ -26,7 +30,9 @@
   }  
 }
 @media only screen and (max-width: 520px) {
-  .low-price {
-    position: relative;
+  .low-price-div {
+    .low-price {
+      position: relative;
+    }
   }
 }

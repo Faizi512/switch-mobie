@@ -3,21 +3,41 @@ $(document).on('turbolinks:load',function(){
   var isEmail =false
   var isPhone =false
   var ip_Address = '';
-  var currentTab = 0; // Current tab is set to be the first tab (0)
-  var sdsa = 3123
+  var currentTab = 0;
+   // Current tab is set to be the first tab (0)
+  var submtForm = false;
   showTab(currentTab); // Display the current tab
   formValidation = {}
-  $('.open-form ').click(function() {
-    event.preventDefault();
-    $('#deal-form-modal').modal('show')
-    $('.clock').hide()    
-  });
+  if(!($('#dealform')[0])) return;
+  var campId = $('#dealform')[0].dataset.campId
+  var successUrl = $('#dealform')[0].dataset.successUrl 
+  var formName = $('#dealform')[0].dataset.formName
+  var optinUrl = $('#dealform')[0].dataset.optinUrl
+  
+    if (formName == 'returning') {
+    $('.open-form ').click(function() {
+      if (submtForm == false) {
+        submtForm = true;
+        event.preventDefault();
+        postData(campId, successUrl, formName)
+      }
+    
+    });
+  }else{
+    $('.open-form ').click(function() {
+      event.preventDefault();
+      $('#deal-form-modal').modal('show')
+      $('.clock').hide()    
+    });
+  }
+
+  
+  
 
   $('#deal-form-modal').on('hide.bs.modal', function (e) {
       $('.clock').show()
   });
     if (!document.getElementById("btn-continue")) return;
-
   document.getElementById("btn-continue").onclick = function() {nextStep(1)};
   document.getElementById("btn-back").onclick = function() {backStep(-1)};
   var el = document.getElementsByClassName("clock");
@@ -27,10 +47,7 @@ $(document).on('turbolinks:load',function(){
   $('[data-toggle="tooltip"]').tooltip();
   
 
-if(!($('#dealform')[0])) return;
-var campId = $('#dealform')[0].dataset.campId || ''
-var successUrl = $('#dealform')[0].dataset.successUrl 
-var formName = $('#dealform')[0].dataset.formName
+
 
 $.getJSON('https://ipapi.co/json/', function(data) {
   if (data != null && data.ip != undefined && typeof (data.ip) == "string") {
@@ -188,7 +205,7 @@ function fixStepIndicator(num) {
   }
 }
 
-function getData(campId='') {
+function getData(campId='', optinUrl='' ) {
   var customer_type = isBadCustomer( getUrlParameter('keyword')) || (getUrlParameter('bc') == "yes");
   var e = JSON.parse(localStorage.getItem("parameters"))
   console.log(ip_Address);
@@ -209,9 +226,9 @@ function getData(campId='') {
     bad_credit_customer: (customer_type) ? "yes" : "no",
     campaignkey: 'E9F2N6A3R5',
     optindate: getFormattedCurrentDate(),
-    optinurl: 'deals.megamobiledeals.com',  
+    optinurl: 'deals.megamobiledeals.com'+ optinUrl,  
     ipaddress: ip_Address,
-    trafficid: getUrlParameter('trafficid') || campId,
+    trafficid: getUrlParameter('trafficid') || formName,
     prize: getUrlParameter('prize') || 35,
     timestamp: new Date,
     user_agent: window.navigator.userAgent,
@@ -221,7 +238,7 @@ function getData(campId='') {
 }
 
 function postData(campId='',successUrl='', formName='') {
-  var e = getData(campId);
+  var e = getData(formName, optinUrl);
   e['before_send'] = JSON.stringify(getData());
   console.log(e)
   $.ajax({
@@ -229,22 +246,17 @@ function postData(campId='',successUrl='', formName='') {
     url: "https://go.webformsubmit.com/dukeleads/waitsubmit?key=eecf9b6b61edd9e66ca0f7735dfa033a&campid=" + campId,
     data: e,
     success: function(e) {
-        console.log(e),
-        $('#deal-form-modal').modal('hide')
-        $('#success-modal').modal('show')
-        currentTab = 0;
-        showTab(currentTab);
-        $('.but_loader').hide()
-        setTimeout(function(){
-          if( isBadCustomer(getUrlParameter('keyword')) ||  (getUrlParameter('bc') == "yes")){
-            window.location = "https://www.megamobiledeals.com/no-credit-check-deals/";
-          }else{
-            window.location = "https://www.megamobiledeals.com/" + successUrl;
-          }
-        }, 3000);
+      
     },
     dataType: "json"
   })
+  setTimeout(function(){
+    if( isBadCustomer(getUrlParameter('keyword')) ||  (getUrlParameter('bc') == "yes")){
+      window.location = "https://www.megamobiledeals.com/no-credit-check-deals/";
+    }else{
+      window.location = "https://www.megamobiledeals.com/" + successUrl;
+    }
+  }, 300)
 }
 
 function getUrlParameter(sParam) {
