@@ -142,11 +142,25 @@
   font-size: 15px;
   font-weight: 400;
 } 
+@media only screen  and (min-width: 750px) and (max-width: 768px) {
+  .o-btn{
+  font-size: 15px !important;
+  }
+
+}
 @media only screen and (max-width: 520px) {
   .mobile {
     display: block !important;
   }
   .desktop {
     display: none !important;
+  }
+  .bolder {
+    font-size: 23px; 
+  }
+}
+@media only screen and (max-width: 322px) {
+  .bolder {
+    font-size: 18px; 
   }
 }

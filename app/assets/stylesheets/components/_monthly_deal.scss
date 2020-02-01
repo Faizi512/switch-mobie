@@ -17,10 +17,7 @@
 	  right: 1rem;
 	  position: relative;
 	}
-	.phone-img img {
-	  max-height: 275px !important;
-	  max-width: 170px !important;
-	}
+	
 	.option-button {
 	  position: relative;
 	  border-radius: 4px;
@@ -35,18 +32,26 @@
 
 }
 
-@media only screen and (max-width: 768px) {
+  .phone-img img {
+    max-height: 275px ;
+    max-width: 170px ;
+  }
+@media only screen and (min-width: 750px) and (max-width: 768px){
+  .phone-img img {
+    max-height: 153px !important;
+    max-width: 100px !important;
+  }   
+}
+@media only screen and (max-width: 750px) {
 
-	.details {
+  .details {
     margin: 0 auto;
     .mobile-price {
-	    border-radius: 11px;
-	    box-shadow: 0 1px 3px 0 #bfbfbf;
-	    .detail-box {
-		    margin-top: 0px !important;
-		  }
-	  }
-  
+      border-radius: 11px;
+      box-shadow: 0 1px 3px 0 #bfbfbf;
+      .detail-box {
+        margin-top: 0px !important;
+      }
+    }
   }
-
 }

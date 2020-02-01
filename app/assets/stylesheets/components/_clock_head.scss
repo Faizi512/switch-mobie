@@ -104,5 +104,11 @@
     height: 7px;
     left: -2px;
   }
-
 }
+
+@media only screen and (max-width: 320px) {
+  .sims-img {
+    height: 225px;
+  }
+}
+

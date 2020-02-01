@@ -17,10 +17,6 @@
   padding: 1rem;
 }
 
-.phone-img img {
-  max-height: 275px !important;
-  max-width: 170px !important;
-}
 .bold {
   font-size: 16px;
   font-weight: 700;
@@ -114,5 +110,12 @@
   .img-review{
     width: 155px;
     height: 40px;
+  }
+}
+
+@media only screen and (max-width: 320px) {
+
+  .horizonatal-box-img {
+    width: 155px;
   }
 }
