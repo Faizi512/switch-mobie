@@ -9,17 +9,15 @@ $(document).on('turbolinks:load',function(){
   showTab(currentTab); // Display the current tab
   formValidation = {}
   if(!($('#dealform')[0])) return;
-  var campId = $('#dealform')[0].dataset.campId
-  var successUrl = $('#dealform')[0].dataset.successUrl 
-  var formName = $('#dealform')[0].dataset.formName
-  var optinUrl = $('#dealform')[0].dataset.optinUrl
-  
-    if (formName == 'returning') {
+
+  var data = $('#dealform')[0].dataset.details
+  var details = JSON.parse(data)
+  if (details.quick_submit) {
     $('.open-form ').click(function() {
       if (submtForm == false) {
         submtForm = true;
         event.preventDefault();
-        postData(campId, successUrl, formName)
+        postData()
       }
     
     });
@@ -31,13 +29,11 @@ $(document).on('turbolinks:load',function(){
     });
   }
 
-  
-  
-
   $('#deal-form-modal').on('hide.bs.modal', function (e) {
-      $('.clock').show()
+    $('.clock').show()
   });
-    if (!document.getElementById("btn-continue")) return;
+
+  if (!document.getElementById("btn-continue")) return;
   document.getElementById("btn-continue").onclick = function() {nextStep(1)};
   document.getElementById("btn-back").onclick = function() {backStep(-1)};
   var el = document.getElementsByClassName("clock");
@@ -46,8 +42,6 @@ $(document).on('turbolinks:load',function(){
   });
   $('[data-toggle="tooltip"]').tooltip();
   
-
-
 
 $.getJSON('https://ipapi.co/json/', function(data) {
   if (data != null && data.ip != undefined && typeof (data.ip) == "string") {
@@ -96,7 +90,7 @@ function nextStep(n) {
       if (anOtherValidate() == true && isPhone == true && isEmail == true){
         $('.but_loader').show()
         $('.nextStep').prop('disabled', true);
-        postData(campId, successUrl, formName)
+        postData()
       }else{
         $('#dealform').parsley().validate()
       }
@@ -205,7 +199,7 @@ function fixStepIndicator(num) {
   }
 }
 
-function getData(campId='', optinUrl='' ) {
+function getData() {
   var customer_type = isBadCustomer( getUrlParameter('keyword')) || (getUrlParameter('bc') == "yes");
   var e = JSON.parse(localStorage.getItem("parameters"))
   console.log(ip_Address);
@@ -215,20 +209,20 @@ function getData(campId='', optinUrl='' ) {
     lastname: $(".last_name").val(),
     email: $(".email").val(),
     phone1: $(".phone").val(),
-    sid: getUrlParameter('sid') || 1,
-    ssid: getUrlParameter('ssid') || 1,
+    sid: getUrlParameter('sid') || details.sid ||1,
+    ssid: getUrlParameter('ssid') || details.ssid ||1,
     ad_set:getUrlParameter('ad_set') || 1,
-    source: getUrlParameter('source') || 'google3',
-    c1: getUrlParameter('c1') || '',
+    source: getUrlParameter('source') || details.source || 'google3',
+    c1: getUrlParameter('c1') || getUrlParameter('bstransid') || getUrlParameter('transid') || '',
     adgroupid: getUrlParameter('adgroupid') || '',
     campaign: getUrlParameter('campaign') || '',
     keyword: getUrlParameter('keyword') || '',
     bad_credit_customer: (customer_type) ? "yes" : "no",
     campaignkey: 'E9F2N6A3R5',
     optindate: getFormattedCurrentDate(),
-    optinurl: 'deals.megamobiledeals.com'+ optinUrl,  
+    optinurl: 'deals.megamobiledeals.com'+ details.optin_url,  
     ipaddress: ip_Address,
-    trafficid: getUrlParameter('trafficid') || formName,
+    trafficid: getUrlParameter('trafficid') || details.form_name,
     prize: getUrlParameter('prize') || 35,
     timestamp: new Date,
     user_agent: window.navigator.userAgent,
@@ -237,13 +231,13 @@ function getData(campId='', optinUrl='' ) {
   // localStorage.setItem("data", JSON.stringify(n))
 }
 
-function postData(campId='',successUrl='', formName='') {
-  var e = getData(formName, optinUrl);
+function postData() {
+  var e = getData();
   e['before_send'] = JSON.stringify(getData());
   console.log(e)
   $.ajax({
     type: "POST",
-    url: "https://go.webformsubmit.com/dukeleads/waitsubmit?key=eecf9b6b61edd9e66ca0f7735dfa033a&campid=" + campId,
+    url: "https://go.webformsubmit.com/dukeleads/waitsubmit?key=eecf9b6b61edd9e66ca0f7735dfa033a&campid=" + details.camp_id,
     data: e,
     success: function(e) {
       
@@ -254,7 +248,7 @@ function postData(campId='',successUrl='', formName='') {
     if( isBadCustomer(getUrlParameter('keyword')) ||  (getUrlParameter('bc') == "yes")){
       window.location = "https://www.megamobiledeals.com/no-credit-check-deals/";
     }else{
-      window.location = "https://www.megamobiledeals.com/" + successUrl;
+      window.location = details.success_url;
     }
   }, 300)
 }

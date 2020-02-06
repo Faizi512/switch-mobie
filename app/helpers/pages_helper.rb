@@ -1,6 +1,85 @@
 module PagesHelper
 
-  def get_deals_data
+  def compare_phones
+    @details = { 
+      camp_id: 'MEGA-MOBILE-DEALS',
+      success_url: 'https://www.megamobiledeals.com/success',
+      form_name: 'Compare-Phones',
+      optin_url: '/compare-phones',
+      sid: nil,
+      ssid: nil,
+      source:nil,
+      quick_submit: false,
+    }.to_json  
+  end
+
+  def returning
+    @details = { 
+      camp_id: 'MEGA-MOBILE-DEALS',
+      success_url: 'https://www.megamobiledeals.com/success',
+      form_name: 'returning',
+      optin_url: '/returning',
+      sid: nil,
+      ssid: nil,
+      source:nil,
+      quick_submit: true,
+    }.to_json  
+  end
+
+  def sim_deals
+    @details = { 
+      camp_id: 'SIM',
+      success_url: 'https://www.megamobiledeals.com/sim-deals',
+      form_name: 'Sim-Deals',
+      optin_url: '/sim-deals',
+      sid: 1,
+      ssid: 1,
+      source:nil,
+      quick_submit: false,
+    }.to_json  
+  end
+
+  def fb_phone_deals
+    @details = { 
+      camp_id: 'MEGA-MOBILE-DEALS',
+      success_url: 'https://www.megamobiledeals.com/success',
+      form_name: 'fb-phone-deals',
+      optin_url: '/fb-phone-deals',
+      sid: 1,
+      ssid: 1,
+      source:'Duke-FB',
+      quick_submit: false,
+    }.to_json  
+  end
+
+  def mega_phone_deals
+    @details = { 
+      camp_id: 'MEGA-MOBILE-DEALS',
+      success_url: 'https://www.megamobiledeals.com/success',
+      form_name: 'mega-phone-deals',
+      optin_url: '/mega-phone-deals',
+      sid: 15643,
+      ssid: 1,
+      source:'mega-HR',
+      quick_submit: false,
+    }.to_json  
+  end
+
+  def home
+    @details = { 
+      camp_id: 'MEGA-MOBILE-DEALS',
+      success_url: 'https://www.megamobiledeals.com/success',
+      form_name: 'Mega-Mobile-Deals',
+      optin_url: '',
+      sid: nil,
+      ssid: nil,
+      source:nil,
+      quick_submit: false,
+    }.to_json  
+  end
+  
+  def get_deals_data url_name
+    send(url_name.gsub('-', '_')) rescue home
     @phones = [
      {
         name: "iPhone 11 Pro 256 GB",
