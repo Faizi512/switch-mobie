@@ -45,7 +45,7 @@ module PagesHelper
       success_url: 'https://www.megamobiledeals.com/success',
       form_name: 'fb-phone-deals',
       optin_url: '/fb-phone-deals',
-      sid: 1,
+      sid: 157,
       ssid: 1,
       source:'Duke-FB',
       quick_submit: false,
