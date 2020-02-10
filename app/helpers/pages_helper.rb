@@ -12,6 +12,19 @@ module PagesHelper
       quick_submit: false,
     }.to_json  
   end
+  
+  def new_mmd
+    @details = { 
+      camp_id: 'MEGA-MOBILE-DEALS',
+      success_url: 'https://www.megamobiledeals.com/success',
+      form_name: 'MEGA-MOBILE-DEALS',
+      optin_url: '/new-mmd',
+      sid: nil,
+      ssid: nil,
+      source:nil,
+      quick_submit: true,
+    }.to_json  
+  end
 
   def returning
     @details = { 
