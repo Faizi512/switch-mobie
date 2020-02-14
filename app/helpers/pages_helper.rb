@@ -26,6 +26,19 @@ module PagesHelper
     }.to_json  
   end
 
+  def sims_returning
+    @details = { 
+      camp_id: 'MEGA-MOBILE-DEALS',
+      success_url: 'https://www.megamobiledeals.com/sim-deals',
+      form_name: 'MEGA-MOBILE-DEALS',
+      optin_url: '/sims_returning',
+      sid: nil,
+      ssid: nil,
+      source:nil,
+      quick_submit: true,
+    }.to_json  
+  end
+
   def returning
     @details = { 
       camp_id: 'MEGA-MOBILE-DEALS',
