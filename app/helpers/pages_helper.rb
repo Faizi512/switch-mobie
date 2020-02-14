@@ -28,9 +28,9 @@ module PagesHelper
 
   def sims_returning
     @details = { 
-      camp_id: 'MEGA-MOBILE-DEALS',
+      camp_id: 'SIM',
       success_url: 'https://www.megamobiledeals.com/sim-deals',
-      form_name: 'MEGA-MOBILE-DEALS',
+      form_name: 'Sims-Returning',
       optin_url: '/sims_returning',
       sid: nil,
       ssid: nil,
