@@ -39,6 +39,19 @@ module PagesHelper
     }.to_json  
   end
 
+  def latest_deals
+    @details = { 
+      camp_id: 'MEGA-MOBILE-DEALS',
+      success_url: 'https://www.megamobiledeals.com/latest-deals',
+      form_name: 'Latest-Deals',
+      optin_url: '/latest-deals',
+      sid: 2,
+      ssid:16986,
+      source:'Snapchat-16986-HR',
+      quick_submit: false,
+    }.to_json  
+  end
+
   def returning
     @details = { 
       camp_id: 'MEGA-MOBILE-DEALS',
