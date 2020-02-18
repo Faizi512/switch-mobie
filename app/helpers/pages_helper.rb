@@ -42,7 +42,7 @@ module PagesHelper
   def latest_deals
     @details = { 
       camp_id: 'MEGA-MOBILE-DEALS',
-      success_url: 'https://www.megamobiledeals.com/latest-deals',
+      success_url: 'https://www.megamobiledeals.com/success2',
       form_name: 'Latest-Deals',
       optin_url: '/latest-deals',
       sid: 2,
