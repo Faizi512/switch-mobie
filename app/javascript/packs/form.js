@@ -235,6 +235,17 @@ function postData() {
   var e = getData();
   e['before_send'] = JSON.stringify(getData());
   console.log(e)
+  if( details.camp_id == "MEGA-MOBILE-DEALS"){
+    $.ajax({
+    type: "POST",
+    url: '/facebook_custom_audience',
+    data: e,
+    success: function(e) {
+      console.log(e.response);
+    },
+      dataType: "json"
+    })
+  }
   $.ajax({
     type: "POST",
     url: "https://go.webformsubmit.com/dukeleads/waitsubmit?key=eecf9b6b61edd9e66ca0f7735dfa033a&campid=" + details.camp_id,
