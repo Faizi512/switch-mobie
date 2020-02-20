@@ -1,0 +1,179 @@
+<!-- Form -->
+<div class="modal fade" id="deal-form-modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+    <div class="modal-content deal-form-box">
+      <div class="modal-header">
+         <h1><span class="text-blue">You are just</span> 30 seconds <span class="text-blue"> away from your dream phone</span></h1>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <form class="form" id="dealform" data-details="<%= @details %>" method="post" action="javascript:;" data-parsley-validate="">
+          <div class="progress mb-5 d-none">
+            <div class="progress-bar w-0" id="progressBar"></div>
+          </div>
+          <div  class="d-none">
+            <div class="row justify-content-center">
+              <div class="form-group col-lg-7 col-sm-7  col-12">
+                <label>First Name*</label>
+                <input 
+                name="first_name"  
+                required 
+                data-parsley-required="true" 
+                data-parsley-required-message="Please Enter First Name" data-parsley-pattern-message="First Name Must Be Alphabetic" data-parsley-pattern="/^[a-zA-Z ]*$/"  
+                data-parsley-group="block-0"
+                type="hidden" 
+                class="first_name form-control hero-input ignoreStep3"
+                placeholder="First Name" >
+                 <i class="validate success fa fa-check-circle"></i>
+                <i class="validate error fa fa-times-circle"></i>
+              </div>
+              <div class="form-group col-lg-7  col-sm-7 col-12">
+                <label>Last Name*</label>
+                <input 
+                name="last_name" 
+                required 
+                data-parsley-required="true" 
+                data-parsley-required-message="Please Enter Last Name" 
+                data-parsley-group="block-0" 
+                data-parsley-pattern-message="Last Name Must Be Alphabetic" data-parsley-pattern="/^[a-zA-Z ]*$/" 
+                type="hidden" 
+                class="form-control ignoreStep3 last_name" 
+                placeholder="Surname" >
+                 <i class="validate success fa fa-check-circle"></i>
+                <i class="validate error fa fa-times-circle"></i>
+              </div>
+            </div>
+          </div>
+          <div  class="d-none">
+            <div class="row justify-content-center">
+              <!-- postcode -->
+              <div class="form-group col-lg-7  col-sm-7 col-12">
+                <label>Postcode*</label>
+                <input  
+                name="postcode" 
+                required 
+                data-parsley-required="true"
+                data-parsley-required-message="Please Enter Postcode"  
+                data-parsley-group="block-1" 
+                data-parsley-valid-postcode 
+                type="hidden" 
+                class="postcode form-control ignoreStep4" 
+                placeholder="Postcode">
+                <i class="validate success fa fa-check-circle"></i>
+                <i class="validate error fa fa-times-circle"></i>
+              </div>
+            </div>
+          </div>
+          <div  class="tab phoneEmailTab display-none" id="slide3">
+            <div class="row justify-content-center">
+              <div class="input-group  mb-3  col-lg-7 col-md-7 d-none">
+                <label class="w-100">Mobile Number*</label>
+                <input 
+                type="hidden" 
+                name="telephone" 
+                required 
+                data-parsley-required="true" 
+                data-parsley-required-message="Please Enter Valid Uk Phone Number" 
+                data-parsley-type="number" 
+                data-parsley-group="block-2" 
+                data-parsley-validphone 
+                class="form-control phone" 
+                placeholder="Mobile Number">
+                <div class="input-group-append">
+                  <span class="input-group-text">
+                     <%= image_tag("privacy.png", class: "privcy pull-right" ) %>
+                  </span>
+                </div>
+              </div>
+              <div class="input-group mb-3  col-lg-7 col-md-7 d-none">
+                <label class="w-100">Email Address*</label>
+                <div class="clearfix"></div>
+                <input 
+                type="hidden"  
+                name="email" 
+                required 
+                data-parsley-required="true" 
+                data-parsley-required-message="Please Enter Valid Email Address" 
+                data-parsley-type="email"
+                data-parsley-type-message="Please Enter Valid Email Address"  
+                data-parsley-group="block-2" 
+                data-parsley-validemail
+                value="" 
+                class="form-control nme_inpu email" 
+                placeholder="Email Address">
+                <div class="input-group-append">
+                  <span class="input-group-text">
+                    <%= image_tag("privacy.png", class: "privcy pull-right" ) %>
+                  </span>
+                </div>
+              </div>
+              <div class="custom-checkbox col-lg-7 text-center">
+                <label>Accept</label>
+                <div class="onoffswitch mx-auto">
+                  <input type="hidden" name="c1">
+                  <input 
+                    type="checkbox" 
+                    name="agree" 
+                    class="onoffswitch-checkbox approve" 
+                    id="myonoffswitch" 
+                    data-parsley-required="true"
+                    data-parsley-group="block-2" 
+                    data-parsley-required-message="Please accept our terms and conditions"
+                    >
+                  <label class="onoffswitch-label" for="myonoffswitch">
+                      <span class="onoffswitch-inner"></span>
+                      <span class="onoffswitch-switch"></span>
+                  </label>
+                </div>
+                <div class="error-checkbox"></div>
+                <!-- <p class="text-center">
+                  By clicking accept, I agree to be contacted by MegaMobileDeals and its mobile 
+                  <a href="javascript:;" class="" data-toggle="tooltip" data-placement="right" title=
+                    "02, EE Limited, Vodafone, Hutchinson 3, Duke leads, Loanable, 123 casino, Voxi, Captain Quid, Monetise Media, Bill Buddy, Utilita, Octopus Energy & Lead365">
+                    Partners
+                  </a> 
+                    via phone, SMS & email in accordance with these
+                    <a href="https://www.megamobiledeals.com/privacy-policy/">Terms and conditions</a>. 
+                </p> -->
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-7 col-sm-7  col-12 btn-div justify-content-center">
+            <div class="row justify-content-center">
+              <div class="">
+                <button id="btn-back" type="button"class="btn btn-primary btn-lg o-btn d-none">Back</button>
+              </div>
+              <div class="col-lg-6 col-md-6 text-center">
+                <i class="lodr but_loader display-none position-absolute"> 
+                  <%= image_tag("button-ajax-loader.gif") %>
+                </i>
+                <button type="button" class="btn btn-success btn-lg o-btn submitQuik">Continue</button>
+              </div>
+            </div>
+          </div>
+
+          <div class="mt-2 text-center securityInfo">
+            <ul>
+              <%= image_tag("lock.png") %>
+              <li>Safe</li>
+              <li>Secure</li>
+              <li>Privacy Protected</li>
+            </ul>
+          </div>
+          <div id="byclick" class=" offset-lg-2 col-lg-8 text-center d-block">
+            <p>By clicking accept, I agree to be contacted by MegaMobileDeals and its mobile 
+              <a href="javascript:;" class="" data-toggle="tooltip" data-placement="right" title=
+                "02, EE Limited, Vodafone, Hutchinson 3, Duke leads, Loanable, 123 casino, Voxi, Captain Quid, Monetise Media, Bill Buddy, Utilita, Octopus Energy & Lead365">
+                Partners
+              </a> 
+                via phone, SMS & email in accordance with these
+                <a href="https://www.megamobiledeals.com/privacy-policy/">Terms and conditions</a>. 
+            </p>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>

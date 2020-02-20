@@ -103,6 +103,9 @@
 .container{
   max-width: 1400px;
 }
+.text-orange{
+  color: #f57200;
+}
 .o-btn{
   border: 1px solid #cc5f00 !important;
   border-radius: 8px !important;
@@ -182,6 +185,9 @@
   .btn-toggl{
     display: none;
   }
+  .text-orange{
+    font-size: 17px !important;
+  }
   .banner-img{
     display: block;
   }
@@ -205,5 +211,8 @@
 @media only screen and (max-width: 322px) {
   .bolder {
     font-size: 18px; 
+  }
+  .text-orange{
+    font-size: 17px !important;
   }
 }

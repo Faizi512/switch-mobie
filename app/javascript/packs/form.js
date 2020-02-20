@@ -1,4 +1,6 @@
 $(document).on('turbolinks:load',function(){
+  var formValidation = {}
+
   validate()   
   var isEmail =false
   var isPhone =false
@@ -7,7 +9,6 @@ $(document).on('turbolinks:load',function(){
    // Current tab is set to be the first tab (0)
   var submtForm = false;
   showTab(currentTab); // Display the current tab
-  formValidation = {}
   if(!($('#dealform')[0])) return;
 
   var data = $('#dealform')[0].dataset.details
@@ -29,13 +30,22 @@ $(document).on('turbolinks:load',function(){
     });
   }
 
+  $('.submitQuik').click(function() {
+      formValidation.whenValidate({
+          group: 'block-2' 
+      }).done(function() {
+        if (submtForm == false) {
+          submtForm = true;
+          event.preventDefault();
+          $('.submitQuik').prop('disabled', true);
+          postData()
+        }
+      })
+    });
+
   $('#deal-form-modal').on('hide.bs.modal', function (e) {
     $('.clock').show()
   });
-
-  if (!document.getElementById("btn-continue")) return;
-  document.getElementById("btn-continue").onclick = function() {nextStep(1)};
-  document.getElementById("btn-back").onclick = function() {backStep(-1)};
   var el = document.getElementsByClassName("clock");
   var clock = new FlipClock(el, 6600, {
       countdown: true
@@ -242,6 +252,7 @@ function postData() {
     data: e,
     success: function(e) {
       console.log(e.response);
+
     },
       dataType: "json"
     })
@@ -261,7 +272,7 @@ function postData() {
     }else{
       window.location = details.success_url;
     }
-  }, 300)
+  }, 1000)
 }
 
 function getUrlParameter(sParam) {
@@ -311,5 +322,8 @@ function isBadCustomer(query) {
     return false;
   }
 }
+ if (!document.getElementById("btn-continue")) return;
+  document.getElementById("btn-continue").onclick = function() {nextStep(1)};
+  document.getElementById("btn-back").onclick = function() {backStep(-1)};
 
 });
