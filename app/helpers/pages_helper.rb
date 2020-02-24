@@ -38,6 +38,7 @@ module PagesHelper
       quick_submit: false,
     }.to_json  
   end
+
   def returning_loans
     @details = { 
       camp_id: 'MEGA-MOBILE-DEALS',
