@@ -38,6 +38,18 @@ module PagesHelper
       quick_submit: false,
     }.to_json  
   end
+  def returning_loans
+    @details = { 
+      camp_id: 'MEGA-MOBILE-DEALS',
+      success_url: 'https://www.megamobiledeals.com/success',
+      form_name: 'returning-loans',
+      optin_url: '/returning-loans',
+      sid: nil,
+      ssid: nil,
+      source:nil,
+      quick_submit: false,
+    }.to_json  
+  end
 
   def sims_returning
     @details = { 
