@@ -64,7 +64,7 @@ window.onload = function onPageLoad() {
   document.getElementsByName("last_name")[0].value = getUrlParameter("lastname")  || "";
   document.getElementsByName("postcode")[0].value = getUrlParameter("postcode")  || "";
   document.getElementsByName("email")[0].value = getUrlParameter("email")  || "";
-  document.getElementsByName("telephone")[0].value = getUrlParameter("phone1")  || "";
+  document.getElementsByName("telephone")[0].value = getUrlParameter("phone1") || getUrlParameter("mobile") || "";
 }
 
 function showTab(n=0) {
