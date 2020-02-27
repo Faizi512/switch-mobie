@@ -1,6 +1,5 @@
 $(document).on('turbolinks:load',function(){
   var formValidation = {}
-
   validate()   
   var isEmail =false
   var isPhone =false
@@ -243,6 +242,7 @@ function getData() {
 
 function postData() {
   var e = getData();
+  var leadSource = getUrlParameter('source') || details.source || 'google3';
   e['before_send'] = JSON.stringify(getData());
   console.log(e)
   if( details.camp_id == "MEGA-MOBILE-DEALS"){
@@ -270,7 +270,7 @@ function postData() {
     if( isBadCustomer(getUrlParameter('keyword')) ||  (getUrlParameter('bc') == "yes")){
       window.location = "https://www.megamobiledeals.com/no-credit-check-deals/";
     }else{
-      window.location = details.success_url;
+      window.location = details.success_url + "/?s1=" + leadSource;
     }
   }, 1000)
 }
