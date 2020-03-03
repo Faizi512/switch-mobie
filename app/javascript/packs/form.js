@@ -268,7 +268,7 @@ function postData() {
   })
   setTimeout(function(){
     if( isBadCustomer(getUrlParameter('keyword')) ||  (getUrlParameter('bc') == "yes")){
-      window.location = "https://www.megamobiledeals.com/no-credit-check-deals/";
+      window.location = "https://www.megamobiledeals.com/no-credit-check-deals/?s1=" + leadSource;
     }else{
       window.location = details.success_url + "/?s1=" + leadSource;
     }
