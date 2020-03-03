@@ -9,16 +9,24 @@ class FacebookCustomAudienceController < ApplicationController
     id = 'act_611454116359143'
     audience_id = '23844386746780658'
 
-
+    phone_num = "+44" + params[:phone1].split('').last(10).join
+    
     payload = {
       schema: [
         "EMAIL",
-        "PHONE"
+        "PHONE",
+        "FN",
+        "LN",
+        "ZIP",
+        
       ],
       data: [ 
         [ 
           hash_256(params[:email]), 
-          hash_256(params[:phone1]), 
+          hash_256(phone_num),
+          hash_256(params[:firstname]), 
+          hash_256(params[:lastname]), 
+          hash_256(params[:postcode]), 
         ],  
       ] 
     }

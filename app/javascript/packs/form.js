@@ -212,7 +212,7 @@ function getData() {
   var customer_type = isBadCustomer( getUrlParameter('keyword')) || (getUrlParameter('bc') == "yes");
   var e = JSON.parse(localStorage.getItem("parameters"))
   console.log(ip_Address);
-  return  n = {
+  return {
     postcode: $(".postcode").val(),
     firstname: $(".first_name").val(),
     lastname: $(".last_name").val(),
