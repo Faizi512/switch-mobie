@@ -10,6 +10,7 @@ module PagesHelper
       ssid: nil,
       source:nil,
       quick_submit: false,
+      submit_on_load: false,
     }.to_json  
   end
   
@@ -23,6 +24,7 @@ module PagesHelper
       ssid: nil,
       source:nil,
       quick_submit: true,
+      submit_on_load: false,
     }.to_json  
   end
 
@@ -36,6 +38,21 @@ module PagesHelper
       ssid: nil,
       source:nil,
       quick_submit: false,
+      submit_on_load: false,
+    }.to_json  
+  end
+
+  def mmd_success
+    @details = { 
+      camp_id: 'MEGA-MOBILE-DEALS',
+      success_url: 'https://www.megamobiledeals.com/success',
+      form_name: 'mmd-success',
+      optin_url: '/mmd-success',
+      sid: nil,
+      ssid: nil,
+      source:nil,
+      quick_submit: false,
+      submit_on_load: true,
     }.to_json  
   end
 
@@ -49,6 +66,7 @@ module PagesHelper
       ssid: nil,
       source:nil,
       quick_submit: false,
+      submit_on_load: false,
     }.to_json  
   end
 
@@ -62,6 +80,7 @@ module PagesHelper
       ssid: nil,
       source:nil,
       quick_submit: true,
+      submit_on_load: false,
     }.to_json  
   end
 
@@ -75,6 +94,7 @@ module PagesHelper
       ssid:16986,
       source:'Snapchat-16986-HR',
       quick_submit: false,
+      submit_on_load: false,
     }.to_json  
   end
 
@@ -88,6 +108,7 @@ module PagesHelper
       ssid: nil,
       source:nil,
       quick_submit: true,
+      submit_on_load: false,
     }.to_json  
   end
 
@@ -101,6 +122,7 @@ module PagesHelper
       ssid: 1,
       source:nil,
       quick_submit: false,
+      submit_on_load: false,
     }.to_json  
   end
 
@@ -114,6 +136,7 @@ module PagesHelper
       ssid: 1,
       source:'Duke-FB',
       quick_submit: false,
+      submit_on_load: false,
     }.to_json  
   end
 
@@ -127,6 +150,7 @@ module PagesHelper
       ssid: 1,
       source:'mega-HR',
       quick_submit: false,
+      submit_on_load: false,
     }.to_json  
   end
 
@@ -140,6 +164,7 @@ module PagesHelper
       ssid: nil,
       source:nil,
       quick_submit: false,
+      submit_on_load: false,
     }.to_json  
   end
   

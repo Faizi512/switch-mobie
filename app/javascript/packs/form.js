@@ -12,6 +12,9 @@ $(document).on('turbolinks:load',function(){
 
   var data = $('#dealform')[0].dataset.details
   var details = JSON.parse(data)
+  if (details.submit_on_load) {
+    postData()
+  }
   if (details.quick_submit) {
     $('.open-form ').click(function() {
       if (submtForm == false) {
@@ -59,11 +62,13 @@ $.getJSON('https://ipapi.co/json/', function(data) {
 });
 
 window.onload = function onPageLoad() {
-  document.getElementsByName("first_name")[0].value = getUrlParameter("firstname") || "";
-  document.getElementsByName("last_name")[0].value = getUrlParameter("lastname")  || "";
-  document.getElementsByName("postcode")[0].value = getUrlParameter("postcode")  || "";
-  document.getElementsByName("email")[0].value = getUrlParameter("email")  || "";
-  document.getElementsByName("telephone")[0].value = getUrlParameter("phone1") || getUrlParameter("mobile") || "";
+  if (!details.submit_on_load) {
+    document.getElementsByName("first_name")[0].value = getUrlParameter("firstname") || "";
+    document.getElementsByName("last_name")[0].value = getUrlParameter("lastname")  || "";
+    document.getElementsByName("postcode")[0].value = getUrlParameter("postcode")  || "";
+    document.getElementsByName("email")[0].value = getUrlParameter("email")  || "";
+    document.getElementsByName("telephone")[0].value = getUrlParameter("phone1") || getUrlParameter("mobile") || "";
+  }
 }
 
 function showTab(n=0) {
@@ -213,11 +218,11 @@ function getData() {
   var e = JSON.parse(localStorage.getItem("parameters"))
   console.log(ip_Address);
   return {
-    postcode: $(".postcode").val(),
-    firstname: $(".first_name").val(),
-    lastname: $(".last_name").val(),
-    email: $(".email").val(),
-    phone1: $(".phone").val(),
+    postcode: getUrlParameter('postcode') || $(".postcode").val() || '',
+    firstname: getUrlParameter('firstname') || $(".first_name").val() || '',
+    lastname: getUrlParameter('lastname') || $(".last_name").val() || '',
+    email: getUrlParameter('email') || $(".email").val() || '',
+    phone1: getUrlParameter('phone1') || $(".phone").val() || '',
     sid: getUrlParameter('sid') || details.sid ||1,
     ssid: getUrlParameter('ssid') || details.ssid ||1,
     ad_set:getUrlParameter('ad_set') || 1,
@@ -239,7 +244,7 @@ function getData() {
   };    
   // localStorage.setItem("data", JSON.stringify(n))
 }
-
+var leadc1 = getUrlParameter('c1') || getUrlParameter('bstransid') || getUrlParameter('transid') || '';
 function postData() {
   var e = getData();
   var leadSource = getUrlParameter('source') || details.source || 'google3';
@@ -266,13 +271,15 @@ function postData() {
     },
     dataType: "json"
   })
-  setTimeout(function(){
-    if( isBadCustomer(getUrlParameter('keyword')) ||  (getUrlParameter('bc') == "yes")){
-      window.location = "https://www.megamobiledeals.com/no-credit-check-deals/?s1=" + leadSource;
-    }else{
-      window.location = details.success_url + "/?s1=" + leadSource;
-    }
-  }, 1000)
+  if (!details.submit_on_load) {
+    setTimeout(function(){
+      if( isBadCustomer(getUrlParameter('keyword')) ||  (getUrlParameter('bc') == "yes")){
+        window.location = "https://www.megamobiledeals.com/no-credit-check-deals/?s1=" + leadSource;
+      }else{
+        window.location = details.success_url + "/?s1=" + leadSource + "&s2=" + leadc1;
+      }
+    }, 1000)
+  }
 }
 
 function getUrlParameter(sParam) {
