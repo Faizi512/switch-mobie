@@ -154,6 +154,34 @@ module PagesHelper
     }.to_json  
   end
 
+  def youtube
+    @details = { 
+      camp_id: 'MEGA-MOBILE-DEALS-YOUTUBE',
+      success_url: 'https://deals.megamobiledeals.com/youtube-success',
+      form_name: 'youtube',
+      optin_url: '/youtube',
+      sid: nil,
+      ssid: nil,
+      source: nil,
+      quick_submit: false,
+      submit_on_load: false,
+    }.to_json  
+  end
+
+  def youtube_success
+    @details = { 
+      camp_id: 'MEGA-MOBILE-DEALS-YOUTUBE-SUCCESS',
+      success_url: '',
+      form_name: 'youtube-success',
+      optin_url: '/youtube-success',
+      sid: nil,
+      ssid: nil,
+      source: nil,
+      quick_submit: false,
+      submit_on_load: false,
+    }.to_json  
+  end
+
   def home
     @details = { 
       camp_id: 'MEGA-MOBILE-DEALS',

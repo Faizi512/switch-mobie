@@ -1,10 +1,4 @@
-<!DOCTYPE html>
-<html>
-<head>
   <% parameters = "&s2=#{params[:c1]}&s1=#{params[:source]}" %>
-  <title>Mega Mobile Deals</title>
-</head>
-<body id="dealform" data-details="<%= @details %>">
   <div class="bg-white h-25 py-3 shadow-lg border-bottom">
     <div class="container">
       <header class="row w-100 mx-0 align-items-center justify-content-md-around justify-content-between">
@@ -16,7 +10,11 @@
   <div class="bg-light py-4">
     <div class="container">
       <section class="row justify-content-between">
-        <a href="<%= "https://mtrk5.co.uk/?a=14118&c=37644&p=r#{parameters}" %>" class="col-md-6 text-decoration-none text-dark">
+        <div class="text-center w-100">
+          <h3 class="pt-3 m-0 text-dark-blue">Here are The Deals You Are Eligible For.</h3>
+          <h3 class="pb-3 text-dark-blue">Keep Scrolling for more!</h3>
+        </div>
+        <a href="<%= "https://mtrk5.co.uk/?a=14118&c=37644&p=r#{parameters}" %>" class="col-md-6 prevent-click text-decoration-none text-dark ">
           <div class=" text-center cursor-p">
             <div class="bg-dark-blue p-4 shadow">
               <p class="fw-500 fs-34 text-white text-center m-0">Samsung Galaxy S10 Plus
@@ -46,12 +44,12 @@
                   </div>
                 </div>
               </div>
-              <button type="button" class="btn btn-light mt-3 w-100">Samsung Galaxy S10 Plus deals</button>
+              <button type="button" class="btn o-btn mt-3 w-100 text-white">Samsung Galaxy S10 Plus deals</button>
             </div>
           </div>
           
         </a>
-        <a href="<%= "https://mtrk5.co.uk/?a=14118&c=37601&p=r#{parameters}"%>" class="col-md-6 text-decoration-none text-dark">
+        <a href="<%= "https://mtrk5.co.uk/?a=14118&c=37601&p=r#{parameters}"%>" class="col-md-6 prevent-click text-decoration-none text-dark">
           <div class="text-center pt-3 pt-md-0 cursor-p">
             <div class="bg-dark-blue p-4 shadow">
               <p class="fw-500 fs-34 text-white text-center m-0">iPhone 11
@@ -81,7 +79,7 @@
                   </div>
                 </div>
               </div>
-              <button type="button" class="btn btn-light mt-3 w-100">iPhone 11 deals</button>
+              <button type="button" class="btn o-btn text-white mt-3 w-100">iPhone 11 deals</button>
             </div>
           </div>
         </a>
@@ -89,7 +87,7 @@
       <!-- Deals section -->
       <section class="border mt-4 rounded-lg shadow-sm">
         <div class="row my-4 mx-3 align-items-center justify-content-around">
-          <a href="<%= "https://mtrk5.co.uk/?a=14118&c=37645&p=r#{parameters}"%>" class="col-md-4 text-decoration-none text-dark">
+          <a href="<%= "https://mtrk5.co.uk/?a=14118&c=37645&p=r#{parameters}"%>" class="col-md-4 prevent-click text-decoration-none text-dark">
             <div class="p-2">
               <div class="rounded-lg border-2 bg-white text-center mx-2 mt-2 flex-column d-flex align-items-center p-4">
                 <p class="m-0 text-info font-weight-bold fs-18">Huawei P30</p>
@@ -112,7 +110,7 @@
               </div>
             </div>
           </a>
-          <a href="<%= "https://mtrk5.co.uk/?a=14118&c=37646&p=r#{parameters}"%>" class="col-md-4 text-decoration-none text-dark">
+          <a href="<%= "https://mtrk5.co.uk/?a=14118&c=37646&p=r#{parameters}"%>" class="col-md-4 prevent-click text-decoration-none text-dark">
             <div class="p-2">
               <div class="bg-warning rounded-lg text-center pb-2">
                 <p class="m-0 small font-weight-bold pt-1">Save £130 on all tariffs</p>
@@ -138,7 +136,7 @@
               </div>
             </div>
           </a>
-          <a href="<%= "https://mtrk5.co.uk/?a=14118&c=37344&p=r#{parameters}"%>" class="col-md-4 text-decoration-none text-dark">
+          <a href="<%= "https://mtrk5.co.uk/?a=14118&c=37344&p=r#{parameters}"%>" class="col-md-4 prevent-click text-decoration-none text-dark">
             <div class="p-2">
               <div class="rounded-lg border-2 bg-white text-center mx-2 mt-2 flex-column d-flex align-items-center p-4">
                 <p class="m-0 text-info font-weight-bold fs-18">BEST Sim Only Deals</p>
@@ -167,7 +165,7 @@
         </div>
         <!--2nd row  -->
         <div class="row py-4 mx-3 align-items-center justify-content-around border-top">
-          <a href="<%= "https://mtrk5.co.uk/?a=14118&c=37644&p=r#{parameters}"%>" class="col-md-4 text-decoration-none text-dark">
+          <a href="<%= "https://mtrk5.co.uk/?a=14118&c=37644&p=r#{parameters}"%>" class="col-md-4 prevent-click text-decoration-none text-dark">
             <div class="p-2">
               <div class="bg-warning rounded-lg text-center pb-2">
                 <p class="m-0 small font-weight-bold pt-1">Save £170 on all tariffs</p>
@@ -193,7 +191,7 @@
               </div>
             </div>
           </a>
-          <a href="<%= "https://c1icktree.co.uk/go/?id=67#{parameters}"%>" class="col-md-4 text-decoration-none text-dark">
+          <a href="<%= "https://c1icktree.co.uk/go/?id=67#{parameters}"%>" class="col-md-4 text-decoration-none prevent-click text-dark">
             <div class="p-2">
               <div class="rounded-lg border-2 bg-white text-center mx-2 mt-2 flex-column d-flex align-items-center p-4">
                 <p class="m-0 text-info font-weight-bold fs-18">FREE iPHONE</p>
@@ -215,7 +213,7 @@
               </div>
             </div>
           </a>
-          <a href="<%= "https://mtrk5.co.uk/?a=14118&c=37601&p=r#{parameters}"%>" class="col-md-4 text-decoration-none text-dark">
+          <a href="<%= "https://mtrk5.co.uk/?a=14118&c=37601&p=r#{parameters}"%>" class="col-md-4 prevent-click text-decoration-none text-dark">
             <div class="p-2">
               <div class="rounded-lg border-2 bg-white text-center mx-2 mt-2 flex-column d-flex align-items-center p-4">
                 <p class="m-0 text-info font-weight-bold fs-18">iPhone X</p>
@@ -244,5 +242,4 @@
   </div>
   <div class="border-top shadow"></div>
   <%= render 'layouts/common/footer' %>
-</body>
-</html>
+  <%= render 'layouts/common/step_form'%>

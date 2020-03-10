@@ -21,8 +21,10 @@ import 'bootstrap/dist/js/bootstrap.js'
 import 'src/application.scss'
 import "@fortawesome/fontawesome-free/js/all"
 
-require("packs/form")
-require("packs/saveEnergy")
+require("packs/form.js")
+require("packs/saveEnergy.js")
+require("packs/youtube.js")
+require("packs/youtubeSuccess.js")
 
 $(function(){
    console.log("Hello from jquery")
