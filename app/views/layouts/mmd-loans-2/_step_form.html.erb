@@ -109,47 +109,39 @@
                   </span>
                 </div>
               </div>
-              <div class="custom-checkbox col-lg-8 text-center">
-                <span class="dark-blue font-weight-bold fs-28 lh-27">Get Accepted For The Latest Smartpone Deals!</span><br>
-                <span class="font-weight-bold fs-23 desktop ">100% approval | All Credit Scores Welcome | No upfront payments</span>
-                <span class=" font-weight-bold fs-23 mobile">100% approval<br> All Credit Scores Welcome <br> No upfront payments</span>
-                <label class="mt-3">Accept</label>
-                <div class="onoffswitch mx-auto">
-                  <input type="hidden" name="c1">
-                  <input 
-                    type="checkbox" 
-                    name="agree" 
-                    class="onoffswitch-checkbox approve" 
-                    id="myonoffswitch" 
-                    data-parsley-required="true"
-                    data-parsley-group="block-2" 
-                    data-parsley-required-message="Please accept our terms and conditions"
-                    >
-                  <label class="onoffswitch-label" for="myonoffswitch">
-                      <span class="onoffswitch-inner"></span>
-                      <span class="onoffswitch-switch"></span>
-                  </label>
+              <div class="checkbox-col col-lg-8 text-center">
+                <div class="bg-opacity rounded-left border-right">
                 </div>
-                <div class="error-checkbox"></div>
-                <p class="text-center">
+                <div class="custom-control custom-checkbox border p-4 rounded shadow">
+                  <input type="checkbox" 
+                  class="custom-control-input approve" 
+                  id="customCheckbox"
+                  id="checkbox" 
+                  data-parsley-required="true"
+                  data-parsley-group="block-2" 
+                  data-parsley-required-message="Please accept our terms and conditions">
+                  <label class="custom-control-label text-dark fw-500 fs-16 pl-md-5 pl-7" for="customCheckbox">I agree the Terms & Conditions.</label>
+                </div>
+                <div class="error-checkbox newcheckbox"></div>
+                <!-- <p class="text-center">
                   By clicking accept, I agree to be contacted by MegaMobileDeals and its mobile 
                   <%= render 'layouts/common/tooltip_partners_step_form'%> 
                     via phone, SMS & email in accordance with these
                     <a href="https://www.megamobiledeals.com/privacy-policy/">Terms and conditions</a>. 
-                </p>
+                </p> -->
               </div>
             </div>
           </div>
-          <div class="col-lg-7 col-sm-7  col-12 btn-div justify-content-center">
+          <div class="col-lg-8 col-sm-8 p-1 model-check-button  col-12 btn-div justify-content-center">
             <div class="row justify-content-center">
               <div class="">
                 <button id="btn-back" type="button"class="btn btn-primary btn-lg o-btn d-none">Back</button>
               </div>
-              <div class="col-lg-6 col-md-6 text-center">
+              <div class="col text-center">
                 <i class="lodr but_loader display-none position-absolute"> 
                   <%= image_tag("button-ajax-loader.gif") %>
                 </i>
-                <button type="button" class="btn btn-success btn-lg o-btn submitQuikly">Continue</button>
+                <button type="button" class="btn btn-success btn-lg o-btn py-3 mt-3 shadow submitQuikly">Continue</button>
               </div>
             </div>
           </div>
