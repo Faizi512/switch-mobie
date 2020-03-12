@@ -42,7 +42,7 @@ module PagesHelper
     }.to_json  
   end
 
-  def new_success
+  def mmd_loans_2
     @details = { 
       camp_id: 'MEGA-MOBILE-DEALS',
       success_url: 'https://www.megamobiledeals.com/success',
