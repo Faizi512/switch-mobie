@@ -61,6 +61,8 @@ $.getJSON('https://ipapi.co/json/', function(data) {
   }
 });
 
+$("#f-name").html(getUrlParameter("firstname") || "");
+
 window.onload = function onPageLoad() {
   if (!details.submit_on_load) {
     document.getElementsByName("first_name")[0].value = getUrlParameter("firstname") || "";

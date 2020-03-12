@@ -16,6 +16,18 @@ $(document).on('turbolinks:load',function(){
      event.preventDefault()
     $('#deal-form-modal').modal('show')
   });
+  $('.submitQuikly').click(function() {
+      formValidation.whenValidate({
+          group: 'block-2' 
+      }).done(function() {
+        if (submtForm == false) {
+          submtForm = true;
+          event.preventDefault();
+          $('.submitQuikly').prop('disabled', true);
+          postData()
+        }
+      })
+    });
   $('[data-toggle="tooltip"]').tooltip();
   
   $.getJSON('https://ipapi.co/json/', function(data) {
