@@ -46,12 +46,12 @@ module PagesHelper
     @details = { 
       camp_id: 'MEGA-MOBILE-DEALS',
       success_url: 'https://www.megamobiledeals.com/success',
-      form_name: 'new-success',
-      optin_url: '/new-success',
+      form_name: 'mmd_loans_2',
+      optin_url: '/mmd_loans_2',
       sid: nil,
       ssid: nil,
       source:nil,
-      quick_submit: false,
+      quick_submit: true,
       submit_on_load: false,
     }.to_json  
   end
