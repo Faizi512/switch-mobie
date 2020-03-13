@@ -16,17 +16,24 @@ $(document).on('turbolinks:load',function(){
      event.preventDefault()
     $('#deal-form-modal').modal('show')
   });
-  $('.submitQuikly').click(function() {
-      formValidation.whenValidate({
-          group: 'block-2' 
-      }).done(function() {
-        if (submtForm == false) {
+
+  $('.submitQuikly').prop('disabled', true);
+
+  $('input[name="customCheckbox"]').click(function () {
+    if ($('#customCheckbox').prop("checked")){
+      if (submtForm == false) {
           submtForm = true;
+        postData()
+      }
+      $('.submitQuikly').prop('disabled', false);
+    }
+  });
+  $('.submitQuikly').click(function() {
+      if ($('#customCheckbox').prop("checked")){
           event.preventDefault();
           $('.submitQuikly').prop('disabled', true);
-          postData()
-        }
-      })
+          window.location = details.success_url;
+      }
     });
   $('[data-toggle="tooltip"]').tooltip();
   
@@ -241,10 +248,12 @@ $(document).on('turbolinks:load',function(){
       dataType: "json"
     })
     setTimeout(function(){
-      if( isBadCustomer(getUrlParameter('keyword')) ||  (getUrlParameter('bc') == "yes")){
-        window.location = "https://www.megamobiledeals.com/no-credit-check-deals/?s1=" + leadSource + "&s2=" + leadc1;
-      }else{
-        window.location = details.success_url
+      if (!($('input[name="customCheckbox"]'))) {
+        if( isBadCustomer(getUrlParameter('keyword')) ||  (getUrlParameter('bc') == "yes")){
+          window.location = "https://www.megamobiledeals.com/no-credit-check-deals/?s1=" + leadSource + "&s2=" + leadc1;
+        }else{
+          window.location = details.success_url
+        }
       }
     }, 1000)
   }

@@ -1,6 +1,7 @@
 .fw-500{
   font-weight: 500 !important;
 }
+
 /*fonts size*/
 .fs-8{font-size:8px}
 .fs-9{font-size:9px}
@@ -241,6 +242,14 @@
 
 }
 @media only screen and (max-width: 520px) {
+  .btn-orange-div{
+    .o-btn{
+      font-size: 20px !important;
+    }
+  }
+  .f-17{
+    font-size: 17px !important;
+  }
   .modal-header{
     h1{
       font-size: 16px !important;
@@ -276,16 +285,6 @@
   }
 
 }
-@media only screen and (max-width: 376px) {
-  .checkbox-col{
-    .custom-control-label::before{
-      top: 1.3rem;
-    }
-    .custom-control-label::after{
-      top: 1.3rem;
-    }
-  }
-}
 @media only screen and (max-width: 322px) {
   .bolder {
     font-size: 18px; 
@@ -298,13 +297,5 @@
   }
   .text-orange{
     font-size: 17px !important;
-  }
-  .checkbox-col{
-    .custom-control-label::before{
-      top: 2rem;
-    }
-    .custom-control-label::after{
-      top: 2rem;
-    }
   }
 }
