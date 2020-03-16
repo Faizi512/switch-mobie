@@ -184,7 +184,7 @@ module PagesHelper
 
   def youtube
     @details = { 
-      camp_id: 'MEGA-MOBILE-DEALS-YOUTUBE',
+      camp_id: 'MEGA-MOBILE-DEALS',
       success_url: 'https://deals.megamobiledeals.com/youtube-success',
       form_name: 'youtube',
       optin_url: '/youtube',
@@ -198,7 +198,7 @@ module PagesHelper
 
   def youtube_success
     @details = { 
-      camp_id: 'MEGA-MOBILE-DEALS-YOUTUBE-SUCCESS',
+      camp_id: 'MEGA-MOBILE-DEALS',
       success_url: '',
       form_name: 'youtube-success',
       optin_url: '/youtube-success',

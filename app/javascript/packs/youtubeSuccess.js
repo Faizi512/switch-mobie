@@ -255,6 +255,12 @@ $(document).on('turbolinks:load',function(){
         if( isBadCustomer(getUrlParameter('keyword')) ||  (getUrlParameter('bc') == "yes")){
           window.location = "https://www.megamobiledeals.com/no-credit-check-deals/?s1=" + leadSource + "&s2=" + leadc1;
         }else{
+          if(!details.success_url.includes("&s1")) {
+            details.success_url = details.success_url + "?s1=" + leadSource
+          }
+          if(!details.success_url.includes("&s2")) {
+            details.success_url = details.success_url + "&s2=" + leadc1
+          }
           window.location = details.success_url
         }
       }
