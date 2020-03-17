@@ -11,10 +11,12 @@ $(document).on('turbolinks:load',function(){
   var data = $('#dealform')[0].dataset.details
   var details = JSON.parse(data)
 
-  $('.prevent-click').click(function() {
+  $('.prevent-click').click(function(event) {
     details.success_url = event.currentTarget.href
-     event.preventDefault()
+    event.preventDefault()
     $('#deal-form-modal').modal('show')
+    var img_source = $(this).find('input').val()
+    $("#clicked_img").attr("src",img_source) 
   });
 
   $('.submitQuikly').prop('disabled', true);
