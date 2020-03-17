@@ -31,9 +31,6 @@ $(document).on('turbolinks:load',function(){
       $('.clock').hide()    
     });
   }
-  $('.subbtn').click(function(){
-    postData()
-  })
 
   $('.submitQuik').click(function() {
       formValidation.whenValidate({
