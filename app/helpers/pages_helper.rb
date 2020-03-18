@@ -98,19 +98,6 @@ module PagesHelper
     }.to_json  
   end
 
-  def privacy_policy
-    @details = { 
-      camp_id: '',
-      success_url: '',
-      form_name: '',
-      optin_url: '',
-      sid: nil,
-      ssid: nil,
-      source:nil,
-      quick_submit: false,
-      submit_on_load: false,
-    }.to_json  
-  end
 
   def terms_and_conditions
     @details = { 
