@@ -3,7 +3,7 @@
   <header class="container row w-100 m-auto align-items-center justify-content-md-around justify-content-between py-3">
     <%= image_tag("logo.png", class: "img-logo-mmd" ) %>
     <%= image_tag("review.png", class: "reviews-img") %>
-  </header>    
+  </header>
 </div>
 
 <div class="top-head">
@@ -15,7 +15,7 @@
       </iframe> -->
     </div>
   </div>
-  <div class="container mb-5 pb-md-0 pb-2"> 
+  <div class="container mb-5 pb-md-0 pb-2">
     <div class="row align-items-center justify-content-center">
       <div class="col-md-4 mx-auto">
         <form class="text-center" id="mmd-deals">
@@ -25,26 +25,26 @@
             </label>
             <input
               placeholder="Phone number"
-              id="phone-num" 
-              name="phone-num" 
+              id="phone-num"
+              name="phone-num"
               class="phone-num px-2 border border-secondary bg-white rounded text-secondary form-control"
               data-parsley-required="true"
-              data-parsley-required-message="Please Enter Valid UK Phone"  
+              data-parsley-required-message="Please Enter Valid UK Phone"
               data-parsley-group="block-0"
               data-parsley-type="number"
               data-parsley-validphone
-              type="number" 
+              type="number"
               required>
               <i class="validate success fa fa-check-circle"></i>
               <i class="validate error fa fa-times-circle"></i>
           </div>
           <div class="custom-control custom-checkbox mb-3">
-            <input 
-            type="checkbox" 
-            name="checkbox" 
-            class="custom-control-input" 
-            id="checkbox" 
-            required 
+            <input
+            type="checkbox"
+            name="checkbox"
+            class="custom-control-input"
+            id="checkbox"
+            required
             data-parsley-required="true"
             data-parsley-required-message="Please Accept our Terms & Conditions"
             >
@@ -68,7 +68,7 @@
     <div class="row align-items-center justify-content-around py-3">
       <%= image_tag("company/02.png", class: "h-76" ) %>
       <%= image_tag("company/ee.png", class: "h-76") %>
-      <%= image_tag("company/three.png", class: "h-76") %>  
+      <%= image_tag("company/three.png", class: "h-76") %>
     </div>
   </div>
 </div>
@@ -100,6 +100,7 @@
   // 4. The API will call this function when the video player is ready.
   function onPlayerReady(event) {
     event.target.playVideo();
+    player.mute();
   }
 
   // 5. The API calls this function when the player's state changes.
