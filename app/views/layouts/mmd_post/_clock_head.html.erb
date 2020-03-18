@@ -1,11 +1,11 @@
 <% parameters = "&s2=#{params[:c1]}&s1=#{params[:source]}" %>
 <section class="mb-md-3 banner-div">
     <div class="container m-md-0">
-      <a class="mmd-post-link" href='<%= "http://mtrk5.co.uk/?a=14118&c=33109#{parameters}" %>'>
+      <a class="mmd-post-link text-decoration-none text-reset" href='<%= "http://mtrk5.co.uk/?a=14118&c=33109#{parameters}" %>'>
         <div class="row">
           <div class="col-md-7 pb-md-0 pb-3">
             <div class="card card-body header-deal border-0 px-0 mt-md-3 mb-md-3">
-              <div class="promotion subbtn">Get Deal Now</div>
+              <div class="promotion subbtn ">Get Deal Now</div>
               <div class="row mx-0 justify-content-center">
                 <%= image_tag("new_mmd/iphone11-pro-max.jpg", class: "image-chead pl-3" ) %>
                 <div class="text py-2">
@@ -29,12 +29,13 @@
               </div>
               <div class="row mt-2">
                 <div class="col px-4">
-                   <button class="btn btn-danger subbtn o-btn py-2 fs-24 w-100">Continue</button>
-                   <p class="text-center mt-3">
-                      By clicking accept, I agree to be contacted by MegaMobileDeals and its mobile 
-                      <%= render 'layouts/common/tooltip_partners_step_form'%> 
-                        via phone, SMS & email in accordance with these
-                      <a href="https://deals.megamobiledeals.com/terms-and-conditions/">Terms and conditions</a>. 
+                  <button class="btn btn-danger subbtn o-btn py-2 fs-24 w-100">Continue</button>
+                  <p class="text-center mt-4 text-decoration-none text-reset px-md-5 mx-md-2">
+                    By clicking accept, I agree to be contacted by MegaMobileDeals and its mobile 
+                    <%= render 'layouts/common/tooltip_partners_step_form'%> 
+                      via phone, SMS & email in accordance with these
+                    <a href="https://deals.megamobiledeals.com/terms-and-conditions/">Terms and conditions
+                    </a>. 
                   </p>
                 </div>
               </div>
