@@ -1,3 +1,4 @@
+<%= javascript_pack_tag 'save_energy', 'data-turbolinks-track': 'reload', defer: true %>
 <%= render 'layouts/save_energy_bill/header' %>
 <div  class="light-blue-color ">
   <div class="container  py-5">
@@ -10,14 +11,14 @@
         <div class="col-md-6 offset-md-3">
           <form id="engeryForm" action="javascript:;">
             <div class="form-group">
-              <input 
-              type="text" 
-              class="form-control address-field  mx-auto" 
-              id="Address" 
-              name="address"  
-              required 
-              data-parsley-required="true" 
-              data-parsley-required-message="Please Enter Your Address"  
+              <input
+              type="text"
+              class="form-control address-field  mx-auto"
+              id="Address"
+              name="address"
+              required
+              data-parsley-required="true"
+              data-parsley-required-message="Please Enter Your Address"
               type="text">
               <i class="validate success fa fa-check-circle"></i>
               <i class="validate error fa fa-times-circle"></i>
@@ -26,7 +27,7 @@
           </form>
         </div>
       </div>
-      
+
     </div>
   </div>
 </div>

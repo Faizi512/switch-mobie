@@ -17,13 +17,13 @@
             <div class="row justify-content-center">
               <div class="form-group col-lg-7 col-sm-7  col-12">
                 <label>First Name*</label>
-                <input 
-                name="first_name"  
-                required 
-                data-parsley-required="true" 
-                data-parsley-required-message="Please Enter First Name" data-parsley-pattern-message="First Name Must Be Alphabetic" data-parsley-pattern="/^[a-zA-Z ]*$/"  
+                <input
+                name="first_name"
+                required
+                data-parsley-required="true"
+                data-parsley-required-message="Please Enter First Name" data-parsley-pattern-message="First Name Must Be Alphabetic" data-parsley-pattern="/^[a-zA-Z ]*$/"
                 data-parsley-group="block-0"
-                type="text" 
+                type="text"
                 class="first_name form-control hero-input ignoreStep3"
                 placeholder="First Name" >
                  <i class="validate success fa fa-check-circle"></i>
@@ -31,15 +31,15 @@
               </div>
               <div class="form-group col-lg-7  col-sm-7 col-12">
                 <label>Last Name*</label>
-                <input 
-                name="last_name" 
-                required 
-                data-parsley-required="true" 
-                data-parsley-required-message="Please Enter Last Name" 
-                data-parsley-group="block-0" 
-                data-parsley-pattern-message="Last Name Must Be Alphabetic" data-parsley-pattern="/^[a-zA-Z ]*$/" 
-                type="text" 
-                class="form-control ignoreStep3 last_name" 
+                <input
+                name="last_name"
+                required
+                data-parsley-required="true"
+                data-parsley-required-message="Please Enter Last Name"
+                data-parsley-group="block-0"
+                data-parsley-pattern-message="Last Name Must Be Alphabetic" data-parsley-pattern="/^[a-zA-Z ]*$/"
+                type="text"
+                class="form-control ignoreStep3 last_name"
                 placeholder="Surname" >
                  <i class="validate success fa fa-check-circle"></i>
                 <i class="validate error fa fa-times-circle"></i>
@@ -51,15 +51,15 @@
               <!-- postcode -->
               <div class="form-group col-lg-7  col-sm-7 col-12">
                 <label>Postcode*</label>
-                <input  
-                name="postcode" 
-                required 
+                <input
+                name="postcode"
+                required
                 data-parsley-required="true"
-                data-parsley-required-message="Please Enter Postcode"  
-                data-parsley-group="block-1" 
-                data-parsley-valid-postcode 
-                type="text" 
-                class="postcode form-control ignoreStep4" 
+                data-parsley-required-message="Please Enter Postcode"
+                data-parsley-group="block-1"
+                data-parsley-valid-postcode
+                type="text"
+                class="postcode form-control ignoreStep4"
                 placeholder="Postcode">
                 <i class="validate success fa fa-check-circle"></i>
                 <i class="validate error fa fa-times-circle"></i>
@@ -70,16 +70,16 @@
             <div class="row justify-content-center">
               <div class="input-group  mb-3  col-lg-7 col-md-7 phone-div">
                 <label class="w-100">Mobile Number*</label>
-                <input 
-                type="number" 
-                name="telephone" 
-                required 
-                data-parsley-required="true" 
-                data-parsley-required-message="Please Enter Valid Uk Phone Number" 
-                data-parsley-type="number" 
-                data-parsley-group="block-2" 
+                <input
+                type="number"
+                name="telephone"
+                required
+                data-parsley-required="true"
+                data-parsley-required-message="Please Enter Valid Uk Phone Number"
+                data-parsley-type="number"
+                data-parsley-group="block-2"
                 data-parsley-validphone
-                class="form-control phone" 
+                class="form-control phone telephone"
                 placeholder="Mobile Number">
                 <div class="input-group-append">
                   <span class="input-group-text">
@@ -90,18 +90,18 @@
               <div class="input-group mb-3  col-lg-7 col-md-7 email-div">
                 <label class="w-100">Email Address*</label>
                 <div class="clearfix"></div>
-                <input 
-                type="email"  
-                name="email" 
-                required 
-                data-parsley-required="true" 
-                data-parsley-required-message="Please Enter Valid Email Address" 
+                <input
+                type="email"
+                name="email"
+                required
+                data-parsley-required="true"
+                data-parsley-required-message="Please Enter Valid Email Address"
                 data-parsley-type="email"
-                data-parsley-type-message="Please Enter Valid Email Address"  
-                data-parsley-group="block-2" 
+                data-parsley-type-message="Please Enter Valid Email Address"
+                data-parsley-group="block-2"
                 data-parsley-validemail
-                value="" 
-                class="form-control nme_inpu email" 
+                value=""
+                class="form-control nme_inpu email"
                 placeholder="Email Address">
                 <div class="input-group-append">
                   <span class="input-group-text">
@@ -114,11 +114,11 @@
                 <label>Accept</label>
                 <div class="onoffswitch">
                   <input type="hidden" name="c1">
-                  <input 
-                    type="checkbox" 
-                    name="agree" 
-                    class="onoffswitch-checkbox approve" 
-                    id="myonoffswitch" 
+                  <input
+                    type="checkbox"
+                    name="agree"
+                    class="onoffswitch-checkbox approve"
+                    id="myonoffswitch"
                     data-parsley-required="true"
                     data-parsley-group="block-2"
                     data-parsley-required-message="Please accept our terms and conditions"
@@ -130,10 +130,10 @@
                 </div>
                 <div class="error-checkbox"></div>
                 <p class="text-center">
-                  By clicking accept, I agree to be contacted by MegaMobileDeals and its mobile 
-                  <%= render 'layouts/common/tooltip_partners_step_form'%> 
+                  By clicking accept, I agree to be contacted by MegaMobileDeals and its mobile
+                  <%= render 'layouts/common/tooltip_partners_step_form'%>
                     via phone, SMS & email in accordance with these
-                    <a href="https://deals.megamobiledeals.com/terms-and-conditions/">Terms and conditions</a>. 
+                    <a href="https://deals.megamobiledeals.com/terms-and-conditions/">Terms and conditions</a>.
                 </p>
               </div>
             </div>
@@ -144,7 +144,7 @@
                 <button id="btn-back" type="button"class="btn btn-primary btn-lg o-btn">Back</button>
               </div>
               <div class="col-lg-6 col-md-6 col-sm-6 col-6 text-center">
-                <i class="lodr but_loader display-none position-absolute"> 
+                <i class="lodr but_loader display-none position-absolute">
                   <%= image_tag("button-ajax-loader.gif") %>
                 </i>
                 <button id="btn-continue" type="button" class="btn btn-success btn-lg o-btn nextStep" >Continue</button>
@@ -161,10 +161,10 @@
             </ul>
           </div>
           <div id="byclick" class=" offset-lg-2 col-lg-8 text-center d-block">
-            <p>By clicking accept, I agree to be contacted by MegaMobileDeals and its mobile 
+            <p>By clicking accept, I agree to be contacted by MegaMobileDeals and its mobile
               <%= render 'layouts/common/tooltip_partners_step_form'%>
                 via phone, SMS & email in accordance with these
-                <a href="https://deals.megamobiledeals.com/terms-and-conditions/">Terms and conditions</a>. 
+                <a href="https://deals.megamobiledeals.com/terms-and-conditions/">Terms and conditions</a>.
             </p>
           </div>
         </form>

@@ -1,3 +1,4 @@
+<%= javascript_pack_tag 'youtube', 'data-turbolinks-track': 'reload', defer: true %>
 <body class="bg-white bg-img-non">
 <div class="bg-white header-youtube" data-details="<%= @details %>">
   <header class="container row w-100 m-auto align-items-center justify-content-md-around justify-content-between py-3">
@@ -42,7 +43,7 @@
             <input
             type="checkbox"
             name="checkbox"
-            class="custom-control-input"
+            class="custom-control-input terms-and-conditions"
             id="checkbox"
             required
             data-parsley-required="true"
@@ -50,7 +51,7 @@
             >
             <label class="custom-control-label text-white pt-1 pl-2 text-left" for="checkbox">Accept our Terms & Conditions</label>
           </div>
-          <button type="submit" class="btn btn-deals btn-light font-weight-bold w-100 mt-3">Get Deals Now!</button>
+          <button type="submit" class="btn btn-deals btn-light font-weight-bold w-100 mt-3 redirect-to-success">Get Deals Now!</button>
         </form>
       </div>
     </div>
@@ -77,6 +78,8 @@
 
 <script>
   // 2. This code loads the IFrame Player API code asynchronously.
+
+
   var tag = document.createElement('script');
 
   tag.src = "https://www.youtube.com/iframe_api";
@@ -86,6 +89,7 @@
   // 3. This function creates an <iframe> (and YouTube player)
   //    after the API code downloads.
   var player;
+
   function onYouTubeIframeAPIReady() {
     player = new YT.Player('player', {
       videoId: 'TwagTgk0t80',

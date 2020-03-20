@@ -317,6 +317,139 @@ module PagesHelper
         deposit: "£0"
       }
     ]
+    @phoneshome = [
+     {
+        name: "6 Months Half Price SIM!",
+        data: "Unlimited",
+        image: "sim/three-sim.png",
+        calls: "Unlimited",
+        texts: "Unlimited",
+        url:"http://mtrk5.co.uk/?a=14118&c=37344&p=r",
+        bluetext: "Best Sim Only Deals, 5G Ready",
+        deposit: "£0"
+      },
+     {
+        name: "Samsung Galaxy S10",
+        data: "Unlimited",
+        image: "phone/samsungs10.png",
+        calls: "Unlimited",
+        texts: "Unlimited",
+        url:"http://mtrk5.co.uk/?a=14118&c=37644&p=r",
+        bluetext: "Personal Hotspot, Go Binge, Data Roaming",
+        deposit: "£0"
+      },
+      {
+        name: "Huawei P30",
+        data: "30GB",
+        image: "phone/huaweip30.png",
+        calls: "Unlimited",
+        texts: "Unlimited",
+        url:"http://mtrk5.co.uk/?a=14118&c=37645&p=r",
+        bluetext: "Personal Hotspot, Go Binge, Data Roaming",
+        deposit: "£0"
+      },
+      {
+        name: "Apple iPhone 11 Pro",
+        data: "Unlimited",
+        image: "phone/iphone11pro.png",
+        calls: "Unlimited",
+        texts: "Unlimited",
+        url:"http://mtrk5.co.uk/?a=14118&c=37646&p=r",
+        bluetext: "",
+        deposit: "£0"
+      },
+      {
+        name: "iPhone 11",
+        data: "Unlimited",
+        image: "phone/iphone11.png",
+        calls: "Unlimited",
+        texts: "Unlimited",
+        url:"http://mtrk5.co.uk/?a=14118&c=33109",
+        bluetext: "No Credit Checks",
+        deposit: "£0"
+      },
+      {
+        name: "iPhone 11",
+        data: "Unlimited",
+        image: "phone/iphone11.webp",
+        calls: "Unlimited",
+        texts: "Unlimited",
+        url:"http://mtrk5.co.uk/?a=14118&c=37601&p=r",
+        bluetext: "Free Personal Hotspot, Free Data Roaming",
+        deposit: "£0"
+      },
+      {
+        name: "Samsung Galaxy S20 Ultra 5G",
+        data: "Unlimited",
+        image: "phone/samsung-galaxy-s20-ultra-black.png",
+        calls: "Unlimited",
+        texts: "Unlimited",
+        url:"http://mtrk5.co.uk/?a=14118&c=37600&p=r",
+        bluetext: "Personal Hotspot, Go Binge, Data Roaming, 5G Ready",
+        deposit: "£0"
+      },
+      {
+        name: "Samsung Galaxy S20 Plus 5G",
+        data: "4GB",
+        image: "phone/samsung-galaxy-s20-plus.png",
+        calls: "Unlimited",
+        texts: "Unlimited",
+        url:"http://mtrk5.co.uk/?a=14118&c=37600&p=r",
+        bluetext: "Personal Hotspot, Data Roaming, 5G Ready",
+        deposit: "£0"
+      },
+      {
+        name: "Samsung Galaxy S10e",
+        data: "30GB",
+        image: "phone/samsung-galaxy-s10e.png",
+        calls: "Unlimited",
+        texts: "Unlimited",
+        url:"http://mtrk5.co.uk/?a=14118&c=37644&p=r",
+        bluetext: "Personal Hotspot, Go Binge, Data Roaming",
+        deposit: "£0"
+      },
+      {
+        name: "iPhone XR",
+        data: "Unlimited",
+        image: "phone/iphonexr.png",
+        calls: "Unlimited",
+        texts: "Unlimited",
+        url:"http://mtrk5.co.uk/?a=14118&c=37721&p=r",
+        bluetext: "Personal Hotspot, Go Binge, Data Roaming",
+        deposit: "£0"
+      },
+      {
+        name: "iPhone XS",
+        data: "Unlimited",
+        image: "phone/iphonexs.png",
+        calls: "Unlimited",
+        texts: "Unlimited",
+        url:"http://mtrk5.co.uk/?a=14118&c=37722&p=r",
+        bluetext: "Personal Hotspot, Go Binge, Data Roaming",
+        deposit: "£0"
+      },
+      {
+        name: "iPhone 11 Pro Max",
+        data: "Unlimited",
+        image: "phone/1iphone-11-pro-max.png",
+        calls: "Unlimited",
+        texts: "Unlimited",
+        url:"http://mtrk5.co.uk/?a=14118&c=37723&p=r",
+        bluetext: "Personal Hotspot, Go Binge, Data Roaming",
+        deposit: "£0"
+      },
+      {
+        name: "Samsung Galaxy S10",
+        data: "Unlimited",
+        image: "phone/samsungs10.png",
+        calls: "Unlimited",
+        texts: "Unlimited",
+        url:"http://mtrk5.co.uk/?a=14118&c=37644&p=r",
+        bluetext: "Personal Hotspot, Go Binge, Data Roaming",
+        deposit: "£0"
+      }
+    ]
+
     @phonescompare = [
      {
         name: "iPhone 11 Pro 256 GB",

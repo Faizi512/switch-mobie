@@ -1,3 +1,5 @@
+<%= javascript_pack_tag 'mmd_loan_two', 'data-turbolinks-track': 'reload', defer: true %>
+
 <% parameters = "&s2=#{params[:c1]}&s1=#{params[:source]}" %>
 <div class="bg-white h-25 py-3 shadow-lg border-bottom">
   <div class="container">
@@ -14,11 +16,11 @@
         <h4 class="py-3 text-dark-blue">You've been declined for a loan today, But you're eligible for a new phone, guaranteed acceptance. </h4>
         <!-- <h3 class="pb-3 text-dark-blue">Keep Scrolling for more!</h3> -->
       </div>
-      <a href="<%= "https://mtrk5.co.uk/?a=14118&c=37644&p=r#{parameters}" %>" class="col-md-6 prevent-click text-decoration-none text-dark ">
+      <a href="<%= "https://mtrk5.co.uk/?a=14118&c=37644&p=r#{parameters}" %>" class="col-md-6 open-popup text-decoration-none text-dark ">
         <div class=" text-center cursor-p">
           <div class="bg-dark-blue p-4 shadow">
             <p class="fw-500 fs-34 text-white text-center m-0">Samsung Galaxy S10 Plus
-              <span class="font-weight-bold fs-34 text-danger">*</span> 
+              <span class="font-weight-bold fs-34 text-danger">*</span>
             </p>
             <p class="fs-18 font-weight-bold text-center text-white">24 month plan</p>
             <div class="row">
@@ -49,11 +51,11 @@
           </div>
         </div>
       </a>
-      <a href="<%= "http://mtrk5.co.uk/?a=14118&c=37681&p=r#{parameters}"%>" class="col-md-6 prevent-click text-decoration-none text-dark">
+      <a href="<%= "http://mtrk5.co.uk/?a=14118&c=37681&p=r#{parameters}"%>" class="col-md-6 open-popup text-decoration-none text-dark">
         <div class="text-center pt-3 pt-md-0 cursor-p">
           <div class="bg-dark-blue p-4 shadow">
             <p class="fw-500 fs-34 text-white text-center m-0">iPhone 11
-              <span class="font-weight-bold fs-34 text-danger">*</span> 
+              <span class="font-weight-bold fs-34 text-danger">*</span>
             </p>
             <p class="fs-18 font-weight-bold text-center text-white">24 month plan</p>
             <div class="row">
@@ -88,17 +90,17 @@
     <!-- Deals section -->
     <section class="border mt-4 rounded-lg shadow-sm">
       <div class="row my-4 mx-3 align-items-center justify-content-around">
-        <a href="<%= "https://mtrk5.co.uk/?a=14118&c=37645&p=r#{parameters}"%>" class="col-md-4 prevent-click text-decoration-none text-dark">
+        <a href="<%= "https://mtrk5.co.uk/?a=14118&c=37645&p=r#{parameters}"%>" class="col-md-4 open-popup text-decoration-none text-dark">
           <div class="p-2">
             <div class="rounded-lg border-2 bg-white text-center mx-2 mt-2 flex-column d-flex align-items-center p-4">
               <p class="m-0 text-info font-weight-bold fs-18">Huawei P30</p>
               <%= image_tag("review-stars.png", class: "success-review-img" ) %>
               <%= image_tag("phone/huaweip30.png", class: "success-box-img mt-3" ) %>
               <input type="hidden" id="img_src" name="img_src" value="/assets/phone/huaweip30.png">
-              <p class="m-0 px-3 pt-3">From 
+              <p class="m-0 px-3 pt-3">From
                 <span class="font-weight-bold fs-18 text-info">£36.00</span> a month
               </p>
-              <p class="m-0 px-3 pb-3"> 
+              <p class="m-0 px-3 pb-3">
                 <span class="font-weight-bold fs-18 text-info">24</span> month plan
               </p>
               <div class="border-top w-100"></div>
@@ -115,7 +117,7 @@
             </div>
           </div>
         </a>
-        <a href="<%= "https://mtrk5.co.uk/?a=14118&c=37646&p=r#{parameters}"%>" class="col-md-4 prevent-click text-decoration-none text-dark">
+        <a href="<%= "https://mtrk5.co.uk/?a=14118&c=37646&p=r#{parameters}"%>" class="col-md-4 open-popup text-decoration-none text-dark">
           <div class="p-2">
             <div class="bg-warning rounded-lg text-center pb-2">
               <p class="m-0 small font-weight-bold pt-1">Save £130 on all tariffs</p>
@@ -124,7 +126,7 @@
                 <%= image_tag("review-stars.png", class: "success-review-img" ) %>
                 <%= image_tag("phone/iphone11pro.png", class: "success-box-img mt-3" ) %>
                 <input type="hidden" id="img_src" name="img_src" value="/assets/phone/iphone11pro.png">
-                <p class="m-0 px-3 pt-3">From 
+                <p class="m-0 px-3 pt-3">From
                   <span class="font-weight-bold fs-18 text-info">£67.00</span> a month
                 </p>
                 <p class="m-0 px-3 pb-3">
@@ -146,7 +148,7 @@
             </div>
           </div>
         </a>
-        <a href="<%= "https://mtrk5.co.uk/?a=14118&c=37344&p=r#{parameters}"%>" class="col-md-4 prevent-click text-decoration-none text-dark">
+        <a href="<%= "https://mtrk5.co.uk/?a=14118&c=37344&p=r#{parameters}"%>" class="col-md-4 open-popup text-decoration-none text-dark">
           <div class="p-2">
             <div class="rounded-lg border-2 bg-white text-center mx-2 mt-2 flex-column d-flex align-items-center p-4">
               <p class="m-0 text-info font-weight-bold fs-18">BEST Sim Only Deals</p>
@@ -180,7 +182,7 @@
       </div>
       <!--2nd row  -->
       <div class="row py-4 mx-3 align-items-center justify-content-around border-top">
-        <a href="<%= "https://mtrk5.co.uk/?a=14118&c=37644&p=r#{parameters}"%>" class="col-md-4 prevent-click text-decoration-none text-dark">
+        <a href="<%= "https://mtrk5.co.uk/?a=14118&c=37644&p=r#{parameters}"%>" class="col-md-4 open-popup text-decoration-none text-dark">
           <div class="p-2">
             <div class="bg-warning rounded-lg text-center pb-2">
               <p class="m-0 small font-weight-bold pt-1">Save £170 on all tariffs</p>
@@ -189,7 +191,7 @@
                 <%= image_tag("review-stars.png", class: "success-review-img" ) %>
                 <%= image_tag("phone/samsungnote10.png", class: "success-box-img mt-3" ) %>
                 <input type="hidden" id="img_src" name="img_src" value="/assets/phone/samsungnote10.png">
-                <p class="m-0 p-3">From 
+                <p class="m-0 p-3">From
                   <span class="font-weight-bold fs-18 text-info">£65.00</span> a month
                 </p>
                 <p class="m-0 px-3 pb-3">
@@ -211,7 +213,7 @@
             </div>
           </div>
         </a>
-        <a href="<%= "https://c1icktree.co.uk/go/?id=67#{parameters}"%>" class="col-md-4 text-decoration-none prevent-click text-dark">
+        <a href="<%= "https://c1icktree.co.uk/go/?id=67#{parameters}"%>" class="col-md-4 text-decoration-none open-popup text-dark">
           <div class="p-2">
             <div class="rounded-lg border-2 bg-white text-center mx-2 mt-2 flex-column d-flex align-items-center p-4">
               <p class="m-0 text-info font-weight-bold fs-18">FREE iPHONE</p>
@@ -234,15 +236,15 @@
             </div>
           </div>
         </a>
-        <a href="<%= "https://mtrk5.co.uk/?a=14118&c=37601&p=r#{parameters}"%>" class="col-md-4 prevent-click text-decoration-none text-dark">
+        <a href="<%= "https://mtrk5.co.uk/?a=14118&c=37601&p=r#{parameters}"%>" class="col-md-4 open-popup text-decoration-none text-dark">
           <div class="p-2">
             <div class="rounded-lg border-2 bg-white text-center mx-2 mt-2 flex-column d-flex align-items-center p-4">
               <p class="m-0 text-info font-weight-bold fs-18">iPhone XS Max</p>
               <%= image_tag("review-stars.png", class: "success-review-img" ) %>
               <%= image_tag("phone/iphonexsmax.png", class: "success-box-img mt-3" ) %>
               <input type="hidden" id="img_src" name="img_src" value="/assets/phone/iphonexsmax.png">
-              <p class="m-0 px-3 pt-3">From 
-                <span class="font-weight-bold fs-18 text-info">£47.00</span> a month 
+              <p class="m-0 px-3 pt-3">From
+                <span class="font-weight-bold fs-18 text-info">£47.00</span> a month
               </p>
               <p class="m-0 px-3 pb-3">
                 <span class="font-weight-bold fs-18 text-info">24</span> month plan

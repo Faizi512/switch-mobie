@@ -2,13 +2,13 @@
 // present in this directory. You're encouraged to place your actual application logic in
 // a relevant structure within app/javascript and only use these pack files to reference
 // that code so it'll be compiled.
+import 'src/application.scss'
+
 
 require("@rails/ujs").start()
 require("turbolinks").start()
 require("@rails/activestorage").start()
 require("channels")
-require("parsleyjs")
-
 
 // Uncomment to copy all static images under ../images to the output folder and reference
 // them with the image_pack_tag helper in views (e.g <%= image_pack_tag 'rails.png' %>)
@@ -16,19 +16,7 @@ require("parsleyjs")
 //
 // const images = require.context('../images', true)
 // const imagePath = (name) => images(name, true)
-import 'flipclock/dist/flipclock.min.js'
-import 'bootstrap/dist/js/bootstrap.js'
-import 'src/application.scss'
-import "@fortawesome/fontawesome-free/js/all"
 
-require("packs/form.js")
-require("packs/saveEnergy.js")
-require("packs/youtube.js")
-require("packs/youtubeSuccess.js")
-
-$(function(){
-   console.log("Hello from jquery")
-     window.FontAwesomeConfig = {
-    searchPseudoElements: true
-  }
-});
+// require("packs/saveEnergy.js")
+// require("packs/youtube.js")
+// require("packs/youtubeSuccess.js")
