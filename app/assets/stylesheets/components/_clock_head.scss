@@ -46,7 +46,8 @@
   align-self: flex-start;
 }
 .image-phone-clock{
-  width: 130px;
+  max-width: 130px;
+  max-height: 190px;
 }
   /*Clock*/
   .clock {
