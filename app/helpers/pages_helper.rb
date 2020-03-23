@@ -169,6 +169,20 @@ module PagesHelper
     }.to_json  
   end
 
+  def social_phone_deals
+    @details = { 
+      camp_id: 'MEGA-MOBILE-DEALS',
+      success_url: 'https://www.megamobiledeals.com/success',
+      form_name: 'social-phone-deals',
+      optin_url: '/social-phone-deals',
+      sid: 157,
+      ssid: 1,
+      source:'Duke-FB',
+      quick_submit: false,
+      submit_on_load: false,
+    }.to_json  
+  end
+
   def mega_phone_deals
     @details = { 
       camp_id: 'MEGA-MOBILE-DEALS',
