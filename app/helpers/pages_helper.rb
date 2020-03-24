@@ -1,7 +1,7 @@
 module PagesHelper
 
   def compare_phones
-    @details = { 
+    @details = {
       camp_id: 'MEGA-MOBILE-DEALS',
       success_url: 'https://www.megamobiledeals.com/success',
       form_name: 'Compare-Phones',
@@ -11,11 +11,11 @@ module PagesHelper
       source:nil,
       quick_submit: false,
       submit_on_load: false,
-    }.to_json  
+    }.to_json
   end
-  
+
   def new_mmd
-    @details = { 
+    @details = {
       camp_id: 'MEGA-MOBILE-DEALS',
       success_url: 'https://www.megamobiledeals.com/success',
       form_name: 'MEGA-MOBILE-DEALS',
@@ -25,11 +25,11 @@ module PagesHelper
       source:nil,
       quick_submit: true,
       submit_on_load: false,
-    }.to_json  
+    }.to_json
   end
 
   def mmd_post
-    @details = { 
+    @details = {
       camp_id: 'MEGA-MOBILE-DEALS',
       success_url: 'https://www.megamobiledeals.com/success',
       form_name: 'mmd-post',
@@ -39,11 +39,11 @@ module PagesHelper
       source:nil,
       quick_submit: false,
       submit_on_load: false,
-    }.to_json  
+    }.to_json
   end
 
   def mmd_loans_2
-    @details = { 
+    @details = {
       camp_id: 'MEGA-MOBILE-DEALS',
       success_url: 'https://www.megamobiledeals.com/success',
       form_name: 'mmd_loans_2',
@@ -53,11 +53,11 @@ module PagesHelper
       source:nil,
       quick_submit: true,
       submit_on_load: false,
-    }.to_json  
+    }.to_json
   end
 
   def mmd_success
-    @details = { 
+    @details = {
       camp_id: 'MEGA-MOBILE-DEALS',
       success_url: 'https://www.megamobiledeals.com/success',
       form_name: 'mmd-success',
@@ -67,11 +67,11 @@ module PagesHelper
       source:nil,
       quick_submit: false,
       submit_on_load: true,
-    }.to_json  
+    }.to_json
   end
 
   def returning_loans
-    @details = { 
+    @details = {
       camp_id: 'MEGA-MOBILE-DEALS',
       success_url: 'https://www.megamobiledeals.com/success',
       form_name: 'returning-loans',
@@ -81,11 +81,11 @@ module PagesHelper
       source:nil,
       quick_submit: false,
       submit_on_load: false,
-    }.to_json  
+    }.to_json
   end
 
   def sims_returning
-    @details = { 
+    @details = {
       camp_id: 'SIM',
       success_url: 'https://www.megamobiledeals.com/sim-deals',
       form_name: 'Sims-Returning',
@@ -95,12 +95,12 @@ module PagesHelper
       source:nil,
       quick_submit: true,
       submit_on_load: false,
-    }.to_json  
+    }.to_json
   end
 
 
   def terms_and_conditions
-    @details = { 
+    @details = {
       camp_id: '',
       success_url: '',
       form_name: '',
@@ -110,11 +110,11 @@ module PagesHelper
       source:nil,
       quick_submit: false,
       submit_on_load: false,
-    }.to_json  
+    }.to_json
   end
 
   def latest_deals
-    @details = { 
+    @details = {
       camp_id: 'MEGA-MOBILE-DEALS',
       success_url: 'https://www.megamobiledeals.com/success2',
       form_name: 'Latest-Deals',
@@ -124,11 +124,11 @@ module PagesHelper
       source:'Snapchat-16986-HR',
       quick_submit: false,
       submit_on_load: false,
-    }.to_json  
+    }.to_json
   end
 
   def returning
-    @details = { 
+    @details = {
       camp_id: 'MEGA-MOBILE-DEALS',
       success_url: 'https://www.megamobiledeals.com/success',
       form_name: 'returning',
@@ -138,11 +138,11 @@ module PagesHelper
       source:nil,
       quick_submit: true,
       submit_on_load: false,
-    }.to_json  
+    }.to_json
   end
 
   def sim_deals
-    @details = { 
+    @details = {
       camp_id: 'SIM',
       success_url: 'https://www.megamobiledeals.com/sim-deals',
       form_name: 'Sim-Deals',
@@ -152,11 +152,11 @@ module PagesHelper
       source:nil,
       quick_submit: false,
       submit_on_load: false,
-    }.to_json  
+    }.to_json
   end
 
   def fb_phone_deals
-    @details = { 
+    @details = {
       camp_id: 'MEGA-MOBILE-DEALS',
       success_url: 'https://www.megamobiledeals.com/success',
       form_name: 'fb-phone-deals',
@@ -166,11 +166,11 @@ module PagesHelper
       source:'Duke-FB',
       quick_submit: false,
       submit_on_load: false,
-    }.to_json  
+    }.to_json
   end
 
   def social_phone_deals
-    @details = { 
+    @details = {
       camp_id: 'MEGA-MOBILE-DEALS',
       success_url: 'https://www.megamobiledeals.com/success',
       form_name: 'social-phone-deals',
@@ -180,11 +180,11 @@ module PagesHelper
       source:'Duke-FB',
       quick_submit: false,
       submit_on_load: false,
-    }.to_json  
+    }.to_json
   end
 
   def mega_phone_deals
-    @details = { 
+    @details = {
       camp_id: 'MEGA-MOBILE-DEALS',
       success_url: 'https://www.megamobiledeals.com/success',
       form_name: 'mega-phone-deals',
@@ -194,11 +194,11 @@ module PagesHelper
       source:'mega-HR',
       quick_submit: false,
       submit_on_load: false,
-    }.to_json  
+    }.to_json
   end
 
   def youtube
-    @details = { 
+    @details = {
       camp_id: 'MEGA-MOBILE-DEALS',
       success_url: 'https://deals.megamobiledeals.com/youtube-success',
       form_name: 'youtube',
@@ -208,11 +208,11 @@ module PagesHelper
       source: nil,
       quick_submit: false,
       submit_on_load: false,
-    }.to_json  
+    }.to_json
   end
 
   def youtube_success
-    @details = { 
+    @details = {
       camp_id: 'MEGA-MOBILE-DEALS',
       success_url: '',
       form_name: 'youtube-success',
@@ -222,11 +222,11 @@ module PagesHelper
       source: nil,
       quick_submit: false,
       submit_on_load: false,
-    }.to_json  
+    }.to_json
   end
 
   def home
-    @details = { 
+    @details = {
       camp_id: 'MEGA-MOBILE-DEALS',
       success_url: 'https://www.megamobiledeals.com/success',
       form_name: 'Mega-Mobile-Deals',
@@ -236,9 +236,9 @@ module PagesHelper
       source:nil,
       quick_submit: false,
       submit_on_load: false,
-    }.to_json  
+    }.to_json
   end
-  
+
   def get_deals_data url_name
     send(url_name.gsub('-', '_')) rescue home
     @phones = [
@@ -574,7 +574,7 @@ module PagesHelper
         texts: "Unlimited",
         permonth: "£10",
         contlength: "3 Month"
-        
+
       },
      {
         name: "O2 Sim Card",
@@ -584,7 +584,7 @@ module PagesHelper
         texts: "Unlimited",
         permonth: "£50",
         contlength: "12 Month"
-        
+
       },
       {
         name: "Vodafone Sim Card",
@@ -594,7 +594,7 @@ module PagesHelper
         texts: "Unlimited",
         permonth: "£10",
         contlength: "18 Month"
-        
+
       },
       {
         name: "3 Sim Card",
@@ -604,7 +604,7 @@ module PagesHelper
         texts: "Unlimited",
         permonth: "£5",
         contlength: "6 Month"
-        
+
       },
       {
         name: "ID Sim Card",
@@ -614,7 +614,7 @@ module PagesHelper
         texts: "Unlimited",
         permonth: "£7",
         contlength: "1 Month"
-        
+
       },
       {
         name: "EE Sim Card",
@@ -624,7 +624,7 @@ module PagesHelper
         texts: "Unlimited",
         permonth: "£6",
         contlength: "12 Month"
-        
+
       }
     ]
   end

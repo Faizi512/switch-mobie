@@ -302,11 +302,7 @@ class Common {
   successUrl(){
     var CI = this;
     setTimeout(function(){
-      if( CI.isBadCustomer(CI.getUrlParameter('keyword')) ||  (CI.getUrlParameter('bc') == "yes")){
-        window.location = "https://www.megamobiledeals.com/no-credit-check-deals/?s1=" + CI.getSource() + "&s2=" + CI.getC1();
-      }else{
-        window.location = CI.details.success_url
-      }
+      window.location = CI.details.success_url
     }, 1000)
   }
 
