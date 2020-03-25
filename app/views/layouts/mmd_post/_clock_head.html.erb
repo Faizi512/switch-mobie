@@ -1,4 +1,4 @@
-<% parameters = "&s2=#{params[:c1]}&s1=#{params[:source]}" %>
+<% parameters = "&s2=#{params[:c1]}&s1=#{params[:source] || JSON(@details)["source"]}" %>
 <section class="mb-md-3 banner-div">
     <div class="container m-md-0">
       <a class="submit-mmd-form text-decoration-none text-reset" href='<%= "https://c1icktree.co.uk/go/?id=90#{parameters}" %>'>

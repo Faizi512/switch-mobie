@@ -1,5 +1,5 @@
 <!--Month deal section-->
-<% parameters = "&s2=#{params[:c1]}&s1=#{params[:source]}" %>
+<% parameters = "&s2=#{params[:c1]}&s1=#{params[:source] || JSON(@details)["source"]}" %>
 <section class="mb-3">
   <div class="container">
     <div class="row">

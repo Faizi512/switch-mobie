@@ -1,5 +1,5 @@
 <!-- Deals list section -->
-<% parameters = "&s2=#{params[:c1]}&s1=#{params[:source]}" %>
+<% parameters = "&s2=#{params[:c1]}&s1=#{params[:source] || JSON(@details)["source"]}" %>
 <section  class="bg-light py-5">
   <% @phoneshome.each do |phone| %>
     <div class="container  deals-list mb-3 open-form " data-url="<%= phone[:url]+parameters %>">
@@ -18,7 +18,7 @@
                     </span>
                     <hr>
                     <small class="text-muted">Deposit from</small>
-                      <span class="bolder d-block mt-2"><%= phone[:deposit] %> 
+                      <span class="bolder d-block mt-2"><%= phone[:deposit] %>
                     </span>
                   </div>
                 </div>
@@ -49,10 +49,10 @@
                    <hr>
                   <div class="row actions">
                     <div class="col-md-6">
-                      <button class="btn btn-primary o-btn open-form w-100 font-weight-bold">Apply now - it's free!</button> 
+                      <button class="btn btn-primary o-btn open-form w-100 font-weight-bold">Apply now - it's free!</button>
                     </div>
                     <div class="col-md-6">
-                      <button class="btn btn-primary open-form w-100 font-weight-bold">More Info</button> 
+                      <button class="btn btn-primary open-form w-100 font-weight-bold">More Info</button>
                     </div>
                   </div>
                 </div>
@@ -64,7 +64,7 @@
                     </span>
                     <hr>
                     <small class="text-muted">Deposit from</small>
-                      <span class="bolder d-block mt-2">£0 
+                      <span class="bolder d-block mt-2">£0
                     </span>
                   </div>
                 </div>

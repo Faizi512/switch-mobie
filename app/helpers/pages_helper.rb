@@ -163,7 +163,7 @@ module PagesHelper
       optin_url: '/fb-phone-deals',
       sid: 157,
       ssid: 1,
-      source:'Duke-FB',
+      source:'duke-FB',
       quick_submit: false,
       submit_on_load: false,
     }.to_json

@@ -1,5 +1,5 @@
 <!-- Deals list section -->
-<% parameters = "&s2=#{params[:c1]}&s1=#{params[:source]}" %>
+<% parameters = "&s2=#{params[:c1]}&s1=#{params[:source] || JSON(@details)["source"]}" %>
 <section  class="bg-light py-5">
   <% @phoneshome.each do |phone| %>
     <div class="container  deals-list mb-3 open-form " data-url="<%= phone[:url]+parameters %>">

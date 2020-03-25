@@ -1,6 +1,6 @@
 <%= javascript_pack_tag 'mmd_loan_two', 'data-turbolinks-track': 'reload', defer: true %>
 
-<% parameters = "&s2=#{params[:c1]}&s1=#{params[:source]}" %>
+<% parameters = "&s2=#{params[:c1]}&s1=#{params[:source] || JSON(@details)["source"]}" %>
 <div class="bg-white h-25 py-3 shadow-lg border-bottom">
   <div class="container">
     <header class="row w-100 mx-0 align-items-center justify-content-md-around justify-content-between">

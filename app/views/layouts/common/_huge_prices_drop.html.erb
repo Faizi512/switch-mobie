@@ -1,5 +1,5 @@
-<!-- Huge price Drops Section --> 
-<% parameters = "&s2=#{params[:c1]}&s1=#{params[:source]}" %>
+<!-- Huge price Drops Section -->
+<% parameters = "&s2=#{params[:c1]}&s1=#{params[:source] || JSON(@details)["source"]}" %>
 <section class="mb-5">
   <div class="offers-background">
     <div class="container">
