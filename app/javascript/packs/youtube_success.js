@@ -7,6 +7,7 @@ class YoutubeSuccess extends Common {
     this.validate("#dealform")
     this.getFormDetails('#dealform')
     this.showToolTip()
+    this.showClock()
     this.fillform()
     this.showTab(this.currentTab);
     this.openPopup()
