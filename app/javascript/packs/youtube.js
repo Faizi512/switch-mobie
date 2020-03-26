@@ -33,8 +33,10 @@ class Youtube extends Common {
       if ($('.terms-and-conditions').prop("checked") && CI.isPhone == true){
         var phoneValue = $("#phone-num").val();
         window.location = "/youtube-success/?phone1=" + phoneValue +"&source="+ CI.getSource() + "&c1=" +CI.getC1();
+      }else{
+        $('#mmd-deals').parsley().whenValidate();
       }
-    });
+    })
   }
 
   getData() {
