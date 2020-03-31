@@ -302,7 +302,7 @@ class Common {
   successUrl(){
     var CI = this;
     setTimeout(function(){
-      window.location = CI.details.success_url
+      window.location = CI.details.success_url+CI.additionalParams()
     }, 1000)
   }
 
@@ -328,6 +328,10 @@ class Common {
       },
       dataType: "json"
     })
+  }
+
+  additionalParams(){
+    return "&s1=" + this.getSource() + "&s2=" + this.getC1();
   }
 
   getC1(){

@@ -5,22 +5,15 @@ class NewMmd extends Common {
     super();
     var CI = this;
     this.getFormDetails('.mt-footer')
+    this.postData()
     this.showToolTip()
     this.showClock()
+
     $('.submit-mmd-form').click(function(event) {
-      $('.but_loader').show()
-      event.preventDefault();
-      if (CI.submtForm == false) {
-        CI.submtForm = true;
-        CI.postData()
-      }
+      window.location = CI.details.success_url+CI.additionalParams();
     });
   }
   successUrl(){
-    var CI = this;
-    setTimeout(function(){
-      window.location = CI.details.success_url+"/?s1=" + CI.getSource() + "&s2=" + CI.getC1();
-    }, 1000)
   }
 }
 

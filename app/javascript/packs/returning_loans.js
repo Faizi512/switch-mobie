@@ -37,12 +37,5 @@ class ReturningLoans extends Common {
       })
     })
   }
-
-  successUrl(){
-    var CI = this;
-    setTimeout(function(){
-      window.location = CI.details.success_url+"/?s1=" + CI.getSource() + "&s2=" + CI.getC1();
-    }, 1000)
-  }
 }
 export default new ReturningLoans();

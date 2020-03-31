@@ -23,7 +23,6 @@ class YoutubeSuccess extends Common {
   openPopup(){
     var CI = this;
     $('.open-popup').click(function(event) {
-      CI.details.success_url = event.currentTarget.href
       event.preventDefault()
       $('#deal-form-modal').modal('show')
     });

@@ -1,5 +1,4 @@
 <!-- Below header section Flipclock -->
-<% parameters = "&s2=#{params[:c1]}&s1=#{params[:source] || JSON(@details)["source"]}" %>
 <section class="mb-3">
   <div class="below-header">
     <div class="container">
@@ -18,7 +17,7 @@
             <%= image_tag("phones-header.png", class: "pl-3" ) %>
           </div>
         </div>
-        <div class="col-md-6 col-sm-12 open-form" data-url="<%= "https://c1icktree.co.uk/go/?id=90" + parameters %>">
+        <div class="col-md-6 col-sm-12 open-form" data-url="https://c1icktree.co.uk/go/?id=90">
           <div class="card card-body header-deal border-0 px-0">
             <div class="row mx-0 justify-content-center">
               <%= image_tag("phone/iphone11.png", class: "image-phone-clock pl-3 pt-4" ) %>

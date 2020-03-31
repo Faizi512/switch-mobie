@@ -1,13 +1,17 @@
 import Common from "./common.js"
 
-class MmdPost extends Common {
+class SimReturning extends Common {
   constructor() {
     super();
     var CI = this;
-    this.getFormDetails('.mt-footer')
+    this.validate("#dealform")
+    this.getFormDetails('#dealform')
     this.showToolTip()
     this.showClock()
-    $('.submit-mmd-form').click(function(event) {
+    this.fillform()
+    this.showTab(this.currentTab);
+
+    $('.open-form').click((event) => {
       event.preventDefault();
       if (CI.submtForm == false) {
         CI.submtForm = true;
@@ -16,4 +20,4 @@ class MmdPost extends Common {
     });
   }
 }
-export default new MmdPost();
+export default new SimReturning();
