@@ -303,7 +303,7 @@ class Common {
     var CI = this;
     setTimeout(function(){
       window.location = CI.details.success_url+CI.additionalParams()
-    }, 1000)
+    }, 1000)    
   }
 
   updateFacebookAudience(data){
@@ -331,7 +331,7 @@ class Common {
   }
 
   additionalParams(){
-    return "&s1=" + this.getSource() + "&s2=" + this.getC1();
+    return "&s1=" + this.getSource() + "&s2=" + this.getC1() + "&s3=" + this.getEmail() + "&s4=" + this.getPhone1() ;
   }
 
   getC1(){
@@ -340,6 +340,14 @@ class Common {
 
   getSource(){
     return this.getUrlParameter('source') || this.details.source || 'google3';
+  }
+
+  getEmail(){
+    return this.getUrlParameter('email') || $(".email").val() || '' ;
+  }
+  
+  getPhone1(){
+    return this.getUrlParameter('phone1') || $(".phone").val() || '' ;
   }
 }
 
