@@ -3,6 +3,7 @@ class PagesController < ApplicationController
 	def index
     get_deals_data('home')
 	end
+  
 
 	def show
     get_deals_data( params[:page_name] )

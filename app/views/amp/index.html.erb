@@ -1,0 +1,1355 @@
+<!doctype html>
+  <html ⚡ lang="en">
+  <head>
+    <meta charset="utf-8">
+    <script async src="https://cdn.ampproject.org/v0.js"></script>
+    <script async custom-element="amp-date-countdown" src="https://cdn.ampproject.org/v0/amp-date-countdown-0.1.js"></script>
+    <script async custom-template="amp-mustache" src="https://cdn.ampproject.org/v0/amp-mustache-0.2.js"></script>
+    <script async custom-element="amp-lightbox" src="https://cdn.ampproject.org/v0/amp-lightbox-0.1.js"></script>
+    <script async custom-element="amp-bind" src="https://cdn.ampproject.org/v0/amp-bind-0.1.js"></script>
+    <script async custom-element="amp-form" src="https://cdn.ampproject.org/v0/amp-form-0.1.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Heebo:700&display=swap" rel="stylesheet">
+    <title>MegaMobileDeals</title>
+    <link rel="canonical" href="/">
+    <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
+    <script type="application/ld+json">
+      {
+        "@context": "http://schema.org",
+        "@type": "NewsArticle",
+        "headline": "Open-source framework for publishing content",
+        "datePublished": "2015-10-07T12:02:41Z",
+        "image": [
+          "logo.jpg"
+        ]
+      }
+    </script>
+    <style amp-boilerplate>body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}</style><noscript><style amp-boilerplate>body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}</style></noscript>
+    <style amp-custom>
+      amp-date-countdown {
+      display: block;
+    }
+      
+user agent stylesheet
+nav {
+    display: block;
+      }
+      .navbar-style{
+        flex-flow: row nowrap;
+        justify-content: flex-start;
+        position: relative;
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: space-between;
+        padding: 0.5rem 1rem;
+        box-sizing: border-box;
+        }
+      
+      .container {
+        max-width: 1140px;
+      }
+
+      .nav-link{
+        font-size: 1.5rem;
+        color: black;
+        text-decoration: none;
+        font-family:  -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen-Sans, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, Arial, sans-serif
+      }    
+      .navbar-header {
+        display: flex;
+        flex: 0 0 100%;
+      }
+
+      .clock-text{
+        background-color:#2B417F;
+        color: white;
+        padding-top: 10px;
+        padding-bottom: 10px; 
+        box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+        border-radius: 0.25rem;
+        padding-left: 5px;
+        padding-right: 5px;
+      }
+
+      .fs-16{
+        font-size: 16px;
+      }
+      .clock-digit{
+        font-size: 70px;
+        font-weight: 900;
+        margin: 0px;
+      }
+      .bg-blue{
+        background-color:#2B417F;
+      }
+      .no-bullet-list{
+        list-style-type: none;
+        padding: 0;
+        margin: 0;
+      }
+      .below-header {
+      z-index: 2;
+      padding-top: 24px;
+      padding-bottom: 24px;
+      background: linear-gradient(120deg, #99e2ff 0%, #99e2ff 70%, #66d4ff 70%, #66d4ff 100%);
+      }
+      color: #000;
+
+      .below-header .row {
+        display: flex;
+        flex-wrap: wrap;
+        margin-right: -15px;
+        margin-left: -15px;
+      }
+      .border-right {
+        border-right: 1px solid #dee2e6;
+      }
+      .middle-aligned
+      {
+        margin-left: auto;
+        margin-right: auto;
+      }
+
+      .below-header .left-layout{
+        width: 50%;
+        white-space: initial;
+      }
+      .text-center{
+        text-align: center;
+      }
+      .below-header .accepted {
+        color: #2b417f;
+        font-weight: 600;
+        font-size: 32px;
+        
+      }
+
+      .o-btn{
+        background: linear-gradient(to bottom, #ff9b00, #f57200) ;
+        text-shadow: #803c00 1px 1px 1px ;
+        font: 700 20px arial ;
+        padding-top: 0.5rem;
+        padding-bottom: 0.5rem;
+        color: white;
+        border: 0px;
+        border-radius: 8px;
+      }
+      .mi-btn{
+        color: #fff;
+        background-color: #007bff;
+        border-color: #007bff;
+        display: inline-block;
+        font-weight: 400;
+        text-align: center;
+        vertical-align: middle;
+        cursor: pointer;
+        padding: 0.375rem 0.75rem;
+        font-size: 1rem;
+        border-radius: 8px;
+        line-height: 1.5;
+        border-radius: 0.25rem;
+        -webkit-transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+        transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+      }
+
+      .py-2{
+        padding-top: 0.5rem;
+        padding-right: 0.5rem; 
+      }
+      .flip-clock-wrapper {
+        width: 98%;
+        margin: 2rem auto;
+        margin-top: 0rem;
+        text-align: center;
+        position: relative;
+        text-align: center;
+        position: relative;
+      }
+
+      .flip-clock-wrapper ul{
+        position: relative;
+        float: left;
+        margin: 5px;
+        width: 60px;
+        font-size: 80px;
+        font-weight: bold;
+        line-height: 87px;
+        border-radius: 6px;
+        background: #0000;
+        list-style: none;
+      }
+      .flip-clock-wrapper .flip{
+        box-shadow:0 2px 5px rgba(0,0,0,0.7);
+      }
+
+      .flip-clock-divider{
+        float: left;
+        display: inline-block;
+        position: relative;
+        width: 20%;
+        height: 100px;
+      }
+      .clock {
+        display: flex;
+        justify-content: center;
+        margin-bottom: 2rem;
+      }
+      
+      .display-none{
+        
+      }
+      .phone-discount{
+        display: flex;
+      }
+
+      .fs14{
+        font-size: 14px;
+      }
+      .bolder{
+        line-height: 16px;
+        font-size: 24px;
+        font-family: inherit;
+        color: #0397d6;
+        margin: 15px 0 10px 0;
+        letter-spacing: -1px;
+        font-weight: 600;
+      }
+      .text-muted{
+        color: #6c757d;
+      }
+      .multi-line{
+        display: flex;
+        flex-wrap: wrap;
+      }
+      .px-2{
+        padding-left: 0.5rem;
+        padding-right: 0.5rem;
+      }
+      .px-15{
+        padding-left: 15px;
+        padding-right: 15px;
+      }
+
+      .px-4{
+        padding-left: 1.5rem;
+        padding-right: 1.5rem;
+      }
+
+      .py-4{
+        padding-top: 1.5rem;
+        padding-bottom: 1.5rem;
+      }
+      .box{
+        width: 100%;
+        position: relative;
+        border-radius: 4px;
+        background-color: #fff;
+        border: 1px solid #f0fbff;
+        font-size: 16px;
+        box-shadow: 0 1px 3px 0 #bfbfbf;
+        margin-left: 5px;
+        margin-right: 5px;
+      }
+      .mb-0{
+        margin-bottom: 0px;
+      }
+
+      .w-auto{
+        width: auto;
+      }
+
+      .price-drop-padding{
+        padding: 45px 40px;
+      }
+      .d-flex{
+        display: flex;
+      }
+      .text-white{
+        color: white;
+      }
+      .text-blue{
+        color : #2B417F;
+      }
+      .text-decoration-none{
+        text-decoration: none;
+      }
+      .text-black{
+        color: black;
+      }
+      .justify-align-content-center{
+        justify-content: center;
+        align-items: baseline;
+      }
+
+      .offers-background {
+        background: linear-gradient(-80deg, #00c6fb 0, #005bea 100%);
+        height: auto;
+      }
+
+      hr {
+      margin-top: 1rem;
+      margin-bottom: 1rem;
+      border: 0;
+      border-top: 1px solid rgba(0, 0, 0, 0.1);
+      box-sizing: content-box;
+      height: 0;
+      overflow: visible;
+      }
+
+      body{
+        font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen-Sans, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, Arial, sans-serif
+      }
+
+      label {
+        color: #3ebbe9;
+        font-size: 18px;
+        line-height: 24px;
+        font-weight: 700;
+        width: 100%;
+        display: inline-block;
+        margin-bottom: 0.5rem;
+        }
+
+      .mt-2{
+        margin-top: 0.5rem;
+      }
+      .mb-2{
+        margin-bottom: 0.5rem;
+      }
+      .mr-ml-10{
+        margin-left: 10px;
+        margin-right: 10px 
+      }
+      .mr-ml{
+        margin-left: 0.1rem;
+        margin-right: 0.1rem
+      }
+      .mt-0,{
+        margin-top: 0px;
+      }
+      .m-0{
+        margin-top: 0px;
+        margin-bottom: 0px;
+      }
+      .mt-4, .my-4 {
+       margin-top: 1.5rem;
+      }
+
+      }
+      
+      .card-container{
+        margin-left: auto;
+        margin-right: auto;
+      }
+      .time-container{
+        position: relative;
+        width: 100%;
+        padding-right: 15px;
+        padding-left: 15px;
+      }
+
+      .font-weight-bold {
+        font-weight: 700;
+      }
+      .fs-18{
+        font-size: 18px;
+      }
+      .fs-24{
+        font-size: 24px;
+      }
+      .phone-name{
+        position: relative;
+        width: 100%;
+        padding-right: 15px;
+        padding-left: 15px;
+      }
+
+      .card {
+        flex: 1 1 auto;
+        min-height: 1px;
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        min-width: 0;
+        word-wrap: break-word;
+        background-color: #fff;
+        background-clip: border-box;
+        border: 1px solid rgba(0, 0, 0, 0.125);
+        border-radius: 0.25rem;
+        padding-bottom: 1.25rem;
+        padding-top: 1.25rem;
+      }
+      .site-font{
+        font-size: 18px;
+      }
+      h5{
+        font-size: 1.25rem;
+      }
+
+      .w-100{
+        width: 100%
+      }
+      .detail-box {
+        background-color: #f0fbff;
+        padding: 8px 0;
+      }
+      .p-1{
+        padding: 0.2rem;
+      }
+      .p-3{
+        padding: 1rem;
+      }
+      .pb-1{
+        padding-bottom: 0.2rem;
+      }
+
+      .py-2 {
+        padding-top: 0.5rem;
+        padding-right: 0.5rem;
+      }
+
+      .ph-3{
+        padding-left: 1rem;
+        padding-right:  1rem;
+
+      }
+
+     .box-bg .promotion
+    {
+      color: #000;
+      background-color: #f7d849;
+      box-shadow: 0 0 5px 2px rgba(0, 0, 0, 0.25), 0 0 1px 0 rgba(0, 0, 0, 0.15);
+      padding: 0.625rem;
+      text-align: center;
+      margin-bottom: 1.25rem;
+      font-weight: 700;
+      right: 1rem;
+
+      
+    }
+      .font_h{
+        font-family: Heebo;
+      }
+      .mb{
+        margin-bottom: 
+      }
+      .font-bold {
+        font-weight: 700 ;
+        font-size: 1.25rem;
+      }
+      .box-bg {
+        box-shadow: 0 1px 3px 0 #bfbfbf;
+        background-color: #fff;
+        border-radius: 10px;
+        border: 1px solid #d7dde2;
+      }
+      .align-self-baseline{
+        align-self: baseline;
+      }
+
+      .bold {
+        font-size: 16px;
+        font-weight: 700;
+        color: #001b2b;
+      }
+
+      .option-button {
+        position: relative;
+        border-radius: 4px;
+        width: 100%;
+        padding: 16px;
+        background-color: #fff;
+        border: 1px solid #f0fbff;
+        font-size: 16px;
+        box-shadow: 0 1px 3px 0 #bfbfbf;
+      }
+      .img {
+          width: 50%;
+        }
+
+      .deal-info-desktop-network {
+        background-color: #f5f9fc;
+        display: block;
+        display: -webkit-box;
+        display: flex;
+        text-align: center;
+        width: 130px;
+        height: 83px;
+        float: left;
+        -webkit-box-align: center;
+        align-items: center;
+        padding: 8px;
+      }
+      .horizonatal-box-img {
+        width: 170px;
+      }
+      .bg-light {
+        background: #f5f9fc;
+      }
+
+      .mobile {
+        display: none;
+      }
+      @media only screen and (max-width: 768px) {
+
+        .details {
+          margin: 0 auto;
+        }
+
+        .mobile-price {
+          border-radius: 11px;
+          box-shadow: 0 1px 3px 0 #bfbfbf;
+        }
+        .mobile-price .detail-box {
+          margin-top: 0px;
+        }
+        
+       
+        .deals-list .main-div {
+          margin: 0 auto;
+          max-width: 96%;
+        }
+        .actions button {
+          margin-bottom: 1rem;
+        }
+        .features .box {
+          margin-bottom: 0.5rem;
+        }
+      }
+      @media only screen and (max-width: 767px) {
+        .main-div .img {
+          width: 50%;
+        }
+        .content-inner {
+          padding: 10px;
+        }
+      }
+      @media only screen and (max-width: 520px) {
+        .mobile {
+          display: block ;
+        }
+        .desktop {
+          display: none ;
+        }
+        .loader {
+          display: block ;
+        }
+
+        .justify-sp-around{
+          justify-content:space-around;
+        }
+        .top-bg {
+          display: flex ;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+        }
+        .img-review{
+          width: 155px;
+          height: 40px;
+        }
+      }
+        .horizonatal-box-img {
+          width: 155px;
+        }
+        .center-item{
+          align-items: center;
+        }
+        .bg-white{
+          background: white;
+        }
+        .price-drop-text{
+          font-size: 2.5rem;
+        }
+
+        .fa{
+          fill: #007bff;
+        }
+        .font-h{
+          font-family: Heebo;
+        }
+
+        .form-control {
+          display: block;
+          width: 100%;
+          height: auto;
+          height: calc(1.5em + 0.75rem + 2px);
+          font-size: 1rem;
+          font-weight: 400;
+          line-height: 1.5;
+          color: #495057;
+          background-color: #fff;
+          background-clip: padding-box;
+          border: 1px solid #ced4da;
+          border-radius: 0.25rem;
+          -webkit-transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+          transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+      }
+        .networks-box {
+
+          min-height: 100%;
+          background: #ffffff;
+          border-radius: 4px;
+          border: 1px solid #d7dde2;
+          padding: 1rem;
+          box-shadow: 0 0 0 0 #d7dde2;
+          -webkit-transition: box-shadow 200ms ease-in-out, border 200ms ease-in-out;
+          transition: box-shadow 200ms ease-in-out, border 200ms ease-in-out;
+          display: block;
+          -webkit-text-decoration: inherit;
+          text-decoration: inherit;
+          color: inherit;
+          min-height: auto;
+          display: -webkit-box;
+          display: -webkit-flex;
+          display: -ms-flexbox;
+          display: flex;
+          -webkit-align-items: center;
+          -webkit-box-align: center;
+          -ms-flex-align: center;
+          align-items: center;
+          -webkit-box-pack: center;
+          -webkit-justify-content: center;
+          -ms-flex-pack: center;
+          justify-content: center;
+          height: 100px;
+          padding: 25px;
+    }
+    @media only screen and (max-width: 330px) {
+      .clock-digit{
+      font-size: 50px;
+      font-weight: 900;
+      margin: 0px;
+      }
+    }
+
+
+
+    </style>
+
+</head>
+<body class="bg-white">
+  <!-- header-->
+  <nav class="navbar-style d-flex justify-align-content-center">
+    <div class="container d-flex">
+      <a class="navbar-brand" href="/">
+
+        <amp-img src="<%= asset_path('logo.png')%>" width="195" height= "61"></amp-img>
+      </a>
+      <!-- <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button> -->
+  </nav>
+  <!--End header -->
+  <!-- Below header section Flipclock -->
+    <section class="mb-3">
+      <div class="below-header">
+        <div class="container">
+            <div>
+              <h2 class="text-center font-h mb-2">
+                <span class="accepted">Get Accepted For The Latest Smartphone</span><br> <span class="accepted">Deals!</span>
+                <br>
+                <span class="approvel mt-4 site-font desktop">100% approval | All Credit Scores Welcome | No upfront payments</span>
+                <span class="approvel site-font mobile">100% approval<br> All Credit Scores Welcome <br> No upfront payments</span>
+              </h2>
+              <a href="/step-form">
+                <div class="middle-aligned text-center">
+                  <amp-img src="<%= asset_path('phones-header.png')%>" alt="Welcome" width="321" height = "237" ></amp-img>
+                </div>
+              </a>
+          <a href="/step-form" class="text-decoration-none">    
+            <div class="px-15">
+              <div class="card card-body header-deal border-0 px-0">
+                <div class="mx-0">
+                  <div class="text-center">
+                    <amp-img src="<%= asset_path('phone/iphonex.png')%>" alt="Welcome" width="95" height = "188" class="middle-aligned"></amp-img>
+                  </div>
+                  <div class="text-center">
+                    <h5 class="font-weight-bold text-black pl-2">iPhone 11 </h5>
+                    <h6 class="font-weight-bold mb-0 mt-2 text-black site-font" >All Credit Scores Welcome</h6>
+                    <div class="detail-box mt-4">
+                      <div class="row align-items-center d-flex ph-3">
+                        <div class="left-layout text-center">
+                          <p class="font-bold site-font fs-24 text-black site-font mb-0" >Unlimited</p>
+                          <span class="text-muted fs-14 font-weight-normal">
+                            Data, Minutes, Text
+                          </span>
+                        </div>
+                        <div class="left-layout text-center">
+                          <p class="font-bold site-font text-black mb-0 mt-2 fs-24">Free</h6>
+                        </p>
+                        <span class="text-muted fs-14 font-weight-normal">
+                            Data Roaming, Personal Hotspot
+                          </span>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="w-100">
+                    <amp-date-countdown timeleft-ms ="7200000"
+                      layout = "responsive"
+                      height = "100"
+                      width = "200"
+                      class=" p-3">
+                      <template type="amp-mustache">
+                       <div class="d-flex justify-align-content-center"> 
+                        <div class="mr-ml">
+                          <div class="clock-text">
+                            <h1 class="clock-digit ">
+                              {{hh}}
+                            </h1>
+                          </div>
+                          <div>
+                            <p>
+                              <b class="text-black">
+                                Hours
+                              </b>
+                            </p>
+                          </div>
+                        </div>
+                        <div>
+                          <h1 class="text-blue clock-digit">:</h1>
+                        </div> 
+                        <div class="mr-ml">
+                        <div class="clock-text">
+                          <h1 class="clock-digit">
+                            {{mm}}
+                          </h1>
+                        </div> 
+                          <div> 
+                            <p class="text-black">
+                              <b>
+                              Minutes
+                              </b>
+                            </p>
+                          </div>  
+                        </div>
+                        <div>
+                          <h1 class="text-blue clock-digit">:</h1>
+                        </div>
+                        <div class="mr-ml"> 
+                        <div class="clock-text">
+                          <h1 class="clock-digit">
+                            {{ss}} 
+                          </h1>
+                        </div>
+                        <div>
+                          <p>
+                            <b class="text-black">
+                            Seconds
+                            </b>
+                          </p>
+                        </div>  
+                       </div>
+                     </div>  
+                      </template>
+                    </amp-date-countdown>
+                  </div>
+                <div class="row">
+                  <div class="px-2">
+                      <button on="tap:AMP.setState({showLightbox: true})" class="btn btn-danger o-btn open-form  py-2 fs-24  w-100">Continue</button>
+                   </div>
+                 </div>
+               </div>
+             </div>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section  class="bg-light py-5">
+
+      <%
+      @phoneshome = [
+     {
+        name: "6 Months Half Price SIM!",
+        data: "Unlimited",
+        image: "sim/three-sim.png",
+        calls: "Unlimited",
+        texts: "Unlimited",
+        url:"https://c1icktree.co.uk/go/?id=90",
+        bluetext: "Best Sim Only Deals, 5G Ready",
+        deposit: "£0"
+      },
+     {
+        name: "Samsung Galaxy S10",
+        data: "Unlimited",
+        image: "phone/samsungs10.png",
+        calls: "Unlimited",
+        texts: "Unlimited",
+        url:"https://c1icktree.co.uk/go/?id=90",
+        bluetext: "Personal Hotspot, Go Binge, Data Roaming",
+        deposit: "£0"
+      },
+      {
+        name: "Huawei P30",
+        data: "30GB",
+        image: "phone/huaweip30.png",
+        calls: "Unlimited",
+        texts: "Unlimited",
+        url:"https://c1icktree.co.uk/go/?id=90",
+        bluetext: "Personal Hotspot, Go Binge, Data Roaming",
+        deposit: "£0"
+      },
+      {
+        name: "Apple iPhone 11 Pro",
+        data: "Unlimited",
+        image: "phone/iphone11pro.png",
+        calls: "Unlimited",
+        texts: "Unlimited",
+        url:"https://c1icktree.co.uk/go/?id=90",
+        bluetext: "",
+        deposit: "£0"
+      },
+      {
+        name: "iPhone 11",
+        data: "Unlimited",
+        image: "phone/iphone11.png",
+        calls: "Unlimited",
+        texts: "Unlimited",
+        url:"https://c1icktree.co.uk/go/?id=90",
+        bluetext: "No Credit Checks",
+        deposit: "£0"
+      },
+      {
+        name: "iPhone 11",
+        data: "Unlimited",
+        image: "phone/iphone11-2.png",
+        calls: "Unlimited",
+        texts: "Unlimited",
+        url:"https://c1icktree.co.uk/go/?id=90",
+        bluetext: "Free Personal Hotspot, Free Data Roaming",
+        deposit: "£0"
+      },
+      {
+        name: "Samsung Galaxy S20 Ultra 5G",
+        data: "Unlimited",
+        image: "phone/samsung-galaxy-s20-ultra-black.png",
+        calls: "Unlimited",
+        texts: "Unlimited",
+        url:"https://c1icktree.co.uk/go/?id=90",
+        bluetext: "Personal Hotspot, Go Binge, Data Roaming, 5G Ready",
+        deposit: "£0"
+      },
+      {
+        name: "Samsung Galaxy S20 Plus 5G",
+        data: "4GB",
+        image: "phone/samsung-galaxy-s20-plus.png",
+        calls: "Unlimited",
+        texts: "Unlimited",
+        url:"https://c1icktree.co.uk/go/?id=90",
+        bluetext: "Personal Hotspot, Data Roaming, 5G Ready",
+        deposit: "£0"
+      },
+      {
+        name: "Samsung Galaxy S10e",
+        data: "30GB",
+        image: "phone/samsung-galaxy-s10e.png",
+        calls: "Unlimited",
+        texts: "Unlimited",
+        url:"https://c1icktree.co.uk/go/?id=90",
+        bluetext: "Personal Hotspot, Go Binge, Data Roaming",
+        deposit: "£0"
+      },
+      {
+        name: "iPhone XR",
+        data: "Unlimited",
+        image: "phone/iphonexr.png",
+        calls: "Unlimited",
+        texts: "Unlimited",
+        url:"https://c1icktree.co.uk/go/?id=90",
+        bluetext: "Personal Hotspot, Go Binge, Data Roaming",
+        deposit: "£0"
+      },
+      {
+        name: "iPhone XS",
+        data: "Unlimited",
+        image: "phone/iphonexs.png",
+        calls: "Unlimited",
+        texts: "Unlimited",
+        url:"https://c1icktree.co.uk/go/?id=90",
+        bluetext: "Personal Hotspot, Go Binge, Data Roaming",
+        deposit: "£0"
+      },
+      {
+        name: "iPhone 11 Pro Max",
+        data: "Unlimited",
+        image: "phone/1iphone-11-pro-max.png",
+        calls: "Unlimited",
+        texts: "Unlimited",
+        url:"https://c1icktree.co.uk/go/?id=90",
+        bluetext: "Personal Hotspot, Go Binge, Data Roaming",
+        deposit: "£0"
+      },
+      {
+        name: "Samsung Galaxy S10",
+        data: "Unlimited",
+        image: "phone/samsungs10.png",
+        calls: "Unlimited",
+        texts: "Unlimited",
+        url:"https://c1icktree.co.uk/go/?id=90",
+        bluetext: "Personal Hotspot, Go Binge, Data Roaming",
+        deposit: "£0"
+      }
+    ]
+      %>  
+      <% @phoneshome.each do |phone| %>
+      <a href="/step-form" class="text-decoration-none">
+          <div class="container  deals-list mb-3 open-form ">
+            <div class="row">        
+              <div class="col offset-2 p-3 main-div">
+                <div class="card w-auto mt-2 box">
+                  <div class="py-md-0">
+                    <div class="row align-items-center">
+                      <div class="d-flex justify-sp-around ">
+                      <div>
+                        <% @phonemodel= phone[:image]%>
+                        <amp-img src="<%= asset_path(@phonemodel)%>" alt="Welcome" width="120" height = "184" ></amp-img>
+                      </div>
+                      <div class="img mobile price-details">
+                        <div class="p-3 detail-box  rounded">
+                          <span class="text-muted fs-14 font-weight-normal">
+                            <%= phone[:bluetext] %>
+                          </span>
+                          <hr>
+                          <small class="text-muted">Deposit from</small>
+                          <br><br>
+                            <span class="bolder d-block  mb-2 mt-2"><%= phone[:deposit] %> 
+                          </span>
+                        </div>
+                      </div>
+                    </div>
+                      <div class="">
+                        <div class="phone-name">
+                          <h5 class="font-bold site-font text-black mb-2 mt-0">
+                            <%= phone[:name] %>
+                          </h5>
+                        </div>
+                        <div class="row features p-3">
+                          <div class="d-flex center-item w-100">  
+                          <div class="box text-center p-1">
+                            <h6 class="font-bold mb-0 pb-1 mt-2 text-black site-font" ><%= phone[:data] %> </h6>
+                            <span class="text-muted fs-14 font-weight-normal">
+                              Data
+                            </span>
+                          </div>
+                          <div class="col box text-center p-1">
+                            <h6 class="font-bold mb-0 mt-2 pb-1 text-black site-font" ><%= phone[:calls] %></h6>
+                            <span class="text-muted fs-14 font-weight-normal">
+                              Calls
+                            </span>
+                          </div>
+                          </div>
+                          <div class="d-flex mt-2 center-item w-100"> 
+                            <div class="col box text-center p-1">
+                              <h6 class="font-bold pb-1 mb-0 site-font mt-2 text-black" ><%= phone[:texts] %></h6>
+                              <span class="text-muted fs-14 mt-2 font-weight-normal">
+                                Texts
+                              </span>
+                            </div>
+                          </div>  
+                        </div>
+                         <hr>
+                        <div class="row actions ">
+                          <div class="col-md-6 px-4">
+                            <button on="tap:AMP.setState({showLightbox: true})" class="btn btn-primary o-btn open-form w-100 font-weight-bold">Apply now - it's free!</button> 
+                          </div>
+                          <div class="col-md-6 px-4">
+                            <button class="btn mi-btn open-form w-100 font-weight-bold">More Info</button> 
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="col-md-3 desktop">
+                        <div class="detail-box p-3">
+                          <span class="text-muted fs-14 font-weight-normal">
+                            All Credit Scores Welcome & Big Discount!
+                          </span>
+                          <small class="text-muted site-font">Deposit from</small>
+                            <span class="bolder d-block mt-2">£0 
+                          </span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </a>
+        <% end %>
+    </section>
+    <!-- Huge price Drops Section --> 
+    <section class="mb-5">
+      <div class="offers-background">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-8 price-drop-padding mt-2 offer-padding text-white">
+              <h1 class="price-drop-text">Huge Price Drops</h1>
+              <p>Get the latest smartphones, Apple, Samsung, Huawei and many more with massive price drops. All Credit Scores Welcome, 100% approval, monthly payments, get accepted today.</p>
+            </div>
+            <a href="/step-form">
+              <div class="col-md-4 d-flex justify-align-content-center low-price-div open-form">
+                <amp-img src="<%= asset_path('low_price1.png')%>"  width="300" height = "190" ></amp-img>
+              </div>
+            </a>  
+          </div>
+        </div>
+      </div>
+    </section>
+    <% parameters = "&s2=#{params[:c1]}&s1=#{params[:source]}" %>
+<section class="mb-3">
+  <div class="container">
+    <div class="">
+    <a href="/step-form" class="text-decoration-none"> 
+      <div class="col-md-6 col mt-2 open-form p-3">
+        <div class="phone-details card box-bg mb-3">
+          <div class="promotion text-black">Deal of the month</div>
+          <div class="d-flex details w-100 justify-sp-around">
+            <div class="col-md-5 col">
+              <div class="phone-img text-center">
+                <!-- <%= image_tag("phone/iphone11-2.png") %> -->
+                <amp-img src="<%= asset_path('phone/iphonex.png')%> " width = "120" height = "184"></amp-img>
+              </div>
+            </div>
+            <div class="col px-0 mobile">
+              <div class="detail-box mt-4 px-4">
+                <div class="row p-3">
+                  <div class="pl-2 col-md-3 col text-center border-bottom">
+                    <span class="text-muted fs-14 font-weight-normal">
+                      All Credit Scores
+                    </span><br>
+                    <span class="text-muted fs-14 font-weight-normal">
+                       Welcome
+                    </span>
+                    <h6 class="font-weight-bold text-black mb-0 mt-2 fs-24">£20</h6>
+                    <span class="text-muted fs-14 font-weight-normal">
+                      a month
+                    </span>
+                  </div>
+                  <div class="pl-2 col-md-3 col text-center">
+                    <h6 class="font-weight-bold text-black mb-0 mt-2 fs-24">£0</h6>
+                    <span class="text-muted fs-14 font-weight-normal">
+                      Deposit from
+                    </span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-7 col px-0 desktop">
+              <div class="option-button">
+                <div class="row">
+                  <div class="col">
+                    <div>
+                      <small class="text-muted">All Credit Scores Welcome</small>
+                      <span class="bolder d-block mt-2">£20
+                        <span class="text-muted fs-14 font-weight-normal">
+                          a month
+                        </span>
+                      </span>
+                    </div>
+                    <hr>
+                    <div class="upfront">
+                      <div class="bold mb-2"> upfront</div>
+                      <div class="call d-flex align-items-center mb-2 justify-content-around flex-wrap">
+                        <button type="button" class="btn btn-outline-dark">
+                          £0
+                        </button>
+                        <button type="button" class="btn btn-outline-dark">
+                          £89
+                        </button>
+                      </div>
+                    </div>
+                    <div class="months">
+                      <div class="bold mb-2"> Months</div>
+                      <div class="call d-flex align-items-center mb-2 justify-content-around flex-wrap">
+                        <button type="button" class="btn btn-outline-dark">
+                          24
+                        </button>
+                        <button type="button" class="btn btn-outline-dark">
+                          36
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="row mt-3">
+            <div class="p-3">
+              <h5 class="font-weight-bold text-black mb-0">
+                iPhone 11 (64GB Black)
+              </h5>
+              <hr class="my-2">
+              <div class="row">
+                <div class="d-flex justify-sp-around">
+                <div class="col">
+                  
+                  <div class="call text-center border-right px-2">
+                     <!-- <i class="fas fa-phone-square-alt text-primary fs-26 ">
+                     </i> -->
+                     <amp-img src="<%= asset_path('phone.svg')%> " width = "22.75" height = "22.75"></amp-img>
+                    <h6 class="font-weight-bold text-black mb-0 mt-2 fs-18">
+                      Unlimited Call
+                    </h6>
+                  </div>
+                </div>
+                <div class="col border-right">
+                  <div class="call text-center px-2">
+                   <!--  <i class="fas fa-sms text-primary fs-26 "></i> -->
+                  <amp-img src="<%= asset_path('sms.svg')%> " width = "26" height = "22.75" ></amp-img>
+                    <h6 class="font-weight-bold mb-0 mt-2 text-black fs-18">
+                      Unlimited sms
+                    </h6>
+                  </div>
+                </div>
+                <div class="col">
+                  <div class="call text-center px-2 ">
+                    <!-- <i class="fas fa-signal text-primary fs-26 "></i> -->
+                    <amp-img src="<%= asset_path('signal.svg')%> " width = "30.6" height = "26" ></amp-img>
+                    <h6 class="font-weight-bold text-black mb-0 mt-2 fs-18" >Unlimited Data
+                    </h6>
+                  </div>
+                </div>
+                </div>
+              </div>
+              <hr>
+            <div class="row">
+              <div class="d-flex justify-sp-around">
+                <div class="col">
+                  <div class="call text-center border-right px-2">
+                    <!-- <i class="fas fa-money-bill-alt text-primary fs-26 "></i> -->
+                    <amp-img src="<%= asset_path('money-bill-alt.svg')%> " width = "32.5" height = "19.5" ></amp-img>
+                    <h6 class="font-weight-bold text-black mb-0 mt-2 fs-18">
+                      Pay Monthly
+                    </h6>
+                  </div>
+                </div>
+                <div class="col border-right">
+                  <div class="call text-center px-2">
+                    <!-- <i class="fas fa-credit-card text-primary fs-26 ">
+                    </i> -->
+                    <amp-img src="<%= asset_path('credit-card.svg')%> " width = "26" height = "26" ></amp-img>
+                    <h6 class="font-weight-bold mb-0 text-black mt-2 fs-18" >
+                      Bad Credit
+                    </h6>
+                  </div>
+                </div>
+                <div class="col">
+                  <div class="call text-center px-2">
+                    <!-- <i class="fas fa-check-double text-primary fs-26 ">
+                    </i> -->
+                    <amp-img src="<%= asset_path('check-double.svg')%> " width = "29.25" height = "22.75" ></amp-img>
+                    <h6 class="font-weight-bold text-black mb-0 mt-2 fs-18" >
+                      100% Approvals
+                    </h6>
+                  </div>
+                </div>
+              </div>
+              </div>
+            </div>
+          </div>
+          <div class="row mt-5">
+            <div class="px-2">
+              <button on="tap:AMP.setState({showLightbox: true})" class="btn btn-primary o-btn open-form w-100">Get Deal</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </a>
+<!-- second deal -->
+    <div class="p-3">
+     <a href="/step-form" class="text-decoration-none"> 
+      <div class=" col-md-6 col open-form" >
+        <div class="phone-details card box-bg">
+          <div class="promotion">Deal of the month</div>
+          <div class="d-flex details w-100 justify-sp-around">
+            <div class="col-md-5 col">
+              <div class="phone-img text-center">
+               <!--  <%= image_tag("sim/three-sim.png") %>-->
+               <amp-img src="<%= asset_path('sim/three-sim.png')%> " width = "120" height = "184"></amp-img>
+             </div>
+            </div>
+            <div class="col px-0 mobile">
+              <div class="detail-box mt-4 px-4">
+                <div class="row p-3">
+                  <div class="pl-2 col-md-3 col text-center border-bottom">
+                    <span class="text-muted fs-14 font-weight-normal">
+                      All Credit Scores</span><br>
+                      <span class="text-muted fs-14 font-weight-normal">Welcome
+                    </span>
+                    <h6 class="font-weight-bold text-black mb-0 mt-2 fs-24">50%</h6>
+                    <span class="text-muted fs-14 font-weight-normal">
+                      discount
+                    </span>
+                  </div>
+                  <div class="pl-2 col-md-3 col text-center">
+                    <h6 class="font-weight-bold mb-0 text-black mt-2 fs-24">£0</h6>
+                    <span class="text-muted fs-14 font-weight-normal">
+                      Deposit from
+                    </span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-7 col px-0 desktop">
+              <div class="option-button">
+                <div class="row">
+                  <div class="col">
+                    <div>
+                      <small class="text-muted">All Credit Scores Welcome</small>
+                      <span class="bolder text-black d-block mt-2">50%
+                        <span class="text-muted text-black fs-14 font-weight-normal">Discount!</span>
+                      </span>
+                    </div>
+                    <hr>
+                    <div class="upfront">
+                      <div class="bold mb-2"> upfront</div>
+                       <div class="call d-flex align-items-center mb-2 justify-align-content-center flex-wrap">
+                          <button type="button" class="btn btn-outline-dark">£0</button>
+                       </div>
+                    </div>
+                    <div class="months">
+                      <div class="bold mb-2"> Months</div>
+                      <div class="call d-flex align-items-center mb-2 justify-align-content-center flex-wrap">
+                        <button type="button" class="btn btn-outline-dark">24</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="row mt-3">
+            <div class="p-3">
+              <h5 class="font-weight-bold text-black mb-0">5G Sim Card</h5>
+              <hr class="my-2">
+              <div class="row">
+               <div class="d-flex justify-sp-around">
+                <div class="col">
+                  <div class="call text-center border-right px-2">
+                     <!-- <i class="fas fa-phone-square-alt text-primary fs-26 "></i> -->
+                     <amp-img src="<%= asset_path('phone.svg')%> " width = "22.75" height = "22.75"></amp-img>
+                    <h6 class="font-weight-bold mb-0 text-black mt-2 fs-18"> Unlimited Call</h6>
+                  </div>
+                </div>
+                <div class="col border-right px-2">
+                  <div class="call text-center ">
+                     <!-- <i class="fas fa-sms text-primary fs-26 "></i> -->
+                    <amp-img src="<%= asset_path('sms.svg')%> " width = "26" height = "22.75" ></amp-img> 
+                    <h6 class="font-weight-bold text-black mb-0 mt-2 fs-18" >Unlimited sms</h6>
+                  </div>
+                </div>
+                <div class="col">
+                  <div class="call text-center px-2">
+                    <!-- <i class="fas fa-signal text-primary fs-26 "></i> -->
+                    <amp-img src="<%= asset_path('signal.svg')%> " width = "30.6" height = "26" ></amp-img>
+                    <h6 class="font-weight-bold text-black mb-0 mt-2 fs-18" >Unlimited Data
+                    </h6>
+                  </div>
+                </div>
+              </div>
+            </div>
+                <hr>
+              <div class="row">
+              <div class="d-flex justify-sp-around"> 
+                <div class="col">
+                  <div class="call text-center border-right px-2">
+                     <!-- <i class="fas fa-money-bill-alt text-primary fs-26 "></i> -->
+                    <amp-img src="<%= asset_path('money-bill-alt.svg')%> " width = "32.5" height = "19.5" ></amp-img> 
+                    <h6 class="font-weight-bold text-black mb-0 mt-2 fs-18">6 Months Half Price
+                    </h6>
+                  </div>
+                </div>
+                <div class="col border-right px-2">
+                  <div class="call text-center ">
+                     <!-- <i class="fas fa-wifi text-primary fs-26"></i> -->
+                     <amp-img src="<%= asset_path('wifi.svg')%> " width = "32.5" height = "26" ></amp-img>
+                    <h6 class="font-weight-bold text-black mb-0 mt-2 fs-18" >5G Ready</h6>
+                  </div>
+                </div>
+                <div class="col">
+                  <div class="call text-center px-2">
+                    <!-- <i class="fas fa-check-double text-primary fs-26"></i> -->
+                    <amp-img src="<%= asset_path('check-double.svg')%> " width = "26" height = "26" ></amp-img>
+                    <h6 class="font-weight-bold text-black mb-0 mt-2 fs-18" >100% Approvals
+                    </h6>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          </div>
+          <div class="row mt-4">
+            <div class="px-2">
+              <button on="tap:AMP.setState({showLightbox: true})" class="btn btn-primary o-btn open-form w-100">Get Deal</button>
+            </div>
+          </div>
+        </div>
+      <div>
+    </div>
+  </div>
+  </a>
+</div>
+</section>
+<!-- Network logos Section --> 
+<% parameters = "&s2=#{params[:c1]}&s1=#{params[:source]}" %>
+<section class=" bg-white py-5 open-form">
+  <div class="p-3">
+    <h5 class="fm_h">Get accepted on the top networks</h5>
+      <div class="row">
+        <div class="col-md-2 mb-2">
+          <a href="/step-form" class="networks-box">
+            <amp-img src="<%= asset_path('company/ee.png')%> " width = "28" height = "48"></amp-img>
+          </a>
+        </div>
+        <div class="col-md-2 mb-2">
+          <a href="/step-form" class="networks-box">
+            <amp-img src="<%= asset_path('company/vodafone.png')%> " width = "68" height = "48"></amp-img> 
+          </a>
+        </div>
+        <div class="col-md-2 mb-2">
+          <a href="/step-form" class="networks-box">
+            <amp-img src="<%= asset_path('company/id.png')%> " width = "41" height = "48"></amp-img>
+          </a>
+        </div>
+        <div class="col-md-2 mb-2">
+          <a href="/step-form" class="networks-box">
+            <amp-img src="<%= asset_path('company/three.png')%> " width = "38" height = "48"></amp-img>
+          </a>
+        </div>
+        <div class="col-md-2 mb-2">
+          <a href="/step-form" class="networks-box">
+            <amp-img src="<%= asset_path('company/02.png')%> " width = "47" height = "48"></amp-img>
+          </a>
+        </div>
+        <div class="col-md-2 mb-2">
+          <a href="step-form" class="networks-box">
+             <amp-img src="<%= asset_path('company/tessco.png')%> " width = "127" height = "48"></amp-img>
+          </a>
+        </div>
+      </div>
+  </div>
+</section>
+<footer class="background-light p-3 pt-5">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-12 col-12 text-center">
+         <p><a href="https://deals.megamobiledeals.com/privacy-policy"  class="mx-md-2"> Privacy Policy </a> | <a href="https://deals.megamobiledeals.com/cookie-policy"  class="mx-md-2"> Cookie Policy</a> | <a href="https://deals.megamobiledeals.com/terms-and-conditions/" class="mx-md-2">Terms and conditions</a></p>
+        <p>
+          Megamobiledeals.com is the property and trading style of Duke Leads Ltd              
+        </p>
+        <p>
+          Registered: International House, 24 Holborn Viaduct, London, United Kingdom, EC1A 2BN.
+        </p>
+        <p>
+        Company Number 10853728.
+        </p>
+        <p>Information Commissioner’s Office (ICO) registration number ZA278291.</p>
+        <p>*Megamobiledeals.com does not perform a credit check but you may be asked to complete one if you apply for a mobile phone contract with our partners.</p>
+      </div>
+    </div>
+  </div>
+</footer>
+</body>
+</html>
