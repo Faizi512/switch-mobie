@@ -28,7 +28,7 @@
       amp-date-countdown {
       display: block;
     }
-      
+
 user agent stylesheet
 nav {
     display: block;
@@ -44,7 +44,7 @@ nav {
         padding: 0.5rem 1rem;
         box-sizing: border-box;
         }
-      
+
       .container {
         max-width: 1140px;
       }
@@ -54,7 +54,7 @@ nav {
         color: black;
         text-decoration: none;
         font-family:  -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen-Sans, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, Arial, sans-serif
-      }    
+      }
       .navbar-header {
         display: flex;
         flex: 0 0 100%;
@@ -64,7 +64,7 @@ nav {
         background-color:#2B417F;
         color: white;
         padding-top: 10px;
-        padding-bottom: 10px; 
+        padding-bottom: 10px;
         box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
         border-radius: 0.25rem;
         padding-left: 5px;
@@ -121,7 +121,7 @@ nav {
         color: #2b417f;
         font-weight: 600;
         font-size: 32px;
-        
+
       }
 
       .o-btn{
@@ -154,7 +154,7 @@ nav {
 
       .py-2{
         padding-top: 0.5rem;
-        padding-right: 0.5rem; 
+        padding-right: 0.5rem;
       }
       .flip-clock-wrapper {
         width: 98%;
@@ -194,9 +194,9 @@ nav {
         justify-content: center;
         margin-bottom: 2rem;
       }
-      
+
       .display-none{
-        
+
       }
       .phone-discount{
         display: flex;
@@ -318,7 +318,7 @@ nav {
       }
       .mr-ml-10{
         margin-left: 10px;
-        margin-right: 10px 
+        margin-right: 10px
       }
       .mr-ml{
         margin-left: 0.1rem;
@@ -336,7 +336,7 @@ nav {
       }
 
       }
-      
+
       .card-container{
         margin-left: auto;
         margin-right: auto;
@@ -425,13 +425,13 @@ nav {
       font-weight: 700;
       right: 1rem;
 
-      
+
     }
       .font_h{
         font-family: Heebo;
       }
       .mb{
-        margin-bottom: 
+        margin-bottom:
       }
       .font-bold {
         font-weight: 700 ;
@@ -503,8 +503,8 @@ nav {
         .mobile-price .detail-box {
           margin-top: 0px;
         }
-        
-       
+
+
         .deals-list .main-div {
           margin: 0 auto;
           max-width: 96%;
@@ -626,9 +626,12 @@ nav {
 
 
     </style>
+  <!-- AMP Analytics --><script async custom-element="amp-analytics" src="https://cdn.ampproject.org/v0/amp-analytics-0.1.js"></script>
 
 </head>
 <body class="bg-white">
+  <amp-analytics config="https://www.googletagmanager.com/amp.json?id=GTM-N7W274Q&gtm.url=SOURCE_URL" data-credentials="include"></amp-analytics>
+
   <!-- header-->
   <nav class="navbar-style d-flex justify-align-content-center">
     <div class="container d-flex">
@@ -652,12 +655,12 @@ nav {
                 <span class="approvel mt-4 site-font desktop">100% approval | All Credit Scores Welcome | No upfront payments</span>
                 <span class="approvel site-font mobile">100% approval<br> All Credit Scores Welcome <br> No upfront payments</span>
               </h2>
-              <a href="/step-form">
+              <a href="/step-form?<%= request.fullpath.split('?')[1] %>">
                 <div class="middle-aligned text-center">
                   <amp-img src="<%= asset_path('phones-header.png')%>" alt="Welcome" width="321" height = "237" ></amp-img>
                 </div>
               </a>
-          <a href="/step-form" class="text-decoration-none">    
+          <a href="/step-form?<%= request.fullpath.split('?')[1] %>" class="text-decoration-none">
             <div class="px-15">
               <div class="card card-body header-deal border-0 px-0">
                 <div class="mx-0">
@@ -691,7 +694,7 @@ nav {
                       width = "200"
                       class=" p-3">
                       <template type="amp-mustache">
-                       <div class="d-flex justify-align-content-center"> 
+                       <div class="d-flex justify-align-content-center">
                         <div class="mr-ml">
                           <div class="clock-text">
                             <h1 class="clock-digit ">
@@ -708,28 +711,28 @@ nav {
                         </div>
                         <div>
                           <h1 class="text-blue clock-digit">:</h1>
-                        </div> 
+                        </div>
                         <div class="mr-ml">
                         <div class="clock-text">
                           <h1 class="clock-digit">
                             {{mm}}
                           </h1>
-                        </div> 
-                          <div> 
+                        </div>
+                          <div>
                             <p class="text-black">
                               <b>
                               Minutes
                               </b>
                             </p>
-                          </div>  
+                          </div>
                         </div>
                         <div>
                           <h1 class="text-blue clock-digit">:</h1>
                         </div>
-                        <div class="mr-ml"> 
+                        <div class="mr-ml">
                         <div class="clock-text">
                           <h1 class="clock-digit">
-                            {{ss}} 
+                            {{ss}}
                           </h1>
                         </div>
                         <div>
@@ -738,9 +741,9 @@ nav {
                             Seconds
                             </b>
                           </p>
-                        </div>  
+                        </div>
                        </div>
-                     </div>  
+                     </div>
                       </template>
                     </amp-date-countdown>
                   </div>
@@ -891,11 +894,11 @@ nav {
         deposit: "£0"
       }
     ]
-      %>  
+      %>
       <% @phoneshome.each do |phone| %>
-      <a href="/step-form" class="text-decoration-none">
+      <a href="/step-form?<%= request.fullpath.split('?')[1] %>" class="text-decoration-none">
           <div class="container  deals-list mb-3 open-form ">
-            <div class="row">        
+            <div class="row">
               <div class="col offset-2 p-3 main-div">
                 <div class="card w-auto mt-2 box">
                   <div class="py-md-0">
@@ -913,7 +916,7 @@ nav {
                           <hr>
                           <small class="text-muted">Deposit from</small>
                           <br><br>
-                            <span class="bolder d-block  mb-2 mt-2"><%= phone[:deposit] %> 
+                            <span class="bolder d-block  mb-2 mt-2"><%= phone[:deposit] %>
                           </span>
                         </div>
                       </div>
@@ -925,7 +928,7 @@ nav {
                           </h5>
                         </div>
                         <div class="row features p-3">
-                          <div class="d-flex center-item w-100">  
+                          <div class="d-flex center-item w-100">
                           <div class="box text-center p-1">
                             <h6 class="font-bold mb-0 pb-1 mt-2 text-black site-font" ><%= phone[:data] %> </h6>
                             <span class="text-muted fs-14 font-weight-normal">
@@ -939,22 +942,22 @@ nav {
                             </span>
                           </div>
                           </div>
-                          <div class="d-flex mt-2 center-item w-100"> 
+                          <div class="d-flex mt-2 center-item w-100">
                             <div class="col box text-center p-1">
                               <h6 class="font-bold pb-1 mb-0 site-font mt-2 text-black" ><%= phone[:texts] %></h6>
                               <span class="text-muted fs-14 mt-2 font-weight-normal">
                                 Texts
                               </span>
                             </div>
-                          </div>  
+                          </div>
                         </div>
                          <hr>
                         <div class="row actions ">
                           <div class="col-md-6 px-4">
-                            <button on="tap:AMP.setState({showLightbox: true})" class="btn btn-primary o-btn open-form w-100 font-weight-bold">Apply now - it's free!</button> 
+                            <button on="tap:AMP.setState({showLightbox: true})" class="btn btn-primary o-btn open-form w-100 font-weight-bold">Apply now - it's free!</button>
                           </div>
                           <div class="col-md-6 px-4">
-                            <button class="btn mi-btn open-form w-100 font-weight-bold">More Info</button> 
+                            <button class="btn mi-btn open-form w-100 font-weight-bold">More Info</button>
                           </div>
                         </div>
                       </div>
@@ -965,7 +968,7 @@ nav {
                             All Credit Scores Welcome & Big Discount!
                           </span>
                           <small class="text-muted site-font">Deposit from</small>
-                            <span class="bolder d-block mt-2">£0 
+                            <span class="bolder d-block mt-2">£0
                           </span>
                         </div>
                       </div>
@@ -978,7 +981,7 @@ nav {
         </a>
         <% end %>
     </section>
-    <!-- Huge price Drops Section --> 
+    <!-- Huge price Drops Section -->
     <section class="mb-5">
       <div class="offers-background">
         <div class="container">
@@ -987,11 +990,11 @@ nav {
               <h1 class="price-drop-text">Huge Price Drops</h1>
               <p>Get the latest smartphones, Apple, Samsung, Huawei and many more with massive price drops. All Credit Scores Welcome, 100% approval, monthly payments, get accepted today.</p>
             </div>
-            <a href="/step-form">
+            <a href="/step-form?<%= request.fullpath.split('?')[1] %>">
               <div class="col-md-4 d-flex justify-align-content-center low-price-div open-form">
                 <amp-img src="<%= asset_path('low_price1.png')%>"  width="300" height = "190" ></amp-img>
               </div>
-            </a>  
+            </a>
           </div>
         </div>
       </div>
@@ -1000,7 +1003,7 @@ nav {
 <section class="mb-3">
   <div class="container">
     <div class="">
-    <a href="/step-form" class="text-decoration-none"> 
+    <a href="/step-form?<%= request.fullpath.split('?')[1] %>" class="text-decoration-none">
       <div class="col-md-6 col mt-2 open-form p-3">
         <div class="phone-details card box-bg mb-3">
           <div class="promotion text-black">Deal of the month</div>
@@ -1084,7 +1087,7 @@ nav {
               <div class="row">
                 <div class="d-flex justify-sp-around">
                 <div class="col">
-                  
+
                   <div class="call text-center border-right px-2">
                      <!-- <i class="fas fa-phone-square-alt text-primary fs-26 ">
                      </i> -->
@@ -1159,7 +1162,7 @@ nav {
     </a>
 <!-- second deal -->
     <div class="p-3">
-     <a href="/step-form" class="text-decoration-none"> 
+     <a href="/step-form?<%= request.fullpath.split('?')[1] %>" class="text-decoration-none">
       <div class=" col-md-6 col open-form" >
         <div class="phone-details card box-bg">
           <div class="promotion">Deal of the month</div>
@@ -1236,7 +1239,7 @@ nav {
                 <div class="col border-right px-2">
                   <div class="call text-center ">
                      <!-- <i class="fas fa-sms text-primary fs-26 "></i> -->
-                    <amp-img src="<%= asset_path('sms.svg')%> " width = "26" height = "22.75" ></amp-img> 
+                    <amp-img src="<%= asset_path('sms.svg')%> " width = "26" height = "22.75" ></amp-img>
                     <h6 class="font-weight-bold text-black mb-0 mt-2 fs-18" >Unlimited sms</h6>
                   </div>
                 </div>
@@ -1252,11 +1255,11 @@ nav {
             </div>
                 <hr>
               <div class="row">
-              <div class="d-flex justify-sp-around"> 
+              <div class="d-flex justify-sp-around">
                 <div class="col">
                   <div class="call text-center border-right px-2">
                      <!-- <i class="fas fa-money-bill-alt text-primary fs-26 "></i> -->
-                    <amp-img src="<%= asset_path('money-bill-alt.svg')%> " width = "32.5" height = "19.5" ></amp-img> 
+                    <amp-img src="<%= asset_path('money-bill-alt.svg')%> " width = "32.5" height = "19.5" ></amp-img>
                     <h6 class="font-weight-bold text-black mb-0 mt-2 fs-18">6 Months Half Price
                     </h6>
                   </div>
@@ -1292,34 +1295,34 @@ nav {
   </a>
 </div>
 </section>
-<!-- Network logos Section --> 
+<!-- Network logos Section -->
 <% parameters = "&s2=#{params[:c1]}&s1=#{params[:source]}" %>
 <section class=" bg-white py-5 open-form">
   <div class="p-3">
     <h5 class="fm_h">Get accepted on the top networks</h5>
       <div class="row">
         <div class="col-md-2 mb-2">
-          <a href="/step-form" class="networks-box">
+          <a href="/step-form?<%= request.fullpath.split('?')[1] %>" class="networks-box">
             <amp-img src="<%= asset_path('company/ee.png')%> " width = "28" height = "48"></amp-img>
           </a>
         </div>
         <div class="col-md-2 mb-2">
-          <a href="/step-form" class="networks-box">
-            <amp-img src="<%= asset_path('company/vodafone.png')%> " width = "68" height = "48"></amp-img> 
+          <a href="/step-form?<%= request.fullpath.split('?')[1] %>" class="networks-box">
+            <amp-img src="<%= asset_path('company/vodafone.png')%> " width = "68" height = "48"></amp-img>
           </a>
         </div>
         <div class="col-md-2 mb-2">
-          <a href="/step-form" class="networks-box">
+          <a href="/step-form?<%= request.fullpath.split('?')[1] %>" class="networks-box">
             <amp-img src="<%= asset_path('company/id.png')%> " width = "41" height = "48"></amp-img>
           </a>
         </div>
         <div class="col-md-2 mb-2">
-          <a href="/step-form" class="networks-box">
+          <a href="/step-form?<%= request.fullpath.split('?')[1] %>" class="networks-box">
             <amp-img src="<%= asset_path('company/three.png')%> " width = "38" height = "48"></amp-img>
           </a>
         </div>
         <div class="col-md-2 mb-2">
-          <a href="/step-form" class="networks-box">
+          <a href="/step-form?<%= request.fullpath.split('?')[1] %>" class="networks-box">
             <amp-img src="<%= asset_path('company/02.png')%> " width = "47" height = "48"></amp-img>
           </a>
         </div>
@@ -1337,7 +1340,7 @@ nav {
       <div class="col-lg-12 col-12 text-center">
          <p><a href="https://deals.megamobiledeals.com/privacy-policy"  class="mx-md-2"> Privacy Policy </a> | <a href="https://deals.megamobiledeals.com/cookie-policy"  class="mx-md-2"> Cookie Policy</a> | <a href="https://deals.megamobiledeals.com/terms-and-conditions/" class="mx-md-2">Terms and conditions</a></p>
         <p>
-          Megamobiledeals.com is the property and trading style of Duke Leads Ltd              
+          Megamobiledeals.com is the property and trading style of Duke Leads Ltd
         </p>
         <p>
           Registered: International House, 24 Holborn Viaduct, London, United Kingdom, EC1A 2BN.
