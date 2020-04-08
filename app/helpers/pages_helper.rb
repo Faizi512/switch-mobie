@@ -239,6 +239,21 @@ module PagesHelper
     }.to_json
   end
 
+  def step_form
+    @details = {
+      camp_id: 'MEGA-MOBILE-DEALS',
+      success_url: 'https://c1icktree.co.uk/go/?id=90',
+      bad_success_url: 'https://mtrk5.co.uk/?a=14118&c=33110',
+      form_name: 'Mega-Mobile-Deals',
+      optin_url: '',
+      sid: nil,
+      ssid: nil,
+      source:'Google-amp',
+      quick_submit: false,
+      submit_on_load: false,
+    }.to_json
+  end
+
   def home
     @details = {
       camp_id: 'MEGA-MOBILE-DEALS',
