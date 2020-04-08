@@ -45,7 +45,7 @@ class MmdLoanTwo extends Common {
     $('.redirect-to-success').click(function() {
       if ($('.terms-and-conditions').prop("checked")){
         event.preventDefault();
-        window.location = CI.details.success_url+CI.additionalParams();
+        CI.urlSelection()
       }
     });
   }

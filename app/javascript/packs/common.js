@@ -80,7 +80,7 @@ class Common {
 
   isBadCustomer(query) {
     if(query){
-      var keywords = ["credit", "accepted", "bad", "score", "sunshine"];
+      var keywords = ["credit", "accepted", "bad", "score", "sunshine", "no credit", "free", "guaranteed"];
       query = query.toLowerCase();
       for(var index in keywords) {
         var word = keywords[index];
@@ -302,8 +302,20 @@ class Common {
   successUrl(){
     var CI = this;
     setTimeout(function(){
-      window.location = CI.details.success_url+CI.additionalParams()
-    }, 1000)    
+      CI.urlSelection()
+    }, 1000)
+  }
+
+  urlSelection(){
+    if(this.getBcFromParams()){
+      window.location = this.details.bad_success_url+this.additionalParamsFoBC()
+    }else{
+       window.location = this.details.success_url+this.additionalParams()
+    }
+  }
+
+  getBcFromParams(){
+    return this.isBadCustomer(this.getUrlParameter('keyword')) ||  (this.getUrlParameter('bc') == "yes")
   }
 
   updateFacebookAudience(data){
@@ -334,6 +346,10 @@ class Common {
     return "&s1=" + this.getSource() + "&s2=" + this.getC1() + "&s3=" + this.getEmail() + "&s4=" + this.getPhone1() ;
   }
 
+  additionalParamsFoBC(){
+    return "&s1=exit-" + this.getSource() + "&s2=" + this.getC1() + "&s3=" + this.getEmail() + "&s4=" + this.getPhone1() ;
+  }
+
   getC1(){
     return this.getUrlParameter('c1') || this.getUrlParameter('bstransid') || this.getUrlParameter('transid') || '';
   }
@@ -345,7 +361,7 @@ class Common {
   getEmail(){
     return this.getUrlParameter('email') || $(".email").val() || '' ;
   }
-  
+
   getPhone1(){
     return this.getUrlParameter('phone1') || $(".phone").val() || '' ;
   }

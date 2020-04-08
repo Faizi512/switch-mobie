@@ -4,6 +4,7 @@ module PagesHelper
     @details = {
       camp_id: 'MEGA-MOBILE-DEALS',
       success_url: 'https://c1icktree.co.uk/go/?id=90',
+      bad_success_url: 'https://mtrk5.co.uk/?a=14118&c=33110',
       form_name: 'Compare-Phones',
       optin_url: '/compare-phones',
       sid: nil,
@@ -18,6 +19,7 @@ module PagesHelper
     @details = {
       camp_id: 'MEGA-MOBILE-DEALS',
       success_url: 'https://c1icktree.co.uk/go/?id=90',
+      bad_success_url: 'https://mtrk5.co.uk/?a=14118&c=33110',
       form_name: 'MEGA-MOBILE-DEALS',
       optin_url: '/new-mmd',
       sid: nil,
@@ -32,6 +34,7 @@ module PagesHelper
     @details = {
       camp_id: 'MEGA-MOBILE-DEALS',
       success_url: 'https://c1icktree.co.uk/go/?id=90',
+      bad_success_url: 'https://mtrk5.co.uk/?a=14118&c=33110',
       form_name: 'mmd-post',
       optin_url: '/mmd-post',
       sid: nil,
@@ -46,6 +49,7 @@ module PagesHelper
     @details = {
       camp_id: 'MEGA-MOBILE-DEALS',
       success_url: 'https://c1icktree.co.uk/go/?id=90',
+      bad_success_url: 'https://mtrk5.co.uk/?a=14118&c=33110',
       form_name: 'mmd_loans_2',
       optin_url: '/mmd_loans_2',
       sid: nil,
@@ -60,6 +64,7 @@ module PagesHelper
     @details = {
       camp_id: 'MEGA-MOBILE-DEALS',
       success_url: 'https://c1icktree.co.uk/go/?id=90',
+      bad_success_url: 'https://mtrk5.co.uk/?a=14118&c=33110',
       form_name: 'mmd-success',
       optin_url: '/mmd-success',
       sid: nil,
@@ -74,6 +79,7 @@ module PagesHelper
     @details = {
       camp_id: 'MEGA-MOBILE-DEALS',
       success_url: 'https://c1icktree.co.uk/go/?id=90',
+      bad_success_url: 'https://mtrk5.co.uk/?a=14118&c=33110',
       form_name: 'returning-loans',
       optin_url: '/returning-loans',
       sid: nil,
@@ -88,6 +94,7 @@ module PagesHelper
     @details = {
       camp_id: 'SIM',
       success_url: 'https://c1icktree.co.uk/go/?id=90',
+      bad_success_url: 'https://mtrk5.co.uk/?a=14118&c=33110',
       form_name: 'Sims-Returning',
       optin_url: '/sims_returning',
       sid: nil,
@@ -117,6 +124,7 @@ module PagesHelper
     @details = {
       camp_id: 'MEGA-MOBILE-DEALS',
       success_url: 'https://c1icktree.co.uk/go/?id=90',
+      bad_success_url: 'https://mtrk5.co.uk/?a=14118&c=33110',
       form_name: 'Latest-Deals',
       optin_url: '/latest-deals',
       sid: 2,
@@ -131,6 +139,7 @@ module PagesHelper
     @details = {
       camp_id: 'MEGA-MOBILE-DEALS',
       success_url: 'https://c1icktree.co.uk/go/?id=90',
+      bad_success_url: 'https://mtrk5.co.uk/?a=14118&c=33110',
       form_name: 'returning',
       optin_url: '/returning',
       sid: nil,
@@ -145,6 +154,7 @@ module PagesHelper
     @details = {
       camp_id: 'SIM',
       success_url: 'https://c1icktree.co.uk/go/?id=90',
+      bad_success_url: 'https://mtrk5.co.uk/?a=14118&c=33110',
       form_name: 'Sim-Deals',
       optin_url: '/sim-deals',
       sid: 1,
@@ -159,6 +169,7 @@ module PagesHelper
     @details = {
       camp_id: 'MEGA-MOBILE-DEALS',
       success_url: 'https://c1icktree.co.uk/go/?id=90',
+      bad_success_url: 'https://mtrk5.co.uk/?a=14118&c=33110',
       form_name: 'fb-phone-deals',
       optin_url: '/fb-phone-deals',
       sid: 157,
@@ -173,6 +184,7 @@ module PagesHelper
     @details = {
       camp_id: 'MEGA-MOBILE-DEALS',
       success_url: 'https://c1icktree.co.uk/go/?id=90',
+      bad_success_url: 'https://mtrk5.co.uk/?a=14118&c=33110',
       form_name: 'social-phone-deals',
       optin_url: '/social-phone-deals',
       sid: 157,
@@ -187,6 +199,7 @@ module PagesHelper
     @details = {
       camp_id: 'MEGA-MOBILE-DEALS',
       success_url: 'https://c1icktree.co.uk/go/?id=90',
+      bad_success_url: 'https://mtrk5.co.uk/?a=14118&c=33110',
       form_name: 'mega-phone-deals',
       optin_url: '/mega-phone-deals',
       sid: 15643,
@@ -215,6 +228,7 @@ module PagesHelper
     @details = {
       camp_id: 'MEGA-MOBILE-DEALS',
       success_url: 'https://c1icktree.co.uk/go/?id=90',
+      bad_success_url: 'https://mtrk5.co.uk/?a=14118&c=33110',
       form_name: 'youtube-success',
       optin_url: '/youtube-success',
       sid: nil,
@@ -229,6 +243,7 @@ module PagesHelper
     @details = {
       camp_id: 'MEGA-MOBILE-DEALS',
       success_url: 'https://c1icktree.co.uk/go/?id=90',
+      bad_success_url: 'https://mtrk5.co.uk/?a=14118&c=33110',
       form_name: 'Mega-Mobile-Deals',
       optin_url: '',
       sid: nil,

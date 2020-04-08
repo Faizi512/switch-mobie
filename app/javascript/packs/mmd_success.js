@@ -8,7 +8,7 @@ class MmdSuccess extends Common {
     this.postData()
     $('a').click((event) => {
       event.preventDefault();
-      window.location = CI.details.success_url+CI.additionalParams()
+      CI.urlSelection()
     });
   }
   successUrl(){}

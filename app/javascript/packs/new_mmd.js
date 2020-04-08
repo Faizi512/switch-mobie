@@ -10,7 +10,7 @@ class NewMmd extends Common {
     this.showClock()
 
     $('.submit-mmd-form').click(function(event) {
-      window.location = CI.details.success_url+CI.additionalParams();
+      CI.urlSelection()
     });
   }
   successUrl(){

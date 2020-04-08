@@ -10,7 +10,7 @@ class Returning extends Common {
     this.showClock()
 
     $('.open-form').click((event) => {
-      window.location = CI.details.success_url+CI.additionalParams()
+      CI.urlSelection()
     });
   }
 
