@@ -19,7 +19,6 @@ class MmdLoanTwo extends Common {
   openPopup(){
     var CI = this;
     $('.open-popup').click(function(event) {
-      CI.details.success_url = event.currentTarget.href
       let img_source = $(this).find('input').val()
       $("#clicked_img").attr("src",img_source)
       event.preventDefault()

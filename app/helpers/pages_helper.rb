@@ -3,7 +3,7 @@ module PagesHelper
   def compare_phones
     @details = {
       camp_id: 'MEGA-MOBILE-DEALS',
-      success_url: 'https://c1icktree.co.uk/go/?id=90',
+      success_url: 'http://mtrk5.co.uk/?a=14118&c=37733&p=r',
       bad_success_url: 'https://mtrk5.co.uk/?a=14118&c=33110',
       form_name: 'Compare-Phones',
       optin_url: '/compare-phones',
@@ -18,7 +18,7 @@ module PagesHelper
   def new_mmd
     @details = {
       camp_id: 'MEGA-MOBILE-DEALS',
-      success_url: 'https://c1icktree.co.uk/go/?id=90',
+      success_url: 'http://mtrk5.co.uk/?a=14118&c=37733&p=r',
       bad_success_url: 'https://mtrk5.co.uk/?a=14118&c=33110',
       form_name: 'MEGA-MOBILE-DEALS',
       optin_url: '/new-mmd',
@@ -33,7 +33,7 @@ module PagesHelper
   def mmd_post
     @details = {
       camp_id: 'MEGA-MOBILE-DEALS',
-      success_url: 'https://c1icktree.co.uk/go/?id=90',
+      success_url: 'http://mtrk5.co.uk/?a=14118&c=37733&p=r',
       bad_success_url: 'https://mtrk5.co.uk/?a=14118&c=33110',
       form_name: 'mmd-post',
       optin_url: '/mmd-post',
@@ -48,7 +48,7 @@ module PagesHelper
   def mmd_loans_2
     @details = {
       camp_id: 'MEGA-MOBILE-DEALS',
-      success_url: 'https://c1icktree.co.uk/go/?id=90',
+      success_url: 'http://mtrk5.co.uk/?a=14118&c=37733&p=r',
       bad_success_url: 'https://mtrk5.co.uk/?a=14118&c=33110',
       form_name: 'mmd_loans_2',
       optin_url: '/mmd_loans_2',
@@ -63,7 +63,7 @@ module PagesHelper
   def mmd_success
     @details = {
       camp_id: 'MEGA-MOBILE-DEALS',
-      success_url: 'https://c1icktree.co.uk/go/?id=90',
+      success_url: 'http://mtrk5.co.uk/?a=14118&c=37733&p=r',
       bad_success_url: 'https://mtrk5.co.uk/?a=14118&c=33110',
       form_name: 'mmd-success',
       optin_url: '/mmd-success',
@@ -78,7 +78,7 @@ module PagesHelper
   def returning_loans
     @details = {
       camp_id: 'MEGA-MOBILE-DEALS',
-      success_url: 'https://c1icktree.co.uk/go/?id=90',
+      success_url: 'http://mtrk5.co.uk/?a=14118&c=37733&p=r',
       bad_success_url: 'https://mtrk5.co.uk/?a=14118&c=33110',
       form_name: 'returning-loans',
       optin_url: '/returning-loans',
@@ -93,7 +93,7 @@ module PagesHelper
   def sims_returning
     @details = {
       camp_id: 'SIM',
-      success_url: 'https://c1icktree.co.uk/go/?id=90',
+      success_url: 'http://mtrk5.co.uk/?a=14118&c=37733&p=r',
       bad_success_url: 'https://mtrk5.co.uk/?a=14118&c=33110',
       form_name: 'Sims-Returning',
       optin_url: '/sims_returning',
@@ -123,7 +123,7 @@ module PagesHelper
   def latest_deals
     @details = {
       camp_id: 'MEGA-MOBILE-DEALS',
-      success_url: 'https://c1icktree.co.uk/go/?id=90',
+      success_url: 'http://mtrk5.co.uk/?a=14118&c=37733&p=r',
       bad_success_url: 'https://mtrk5.co.uk/?a=14118&c=33110',
       form_name: 'Latest-Deals',
       optin_url: '/latest-deals',
@@ -138,7 +138,7 @@ module PagesHelper
   def returning
     @details = {
       camp_id: 'MEGA-MOBILE-DEALS',
-      success_url: 'https://c1icktree.co.uk/go/?id=90',
+      success_url: 'http://mtrk5.co.uk/?a=14118&c=37733&p=r',
       bad_success_url: 'https://mtrk5.co.uk/?a=14118&c=33110',
       form_name: 'returning',
       optin_url: '/returning',
@@ -153,7 +153,7 @@ module PagesHelper
   def sim_deals
     @details = {
       camp_id: 'SIM',
-      success_url: 'https://c1icktree.co.uk/go/?id=90',
+      success_url: 'http://mtrk5.co.uk/?a=14118&c=37733&p=r',
       bad_success_url: 'https://mtrk5.co.uk/?a=14118&c=33110',
       form_name: 'Sim-Deals',
       optin_url: '/sim-deals',
@@ -168,7 +168,7 @@ module PagesHelper
   def fb_phone_deals
     @details = {
       camp_id: 'MEGA-MOBILE-DEALS',
-      success_url: 'https://c1icktree.co.uk/go/?id=90',
+      success_url: 'http://mtrk5.co.uk/?a=14118&c=37733&p=r',
       bad_success_url: 'https://mtrk5.co.uk/?a=14118&c=33110',
       form_name: 'fb-phone-deals',
       optin_url: '/fb-phone-deals',
@@ -183,7 +183,7 @@ module PagesHelper
   def social_phone_deals
     @details = {
       camp_id: 'MEGA-MOBILE-DEALS',
-      success_url: 'https://c1icktree.co.uk/go/?id=90',
+      success_url: 'http://mtrk5.co.uk/?a=14118&c=37733&p=r',
       bad_success_url: 'https://mtrk5.co.uk/?a=14118&c=33110',
       form_name: 'social-phone-deals',
       optin_url: '/social-phone-deals',
@@ -198,7 +198,7 @@ module PagesHelper
   def mega_phone_deals
     @details = {
       camp_id: 'MEGA-MOBILE-DEALS',
-      success_url: 'https://c1icktree.co.uk/go/?id=90',
+      success_url: 'http://mtrk5.co.uk/?a=14118&c=37733&p=r',
       bad_success_url: 'https://mtrk5.co.uk/?a=14118&c=33110',
       form_name: 'mega-phone-deals',
       optin_url: '/mega-phone-deals',
@@ -227,7 +227,7 @@ module PagesHelper
   def youtube_success
     @details = {
       camp_id: 'MEGA-MOBILE-DEALS',
-      success_url: 'https://c1icktree.co.uk/go/?id=90',
+      success_url: 'http://mtrk5.co.uk/?a=14118&c=37733&p=r',
       bad_success_url: 'https://mtrk5.co.uk/?a=14118&c=33110',
       form_name: 'youtube-success',
       optin_url: '/youtube-success',
@@ -242,7 +242,7 @@ module PagesHelper
   def step_form
     @details = {
       camp_id: 'MEGA-MOBILE-DEALS',
-      success_url: 'https://c1icktree.co.uk/go/?id=90',
+      success_url: 'http://mtrk5.co.uk/?a=14118&c=37733&p=r',
       bad_success_url: 'https://mtrk5.co.uk/?a=14118&c=33110',
       form_name: 'Mega-Mobile-Deals',
       optin_url: '',
@@ -257,7 +257,7 @@ module PagesHelper
   def home
     @details = {
       camp_id: 'MEGA-MOBILE-DEALS',
-      success_url: 'https://c1icktree.co.uk/go/?id=90',
+      success_url: 'http://mtrk5.co.uk/?a=14118&c=37733&p=r',
       bad_success_url: 'https://mtrk5.co.uk/?a=14118&c=33110',
       form_name: 'Mega-Mobile-Deals',
       optin_url: '',
@@ -368,7 +368,7 @@ module PagesHelper
         image: "sim/three-sim.png",
         calls: "Unlimited",
         texts: "Unlimited",
-        url:"https://c1icktree.co.uk/go/?id=90",
+        url:"http://mtrk5.co.uk/?a=14118&c=37733&p=r",
         bluetext: "Best Sim Only Deals, 5G Ready",
         deposit: "£0"
       },
@@ -378,7 +378,7 @@ module PagesHelper
         image: "phone/samsungs10.png",
         calls: "Unlimited",
         texts: "Unlimited",
-        url:"https://c1icktree.co.uk/go/?id=90",
+        url:"http://mtrk5.co.uk/?a=14118&c=37733&p=r",
         bluetext: "Personal Hotspot, Go Binge, Data Roaming",
         deposit: "£0"
       },
@@ -388,7 +388,7 @@ module PagesHelper
         image: "phone/huaweip30.png",
         calls: "Unlimited",
         texts: "Unlimited",
-        url:"https://c1icktree.co.uk/go/?id=90",
+        url:"http://mtrk5.co.uk/?a=14118&c=37733&p=r",
         bluetext: "Personal Hotspot, Go Binge, Data Roaming",
         deposit: "£0"
       },
@@ -398,7 +398,7 @@ module PagesHelper
         image: "phone/iphone11pro.png",
         calls: "Unlimited",
         texts: "Unlimited",
-        url:"https://c1icktree.co.uk/go/?id=90",
+        url:"http://mtrk5.co.uk/?a=14118&c=37733&p=r",
         bluetext: "",
         deposit: "£0"
       },
@@ -408,7 +408,7 @@ module PagesHelper
         image: "phone/iphone11.png",
         calls: "Unlimited",
         texts: "Unlimited",
-        url:"https://c1icktree.co.uk/go/?id=90",
+        url:"http://mtrk5.co.uk/?a=14118&c=37733&p=r",
         bluetext: "No Credit Checks",
         deposit: "£0"
       },
@@ -418,7 +418,7 @@ module PagesHelper
         image: "phone/iphone11-2.png",
         calls: "Unlimited",
         texts: "Unlimited",
-        url:"https://c1icktree.co.uk/go/?id=90",
+        url:"http://mtrk5.co.uk/?a=14118&c=37733&p=r",
         bluetext: "Free Personal Hotspot, Free Data Roaming",
         deposit: "£0"
       },
@@ -428,7 +428,7 @@ module PagesHelper
         image: "phone/samsung-galaxy-s20-ultra-black.png",
         calls: "Unlimited",
         texts: "Unlimited",
-        url:"https://c1icktree.co.uk/go/?id=90",
+        url:"http://mtrk5.co.uk/?a=14118&c=37733&p=r",
         bluetext: "Personal Hotspot, Go Binge, Data Roaming, 5G Ready",
         deposit: "£0"
       },
@@ -438,7 +438,7 @@ module PagesHelper
         image: "phone/samsung-galaxy-s20-plus.png",
         calls: "Unlimited",
         texts: "Unlimited",
-        url:"https://c1icktree.co.uk/go/?id=90",
+        url:"http://mtrk5.co.uk/?a=14118&c=37733&p=r",
         bluetext: "Personal Hotspot, Data Roaming, 5G Ready",
         deposit: "£0"
       },
@@ -448,7 +448,7 @@ module PagesHelper
         image: "phone/samsung-galaxy-s10e.png",
         calls: "Unlimited",
         texts: "Unlimited",
-        url:"https://c1icktree.co.uk/go/?id=90",
+        url:"http://mtrk5.co.uk/?a=14118&c=37733&p=r",
         bluetext: "Personal Hotspot, Go Binge, Data Roaming",
         deposit: "£0"
       },
@@ -458,7 +458,7 @@ module PagesHelper
         image: "phone/iphonexr.png",
         calls: "Unlimited",
         texts: "Unlimited",
-        url:"https://c1icktree.co.uk/go/?id=90",
+        url:"http://mtrk5.co.uk/?a=14118&c=37733&p=r",
         bluetext: "Personal Hotspot, Go Binge, Data Roaming",
         deposit: "£0"
       },
@@ -468,7 +468,7 @@ module PagesHelper
         image: "phone/iphonexs.png",
         calls: "Unlimited",
         texts: "Unlimited",
-        url:"https://c1icktree.co.uk/go/?id=90",
+        url:"http://mtrk5.co.uk/?a=14118&c=37733&p=r",
         bluetext: "Personal Hotspot, Go Binge, Data Roaming",
         deposit: "£0"
       },
@@ -478,7 +478,7 @@ module PagesHelper
         image: "phone/1iphone-11-pro-max.png",
         calls: "Unlimited",
         texts: "Unlimited",
-        url:"https://c1icktree.co.uk/go/?id=90",
+        url:"http://mtrk5.co.uk/?a=14118&c=37733&p=r",
         bluetext: "Personal Hotspot, Go Binge, Data Roaming",
         deposit: "£0"
       },
@@ -488,7 +488,7 @@ module PagesHelper
         image: "phone/samsungs10.png",
         calls: "Unlimited",
         texts: "Unlimited",
-        url:"https://c1icktree.co.uk/go/?id=90",
+        url:"http://mtrk5.co.uk/?a=14118&c=37733&p=r",
         bluetext: "Personal Hotspot, Go Binge, Data Roaming",
         deposit: "£0"
       }

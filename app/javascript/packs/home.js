@@ -22,7 +22,6 @@ class Home extends Common {
       $('#deal-form-modal').modal('show')
       $('.clock').hide()
       event.preventDefault();
-      CI.details.success_url = event.currentTarget.dataset.url
     });
   }
 }

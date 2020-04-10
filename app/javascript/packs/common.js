@@ -80,7 +80,10 @@ class Common {
 
   isBadCustomer(query) {
     if(query){
-      var keywords = ["credit", "accepted", "bad", "score", "sunshine", "no credit", "free", "guaranteed"];
+      var keywords = ["credit", "accepted", "bad", "score", "sunshine",
+                       "no credit", "free", "guaranteed", "gift", "win", "wining", "very",
+                       "phone check", "check" , "offers", "no upfront", "deals", "cheap", "catalogues", "later",
+                       "sun", "no deposit", "accepted"]
       query = query.toLowerCase();
       for(var index in keywords) {
         var word = keywords[index];
