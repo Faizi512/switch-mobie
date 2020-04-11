@@ -346,7 +346,7 @@ class Common {
   }
 
   additionalParams(){
-    return "&s1=" + this.getSource() + "&s2=" + this.getC1() + "&s3=" + this.getEmail() + "&s4=" + this.getPhone1() ;
+    return "?s1=" + this.getSource() + "&s2=" + this.getC1() + "&s3=" + this.getEmail() + "&s4=" + this.getPhone1() + "&s5=" + this.getFirstName() ;
   }
 
   additionalParamsFoBC(){
@@ -367,6 +367,10 @@ class Common {
 
   getPhone1(){
     return this.getUrlParameter('phone1') || $(".phone").val() || '' ;
+  }
+
+  getFirstName(){
+    return this.getUrlParameter('firstname') || $(".first_name").val() || '' ;
   }
 }
 

@@ -80,8 +80,22 @@
 .hv-50{
   height: 50px !important;
 }
+.top-text-deal{
+  border-top-right-radius: 10px;
+}
 .sim-img{
   width: 200px;
+}
+.s10-img{
+  width: 132px;
+}
+.div-deals{
+  color: #00478d !important;
+  border-radius: 10px;
+  border-left: 9px solid #00478d;
+  box-shadow: 0 0 18px 0 rgba(5,133,236,.3);
+  text-shadow: #00478d8c 0.1px 0.1px 0.1px !important;
+  cursor: pointer;
 }
 .div-sim{
   color: #00478d !important;
@@ -280,6 +294,9 @@
 
 }
 @media only screen and (max-width: 520px) {
+  .s10-img{
+    width: 125px;
+  }
   .sim-img {
     width: 140px;
   }
@@ -294,8 +311,14 @@
   .fs-md-22{
     font-size: 22px !important;
   }
+  .fs-md-19{
+    font-size: 19px !important;
+  }
   .fs-md-17{
     font-size: 17px !important;
+  }
+  .fs-md-15{
+    font-size: 15px !important;
   }
   .lis-list{
     padding-left: 13% !important;
@@ -377,6 +400,9 @@
 }
 
 @media only screen and (max-width: 322px) {
+  .fs-sm-22{
+    font-size: 22px !important;
+  }
   .bolder {
     font-size: 18px;
   }
