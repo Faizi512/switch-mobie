@@ -12,7 +12,5 @@ class MmdSuccess extends Common {
     });
   }
   successUrl(){}
-
 }
 export default new MmdSuccess();
-
