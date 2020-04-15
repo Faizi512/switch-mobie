@@ -1,0 +1,933 @@
+<!doctype html>
+  <html ⚡ lang="en">
+  <head>
+    <meta charset="utf-8">
+    <script async src="https://cdn.ampproject.org/v0.js"></script>
+    <script async custom-template="amp-mustache" src="https://cdn.ampproject.org/v0/amp-mustache-0.2.js"></script>
+    <script async custom-element="amp-date-countdown" src="https://cdn.ampproject.org/v0/amp-date-countdown-0.1.js"></script>
+    <script async custom-element="amp-lightbox" src="https://cdn.ampproject.org/v0/amp-lightbox-0.1.js"></script>
+    <script async custom-element="amp-bind" src="https://cdn.ampproject.org/v0/amp-bind-0.1.js"></script>
+    <script async custom-element="amp-form" src="https://cdn.ampproject.org/v0/amp-form-0.1.js"></script>
+    <link rel="canonical" href="sim-deal-only">
+    <link href="https://fonts.googleapis.com/css?family=Heebo:700&display=swap" rel="stylesheet">
+    <title>MegaMobileDeals</title>
+    <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
+    <script type="application/ld+json">
+      {
+        "@context": "http://schema.org",
+        "@type": "NewsArticle",
+        "headline": "Open-source framework for publishing content",
+        "datePublished": "2015-10-07T12:02:41Z",
+        "image": [
+          "logo.jpg"
+        ]
+      }
+    </script>
+    <style amp-boilerplate>body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}</style><noscript><style amp-boilerplate>body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}</style></noscript>
+    <style amp-custom>
+      amp-date-countdown {
+      display: block;
+    }
+
+user agent stylesheet
+nav {
+    display: block;
+      }
+      .navbar-style{
+        flex-flow: row nowrap;
+        justify-content: flex-start;
+        position: relative;
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: space-between;
+        padding: 0.5rem 1rem;
+        box-sizing: border-box;
+        }
+
+      .container {
+        max-width: 1140px;
+        padding-left: 15px;
+        padding-right: 15px;
+      }
+
+      .nav-link{
+        font-size: 1.5rem;
+        color: black;
+        text-decoration: none;
+        font-family:  -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen-Sans, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, Arial, sans-serif
+      }
+      .navbar-header {
+        display: flex;
+        flex: 0 0 100%;
+      }
+
+      .clock-text{
+        background-color:#2B417F;
+        color: white;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+        border-radius: 0.25rem;
+        padding-left: 5px;
+        padding-right: 5px;
+      }
+
+      .fs-16{
+        font-size: 16px;
+      }
+      .clock-digit{
+        font-size: 60px;
+        font-weight: 900;
+        margin: 0px;
+      }
+      .bg-blue{
+        background-color:#2B417F;
+      }
+      .text-red{
+        color:#D84445; 
+      }
+      .no-bullet-list{
+        list-style-type: none;
+        padding: 0;
+        margin: 0;
+      }
+      .below-header {
+      z-index: 2;
+      padding-top: 24px;
+      padding-bottom: 24px;
+      background: linear-gradient(120deg, #99e2ff 0%, #99e2ff 70%, #66d4ff 70%, #66d4ff 100%);
+      }
+      color: #000;
+
+      .below-header .row {
+        display: flex;
+        flex-wrap: wrap;
+        margin-right: -15px;
+        margin-left: -15px;
+      }
+      .border-right {
+        border-right: 1px solid #dee2e6;
+      }
+
+      .border-left {
+        border-left: 1px solid #dee2e6;
+      }
+
+      .middle-aligned
+      {
+        margin-left: auto;
+        margin-right: auto;
+      }
+
+      .below-header .left-layout{
+        width: 50%;
+        white-space: initial;
+      }
+      .text-center{
+        text-align: center;
+      }
+      .below-header .accepted {
+        color: #2b417f;
+        font-weight: 600;
+        font-size: 32px;
+
+      }
+
+      .o-btn{
+        background: linear-gradient(to bottom, #ff9b00, #f57200) ;
+        text-shadow: #803c00 1px 1px 1px ;
+        font: 700 20px arial ;
+        padding-top: 0.5rem;
+        padding-bottom: 0.5rem;
+        color: white;
+        border: 0px;
+        border-radius: 8px;
+      }
+      .mi-btn{
+        color: #fff;
+        background-color: #007bff;
+        border-color: #007bff;
+        display: inline-block;
+        font-weight: 400;
+        text-align: center;
+        vertical-align: middle;
+        cursor: pointer;
+        padding: 0.375rem 0.75rem;
+        font-size: 1rem;
+        border-radius: 8px;
+        line-height: 1.5;
+        border-radius: 0.25rem;
+        -webkit-transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+        transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+      }
+
+      .py-0{
+        padding-top: 0px;
+        padding-bottom: 0px;
+      }
+
+      .py-2{
+        padding-top: 0.5rem;
+        padding-bottom: 0.5rem;
+      }
+      .py-3{
+        padding-top: 1rem;
+        padding-bottom: 1rem;
+      }
+
+
+      .flip-clock-wrapper {
+        width: 98%;
+        margin: 2rem auto;
+        margin-top: 0rem;
+        text-align: center;
+        position: relative;
+        text-align: center;
+        position: relative;
+      }
+
+      .flip-clock-wrapper ul{
+        position: relative;
+        float: left;
+        margin: 5px;
+        width: 60px;
+        font-size: 80px;
+        font-weight: bold;
+        line-height: 87px;
+        border-radius: 6px;
+        background: #0000;
+        list-style: none;
+      }
+      .flip-clock-wrapper .flip{
+        box-shadow:0 2px 5px rgba(0,0,0,0.7);
+      }
+
+      .flip-clock-divider{
+        float: left;
+        display: inline-block;
+        position: relative;
+        width: 20%;
+        height: 100px;
+      }
+      .clock {
+        display: flex;
+        justify-content: center;
+        margin-bottom: 2rem;
+      }
+
+      .display-none{
+
+      }
+      .phone-discount{
+        display: flex;
+      }
+
+      .fs14{
+        font-size: 14px;
+      }
+      .bolder{
+        line-height: 16px;
+        font-size: 24px;
+        font-family: inherit;
+        color: #0397d6;
+        margin: 15px 0 10px 0;
+        letter-spacing: -1px;
+        font-weight: 600;
+      }
+      .text-muted{
+        color: #6c757d;
+      }
+      .multi-line{
+        display: flex;
+        flex-wrap: wrap;
+      }
+      .px-2{
+        padding-left: 0.5rem;
+        padding-right: 0.5rem;
+      }
+      .px-15{
+        padding-left: 15px;
+        padding-right: 15px;
+      }
+
+       .px-3{
+        padding-left: 1rem;
+        padding-right: 1rem;
+      }
+
+      .px-4{
+        padding-left: 1.5rem;
+        padding-right: 1.5rem;
+      }
+
+
+
+      .py-4{
+        padding-top: 1.5rem;
+        padding-bottom: 1.5rem;
+      }
+      .box{
+        width: 100%;
+        position: relative;
+        border-radius: 4px;
+        background-color: #fff;
+        border: 1px solid #f0fbff;
+        font-size: 16px;
+        box-shadow: 0 1px 3px 0 #bfbfbf;
+        margin-left: 5px;
+        margin-right: 5px;
+      }
+      .mb-0{
+        margin-bottom: 0px;
+      }
+      .mb-1{
+        margin-bottom: 0.5rem;
+      }
+      .w-auto{
+        width: auto;
+      }
+
+      .price-drop-padding{
+        padding: 45px 40px;
+      }
+      .d-flex{
+        display: flex;
+      }
+      .text-white{
+        color: white;
+      }
+      .text-blue{
+        color : #2B417F;
+      }
+      .text-decoration-none{
+        text-decoration: none;
+      }
+      .text-black{
+        color: black;
+      }
+      .justify-center-align-center{
+        justify-content: center;
+        align-items: center;
+      }
+
+      .justify-center-align-baseline{
+        justify-content: center;
+        align-items: baseline;
+      }
+
+      .align-baseline{
+        align-content: baseline;
+      }
+
+      .align-center{
+        align-content: center;
+      }
+
+      .offers-background {
+        background: linear-gradient(-80deg, #00c6fb 0, #005bea 100%);
+        height: auto;
+      }
+
+      hr {
+      margin-top: 1rem;
+      margin-bottom: 1rem;
+      border: 0;
+      border-top: 1px solid rgba(0, 0, 0, 0.1);
+      box-sizing: content-box;
+      height: 0;
+      overflow: visible;
+      }
+
+      body{
+        font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen-Sans, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, Arial, sans-serif;
+        background: #F8F9FA;
+      }
+
+      label {
+        color: #3ebbe9;
+        font-size: 18px;
+        line-height: 24px;
+        font-weight: 700;
+        width: 100%;
+        display: inline-block;
+        margin-bottom: 0.5rem;
+        }
+
+      .mt-2{
+        margin-top: 0.5rem;
+      }
+      .ml-2{
+        margin-left: 0.5rem;
+      }
+      .mr-2{
+        margin-right: 0.5rem;
+      }
+      .mb-2{
+        margin-bottom: 0.5rem;
+      }
+      .mt-px{
+        margin-top: 1px;
+      }
+      .mt-px-2{
+        margin-top: 2px;
+      }
+      .mb-px{
+        margin-bottom: 1px;
+      }
+      .mr-ml-10{
+        margin-left: 10px;
+        margin-right: 10px
+      }
+      .mr-ml{
+        margin-left: 0.1rem;
+        margin-right: 0.1rem
+      }
+      .mr-ml-2{
+        margin-left: 0.2rem;
+        margin-right: 0.2rem
+      }
+      .mt-0,{
+        margin-top: 0px;
+      }
+      .m-0{
+        margin: 0px;
+      }
+      .mt-4, .my-4 {
+       margin-top: 1.5rem;
+      }
+
+      }
+
+      .card-container{
+        margin-left: auto;
+        margin-right: auto;
+      }
+      .time-container{
+        position: relative;
+        width: 100%;
+        padding-right: 15px;
+        padding-left: 15px;
+      }
+
+      .font-weight-bold {
+        font-weight: 700;
+      }
+      .fs-18{
+        font-size: 18px;
+      }
+      .fs-24{
+        font-size: 24px;
+      }
+      .phone-name{
+        position: relative;
+        width: 100%;
+        padding-right: 15px;
+        padding-left: 15px;
+      }
+      .clock-radius{
+        border-radius: 8px;
+      }
+
+      .card {
+        flex: 1 1 auto;
+        min-height: 1px;
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        min-width: 0;
+        word-wrap: break-word;
+        background-color: #fff;
+        background-clip: border-box;
+        border: 1px solid rgba(0, 0, 0, 0.125);
+        border-radius: 0.25rem;
+        padding-bottom: 1.25rem;
+        padding-top: 1.25rem;
+      }
+      .site-font{
+        font-size: 18px;
+      }
+      h5{
+        font-size: 1.25rem;
+      }
+
+      .w-100{
+        width: 100%;
+      }
+
+      .w-75{
+        width: 75%;
+      }
+
+      .height{
+        height: 100%;
+      }
+
+      .detail-box {
+        background-color: #f0fbff;
+        padding: 8px 0;
+      }
+      .p-1{
+        padding: 0.2rem;
+      }
+      .p-3{
+        padding: 1rem;
+      }
+      .pb-1{
+        padding-bottom: 0.2rem;
+      }
+
+
+      .ph-3{
+        padding-left: 1rem;
+        padding-right:  1rem;
+
+      }
+
+
+     .box-bg .promotion
+    {
+      color: #000;
+      background-color: #FFC239;
+      box-shadow: 0 0 5px 2px rgba(0, 0, 0, 0.25), 0 0 1px 0 rgba(0, 0, 0, 0.15);
+      text-align: center;
+      margin-bottom: 0.5rem;
+      font-weight: 700;
+      right: 1rem;
+
+
+    }
+
+      .font_h{
+        font-family: Heebo;
+      }
+      .mb{
+        margin-bottom:
+      }
+      .font-bold {
+        font-weight: 700 ;
+        font-size: 1.25rem;
+      }
+      .box-bg {
+        box-shadow: 0 1px 3px 0 #bfbfbf;
+        background-color: #fff;
+        border-radius: 10px;
+        border: 1px solid #d7dde2;
+      }
+      .align-self-baseline{
+        align-self: baseline;
+      }
+      .flex-column{
+        flex-direction: column;
+      }
+
+      .bold {
+        font-size: 16px;
+        font-weight: 700;
+        color: #001b2b;
+      }
+
+      .blue-text{
+        color: #04478C;
+      }
+      .option-button {
+        position: relative;
+        border-radius: 4px;
+        width: 100%;
+        padding: 16px;
+        background-color: #fff;
+        border: 1px solid #f0fbff;
+        font-size: 16px;
+        box-shadow: 0 1px 3px 0 #bfbfbf;
+      }
+      .img {
+          width: 50%;
+        }
+
+     
+      .shadow {
+        box-shadow: 0 0 30px #55818452;
+    }
+
+
+      }
+     
+      .deal-info-desktop-network {
+        background-color: #f5f9fc;
+        display: block;
+        display: -webkit-box;
+        display: flex;
+        text-align: center;
+        width: 130px;
+        height: 83px;
+        float: left;
+        -webkit-box-align: center;
+        align-items: center;
+        padding: 8px;
+      }
+      .horizonatal-box-img {
+        width: 170px;
+      }
+      .bg-light {
+        background: #f5f9fc;
+      }
+
+      .mobile {
+        display: none;
+      }
+      @media only screen and (max-width: 768px) {
+
+        .details {
+          margin: 0 auto;
+        }
+
+        .mobile-price {
+          border-radius: 11px;
+          box-shadow: 0 1px 3px 0 #bfbfbf;
+        }
+        .mobile-price .detail-box {
+          margin-top: 0px;
+        }
+
+
+        .deals-list .main-div {
+          margin: 0 auto;
+          max-width: 96%;
+        }
+        .actions button {
+          margin-bottom: 1rem;
+        }
+        .features .box {
+          margin-bottom: 0.5rem;
+        }
+      }
+      @media only screen and (max-width: 767px) {
+        .main-div .img {
+          width: 50%;
+        }
+        .content-inner {
+          padding: 10px;
+        }
+      }
+      @media only screen and (max-width: 520px) {
+        .mobile {
+          display: block ;
+        }
+        .desktop {
+          display: none ;
+        }
+        .loader {
+          display: block ;
+        }
+
+        .justify-sp-around{
+          justify-content:space-around;
+        }
+        .top-bg {
+          display: flex ;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+        }
+        .img-review{
+          width: 155px;
+          height: 40px;
+        }
+      }
+        .horizonatal-box-img {
+          width: 155px;
+        }
+        .img-div{
+          position: relative;
+          box-sizing: border-box;
+          text-align: right;
+        }
+        .price-img{
+          left: 22px
+        }
+
+        .center-item{
+          align-items: center;
+        }
+
+        .sim-tag-container{
+          flex: 0 0 66.66667%;
+          max-width: 66.66667%;
+          position: relative;
+          width: 100%;
+        }
+
+        .bg-white{
+          background: white;
+        }
+        .price-drop-text{
+          font-size: 2.5rem;
+        }
+
+        .box-shadow{
+          box-shadow: 0 .125rem .25rem rgba(0,0,0,.075)
+        }
+
+        .fa{
+          fill: #007bff;
+        }
+        .font-h{
+          font-family: Heebo;
+        }
+        .hv-50{
+          height: 50px;
+        }
+
+        .form-control {
+          display: block;
+          width: 100%;
+          height: auto;
+          height: calc(1.5em + 0.75rem + 2px);
+          font-size: 1rem;
+          font-weight: 400;
+          line-height: 1.5;
+          color: #495057;
+          background-color: #fff;
+          background-clip: padding-box;
+          border: 1px solid #ced4da;
+          border-radius: 0.25rem;
+          -webkit-transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+          transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+      }
+        .networks-box {
+
+          min-height: 100%;
+          background: #ffffff;
+          border-radius: 4px;
+          border: 1px solid #d7dde2;
+          padding: 1rem;
+          box-shadow: 0 0 0 0 #d7dde2;
+          -webkit-transition: box-shadow 200ms ease-in-out, border 200ms ease-in-out;
+          transition: box-shadow 200ms ease-in-out, border 200ms ease-in-out;
+          display: block;
+          -webkit-text-decoration: inherit;
+          text-decoration: inherit;
+          color: inherit;
+          min-height: auto;
+          display: -webkit-box;
+          display: -webkit-flex;
+          display: -ms-flexbox;
+          display: flex;
+          -webkit-align-items: center;
+          -webkit-box-align: center;
+          -ms-flex-align: center;
+          align-items: center;
+          -webkit-box-pack: center;
+          -webkit-justify-content: center;
+          -ms-flex-pack: center;
+          justify-content: center;
+          height: 100px;
+          padding: 25px;
+    }
+
+    @media only screen and (max-width: 375px) {
+        
+      .clock-digit{
+        font-size: 50px;
+        font-weight: 900;
+        margin: 0px;
+      }
+
+        }
+
+    @media only screen and (max-width: 320px) {
+        
+      .clock-digit{
+        font-size: 40px;
+        font-weight: 900;
+        margin: 0px;
+      }
+
+        }
+      
+    </style>
+  <!-- AMP Analytics --><script async custom-element="amp-analytics" src="https://cdn.ampproject.org/v0/amp-analytics-0.1.js"></script>
+
+</head>
+<body>
+  <nav class="navbar-style bg-white d-flex justify-center-align-center">
+    <div class="d-flex">
+      <a class="navbar-brand" href="/">
+
+        <amp-img src="<%= asset_path('logo.png')%>" width="145" height= "45.3"></amp-img>
+      </a>
+      <!-- <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button> -->
+  </nav>
+  <div class="container py-2 px-15 d-flex justify-center-align-center">
+    <div class="card shadow box-bg d-flex justify-center-align-center text-center">
+      <div class="promotion mt-2 w-100 mb-1 blue-text">
+        <h2 class="blue-text py-3 m-0 fs-18">Get your Sim deal, before time expires</h2>
+      </div>
+      <div class="w-100 d-flex justify-sp-around">
+          <amp-date-countdown timeleft-ms ="7200000"
+            layout = "responsive"
+            height = "100"
+            width = "200">
+            <template type="amp-mustache">
+             <div class="d-flex justify-center-align-baseline">
+              <div class="mr-ml">
+                <div class="clock-text clock-radius px-3 mr-ml-2">
+                  <h1 class="clock-digit">
+                    {{hh}}
+                  </h1>
+                </div>
+                <div>
+                  <p class="m-0">
+                    <b class="text-black">
+                      Hours
+                    </b>
+                  </p>
+                </div>
+              </div>
+              <div>
+                <h1 class="text-blue clock-digit">:</h1>
+              </div>
+              <div class="mr-ml">
+              <div class="clock-text clock-radius px-3 mr-ml-2">
+                <h1 class="clock-digit">
+                  {{mm}}
+                </h1>
+              </div>
+                <div>
+                  <p class="text-black m-0">
+                    <b>
+                    Minutes
+                    </b>
+                  </p>
+                </div>
+              </div>
+              <div>
+                <h1 class="text-blue clock-digit">:</h1>
+              </div>
+              <div class="mr-ml">
+              <div class="clock-text clock-radius px-3 mr-ml-2">
+                <h1 class="clock-digit">
+                  {{ss}}
+                </h1>
+              </div>
+              <div>
+                <p class="m-0">
+                  <b class="text-black">
+                  Seconds
+                  </b>
+                </p>
+              </div>
+             </div>
+           </div>
+            </template>
+          </amp-date-countdown>
+        </div>
+        
+      <div class="d-flex w-100 justify-sp-around">  
+      <div class="d-flex justify-center-align-center small-mobile-margin sim-tag-container px-0">
+      <div class="img-div d-flex"> 
+      <amp-img src="<%= asset_path('sim/sim-tag.png')%> " width = "88" height = "76" class="price-img"></amp-img>
+      <amp-img src="<%= asset_path('sim/sim-icon.png')%> " width = "140" height = "140" class="sim-img"></amp-img>
+        
+      </div>
+    </div>
+    <div class="d-flex justify-center-align-center border-left small-mobile-margin flex-column py-2 mt-4 w-100">
+      <div class="text-center py-0 ">
+        <h6 class="font-bold mb-0 pb-1 mt-2 text-black site-font">Data</h6>
+        <span class="blue-text bold ">8gb</span> 
+      </div>
+       <div class="text-center py-0">
+        <h6 class="font-bold mb-0 pb-1 mt-2 text-black site-font">Calls</h6>
+        <span class="blue-text bold">Unlimited</span> 
+      </div>
+       <div class="text-center py-0">
+        <h6 class="font-bold mb-0 pb-1 mt-2 text-black site-font">Texts</h6>
+        <span class="blue-text bold">Unlimited</span> 
+      </div>
+    </div>
+  </div>
+      <div class="row mb-2 w-100">
+        
+        <div class="d-flex w-100 mb-2 justify-center-align-center flex-column">
+          <div>
+          <div class="d-flex mt-2 mt-px align-baseline">
+            <amp-img src="<%= asset_path('check.svg')%>" width="20" height= "20" class="mr-2 "></amp-img>      
+            <span class="blue-text mt-px"> 5G Ready at no extra cost</span>
+          </div>
+          <div class="d-flex mt-px align-baseline">
+            <amp-img src="<%= asset_path('check.svg')%>" width="20" height= "20" class="mr-2 mt-px mb-px"></amp-img>
+            <span class="blue-text mt-px-2"> Personal Hotspot</span>
+          </div>
+          <div class="d-flex mt-px align-baseline">
+            <amp-img src="<%= asset_path('check.svg')%>" width="20" height= "20" class="mr-2 mt-px mb-px"> </amp-img>
+            <span class="blue-text mt-px"> Go Roam Around the World</span>
+          </div>
+          </div>
+        </div>
+        <div class="px-2">
+            <button on="tap:AMP.setState({showLightbox: true})" class="btn btn-danger o-btn open-form hv-50 fs-24  w-100">Get deal now</button>
+         </div>
+       </div>
+    </div>
+  </div>
+  <hr class="m-0">
+  <section class=" bg-white py-5 open-form">
+  <div class="p-3">
+    <h5 class="fm_h">Get accepted on the top networks</h5>
+      <div class="row">
+        <div class="col-md-2 mb-2">
+          <a href="/step-form?<%= request.fullpath.split('?')[1] %>" class="networks-box">
+            <amp-img src="<%= asset_path('company/ee.png')%> " width = "28" height = "48"></amp-img>
+          </a>
+        </div>
+        <div class="col-md-2 mb-2">
+          <a href="/step-form?<%= request.fullpath.split('?')[1] %>" class="networks-box">
+            <amp-img src="<%= asset_path('company/vodafone.png')%> " width = "68" height = "48"></amp-img>
+          </a>
+        </div>
+        <div class="col-md-2 mb-2">
+          <a href="/step-form?<%= request.fullpath.split('?')[1] %>" class="networks-box">
+            <amp-img src="<%= asset_path('company/id.png')%> " width = "41" height = "48"></amp-img>
+          </a>
+        </div>
+        <div class="col-md-2 mb-2">
+          <a href="/step-form?<%= request.fullpath.split('?')[1] %>" class="networks-box">
+            <amp-img src="<%= asset_path('company/three.png')%> " width = "38" height = "48"></amp-img>
+          </a>
+        </div>
+        <div class="col-md-2 mb-2">
+          <a href="/step-form?<%= request.fullpath.split('?')[1] %>" class="networks-box">
+            <amp-img src="<%= asset_path('company/02.png')%> " width = "47" height = "48"></amp-img>
+          </a>
+        </div>
+        <div class="col-md-2 mb-2">
+          <a href="step-form" class="networks-box">
+             <amp-img src="<%= asset_path('company/tessco.png')%> " width = "127" height = "48"></amp-img>
+          </a>
+        </div>
+      </div>
+</section>
+  <footer class="background-light pt-5">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12 col-12 text-center">
+           <p><a href="https://deals.megamobiledeals.com/privacy-policy"  class="mx-md-2"> Privacy Policy </a> | <a href="https://deals.megamobiledeals.com/cookie-policy"  class="mx-md-2"> Cookie Policy</a> | <a href="https://deals.megamobiledeals.com/terms-and-conditions/" class="mx-md-2">Terms and conditions</a></p>
+          <p>
+            Megamobiledeals.com is the property and trading style of Duke Leads Ltd
+          </p>
+          <p>
+            Registered: International House, 24 Holborn Viaduct, London, United Kingdom, EC1A 2BN.
+          </p>
+          <p>
+          Company Number 10853728.
+          </p>
+          <p>Information Commissioner’s Office (ICO) registration number ZA278291.</p>
+          <p>*Megamobiledeals.com does not perform a credit check but you may be asked to complete one if you apply for a mobile phone contract with our partners.</p>
+        </div>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>
