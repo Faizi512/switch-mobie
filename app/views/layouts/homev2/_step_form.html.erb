@@ -1,11 +1,14 @@
-<%= javascript_pack_tag 'step_form', 'data-turbolinks-track': 'reload', defer: true %>
-<div class="bg-white bg-img-non">
+<!-- Form -->
+<div class="modal fade" id="deal-form-modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
   <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
     <div class="modal-content deal-form-box">
       <div class="modal-header">
          <h1><span class="text-blue">You are just</span> 30 seconds <span class="text-blue"> away from your dream phone</span></h1>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
       </div>
-      <div class="modal-body" style="z-index: 1 !important">
+      <div class="modal-body">
         <form class="form" id="dealform" data-details="<%= @details %>" method="post" action="javascript:;">
           <div class="progress mb-5">
             <div class="progress-bar w-0" id="progressBar"></div>
@@ -261,10 +264,10 @@
             </div>
           </div>
           <div  class="tab display-none" id="slide7">
+            <h4 class="text-center mb-3 text-orange">
+              Great, your mobile offer is on the next page. Just let us know if the following offers would be of interest to you. If not just select "no" and continue to your mobile deal
+            </h4>
             <div class="row justify-content-center">
-              <h4 class="text-center mb-3 text-orange">
-                Great, your mobile offer is on the next page. Just let us know if the following offers would be of interest to you. If not just select "no" and continue to your mobile deal
-              </h4>
               <div class="col px-0">
                  <h4 class="text-center mb-4">50 Free Spins From 123 Casino?</h4>
                  <div class="form-group col-lg-7  col-sm-7 col-12 mx-auto">

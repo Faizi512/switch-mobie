@@ -1,0 +1,112 @@
+@-moz-keyframes spin {
+  0% {
+    -moz-transform: rotate(0deg);
+    transform: rotate(0deg)
+  }
+
+  100% {
+    -moz-transform: rotate(359deg);
+    transform: rotate(359deg)
+  }
+}
+
+@-webkit-keyframes spin {
+  0% {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg)
+  }
+
+  100% {
+    -webkit-transform: rotate(359deg);
+    transform: rotate(359deg)
+  }
+}
+
+@keyframes spin {
+  0% {
+    -moz-transform: rotate(0deg);
+    -ms-transform: rotate(0deg);
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg)
+  }
+
+  100% {
+    -moz-transform: rotate(359deg);
+    -ms-transform: rotate(359deg);
+    -webkit-transform: rotate(359deg);
+    transform: rotate(359deg)
+  }
+}
+.btn-success{
+  box-shadow: rgba(255, 0, 131, 0.5) 0px 10px 40px -10px;
+  transition: all 0.3s ease 0s, transform 0.5s ease 0s;
+}
+.btn-success:hover{
+  background-color: #DC0073;
+}
+.btn-success.in-progress:before {
+  content: "";
+  display: block;
+  position: absolute;
+  z-index: 1;
+  top: 50%;
+  left: 50%;
+  border-radius: 100%;
+  box-sizing: border-box;
+  margin-top: -12.5px;
+  margin-left: 0px;
+  width: 25px;
+  height: 25px;
+  border: 2px solid rgba(255,255,255,0.15);
+  border-top-color: rgba(255,255,255,0.8);
+  -moz-animation: spin 0.6s linear 300;
+  -webkit-animation: spin 0.6s linear 300;
+  animation: spin 0.6s linear 300;
+  left: 25px;
+}
+
+.btn-success.in-progress{
+  pointer-events: none;
+  opacity: 0.8;
+}
+
+input:checked ~ label {
+  background: #F7F7F7;
+  border-color: #f57200 !important;
+}
+label.with-icn {
+  min-width: 160px;
+  min-height: 170px;
+}
+.iconic-and-text {
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  justify-content: flex-start;
+  height: 100%;
+}
+input:checked ~ label i {
+  background: #f57200;
+  border-width: 5px;
+}
+input:checked ~ label .icon-save-energy {
+  color: #f57200;
+}
+i {
+  display: inline-block;
+  width: 30px;
+  min-height: 30px;
+  border: 15px #fff solid;
+  background: transparent;
+  box-shadow: 0 0 0 1px #DADADA;
+  border-radius: 50%;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  -webkit-transition: border-width 0.1s, box-shadow 0.1s;
+  -moz-transition: border-width 0.1s, box-shadow 0.1s;
+  -o-transition: border-width 0.1s, box-shadow 0.1s;
+  transition: border-width 0.1s, box-shadow 0.1s;
+}
+.text-orange{
+  color: #f57200 !important;
+}

@@ -82,7 +82,7 @@ class Common {
     if(query){
       var keywords = ["credit", "accepted", "bad", "score", "sunshine",
                        "no credit", "free", "guaranteed", "gift", "win", "wining", "very",
-                       "phone check", "check" , "offers", "no upfront", "deals", "cheap", "catalogues", "later",
+                       "phone check", "check" , "no upfront", "cheap", "catalogues", "later",
                        "sun", "no deposit", "accepted"]
       query = query.toLowerCase();
       for(var index in keywords) {
@@ -174,6 +174,7 @@ class Common {
     if (!tabs[n]) return;
     tabs[n].style.display = "block";
     this.fixStepIndicator(n)
+    $(".btn-success").removeClass("in-progress")
   }
 
   fillform(){
@@ -212,6 +213,10 @@ class Common {
       return false
     }
     return true
+  }
+
+  showCircle(){
+    $(".btn-success").addClass("in-progress")
   }
 
   fixStepIndicator(num) {

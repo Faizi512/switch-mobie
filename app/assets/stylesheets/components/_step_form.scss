@@ -1,24 +1,39 @@
 
-input[type=number]::-webkit-inner-spin-button, 
-input[type=number]::-webkit-outer-spin-button { 
-  -webkit-appearance: none; 
-  margin: 0; 
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+.opacity-0{
+  opacity: 0;
+}
+
+.fs-45{
+  font-size:45px
+}
+
+.yes-hover:hover .icon-save-energy{
+  cursor: pointer;
+  color: green;
+}
+.no-hover:hover .icon-save-energy{
+  color: red;
 }
 .display-none{
   display: none;
 }
 %onoff-inner{
-  display: block; 
-  float: left; 
-  width: 50%; 
-  height: 30px; 
-  padding: 0; 
+  display: block;
+  float: left;
+  width: 50%;
+  height: 30px;
+  padding: 0;
   line-height: 30px;
-  font-size: 14px; 
-  color: white; 
-  font-family: Trebuchet, Arial, sans-serif; 
+  font-size: 14px;
+  color: white;
+  font-family: Trebuchet, Arial, sans-serif;
   font-weight: bold;
-  box-sizing: border-box;        
+  box-sizing: border-box;
 }
 .deal-form-box {
   background: #fff;
@@ -37,8 +52,8 @@ input[type=number]::-webkit-outer-spin-button {
       .text-blue{
         color: #3ebbe9;
       }
-      
-    }   
+
+    }
   }
   .modal-body{
     .form {
@@ -47,7 +62,7 @@ input[type=number]::-webkit-outer-spin-button {
         margin-bottom: 0px;
         font-size: 15px;
         font-weight: 400;
-      }     
+      }
       padding: 15px;
       .progress {
         height: 1.6rem;
@@ -76,7 +91,7 @@ input[type=number]::-webkit-outer-spin-button {
         line-height: 24px;
         font-weight: 700;
         width: 100%;
-        
+
       }
       .securityInfo {
         text-align: center;
@@ -120,12 +135,12 @@ input[type=number]::-webkit-outer-spin-button {
           border-width: 2px;
         }
       }
-      
+
       /*.onoffswitch {
-        position: relative; 
+        position: relative;
         width: 90px;
-        -webkit-user-select: none; 
-        -moz-user-select: none; 
+        -webkit-user-select: none;
+        -moz-user-select: none;
         -ms-user-select: none;
         .onoffswitch-checkbox {
           display: block;
@@ -134,28 +149,28 @@ input[type=number]::-webkit-outer-spin-button {
           position: absolute;
         }
         .onoffswitch-label {
-          display: block; 
-          overflow: hidden; 
+          display: block;
+          overflow: hidden;
           cursor: pointer;
-          border: 2px solid #999999; 
+          border: 2px solid #999999;
           border-radius: 20px;
           .onoffswitch-inner {
-            display: block; 
-            width: 200%; 
+            display: block;
+            width: 200%;
             margin-left: -100%;
             transition: margin 0.3s ease-in 0s;
             &:before{
               @extend %onoff-inner;
               content: "Yes";
               padding-left: 10px;
-              background-color: #f08c33; 
+              background-color: #f08c33;
               color: #FFFFFF;
             }
             &:after{
               @extend %onoff-inner;
               content: "No";
               padding-right: 10px;
-              background-color: #EEEEEE; 
+              background-color: #EEEEEE;
               color: #999999;
               text-align: right;
             }
@@ -169,17 +184,17 @@ input[type=number]::-webkit-outer-spin-button {
             position: absolute;
             top: 0;
             bottom: 0;
-            right: 56px;    
-            border: 2px solid #999999; 
+            right: 56px;
+            border: 2px solid #999999;
             border-radius: 20px;
-            transition: all 0.3s ease-in 0s; 
+            transition: all 0.3s ease-in 0s;
           }
         }
       }*/
     .form-control{
         height: auto;
       }
-    }  
+    }
   }
   h2 {
     margin: 7px 0;
@@ -188,8 +203,8 @@ input[type=number]::-webkit-outer-spin-button {
     color: #282828;
     font-weight: 400;
     margin-bottom: 20px;
-  }  
-} 
+  }
+}
 
 .parsley-error-list{
   clear: both;
@@ -243,13 +258,13 @@ input[type=number]::-webkit-outer-spin-button {
     top: 0;
     bottom: 0;
     right: 56px;    border: 2px solid #999999; border-radius: 20px;
-    transition: all 0.3s ease-in 0s; 
+    transition: all 0.3s ease-in 0s;
 }
 .onoffswitch-checkbox:checked + .onoffswitch-label .onoffswitch-inner {
     margin-left: 0;
 }
 .onoffswitch-checkbox:checked + .onoffswitch-label .onoffswitch-switch {
-    right: 0px; 
+    right: 0px;
 }
 
 input:checked + .slider {
@@ -273,7 +288,7 @@ input:checked + .slider:before {
 
 .slider.round:before {
   border-radius: 50%;
-} 
+}
 input.valid ~ .validate.success {
   display: inline-block;
 }
@@ -316,7 +331,7 @@ input.error ~ .validate.success {
       margin-bottom: 1rem !important;
     }
   }
-  
+
 }
 @media only screen and (max-width: 767px) {
   .deal-form-box{
