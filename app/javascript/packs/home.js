@@ -23,12 +23,16 @@ class Home extends Common {
       CI.backStep(-1)
     });
 
-    $("input[name='save-energy']").click(function() {
+    $("input[name='save-energy-bc-no']").click(function() {
       if (this.value == "yes") {
         CI.nextStep(1);
         $( "#btn-continue").show()
       }else{
-        CI.nextStep(2);
+        if(CI.getBcFromParams()){
+           CI.nextStep(2);
+        }else{
+          CI.successUrl()
+        }
       }
     });
 
@@ -64,7 +68,7 @@ class Home extends Common {
   checklastStep(){
     var CI = this
     if($("input[name='free-credit']:checked").length > 0 && $("input[name='casino']:checked").length > 0){
-      CI.successUrl()
+      this.successUrl()
     }
   }
 
@@ -84,16 +88,6 @@ class Home extends Common {
 
   mmdLead(){
     if (this.customValidator('#dealform') == true && this.isPhone == true && this.isEmail == true){
-      $('.but_loader').show()
-      $('.nextStep').prop('disabled', true);
-      this.postData()
-    }else{
-      $('#dealform').parsley().validate()
-    }
-  }
-
-  mmdBCLead(){
-    if (this.customValidator('#dealform') == true && this.isPhone == true && this.isEmail == true){
       this.postMMDData()
     }else{
       $('#dealform').parsley().validate()
@@ -104,9 +98,9 @@ class Home extends Common {
     this.firePixel()
     var data = this.getData();
     $( "#btn-continue").hide()
-    $(".postcode_holder").html($(".postcode").val() || this.getUrlParameter("postcode")  || "");
     $( "#btn-back").hide()
     $( ".progress").hide()
+    $(".postcode_holder").html($(".postcode").val() || this.getUrlParameter("postcode")  || "");
     // Form Submisson
     this.updateFacebookAudience(data)
     this.submitLead(data, this.details.camp_id)
@@ -115,6 +109,10 @@ class Home extends Common {
   energyLead(){
     var data = this.getDataEnergy();
     this.submitLead(data, "ENERGY")
+    if(!this.getBcFromParams()){
+      this.currentTab  = 3
+      this.successUrl()
+    }
   }
 
   financeLead(){
@@ -133,12 +131,7 @@ class Home extends Common {
 
   handleBadCustomerForm(){
     if (this.currentTab == 2) {
-      if (this.getBcFromParams()) {
-        this.mmdBCLead()
-      }else{
-        this.currentTab = 6
-        this.mmdLead()
-      }
+      this.mmdLead()
     }else if (this.currentTab == 4) {
       $( "#btn-continue").hide()
       $( "#btn-back").hide()
