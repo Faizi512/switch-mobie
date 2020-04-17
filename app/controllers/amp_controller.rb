@@ -5,7 +5,7 @@ class AmpController < ApplicationController
 
   end
 
-  def sim_only_deals
+  def sim_deal_only
     render :layout => false
 
   end

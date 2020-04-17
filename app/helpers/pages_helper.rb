@@ -254,6 +254,21 @@ module PagesHelper
     }.to_json
   end
 
+    def step_form_sim_deal_only
+    @details = {
+      camp_id: 'MEGA-MOBILE-DEALS',
+      success_url: '/success',
+      bad_success_url: 'https://mtrk5.co.uk/?a=14118&c=33110',
+      form_name: 'Mega-Mobile-Deals',
+      optin_url: '',
+      sid: nil,
+      ssid: nil,
+      source:'three-sim-amp',
+      quick_submit: false,
+      submit_on_load: false,
+    }.to_json
+  end
+
   def sim_deal_only
     @details = {
       camp_id: 'MEGA-MOBILE-DEALS',
