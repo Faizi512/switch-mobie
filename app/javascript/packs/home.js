@@ -148,7 +148,7 @@ class Home extends Common {
       phone1: this.getUrlParameter('phone1') || $(".phone").val() || '',
       street1: this.getUrlParameter('street1')|| $(".street1").val(),
       lead_id: this.getUrlParameter('lead_id')|| '',
-      sid: this.getUrlParameter('sid')|| 1,
+      sid: 1,
       source: 'MMD',
       ssid: this.getUrlParameter('ssid') || 'unknown',
       paymentmethod: this.getUrlParameter('paymentmethod')|| 'prepayment',
