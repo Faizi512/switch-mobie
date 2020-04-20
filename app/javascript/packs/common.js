@@ -115,7 +115,6 @@ class Common {
     this.validatePhone()
     this.validateEmail()
     this.validatePostcode()
-
   }
 
   validatePhone(){
