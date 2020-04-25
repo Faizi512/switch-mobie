@@ -1,8 +1,9 @@
 class AmpController < ApplicationController
-  
-  def index
-    render :layout => false
+  include PagesHelper
 
+  def index
+    @bc = isbadCustomer(params[:keyword]) || params[:bc] == "yes"
+    render :layout => false
   end
 
   def sim_deal_only

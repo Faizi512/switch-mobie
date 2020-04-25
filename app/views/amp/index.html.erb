@@ -1,17 +1,22 @@
 <!doctype html>
-  <html ⚡ lang="en">
+<html ⚡ lang="en">
   <head>
     <meta charset="utf-8">
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+    <link rel="canonical" href="/">
     <script async src="https://cdn.ampproject.org/v0.js"></script>
     <script async custom-element="amp-date-countdown" src="https://cdn.ampproject.org/v0/amp-date-countdown-0.1.js"></script>
-    <script async custom-template="amp-mustache" src="https://cdn.ampproject.org/v0/amp-mustache-0.2.js"></script>
     <script async custom-element="amp-lightbox" src="https://cdn.ampproject.org/v0/amp-lightbox-0.1.js"></script>
     <script async custom-element="amp-bind" src="https://cdn.ampproject.org/v0/amp-bind-0.1.js"></script>
     <script async custom-element="amp-form" src="https://cdn.ampproject.org/v0/amp-form-0.1.js"></script>
+    <script async custom-template="amp-mustache" src="https://cdn.ampproject.org/v0/amp-mustache-0.2.js"></script>
+    <script async custom-element="amp-selector" src="https://cdn.ampproject.org/v0/amp-selector-0.1.js"></script>
     <link href="https://fonts.googleapis.com/css?family=Heebo:700&display=swap" rel="stylesheet">
     <title>MegaMobileDeals</title>
     <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
     <script type="application/ld+json">
+
       {
         "@context": "http://schema.org",
         "@type": "NewsArticle",
@@ -22,15 +27,38 @@
         ]
       }
     </script>
+
     <style amp-boilerplate>body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}</style><noscript><style amp-boilerplate>body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}</style></noscript>
     <style amp-custom>
       amp-date-countdown {
-      display: block;
-    }
-
-user agent stylesheet
-nav {
-    display: block;
+        display: block;
+      }
+      .lightbox {
+        background: rgba(0,0,0,0.8);
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      .lightbox h1 {
+        color: white;
+      }
+      form {
+        opacity: 1;
+        width: 82%;
+        background: white;
+        padding: 25px;
+        border-radius: 11px;
+        box-shadow: 0 5px 5px -3px rgba(0,0,0,0.2), 0 8px 10px 1px rgba(0,0,0,0.14), 0 3px 14px 2px rgba(0,0,0,0.12);
+      }
+      .bottom-bar{
+        text-align: center;
+        margin-top: 20px;
+      }
+      nav {
+        display: block;
       }
       .navbar-style{
         flex-flow: row nowrap;
@@ -92,7 +120,6 @@ nav {
       padding-bottom: 24px;
       background: linear-gradient(120deg, #99e2ff 0%, #99e2ff 70%, #66d4ff 70%, #66d4ff 100%);
       }
-      color: #000;
 
       .below-header .row {
         display: flex;
@@ -124,6 +151,7 @@ nav {
       }
 
       .o-btn{
+        cursor: pointer;
         background: linear-gradient(to bottom, #ff9b00, #f57200) ;
         text-shadow: #803c00 1px 1px 1px ;
         font: 700 20px arial ;
@@ -256,7 +284,7 @@ nav {
       .w-auto{
         width: auto;
       }
-      
+
 
       .price-drop-padding{
         padding: 45px 40px;
@@ -414,8 +442,7 @@ nav {
 
       }
 
-     .box-bg .promotion
-    {
+     .box-bg .promotion{
       color: #000;
       background-color: #f7d849;
       box-shadow: 0 0 5px 2px rgba(0, 0, 0, 0.25), 0 0 1px 0 rgba(0, 0, 0, 0.15);
@@ -425,8 +452,7 @@ nav {
       font-weight: 700;
       right: 1rem;
 
-
-    }
+      }
       .font_h{
         font-family: Heebo;
       }
@@ -464,8 +490,8 @@ nav {
         box-shadow: 0 1px 3px 0 #bfbfbf;
       }
       .img {
-          width: 50%;
-        }
+         width: 50%;
+      }
 
       .deal-info-desktop-network {
         background-color: #f5f9fc;
@@ -489,6 +515,111 @@ nav {
 
       .mobile {
         display: none;
+      }
+      .input-group-text {
+        margin-left: -5px;
+        display: flex;
+        align-items: center;
+        padding: 5.6px .75rem;
+        margin-bottom: 0;
+        font-size: 1rem;
+        font-weight: 400;
+        line-height: 1.5;
+        color: #495057;
+        text-align: center;
+        white-space: nowrap;
+        background-color: #e9ecef;
+        border: 1px solid #ced4da;
+        border-radius: .25rem;
+      }
+      .input-group {
+        position: relative;
+        display: flex;
+        flex-wrap: wrap;
+        align-items: stretch;
+        width: 100%;
+        margin-top: 15px;
+      }
+      .input-group input{
+        flex: 1 1;
+      }
+      .onoffswitch {
+        position: relative;
+        width: 90px;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+      }
+      .onoffswitch-checkbox {
+        display: block;
+        opacity: 0;
+        z-index: 2;
+        position: absolute;
+      }
+      .onoffswitch-inner {
+        display: block;
+        width: 200%;
+        margin-left: -100%;
+        transition: margin 0.3s ease-in 0s;
+      }
+      .onoffswitch-inner:before, .onoffswitch-inner:after {
+        display: block;
+        float: left;
+        width: 50%;
+        height: 30px;
+        padding: 0;
+        line-height: 30px;
+        font-size: 14px;
+        color: white;
+        font-family: Trebuchet, Arial, sans-serif;
+        font-weight: bold;
+        box-sizing: border-box;
+      }
+      .onoffswitch-inner:before {
+        content: "Yes";
+        padding-left: 10px;
+        background-color: #f08c33;
+        color: #FFFFFF;
+        text-align: left;
+      }
+      .onoffswitch-inner:after {
+        content: "No";
+        padding-right: 10px;
+        background-color: #EEEEEE;
+        color: #999999;
+        text-align: right;
+      }
+      input:checked ~ label {
+        background: #F7F7F7;
+        border-color: #f57200;
+      }
+      .onoffswitch-checkbox:checked+.onoffswitch-label .onoffswitch-inner {
+          margin-left: 0;
+      }
+      .onoffswitch-checkbox:checked+.onoffswitch-label .onoffswitch-switch {
+          right: 0px;
+      }
+      .onoffswitch-switch {
+        display: block;
+        box-sizing: border-box;
+        width: 22px;
+        height: 22px;
+        margin: 6px;
+        background: #FFFFFF;
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        right: 56px;
+        border: 2px solid #999999;
+        border-radius: 20px;
+        transition: all 0.3s ease-in 0s;
+      }
+      .onoffswitch-label {
+        display: block;
+        overflow: hidden;
+        cursor: pointer;
+        border: 2px solid #999999;
+        border-radius: 20px;
       }
       @media only screen and (max-width: 768px) {
 
@@ -568,12 +699,16 @@ nav {
         .font-h{
           font-family: Heebo;
         }
-
+        .form-group{
+          margin: 15px 6px;
+        }
         .form-control {
+          box-sizing: border-box;
           display: block;
           width: 100%;
+          padding: 0px 10px;
           height: auto;
-          height: calc(1.5em + 0.75rem + 2px);
+          height: calc(1.7em + 0.75rem + 2px);
           font-size: 1rem;
           font-weight: 400;
           line-height: 1.5;
@@ -584,9 +719,8 @@ nav {
           border-radius: 0.25rem;
           -webkit-transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
           transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
-      }
+        }
         .networks-box {
-
           min-height: 100%;
           background: #ffffff;
           border-radius: 4px;
@@ -614,53 +748,893 @@ nav {
           justify-content: center;
           height: 100px;
           padding: 25px;
-    }
-    @media only screen and (max-width: 330px) {
-      .clock-digit{
-      font-size: 50px;
-      font-weight: 900;
-      margin: 0px;
       }
-    }
+      @media only screen and (max-width: 330px) {
+        .clock-digit{
+        font-size: 50px;
+        font-weight: 900;
+        margin: 0px;
+        }
+      }
+      .radio-grp {
+        background-color: #fff;
+        display: block;
+        margin: 10px 0;
+        position: relative;
+        border-radius: 0;
+      }
+      .radio-grp input {
+        width: 32px;
+        height: 32px;
+        order: 1;
+        z-index: 2;
+        position: absolute;
+        right: 30px;
+        top: 50%;
+        -webkit-transform: translateY(-50%);
+        transform: translateY(-50%);
+        cursor: pointer;
+        visibility: hidden;
+      }
+      .radio-grp input:checked ~ label {
+        color: #fff;
+      }
+      .radio-grp label {
+        box-sizing: border-box;
+        padding: 18px 30px 18px 60px;
+        margin-bottom: 0;
+        width: 100%;
+        display: block;
+        text-align: left;
+        color: #000;
+        font-size: 16px;
+        font-weight: 700;
+        cursor: pointer;
+        position: relative;
+        z-index: 2;
+        transition: color 200ms ease-in;
+        overflow: hidden;
+        border-radius: 0;
+        box-shadow: 0 5px 5px -3px rgba(0,0,0,0.2), 0 8px 10px 1px rgba(0, 0, 0, 0), 0 3px 14px 2px rgba(0,0,0,0.12);
+        border-radius: 4px;
+      }
+      .radio-grp input:checked ~ label:before {
+        -webkit-transform: translate(-50%,-50%) scale3d(56,56,1);
+        transform: translate(-50%,-50%) scale3d(56,56,1);
+        opacity: 1;
+        -webkit-transition: all .2s ease-in-out;
+        transition: all .2s ease-in-out;
+      }
+      .radio-grp label:before {
+        width: 10px;
+        height: 10px;
+        border-radius: 50%;
+        content: "";
+        background-color: #3f66db;
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        -webkit-transform: translate(-50%,-50%) scale3d(1,1,1);
+        transform: translate(-50%,-50%) scale3d(1,1,1);
+        transition: all 300ms cubic-bezier(0.4,0,0.2,1);
+        opacity: 0;
+        z-index: -1;
+      }
+      .radio-grp input:checked ~ label:after {
+        background-color: #fff;
+        border-color: #fff;
+        background-image: url(../img/icons/radia-selected-dotted.svg);
+        background-repeat: no-repeat;
+        background-position: 7px 7px;
+        -webkit-transition: all .2s ease-in-out;
+        transition: all .2s ease-in-out;
+      }
+      .radio-grp label:after {
+        width: 32px;
+        height: 32px;
+        content: "";
+        border: 2px solid #e7e7ee;
+        background-color: #e7e7ee;
+        border-radius: 50%;
+        z-index: 2;
+        position: absolute;
+        left: 10px;
+        top: 50%;
+        -webkit-transform: translateY(-50%);
+        transform: translateY(-50%);
+        cursor: pointer;
+      }
 
+      .text-orange {
+        color: #f57200;
+        font-size: 17px;
+      }
+      button:disabled {
+        opacity: 0.6;
+      }
+      input.user-invalid {
+        border: 1px solid red;
+      }
+      @-moz-keyframes spin {
+        0% {
+          -moz-transform: rotate(0deg);
+          transform: rotate(0deg)
+        }
 
+        100% {
+          -moz-transform: rotate(359deg);
+          transform: rotate(359deg)
+        }
+      }
+
+      @-webkit-keyframes spin {
+        0% {
+          -webkit-transform: rotate(0deg);
+          transform: rotate(0deg)
+        }
+
+        100% {
+          -webkit-transform: rotate(359deg);
+          transform: rotate(359deg)
+        }
+      }
+
+      @keyframes spin {
+        0% {
+          -moz-transform: rotate(0deg);
+          -ms-transform: rotate(0deg);
+          -webkit-transform: rotate(0deg);
+          transform: rotate(0deg)
+        }
+
+        100% {
+          -moz-transform: rotate(359deg);
+          -ms-transform: rotate(359deg);
+          -webkit-transform: rotate(359deg);
+          transform: rotate(359deg)
+        }
+      }
+      .button-next{
+        position: relative;
+        transition: all 0.3s ease 0s, transform 0.5s ease 0s;
+      }
+      .amp-form-submitting .button-next:before, .amp-form-verifying .button-next:before {
+        content: "";
+        display: block;
+        position: absolute;
+        z-index: 1;
+        top: 50%;
+        left: 50%;
+        border-radius: 100%;
+        box-sizing: border-box;
+        margin-top: -12.5px;
+        margin-left: 0px;
+        width: 25px;
+        height: 25px;
+        border: 2px solid rgba(255,255,255,0.15);
+        border-top-color: rgba(255,255,255,0.8);
+        -moz-animation: spin 0.6s linear 300;
+        -webkit-animation: spin 0.6s linear 300;
+        animation: spin 0.6s linear 300;
+        left: 25px;
+      }
+      .button-next{
+        margin-bottom: 13px;
+        width: 96%;
+        border-radius: 4px;
+        box-shadow: 0 5px 5px -3px rgba(0,0,0,0.2), 0 8px 10px 1px rgba(0,0,0,0.08), 0 3px 14px 2px rgba(0,0,0,0.12);
+      }
+      .amp-form-submitting .button-next, .amp-form-verifying .button-next{
+        pointer-events: none;
+        opacity: 0.8;
+      }
+      .tooltip {
+        position: relative;
+        display: inline-block;
+        color: blue;
+        border-bottom: 1px dotted black;
+      }
+
+      .tooltip .tooltiptext {
+        visibility: hidden;
+        width: 120px;
+        background-color: black;
+        color: #fff;
+        text-align: center;
+        border-radius: 6px;
+        padding: 5px 5px;
+        position: absolute;
+        z-index: 1;
+      }
+
+      .tooltip:hover .tooltiptext {
+        visibility: visible;
+      }
+      :root {
+        --color-white: #fff;
+        --color-black: #333;
+        --color-gray: #75787b;
+        --color-gray-light: #bbb;
+        --color-gray-disabled: #e8e8e8;
+        --color-green: #53a318;
+        --color-green-dark: #383;
+        --font-size-small: .75rem;
+        --font-size-default: .875rem;
+      }
+
+      .progress-bar {
+        display: flex;
+        justify-content: space-between;
+        list-style: none;
+        padding: 0;
+        margin: 0 0 1rem 0;
+      }
+      .progress-bar li {
+        flex: 2;
+        position: relative;
+        padding: 0 0 14px 0;
+        font-size: var(--font-size-default);
+        line-height: 1.5;
+        color: var(--color-green);
+        font-weight: 600;
+        white-space: nowrap;
+        overflow: visible;
+        min-width: 0;
+        text-align: center;
+        border-bottom: 2px solid var(--color-gray-disabled);
+      }
+      .progress-bar li:first-child,
+      .progress-bar li:last-child {
+        flex: 1;
+      }
+      .progress-bar li:last-child {
+        text-align: right;
+      }
+      .progress-bar li:before {
+        content: "";
+        display: block;
+        width: 8px;
+        height: 8px;
+        background-color: var(--color-gray-disabled);
+        border-radius: 50%;
+        border: 2px solid var(--color-white);
+        position: absolute;
+        left: calc(50% - 6px);
+        bottom: -7px;
+        z-index: 3;
+        transition: all .2s ease-in-out;
+      }
+      .progress-bar li:first-child:before {
+        left: 0;
+      }
+      .progress-bar li:last-child:before {
+        right: 0;
+        left: auto;
+      }
+      .progress-bar span {
+        transition: opacity .3s ease-in-out;
+      }
+      .progress-bar li:not(.is-active) span {
+        opacity: 0;
+      }
+      .progress-bar .is-complete:not(:first-child):after,
+      .progress-bar .is-active:not(:first-child):after {
+        content: "";
+        display: block;
+        width: 100%;
+        position: absolute;
+        bottom: -2px;
+        left: -50%;
+        z-index: 2;
+        border-bottom: 2px solid var(--color-green);
+      }
+      .progress-bar li:last-child span {
+        width: 200%;
+        display: inline-block;
+        position: absolute;
+        left: -100%;
+      }
+
+      .progress-bar .is-complete:last-child:after,
+      .progress-bar .is-active:last-child:after {
+        width: 200%;
+        left: -100%;
+      }
+
+      .progress-bar .is-complete:before {
+        background-color: var(--color-green);
+      }
+
+      .progress-bar .is-active:before,
+      .progress-bar li:hover:before,
+      .progress-bar .is-hovered:before {
+        background-color: var(--color-white);
+        border-color: var(--color-green);
+      }
+      .progress-bar li:hover:before,
+      .progress-bar .is-hovered:before {
+        transform: scale(1.33);
+      }
+
+      .progress-bar li:hover span,
+      .progress-bar li.is-hovered span {
+        opacity: 1;
+      }
+
+      .progress-bar:hover li:not(:hover) span {
+        opacity: 0;
+      }
+
+      .x-ray .progress-bar,
+      .x-ray .progress-bar li {
+        border: 1px dashed red;
+      }
+
+      .progress-bar .has-changes {
+        opacity: 1;
+      }
+      .progress-bar .has-changes:before {
+        content: "";
+        display: block;
+        width: 8px;
+        height: 8px;
+        position: absolute;
+        left: calc(50% - 4px);
+        bottom: -20px;
+        background-image: url('data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%208%208%22%3E%3Cpath%20fill%3D%22%23ed1c24%22%20d%3D%22M4%200l4%208H0z%22%2F%3E%3C%2Fsvg%3E');
+      }
+      h1.top-heading{
+        text-align: center;
+        margin: 7px 0;
+        font-size: 16px;
+        padding: 0;
+        color: #1b0e65;
+        font-weight: 600;
+      }
+      .top-heading span{
+        color: #3ebbe9;
+      }
+      .securityInfo ul li {
+        display: inline;
+        font-size: 12px;
+        color: #2f2f2f;
+        padding: 1px 10px;
+        border-right: solid 1px #2f2f2f;
+      }
+      .securityInfo ul img {
+        border: medium none;
+        max-width: 100%;
+        vertical-align: middle;
+        position: relative;
+        top: -1px;
+      }
 
     </style>
-  <!-- AMP Analytics --><script async custom-element="amp-analytics" src="https://cdn.ampproject.org/v0/amp-analytics-0.1.js"></script>
+    <!-- AMP Analytics -->
+    <script async custom-element="amp-analytics" src="https://cdn.ampproject.org/v0/amp-analytics-0.1.js"></script>
+  </head>
+  <body class="bg-white">
+    <amp-analytics config="https://www.googletagmanager.com/amp.json?id=GTM-N7W274Q&gtm.url=SOURCE_URL" data-credentials="include"></amp-analytics>
+    <div>
+      <amp-lightbox id="my-bindable-lightbox" [open]="showLightbox" layout="nodisplay"
+        on="lightboxClose:AMP.setState({showLightbox: false})">
+        <div class="lightbox"
+             >
+             <form
+               id="dealForm"
+                on="submit-error:AMP.setState({
+                  currentPage: event.response.currentPage
+                });submit-success:AMP.setState({
+                  currentPage: event.response.currentPage
+                })"
+                method="post"
+                action-xhr="/validate_data"
+                verify-xhr="/validate_data"
+                target="_top"
+                custom-validation-reporting="interact-and-submit"
+                class="verification-form">
+              <div class="stepper simple">
+                <h1 class="top-heading"><span class="text-blue">You are just</span> 30 seconds <span class="text-blue"> away from your dream phone</span></h1>
+                <div>
+                  <input type="hidden" name="step" [value]="currentPage">
+                  <input type="hidden" name="sid" value="<%= params[:sid] %>">
+                  <input type="hidden" name="ssid" value="<%= params[:ssid] %>">
+                  <input type="hidden" name="ad_set" value="<%= params[:ad_set] %>">
+                  <input type="hidden" name="source" value="<%= params[:source] %>">
+                  <input type="hidden" name="c1" value="<%= params[:c1] %>">
+                  <input type="hidden" name="bstransid" value="<%= params[:bstransid] %>">
+                  <input type="hidden" name="transid" value="<%= params[:transid] %>">
+                  <input type="hidden" name="adgroupid" value="<%= params[:adgroupid] %>">
+                  <input type="hidden" name="campaign" value="<%= params[:campaign] %>">
+                  <input type="hidden" name="keyword" value="<%= params[:keyword] %>">
+                  <input type="hidden" name="trafficid" value="<%= params[:trafficid] %>">
+                  <input type="hidden" name="paymentmethod" value="<%= params[:paymentmethod] %>">
+                  <input type="hidden" name="currentprovider" value="<%= params[:currentprovider] %>">
+                  <input type="hidden" name="towncity" value="<%= params[:towncity] %>">
+                  <input type="hidden" name="title" value="<%= params[:title] %>">
+                  <input type="hidden" name="bc" value="<%= params[:bc] %>">
+                </div>
+                <section [hidden]="currentPage > 0">
+                  <section>
+                    <ol class="progress-bar">
+                      <li class="is-complete"><span>Start</span></li>
+                      <li class="is-active"><span>Name</span></li>
+                      <li><span>Postcode</span></li>
+                      <li><span>Last Step</span></li>
+                    </ol>
+                  </section>
+                  <div  class="tab display-none" id="slide1">
+                    <div class="row justify-content-center">
+                      <div class="form-group col-lg-7 col-sm-7  col-12">
+                        <label>First Name*</label>
+                        <input
+                        name="firstname"
+                        id="verification-firstname"
+                        required
+                        pattern="^([A-Za-z]+[,.]?[ ]?|[A-Za-z]+['-]?)+$"
+                        type="text"
+                        value="<%= params[:firstname] %>"
+                        class="first_name form-control"
+                        placeholder="First Name" >
+                        <i class="validate success fa fa-check-circle"></i>
+                        <i class="validate error fa fa-times-circle"></i>
+                        <span visible-when-invalid="customError" validation-for="verification-firstname">First Name Must Be Alphabetic</span>
+                        <span visible-when-invalid="patternMismatch" validation-for="verification-firstname">First Name Must Be Alphabetic</span>
+                        <span visible-when-invalid="valueMissing" validation-for="verification-firstname">Please Enter First Name</span>
+                      </div>
+                      <div class="form-group col-lg-7  col-sm-7 col-12">
+                        <label>Last Name*</label>
+                        <input
+                        name="lastname"
+                        id="verification-lastname"
+                        required
+                        pattern="^([A-Za-z]+[,.]?[ ]?|[A-Za-z]+['-]?)+$"
+                        type="text"
+                        value="<%= params[:lastname] %>"
+                        class="form-control last_name"
+                        placeholder="Surname" >
+                        <i class="validate success fa fa-check-circle"></i>
+                        <i class="validate error fa fa-times-circle"></i>
+                        <span visible-when-invalid="customError" validation-for="verification-lastname">Last Name Must Be Alphabetic</span>
+                        <span visible-when-invalid="patternMismatch" validation-for="verification-lastname">Last Name Must Be Alphabetic</span>
+                        <span visible-when-invalid="valueMissing" validation-for="verification-lastname">Please Enter Last Name</span>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="bottom-bar">
+                    <button
+                      class="button-next btn btn-primary o-btn" type="submit" > Continue
+                    </button>
+                  </div>
+                </section>
 
-</head>
-<body class="bg-white">
-  <amp-analytics config="https://www.googletagmanager.com/amp.json?id=GTM-N7W274Q&gtm.url=SOURCE_URL" data-credentials="include"></amp-analytics>
+                <section hidden
+                  [hidden]="currentPage != 1">
+                  <section>
+                    <ol class="progress-bar">
+                      <li class="is-complete"><span>Start</span></li>
+                      <li class="is-complete"><span>Name</span></li>
+                      <li class="is-active"><span>Postcode</span></li>
+                      <li><span>Last Step</span></li>
+                    </ol>
+                  </section>
+                  <div  class="tab">
+                    <div class="row justify-content-center">
+                      <!-- postcode -->
+                      <div class="form-group col-lg-7  col-sm-7 col-12">
+                        <label>Postcode*</label>
+                        <input
+                        name="postcode"
+                        pattern="([Gg][Ii][Rr] 0[Aa]{2})|((([A-Za-z][0-9]{1,2})|(([A-Za-z][A-Ha-hJ-Yj-y][0-9]{1,2})|(([A-Za-z][0-9][A-Za-z])|([A-Za-z][A-Ha-hJ-Yj-y][0-9][A-Za-z]?))))\s?[0-9][A-Za-z]{2})"
+                        type="text"
+                        id="verification-postcode"
+                        value="<%= params[:postcode] %>"
+                        [required]="currentPage == 1"
+                        class="postcode form-control ignoreStep4"
+                        placeholder="Postcode">
+                        <i class="validate success fa fa-check-circle"></i>
+                        <i class="validate error fa fa-times-circle"></i>
+                        <span visible-when-invalid="customError" validation-for="verification-postcode">Please Enter Uk Valid Postcode</span>
+                        <span visible-when-invalid="patternMismatch" validation-for="verification-postcode">Please Enter Uk Valid Postcode</span>
+                        <span visible-when-invalid="valueMissing" validation-for="verification-postcode">Please Enter Postcode</span>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="bottom-bar">
+                    <button type="submit"
+                      class="button-next btn btn-primary o-btn"
+                      >Next
+                    </button>
+                    <a role="button" tabindex="1" class="button-prev"
+                      on="tap:AMP.pushState({ currentPage: currentPage - 1 })">
+                      back
+                    </a>
+                  </div>
+                </section>
 
-  <!-- header-->
-  <nav class="navbar-style d-flex justify-align-content-center">
-    <div class="container d-flex">
-      <a class="navbar-brand" href="/">
+                <section hidden
+                  [hidden]="currentPage != 2">
+                  <section>
+                    <ol class="progress-bar">
+                      <li class="is-complete"><span>Start</span></li>
+                      <li class="is-complete"><span>Name</span></li>
+                      <li class="is-complete"><span>Postcode</span></li>
+                      <li class="is-active"><span>Last Step</span></li>
+                    </ol>
+                  </section>
+                  <div  class="tab phoneEmailTab display-none" id="slide3">
+                    <div class="row justify-content-center">
+                      <div class="input-group  mb-3  col-lg-7 col-md-7 phone-div">
+                        <label class="w-100">Mobile Number*</label>
+                        <input
+                        type="number"
+                        name="phone1"
+                        id="verification-phone1"
+                        [required]="currentPage == 2"
+                        class="form-control phone phone1"
+                        value="<%= params[:phone1] %>"
+                        placeholder="Mobile Number">
+                        <div class="input-group-append">
+                          <span class="input-group-text">
+                            <amp-img class="privcy pull-right" src="<%= asset_path('privacy.png')%>" width="70" height= "28"></amp-img>
+                          </span>
+                        </div>
+                        <div visible-when-invalid="customError" class="w-100" validation-for="verification-phone1">Please Enter Uk Valid Phone</div>
+                        <div visible-when-invalid="valueMissing" class="w-100" validation-for="verification-phone1">Please Enter Phone</div>
+                      </div>
+                      <div class="input-group mb-3  col-lg-7 col-md-7 email-div">
+                        <label class="w-100">Email Address*</label>
+                        <div class="clearfix"></div>
+                        <input
+                        type="email"
+                        name="email"
+                        id="verification-email"
+                        [required]="currentPage == 2"
+                        value="<%= params[:email] %>"
+                        class="form-control nme_inpu email"
+                        placeholder="Email Address">
+                        <div class="input-group-append">
+                          <span class="input-group-text">
+                             <amp-img class="privcy pull-right" src="<%= asset_path('privacy.png')%>" width="70" height= "28"></amp-img>
+                          </span>
+                        </div>
+                        <div visible-when-invalid="customError" class="w-100" validation-for="verification-email">Please Enter Valid Email</div>
+                        <div visible-when-invalid="valueMissing" class="w-100" validation-for="verification-email">Please Enter Email</div>
+                      </div>
+                      <div class="custom-checkbox col-lg-7">
+                        <label>Accept</label>
+                        <div class="onoffswitch">
+                          <input type="hidden" name="c1">
+                          <input
+                            type="checkbox"
+                            name="agree"
+                            no-verify
+                            [required]="currentPage == 2"
+                            class="onoffswitch-checkbox approve"
+                            id="myonoffswitch"
+                            >
+                          <label class="onoffswitch-label" for="myonoffswitch">
+                              <span class="onoffswitch-inner"></span>
+                              <span class="onoffswitch-switch"></span>
+                          </label>
+                        </div>
+                        <div class="error-checkbox"></div>
+                        <p class="text-center">
+                          By clicking accept, I agree to be contacted by MegaMobileDeals and its mobile
+                          <span class="tooltip">Partners
+                            <span class="tooltiptext">02, EE Limited, Vodafone, Hutchinson 3, Duke leads, Loanable, 123 casino, Voxi, Monetise Media, Bill Buddy, Utilita, Lead365, Scores Matter, Bill Switchers, Sunshine mobile, Experian</span>
+                          </span>
+                          via phone, SMS & email in accordance with these
 
-        <amp-img src="<%= asset_path('logo.png')%>" width="195" height= "61"></amp-img>
-      </a>
-      <!-- <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button> -->
-  </nav>
-  <!--End header -->
-  <!-- Below header section Flipclock -->
+                          <a href="https://deals.megamobiledeals.com/terms-and-conditions/">Terms and conditions</a>.
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="bottom-bar">
+                    <button class="button-next btn btn-primary o-btn" type="submit">Next</button>
+                    <a role="button" tabindex="1" class="button-prev"
+                      on="tap:AMP.pushState({ currentPage: currentPage - 1 })">back</a>
+                  </div>
+                </section>
+                <% if @bc %>
+                  <section hidden
+                  [hidden]="currentPage != 3">
+                  <div  class="tab display-none" id="slide4">
+                    <div class="row justify-content-center">
+                      <h4 class="text-center">Great your mobile deal is ready! it's on the next page </h4>
+                      <h5 class="text-center text-orange">
+                        After you get your mobile deal would you also like to save on your energy bills? All we need is your first line of address, to see if you can get a better deal. It's that simple
+                      </h5>
+
+                      <div class="form-group col-lg-7  col-sm-7 col-12">
+                         <div class="row w-100 m-0 justify-content-around">
+                            <div class="col-6 text-center">
+                              <div class="radio-grp">
+                                <input
+                                  on="change:AMP.setState({
+                                    currentPage: currentPage + 1,
+                                  })"
+                                  id="save-energy-bc-no"
+                                  name="save_energy_bc_no"
+                                  class=""
+                                  type="radio"
+                                  value="yes"
+                                  [required]="currentPage == 3"
+                                  >
+                                 <label for="save-energy-bc-no" class="input-radio with-icn yes-hover border rounded pt-4 pb-2 cursor-p">
+                                    Yes
+                                 </label>
+                               </div>
+                            </div>
+                            <div class="col-6 text-center radio-grp">
+                              <input
+                                on="change:AMP.setState({
+                                    currentPage: currentPage + 2,
+                                  })"
+                                id="save-energy-bc-ye"
+                                name="save_energy_bc_no"
+                                class=""
+                                type="radio"
+                                value="no"
+                                [required]="currentPage == 3"
+                                >
+                               <label for="save-energy-bc-ye" class="input-radio with-icn no-hover border rounded pt-4 pb-2 cursor-p">
+                                  No
+                               </label>
+                            </div>
+                         </div>
+                      </div>
+                    </div>
+                  </div>
+                  </section>
+                <% else %>
+                  <section hidden
+                    [hidden]="currentPage != 3">
+
+                    <div  class="tab display-none" id="slide4">
+                      <div class="row justify-content-center">
+                        <h4 class="text-center">Great your mobile deal is ready! it's on the next page </h4>
+                        <h5 class="text-center text-orange">
+                          After you get your mobile deal would you also like to save on your energy bills? All we need is your first line of address, to see if you can get a better deal. It's that simple
+                        </h5>
+
+                        <div class="form-group col-lg-7  col-sm-7 col-12">
+                           <div class="row w-100 m-0 justify-content-around">
+                              <div class="col-6 text-center radio-grp">
+                                <input
+                                  on="change:AMP.setState({
+                                    currentPage: currentPage + 1,
+                                  })"
+                                  id="save-energy-bc-yes"
+                                  name="save_energy_bc_no"
+                                  type="radio"
+                                  value="yes"
+                                  [required]="currentPage == 3"
+                                  >
+                                 <label  for="save-energy-bc-yes" class="input-radio with-icn yes-hover border rounded pt-4 pb-2 cursor-p">
+                                    Yes
+                                 </label>
+                              </div>
+                              <div class="col-6 text-center radio-grp">
+                                <input
+                                  on="change:dealForm.submit"
+                                  id="save-energy-bc-no"
+                                  name="save_energy_bc_no"
+                                  type="radio"
+                                  value="no"
+                                  [required]="currentPage == 3"
+                                  >
+                                 <label for="save-energy-bc-no" class="input-radio with-icn no-hover border rounded pt-4 pb-2 cursor-p">
+                                    No
+                                 </label>
+                              </div>
+                           </div>
+                        </div>
+                      </div>
+                    </div>
+                  </section>
+                <% end %>
+                <section hidden
+                  [hidden]="currentPage != 4">
+                  <div  class="tab display-none" id="slide5">
+                    <div class="row justify-content-center">
+                      <div class="form-group col-lg-7  col-sm-7 col-12">
+                         <label>First Line Of Address?</label>
+                         <input
+                            name="street1"
+                            id="verification-street1"
+                            [required]="currentPage == 4"
+                            type="text"
+                            class="street1 form-control"
+                            placeholder="Address">
+                         <i class="validate success fa fa-check-circle"></i>
+                         <i class="validate error fa fa-times-circle"></i>
+                         <span visible-when-invalid="customError" validation-for="verification-street1">Please Enter Your First Line of Address</span>
+                        <span visible-when-invalid="valueMissing" validation-for="verification-street1">Please Enter Your First Line of Address</span>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="bottom-bar">
+                    <button class="button-next btn btn-primary o-btn" type="submit">Next</button>
+                  </div>
+                </section>
+                <section hidden
+                  [hidden]="currentPage != 5">
+
+                  <div  class="tab display-none" id="slide6">
+                    <div class="row justify-content-center">
+                      <h4 class="text-center">Would you be interested in finance for a phone from one of our partners?</h4>
+                      <div class="form-group col-lg-7 col-sm-7 col-12">
+                         <div class="row w-100 m-0 justify-content-around">
+                            <div class="col-6 text-center radio-grp">
+                              <input
+                                  id="finance"
+                                  name="finance"
+                                  on="change:dealForm.submit"
+                                  type="radio"
+                                  value="yes"
+                                  [required]="currentPage == 5"
+                                  >
+                              <label for="finance" class="input-radio with-icn yes-hover border rounded pt-4 pb-2 cursor-p">
+                                  Yes
+                              </label>
+                            </div>
+                            <div class="col-6 text-center radio-grp">
+                              <input
+                                  id="financeno"
+                                  name="finance"
+                                  on="change:AMP.setState({
+                                    currentPage: currentPage + 1,
+                                  })"
+                                  type="radio"
+                                  value="no"
+                                  [required]="currentPage == 5"
+                                  >
+                              <label for="financeno" class="input-radio with-icn yes-hover border rounded pt-4 pb-2 cursor-p">
+                                  No
+                              </label>
+                            </div>
+                         </div>
+                      </div>
+                    </div>
+                  </div>
+                </section>
+                <section hidden
+                  [hidden]="currentPage != 6">
+                  <div class="tab display-none" id="slide7">
+                    <h4 class="text-center mb-3 text-orange">
+                      Great, your mobile offer is on the next page. Just let us know if the following offers would be of interest to you. If not just select "no" and continue to your mobile deal
+                    </h4>
+                    <div class="row justify-content-center">
+                      <div class="col px-0">
+                         <h4 class="text-center mb-4">50 Free Spins From 123 Casino?</h4>
+                         <div class="form-group col-lg-7  col-sm-7 col-12 mx-auto">
+                            <div class="row w-100 m-0 justify-content-around">
+                               <div class="col-6 text-center radio-grp">
+                                  <input
+                                     on="change:dealForm.submit"
+                                     id="casino"
+                                     name="casino"
+                                     type="radio"
+                                     value="yes"
+                                     [required]="currentPage == 6"
+                                     >
+                                <label for="casino" class="input-radio with-icn yes-hover border rounded pt-4 pb-2 cursor-p">
+                                  Yes
+                                </label>
+                               </div>
+                               <div class="col-6 text-center radio-grp">
+                                  <input
+                                     on="change:dealForm.submit"
+                                     id="casinono"
+                                     name="casino"
+                                     type="radio"
+                                     value="no"
+                                     [required]="currentPage == 6"
+                                    >
+                                  <label for="casinono" class="input-radio with-icn yes-hover border rounded pt-4 pb-2 cursor-p">
+                                    No
+                                  </label>
+                               </div>
+                            </div>
+                         </div>
+                      </div>
+                    </div>
+                    <div class="row justify-content-center mt-3">
+                      <div class="col px-0">
+                         <h4 class="text-center mb-4">A Free Credit Report?</h4>
+                         <div class="form-group col-lg-7  col-sm-7 col-12 mx-auto">
+                            <div class="row w-100 m-0 justify-content-around">
+                               <div class="col-6 text-center radio-grp">
+                                  <input
+                                     id="free-credit"
+                                     name="free_credit"
+                                     on="change:dealForm.submit"
+                                     type="radio"
+                                     value="yes"
+                                     [required]="currentPage == 6"
+                                    >
+                                  <label for="free-credit" class="input-radio with-icn yes-hover border rounded pt-4 pb-2 cursor-p">
+                                    Yes
+                                  </label>
+                               </div>
+                               <div class="col-6 text-center radio-grp">
+                                  <input
+                                     id="free-creditno"
+                                     name="free_credit"
+                                     on="change:dealForm.submit"
+                                     type="radio"
+                                     value="no"
+                                     [required]="currentPage == 6"
+                                     >
+                                  <label for="free-creditno" class="input-radio with-icn yes-hover border rounded pt-4 pb-2 cursor-p">
+                                    No
+                                  </label>
+                               </div>
+                            </div>
+                         </div>
+                      </div>
+                    </div>
+                  </div>
+                </section>
+              </div>
+              <div class="mt-2 text-center securityInfo">
+                <ul>
+                  <amp-img src="<%= asset_path('lock.png')%>" width="13" height= "16"></amp-img>
+                  <li>Safe</li>
+                  <li>Secure</li>
+                  <li>Privacy Protected</li>
+                </ul>
+              </div>
+              <p class="text-center">
+                By clicking accept, I agree to be contacted by MegaMobileDeals and its mobile
+                <span class="tooltip">Partners
+                  <span class="tooltiptext">02, EE Limited, Vodafone, Hutchinson 3, Duke leads, Loanable, 123 casino, Voxi, Monetise Media, Bill Buddy, Utilita, Lead365, Scores Matter, Bill Switchers, Sunshine mobile, Experian</span>
+                </span>
+                via phone, SMS & email in accordance with these
+
+                <a href="https://deals.megamobiledeals.com/terms-and-conditions/">Terms and conditions</a>.
+              </p>
+            </form>
+        </div>
+      </amp-lightbox>
+    </div>
+    <nav class="navbar-style d-flex justify-align-content-center">
+      <div class="container d-flex">
+        <a class="navbar-brand" href="/">
+          <amp-img src="<%= asset_path('logo.png')%>" width="195" height= "61"></amp-img>
+        </a>
+      </div>
+    </nav>
+
     <section class="mb-3">
       <div class="below-header">
         <div class="container">
             <div>
-              <h2 class="text-center font-h mb-2">
-                <span class="accepted">Get Accepted For The Latest Smartphone</span><br> <span class="accepted">Deals!</span>
-                <br>
-                <span class="approvel mt-4 site-font desktop">100% approval | All Credit Scores Welcome | No upfront payments</span>
-                <span class="approvel site-font mobile">100% approval<br> All Credit Scores Welcome <br> No upfront payments</span>
-              </h2>
-              <a href="/step-form?<%= request.fullpath.split('?')[1] %>">
+              <% if @bc == true %>
+                <h2 class="text-center font-h mb-2">
+                  <span class="accepted">Get Accepted For The Latest Smartphone</span><br> <span class="accepted">Deals!</span>
+                  <br>
+                  <span class="approvel mt-4 site-font desktop">100% approval | All Credit Scores Welcome | No upfront payments</span>
+                  <span class="approvel site-font mobile">100% approval<br> All Credit Scores Welcome <br> No upfront payments</span>
+                </h2>
+              <% else %>
+                <h2 class="text-center font-h mb-2">
+                  <span class="accepted">Get Accepted For The Latest Smartphone</span><br> <span class="accepted">Deals!</span>
+                  <br>
+                  <span class="approvel mt-4 site-font desktop">No upfront payments | Network Sign Up Offers | Huge Discounts</span>
+                  <span class="approvel site-font mobile">No upfront payments <br> Network Sign Up Offers <br> Huge Discounts </span>
+                </h2>
+              <%end%>
+              <!--  -->
+              <div on="tap:AMP.setState({showLightbox: true})" role="button" tabindex="0">
                 <div class="middle-aligned text-center">
                   <amp-img src="<%= asset_path('phones-header.png')%>" alt="Welcome" width="321" height = "237" ></amp-img>
                 </div>
-              </a>
-          <a href="/step-form?<%= request.fullpath.split('?')[1] %>" class="text-decoration-none">
+              </div>
+            </div>
+          <div on="tap:AMP.setState({showLightbox: true})" role="button" tabindex="0" class="text-decoration-none">
             <div class="px-15">
               <div class="card card-body header-deal border-0 px-0">
                 <div class="mx-0">
@@ -669,7 +1643,9 @@ nav {
                   </div>
                   <div class="text-center">
                     <h5 class="font-weight-bold text-black pl-2">iPhone 11 </h5>
-                    <h6 class="font-weight-bold mb-0 mt-2 text-black site-font" >All Credit Scores Welcome</h6>
+                    <% if @bc == true %>
+                      <h6 class="font-weight-bold mb-0 mt-2 text-black site-font" >All Credit Scores Welcome</h6>
+                    <% end %>
                     <div class="detail-box mt-4">
                       <div class="row align-items-center d-flex ph-3">
                         <div class="left-layout text-center">
@@ -748,22 +1724,21 @@ nav {
                     </amp-date-countdown>
                   </div>
                 <div class="row">
-                  <div class="px-2">
-                      <button on="tap:AMP.setState({showLightbox: true})" class="btn btn-danger o-btn open-form  py-2 fs-24  w-100">Continue</button>
+                  <div class="col-md-6 px-4 w-100">
+                      <button on="tap:AMP.setState({showLightbox: true})" role="button" tabindex="0" class="btn btn-danger o-btn open-form  py-2 fs-24  w-100">Continue</button>
                    </div>
                  </div>
                </div>
              </div>
-            </a>
+            </div>
           </div>
         </div>
       </div>
     </section>
     <section  class="bg-light py-5">
 
-      <%
-      @phoneshome = [
-     {
+    <%
+      @phoneshome = [{
         name: "6 Months Half Price SIM!",
         data: "Unlimited",
         image: "sim/three-sim.png",
@@ -896,7 +1871,7 @@ nav {
     ]
       %>
       <% @phoneshome.each do |phone| %>
-      <a href="/step-form?<%= request.fullpath.split('?')[1] %>" class="text-decoration-none">
+      <div on="tap:AMP.setState({showLightbox: true})" role="button" tabindex="0" class="text-decoration-none">
           <div class="container  deals-list mb-3 open-form ">
             <div class="row">
               <div class="col offset-2 p-3 main-div">
@@ -954,7 +1929,7 @@ nav {
                          <hr>
                         <div class="row actions ">
                           <div class="col-md-6 px-4">
-                            <button on="tap:AMP.setState({showLightbox: true})" class="btn btn-primary o-btn open-form w-100 font-weight-bold">Apply now - it's free!</button>
+                            <button on="tap:AMP.setState({showLightbox: true})" role="button" tabindex="0" class="btn btn-primary o-btn open-form w-100 font-weight-bold">Apply now - it's free!</button>
                           </div>
                           <div class="col-md-6 px-4">
                             <button class="btn mi-btn open-form w-100 font-weight-bold">More Info</button>
@@ -964,9 +1939,11 @@ nav {
 
                       <div class="col-md-3 desktop">
                         <div class="detail-box p-3">
-                          <span class="text-muted fs-14 font-weight-normal">
-                            All Credit Scores Welcome & Big Discount!
-                          </span>
+                          <% if @bc == true %>
+                            <span class="text-muted fs-14 font-weight-normal">
+                              All Credit Scores Welcome & Big Discount!
+                            </span>
+                          <% end %>
                           <small class="text-muted site-font">Deposit from</small>
                             <span class="bolder d-block mt-2">£0
                           </span>
@@ -978,7 +1955,7 @@ nav {
               </div>
             </div>
           </div>
-        </a>
+        </div>
         <% end %>
     </section>
     <!-- Huge price Drops Section -->
@@ -988,13 +1965,17 @@ nav {
           <div class="row">
             <div class="col-md-8 price-drop-padding mt-2 offer-padding text-white">
               <h1 class="price-drop-text">Huge Price Drops</h1>
-              <p>Get the latest smartphones, Apple, Samsung, Huawei and many more with massive price drops. All Credit Scores Welcome, 100% approval, monthly payments, get accepted today.</p>
+              <% if @bc == true %>
+                <p>Get the latest smartphones, Apple, Samsung, Huawei and many more with massive price drops. All Credit Scores Welcome, 100% approval, monthly payments, get accepted today.</p>
+              <% else %>
+                <p>Get the latest smartphones, Apple, Samsung, Huawei and many more with massive price drops. No upfront payments, Network Sign Up Offers, monthly payments, get accepted today.</p>
+              <% end %>
             </div>
-            <a href="/step-form?<%= request.fullpath.split('?')[1] %>">
+            <div on="tap:AMP.setState({showLightbox: true})" role="button" tabindex="0">
               <div class="col-md-4 d-flex justify-align-content-center low-price-div open-form">
                 <amp-img src="<%= asset_path('low_price1.png')%>"  width="300" height = "190" ></amp-img>
               </div>
-            </a>
+            </div>
           </div>
         </div>
       </div>
@@ -1003,7 +1984,7 @@ nav {
 <section class="mb-3">
   <div class="container">
     <div class="">
-    <a href="/step-form?<%= request.fullpath.split('?')[1] %>" class="text-decoration-none">
+    <div on="tap:AMP.setState({showLightbox: true})" role="button" tabindex="0" class="text-decoration-none">
       <div class="col-md-6 col mt-2 open-form p-3">
         <div class="phone-details card box-bg mb-3">
           <div class="promotion text-black">Deal of the month</div>
@@ -1018,12 +1999,14 @@ nav {
               <div class="detail-box mt-4 px-4">
                 <div class="row p-3">
                   <div class="pl-2 col-md-3 col text-center border-bottom">
-                    <span class="text-muted fs-14 font-weight-normal">
-                      All Credit Scores
-                    </span><br>
-                    <span class="text-muted fs-14 font-weight-normal">
-                       Welcome
-                    </span>
+                    <% if @bc == true %>
+                      <span class="text-muted fs-14 font-weight-normal">
+                        All Credit Scores
+                      </span><br>
+                      <span class="text-muted fs-14 font-weight-normal">
+                         Welcome
+                      </span>
+                    <% end %>
                     <h6 class="font-weight-bold text-black mb-0 mt-2 fs-24">£20</h6>
                     <span class="text-muted fs-14 font-weight-normal">
                       a month
@@ -1043,7 +2026,9 @@ nav {
                 <div class="row">
                   <div class="col">
                     <div>
-                      <small class="text-muted">All Credit Scores Welcome</small>
+                      <% if @bc == true %>
+                        <small class="text-muted">All Credit Scores Welcome</small>
+                      <% end %>
                       <span class="bolder d-block mt-2">£20
                         <span class="text-muted fs-14 font-weight-normal">
                           a month
@@ -1154,15 +2139,15 @@ nav {
           </div>
           <div class="row mt-5">
             <div class="px-2">
-              <button on="tap:AMP.setState({showLightbox: true})" class="btn btn-primary o-btn open-form w-100">Get Deal</button>
+              <button on="tap:AMP.setState({showLightbox: true})" role="button" tabindex="0" class="btn btn-primary o-btn open-form w-100">Get Deal</button>
             </div>
           </div>
         </div>
       </div>
-    </a>
+    </div>
 <!-- second deal -->
-    <div class="p-3">
-     <a href="/step-form?<%= request.fullpath.split('?')[1] %>" class="text-decoration-none">
+  <div class="p-3">
+    <div on="tap:AMP.setState({showLightbox: true})" role="button" tabindex="0" class="text-decoration-none">
       <div class=" col-md-6 col open-form" >
         <div class="phone-details card box-bg">
           <div class="promotion">Deal of the month</div>
@@ -1177,10 +2162,12 @@ nav {
               <div class="detail-box mt-4 px-4">
                 <div class="row p-3">
                   <div class="pl-2 col-md-3 col text-center border-bottom">
-                    <span class="text-muted fs-14 font-weight-normal">
-                      All Credit Scores</span><br>
-                      <span class="text-muted fs-14 font-weight-normal">Welcome
-                    </span>
+                    <% if @bc == true %>
+                      <span class="text-muted fs-14 font-weight-normal">
+                        All Credit Scores</span><br>
+                        <span class="text-muted fs-14 font-weight-normal">Welcome
+                      </span>
+                    <% end %>
                     <h6 class="font-weight-bold text-black mb-0 mt-2 fs-24">50%</h6>
                     <span class="text-muted fs-14 font-weight-normal">
                       discount
@@ -1200,7 +2187,9 @@ nav {
                 <div class="row">
                   <div class="col">
                     <div>
-                      <small class="text-muted">All Credit Scores Welcome</small>
+                      <% if @bc == true %>
+                        <small class="text-muted">All Credit Scores Welcome</small>
+                      <% end %>
                       <span class="bolder text-black d-block mt-2">50%
                         <span class="text-muted text-black fs-14 font-weight-normal">Discount!</span>
                       </span>
@@ -1285,14 +2274,14 @@ nav {
           </div>
           <div class="row mt-4">
             <div class="px-2">
-              <button on="tap:AMP.setState({showLightbox: true})" class="btn btn-primary o-btn open-form w-100">Get Deal</button>
+              <button on="tap:AMP.setState({showLightbox: true})" role="button" tabindex="0" class="btn btn-primary o-btn open-form w-100">Get Deal</button>
             </div>
           </div>
         </div>
       <div>
     </div>
   </div>
-  </a>
+  </div>
 </div>
 </section>
 <!-- Network logos Section -->
@@ -1302,34 +2291,34 @@ nav {
     <h5 class="fm_h">Get accepted on the top networks</h5>
       <div class="row">
         <div class="col-md-2 mb-2">
-          <a href="/step-form?<%= request.fullpath.split('?')[1] %>" class="networks-box">
+          <div on="tap:AMP.setState({showLightbox: true})" role="button" tabindex="0" class="networks-box">
             <amp-img src="<%= asset_path('company/ee.png')%> " width = "28" height = "48"></amp-img>
-          </a>
+          </div>
         </div>
         <div class="col-md-2 mb-2">
-          <a href="/step-form?<%= request.fullpath.split('?')[1] %>" class="networks-box">
+          <div on="tap:AMP.setState({showLightbox: true})" role="button" tabindex="0" class="networks-box">
             <amp-img src="<%= asset_path('company/vodafone.png')%> " width = "68" height = "48"></amp-img>
-          </a>
+          </div>
         </div>
         <div class="col-md-2 mb-2">
-          <a href="/step-form?<%= request.fullpath.split('?')[1] %>" class="networks-box">
+          <div on="tap:AMP.setState({showLightbox: true})" role="button" tabindex="0" class="networks-box">
             <amp-img src="<%= asset_path('company/id.png')%> " width = "41" height = "48"></amp-img>
           </a>
         </div>
         <div class="col-md-2 mb-2">
-          <a href="/step-form?<%= request.fullpath.split('?')[1] %>" class="networks-box">
+          <div on="tap:AMP.setState({showLightbox: true})" role="button" tabindex="0" class="networks-box">
             <amp-img src="<%= asset_path('company/three.png')%> " width = "38" height = "48"></amp-img>
-          </a>
+          </div>
         </div>
         <div class="col-md-2 mb-2">
-          <a href="/step-form?<%= request.fullpath.split('?')[1] %>" class="networks-box">
+          <div on="tap:AMP.setState({showLightbox: true})" role="button" tabindex="0" class="networks-box">
             <amp-img src="<%= asset_path('company/02.png')%> " width = "47" height = "48"></amp-img>
-          </a>
+          </div>
         </div>
         <div class="col-md-2 mb-2">
-          <a href="step-form" class="networks-box">
+          <div on="tap:AMP.setState({showLightbox: true})" role="button" tabindex="0" class="networks-box">
              <amp-img src="<%= asset_path('company/tessco.png')%> " width = "127" height = "48"></amp-img>
-          </a>
+          </div>
         </div>
       </div>
   </div>

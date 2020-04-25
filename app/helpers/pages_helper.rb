@@ -1,5 +1,23 @@
 module PagesHelper
 
+  def isbadCustomer query
+    if(query.present?)
+      keywords = ["credit", "accepted", "bad", "score", "sunshine",
+                         "no credit", "free", "guaranteed", "gift", "win", "wining", "very",
+                         "phone check", "check" , "no upfront", "cheap", "catalogues", "later",
+                         "sun", "no deposit", "accepted", "No deposit", "0 deposit"]
+      query = query.downcase();
+      keywords.each do |word|
+        matchedIndex = query.in?(word);
+        if (matchedIndex)
+          return true;
+          break;
+        end
+      end
+      return false
+    end
+  end
+
   def compare_phones
     @details = {
       camp_id: 'MEGA-MOBILE-DEALS',
@@ -298,7 +316,7 @@ module PagesHelper
       submit_on_load: true,
     }.to_json
   end
-       
+
   def exclusive_top_deals
     @details = {
       camp_id: 'MEGA-MOBILE-DEALS',

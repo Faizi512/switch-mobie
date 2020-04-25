@@ -83,7 +83,7 @@ class Common {
       var keywords = ["credit", "accepted", "bad", "score", "sunshine",
                        "no credit", "free", "guaranteed", "gift", "win", "wining", "very",
                        "phone check", "check" , "no upfront", "cheap", "catalogues", "later",
-                       "sun", "no deposit", "accepted"]
+                       "sun", "no deposit", "accepted", "No deposit", "0 deposit"]
       query = query.toLowerCase();
       for(var index in keywords) {
         var word = keywords[index];
