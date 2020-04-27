@@ -131,12 +131,7 @@
                   </label>
                 </div>
                 <div class="error-checkbox"></div>
-                <p class="text-center">
-                  By clicking accept, I agree to be contacted by MegaMobileDeals and its mobile
-                  <%= render 'layouts/common/tooltip_partners_step_form'%>
-                    via phone, SMS & email in accordance with these
-                    <a href="https://deals.megamobiledeals.com/terms-and-conditions/">Terms and conditions</a>.
-                </p>
+                 <%= render 'layouts/common/accept_terms'%>
               </div>
             </div>
           </div>
@@ -162,6 +157,7 @@
               <li>Privacy Protected</li>
             </ul>
           </div>
+          <%= render 'layouts/common/form_network_logo'%>
         </form>
       </div>
     </div>
