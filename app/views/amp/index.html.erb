@@ -46,6 +46,7 @@
         color: white;
       }
       form {
+        position: relative;
         opacity: 1;
         width: 82%;
         background: white;
@@ -623,7 +624,7 @@
       }
       @media only screen and (max-width: 768px) {
         .tooltip .tooltiptext{
-          left: -14px !important;
+          left: -14px;
         }
         .details {
           margin: 0 auto;
@@ -1110,6 +1111,13 @@
         position: relative;
         top: -1px;
       }
+      .close{
+        position: absolute;
+        right: 10px;
+        top: 0px;
+        color: #7a7a7a;
+        font-size: 30px;
+      }
 
     </style>
     <!-- AMP Analytics -->
@@ -1120,8 +1128,7 @@
     <div>
       <amp-lightbox id="my-bindable-lightbox" [open]="showLightbox" layout="nodisplay"
         on="lightboxClose:AMP.setState({showLightbox: false})">
-        <div class="lightbox"
-             >
+        <div class="lightbox">
              <form
                id="dealForm"
                 on="submit-error:AMP.setState({
@@ -1137,7 +1144,10 @@
                 class="verification-form">
               <div class="stepper simple">
                 <h1 class="top-heading"><span class="text-blue">You are just</span> 30 seconds <span class="text-blue"> away from your dream phone</span></h1>
-                <div>
+                <span role="button" tabindex="1" class="close" on="tap:my-bindable-lightbox.close">
+                  <span aria-hidden="true">×</span>
+                </span>
+              <div>
                   <input type="hidden" name="step" [value]="currentPage">
                   <input type="hidden" name="sid" value="<%= params[:sid] %>">
                   <input type="hidden" name="ssid" value="<%= params[:ssid] %>">
@@ -1332,7 +1342,7 @@
                   <p class="text-center">
                     By clicking accept, I agree to be contacted by MegaMobileDeals and its mobile
                     <span class="tooltip">Partners
-                      <span class="tooltiptext">02, EE Limited, Vodafone, Hutchinson 3, Duke leads, Loanable, 123 casino, Voxi, Monetise Media, Bill Buddy, Utilita, Lead365, Scores Matter, Bill Switchers, Sunshine mobile, Experian</span>
+                      <span class="tooltiptext">02, EE Limited, Vodafone, Hutchinson 3, Duke leads, Loanable, 123 casino, Voxi, Monetise Media, Bill Buddy, Utilita, Lead365, Scores Matter, Bill Switchers, Sunshine mobile, Experian, Endsleigh</span>
                     </span>
                     via phone, SMS & email in accordance with these
 
