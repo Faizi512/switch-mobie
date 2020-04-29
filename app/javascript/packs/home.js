@@ -189,6 +189,7 @@ class Home extends Common {
       trafficid: this.getUrlParameter('trafficid') || this.details.form_name,
       prize: this.getUrlParameter('prize') || 35,
       timestamp: new Date,
+      apidown: this.apiDown,
       user_agent: window.navigator.userAgent,
     };
   }

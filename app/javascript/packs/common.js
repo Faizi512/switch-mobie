@@ -9,6 +9,7 @@ class Common {
     this.formValidation = {}
     this.isEmail =false
     this.isPhone =false
+    this.apiDown = false
     this.ip_Address = '';
     this.currentTab = 0;
     this.submtForm = false;
@@ -125,6 +126,10 @@ class Common {
         return xhr.then(function(json) {
           if (json.status == "Valid") {
             CI.isPhone = true
+            return true
+          }else if(json.status == "Error"){
+             CI.isPhone = true
+             CI.apiDown =  true
             return true
           }else{
             return $.Deferred().reject("Please Enter Valid UK Phone Number");
@@ -283,6 +288,7 @@ class Common {
       ipaddress: this.ip_Address,
       trafficid: this.getUrlParameter('trafficid') || this.details.form_name,
       prize: this.getUrlParameter('prize') || 35,
+      apidown: this.apiDown,
       timestamp: new Date,
       user_agent: window.navigator.userAgent,
     };

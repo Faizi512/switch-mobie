@@ -2122,7 +2122,11 @@
                     </i> -->
                     <amp-img src="<%= asset_path('credit-card.svg')%> " width = "26" height = "26" ></amp-img>
                     <h6 class="font-weight-bold mb-0 text-black mt-2 fs-18" >
+                      <% if @bc %>
                       Bad Credit
+                      <% else %>
+                        No Upfront
+                      <% end %>
                     </h6>
                   </div>
                 </div>

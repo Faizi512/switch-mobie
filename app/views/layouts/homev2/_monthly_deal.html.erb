@@ -45,7 +45,7 @@
                       <% if @bc == true %>
                         <small class="text-muted">All Credit Scores Welcome</small>
                       <% end %>
-                      
+
                       <span class="bolder d-block mt-2">£20
                         <span class="text-muted fs-14 font-weight-normal">
                           a month
@@ -127,7 +127,11 @@
                     <i class="fas fa-credit-card text-primary fs-26 ">
                     </i>
                     <h6 class="font-weight-bold mb-0 mt-2 fs-18" >
+                      <% if @bc %>
                       Bad Credit
+                      <% else %>
+                        No Upfront
+                      <% end %>
                     </h6>
                   </div>
                 </div>
@@ -170,7 +174,7 @@
                         All Credit Scores Welcome
                       </span>
                     <% end %>
-                    
+
                     <h6 class="font-weight-bold mb-0 mt-0 fs-24">50%</h6>
                     <span class="text-muted fs-14 font-weight-normal">
                       discount
