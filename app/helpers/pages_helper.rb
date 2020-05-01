@@ -487,7 +487,7 @@ module PagesHelper
         calls: "Unlimited",
         texts: "Unlimited",
         url:"/success",
-        bluetext: "No Credit Checks",
+        bluetext: "Personal Hotspot, Go Binge, Data Roaming",
         deposit: "£0"
       },
       {
