@@ -300,6 +300,35 @@
     height: auto !important;
   }
 }
+
+@media only screen and (min-width: 767px) and (max-width: 992px) {
+  .deals-list{
+    max-width: 540px !important;
+    .btn{
+      font-size: 18px !important;
+      line-height: normal;
+    }
+    .actions{
+      padding-bottom: 10px;
+    }
+  }
+
+  .mobile {
+    display: block !important;
+  }
+  .desktop {
+    display: none !important;
+  }
+}
+@media only screen  and (max-width: 768px) {
+  .mobile {
+    display: block !important;
+  }
+  .desktop {
+    display: none !important;
+  }
+
+}
 @media only screen and (max-width: 520px) {
   .div-deals{
     height: auto !important;
@@ -373,12 +402,6 @@
     background-image: none;
   }
 
-  .mobile {
-    display: block !important;
-  }
-  .desktop {
-    display: none !important;
-  }
   .bolder {
     font-size: 23px;
   }

@@ -319,11 +319,12 @@ input.error ~ .validate.success {
   margin-top: -31px;
   right: 6px;
 }
-@media only screen and (max-width: 768px) {
+
+@media only screen and (max-width: 992px) {
   .deal-form-box {
     h1 {
       text-align: center;
-      font-size: 24px;
+      font-size: 16px !important;
     }
     .progress {
       height: 1.6rem;
@@ -333,6 +334,8 @@ input.error ~ .validate.success {
   }
 
 }
+
+
 @media only screen and (max-width: 767px) {
   .deal-form-box{
     padding: 0;
@@ -351,6 +354,30 @@ input.error ~ .validate.success {
     }
     .content-inner{
       padding: 10px
+    }
+  }
+}
+@media only screen and (max-width: 520px) {
+  .btn-div{
+    .row{
+      flex-direction: column-reverse;
+    }
+    .col-lg-6 {
+      padding: 0;
+      margin: 2px 0;
+      flex: 0 0 100%;
+      max-width: 100%;
+    }
+    #btn-back{
+      background: none !important;
+      border: none !important;
+      box-shadow: none !important;
+      color: black;
+      text-shadow: none !important;
+      padding: 0px;
+      font-weight: 400 !important;
+      font-size: 15px !important;
+      line-height: normal !important;
     }
   }
 }

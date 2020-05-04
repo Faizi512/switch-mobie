@@ -54,9 +54,6 @@
   background: #f5f9fc;
 }
 
-.mobile {
-  display: none !important;
-}
 @media only screen and (max-width: 768px) {
 
   .details {
@@ -70,8 +67,8 @@
   .mobile-price .detail-box {
     margin-top: 0px !important;
   }
-  
- 
+
+
   .deals-list .main-div {
     margin: 0 auto;
     max-width: 96%;
@@ -92,12 +89,6 @@
   }
 }
 @media only screen and (max-width: 520px) {
-  .mobile {
-    display: block !important;
-  }
-  .desktop {
-    display: none !important;
-  }
   .loader {
     display: block !important;
   }

@@ -17,7 +17,7 @@
 	  right: 1rem;
 	  position: relative;
 	}
-	
+
 	.option-button {
 	  position: relative;
 	  border-radius: 4px;
@@ -27,20 +27,19 @@
 	  border: 1px solid #f0fbff;
 	  font-size: 16px;
 	  box-shadow: 0 1px 3px 0 #bfbfbf;
-	  
 	}
 
 }
 
   .phone-img img {
-    max-height: 253px ;
-    max-width: 170px ;
+    max-height: 253px;
+    max-width: 100%;
   }
 @media only screen and (min-width: 750px) and (max-width: 768px){
   .phone-img img {
     max-height: 153px !important;
     max-width: 100px !important;
-  }   
+  }
 }
 @media only screen and (max-width: 750px) {
 

@@ -8,7 +8,9 @@
 		}
 	}
 	.low-price {
-	  margin-top: -52px;
+    max-width: 100%;
+    position: absolute;
+    bottom: 0px;
 	}
 }
 
@@ -18,16 +20,17 @@
         padding: 45px 40px;
     }
   }
+
 	.low-price-div {
     text-align: center;
     .low-price {
 	    margin-top: 0;
 	    width: 300px;
-	    position: absolute;
+	    position: relative;
 	    right: 0;
 	    bottom: 0;
 	  }
-  }  
+  }
 }
 @media only screen and (max-width: 520px) {
   .low-price-div {
