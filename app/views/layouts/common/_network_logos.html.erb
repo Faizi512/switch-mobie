@@ -1,7 +1,12 @@
 <!-- Network logos Section -->
 <section class=" bg-white py-5 open-form" data-url="/success" >
   <div class="container">
-    <h5 class="fm_h text-center text-md-left">Get accepted on the top networks</h5>
+    <% if @bc %>
+      <h5 class="fm_h text-center text-md-left">Get accepted on the top networks</h5>
+    <% else %>
+      <h5 class="fm_h text-center text-md-left">Choose between the top networks</h5>
+    <% end %>
+    
       <div class="row">
         <div class="col-md-2 mb-2">
           <a href="http://mtrk5.co.uk/?a=14118&c=37344&p=r&s1=<%= params[:s1] %>&s2=<%= params[:s2] %>&s3=<%= params[:s3] %>&s4=<%= params[:s4] %>&s5=<%= params[:s5] %>" class="networks-box">
