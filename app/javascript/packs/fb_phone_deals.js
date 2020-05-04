@@ -39,7 +39,7 @@ class FbPhoneDeals extends Common {
       sid: this.getUrlParameter('sid') || this.details.sid ||1,
       ssid: this.getUrlParameter('ssid') || this.details.ssid ||1,
       ad_set:this.getUrlParameter('ad_set') || 1,
-      source: "taboola",
+      source: this.getUrlParameter('source') || "taboola",
       c1: this.getUrlParameter('c1') || this.getUrlParameter('bstransid') || this.getUrlParameter('transid') || '',
       adgroupid: this.getUrlParameter('adgroupid') || '',
       campaign: this.getUrlParameter('campaign') || '',
