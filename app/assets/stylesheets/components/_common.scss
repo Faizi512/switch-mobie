@@ -74,6 +74,66 @@
 .lh-34{line-height:34px}
 .lh-n{line-height:normal}
 .lh-0{line-height:0px}
+
+/*radio btn */
+
+.input-deposit{ 
+  font-size: 23px !important;
+  font-weight: 800px;
+  background-color: white;
+  width: 100%;
+  border: 1px solid transparent;
+  display: flex;
+  justify-content: center;
+}
+.input-deposit:hover{
+  border: 1px solid #344eb0;
+}
+.input-deposit:after{
+  width: 32px;
+  height: 32px;
+  content: "";
+  border: 2px solid #e7e7ee;
+  background-color: #e7e7ee;
+  border-radius: 50%;
+  z-index: 2;
+  position: absolute;
+  left: 6%;
+  top: 29px;
+  -webkit-transform: translateY(-50%);
+  transform: translateY(-50%);
+  cursor: pointer;
+}
+input:checked ~ .input-deposit:after{
+  background-color: #fff;
+  border-color: #fff;
+  background-image: url('radiodott.png');
+  background-repeat: no-repeat;
+  background-position: 7px 7px;
+  -webkit-transition: all .2s ease-in-out;
+  transition: all .2s ease-in-out
+}
+input:checked ~ .input-deposit{
+  color: white !important;
+  background: #3ebbe9;
+  border: 1px solid #3ebbe9 !important;
+}
+.input-deposit-radio{
+  width: 80%;
+  left: 21px;
+  height: 55px;
+}
+input:hover ~ .input-deposit{
+  border: 1px solid #3ebbe9;
+  color: white !important;
+  background: #3ebbe9;
+}
+input:hover ~ .input-deposit:after{
+  border: 4px solid white;
+  background: #3ebbe9;
+}
+/*radio btn end*/
+
 .w-95{
   width: 95% !important;
 }
