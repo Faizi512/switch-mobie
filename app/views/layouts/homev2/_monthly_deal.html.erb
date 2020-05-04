@@ -137,16 +137,19 @@
                 </div>
                 <div class="col">
                   <div class="call text-center ">
-                    <i class="fas fa-truck text-primary fs-26 ">
-                    </i>
-                    <h6 class="font-weight-bold mb-0 mt-2 fs-18" >
-                      
-                      <% if @bc %>
+                    <% if @bc %>
+                      <i class="fas fa-check-double text-primary fs-26 ">
+                      </i>
+                      <h6 class="font-weight-bold mb-0 mt-2 fs-18" >
                         100% Approvals
-                      <% else %>
+                      </h6>
+                    <% else %>
+                      <i class="fas fa-truck text-primary fs-26 ">
+                      </i>
+                      <h6 class="font-weight-bold mb-0 mt-2 fs-18" >
                         Next Day Delivery
-                      <% end %>
-                    </h6>
+                      </h6>
+                    <% end %>
                   </div>
                 </div>
               </div>
@@ -266,14 +269,19 @@
                 </div>
                 <div class="col">
                   <div class="call text-center ">
-                    <i class="fas fa-truck text-primary fs-26"></i>
-                    <h6 class="font-weight-bold mb-0 mt-2 fs-18" >
-                      <% if @bc %>
+                    <% if @bc %>
+                      <i class="fas fa-check-double text-primary fs-26 ">
+                      </i>
+                      <h6 class="font-weight-bold mb-0 mt-2 fs-18" >
                         100% Approvals
-                      <% else %>
+                      </h6>
+                    <% else %>
+                      <i class="fas fa-truck text-primary fs-26 ">
+                      </i>
+                      <h6 class="font-weight-bold mb-0 mt-2 fs-18" >
                         Next Day Delivery
-                      <% end %>
-                    </h6>
+                      </h6>
+                    <% end %>
                   </div>
                 </div>
               </div>
