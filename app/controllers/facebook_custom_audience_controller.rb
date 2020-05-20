@@ -5,6 +5,12 @@ class FacebookCustomAudienceController < ApplicationController
   require 'rest_client'
 
   def send_data_to_autopilot
+    if params[:bad_credit_customer].downcase == "yes"
+      contact_lit = "contactlist_540914cc-5c2c-4971-a0f4-0faaa4913ce5"
+    else
+      contact_lit = "contactlist_2b0a5144-dedb-41f7-9088-5e621a197291"
+    end
+
     values = {
       'contact': {
         'MailingPostalCode': params[:postcode],
@@ -13,6 +19,7 @@ class FacebookCustomAudienceController < ApplicationController
         'Email': params[:email],
         'Phone': params[:phone1],
         'LeadSource': params[:source],
+        "_autopilot_list": contact_lit,
         'custom': {
           'string--bad_credit_customer':  params[:bad_credit_customer],
           'string--campaign':  params[:campaign],
