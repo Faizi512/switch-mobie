@@ -1,5 +1,44 @@
 class FacebookCustomAudienceController < ApplicationController
   include FacebookCustomAudienceHelper
+  skip_before_action :verify_authenticity_token
+  require 'rubygems' if RUBY_VERSION < '1.9'
+  require 'rest_client'
+
+  def send_data_to_autopilot
+    values = {
+      'contact': {
+        'MailingPostalCode': params[:postcode],
+        'FirstName': params[:firstname],
+        'LastName': params[:lastname],
+        'Email': params[:email],
+        'Phone': params[:phone1],
+        'LeadSource': params[:source],
+        'custom': {
+          'string--bad_credit_customer':  params[:bad_credit_customer],
+          'string--campaign':  params[:campaign],
+          'string--adgroupid':  params[:adgroupid],
+          'string--sid':  params[:sid],
+          'string--ssid':  params[:ssid],
+          'string--ad_set':  params[:ad_set],
+          'string--c1':  params[:c1],
+          'string--keyword':  params[:keyword],
+          'string--trafficid':  params[:trafficid],
+          'string--prize':  params[:prize],
+          'string--ipaddress':  params[:ipaddress],
+          'string--optinurl':  params[:optinurl],
+          'string--optindate':  params[:optindate],
+          'string--campaignkey':  params[:campaignkey],
+        }
+      }
+    }
+
+    headers = {
+      :autopilotapikey => 'f745214713484590b194c550aaadb259',
+      :content_type => 'application/json'
+    }
+    response = RestClient.post 'https://api2.autopilothq.com/v1/contact', values.to_json, headers
+    puts response
+  end
 
   require 'rubygems' if RUBY_VERSION < '1.9'
   require 'rest_client'
