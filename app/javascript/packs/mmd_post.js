@@ -15,5 +15,8 @@ class MmdPost extends Common {
       }
     });
   }
+  urlSelection(){
+    window.location = this.details.bad_success_url+this.additionalParamsFoBC()
+  }
 }
 export default new MmdPost();
