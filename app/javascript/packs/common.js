@@ -35,7 +35,9 @@ class Common {
     var data = $(form)[0].dataset.details
     this.details = JSON.parse(data)
   }
-
+  showCircle(){
+    $(".btn-success").addClass("in-progress")
+  }
   showToolTip(){
     $('[data-toggle="tooltip"]').tooltip();
   }

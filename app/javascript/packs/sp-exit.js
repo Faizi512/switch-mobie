@@ -21,10 +21,6 @@ class SpExit extends Common {
     
   }
 
-  showCircle(){
-    $(".btn-success").addClass("in-progress")
-  }
-
   successUrl(){
     var CI = this;
     setTimeout(function(){
