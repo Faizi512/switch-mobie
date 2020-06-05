@@ -356,7 +356,7 @@ class Common {
   }
 
   additionalParams(){
-    return "?s1=" + this.getSource() + "&s2=" + this.getC1() + "&s3=" + this.getEmail() + "&s4=" + this.getPhone1() + "&s5=" + this.getFirstName() ;
+    return "&s1=exit-" + this.getSource() + "&s2=" + this.getC1() + "&s3=" + this.getEmail() + "&s4=" + this.getPhone1() ;
   }
 
   additionalParamsFoBC(){
