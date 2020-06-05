@@ -109,6 +109,9 @@ class Common {
           if(field.$element.hasClass('approve')){
             return $('.error-checkbox')
           }
+          if(field.$element.hasClass('error-on-button')){
+            return $(field.element.closest(".tab").querySelector(".error-box"))
+          }
           return field.$element.parent()
         },
     })
@@ -217,10 +220,6 @@ class Common {
       return false
     }
     return true
-  }
-
-  showCircle(){
-    $(".btn-success").addClass("in-progress")
   }
 
   fixStepIndicator(num) {
@@ -363,6 +362,9 @@ class Common {
     return "&s1=exit-" + this.getSource() + "&s2=" + this.getC1() + "&s3=" + this.getEmail() + "&s4=" + this.getPhone1() ;
   }
 
+  paramsforSpExit(){
+    return "?s5=" + this.getFirstName();
+  }
   getC1(){
     return this.getUrlParameter('c1') || this.getUrlParameter('bstransid') || this.getUrlParameter('transid') || '';
   }

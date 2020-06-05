@@ -332,6 +332,22 @@ module PagesHelper
     }.to_json
   end
 
+  def sp_exit
+    @details = {
+      camp_id: 'ENERGY-PREMIUM',
+      success_url: 'https://mtrk5.co.uk/?a=14118&c=33110',
+      bad_success_url: 'https://mtrk5.co.uk/?a=14118&c=33110',
+      form_name: 'SP-Exit',
+      optin_url: '/sp-exit',
+      sid: 1,
+      ssid: nil,
+      source:'mmd-exit',
+      quick_submit: false,
+      submit_on_load: false,
+    }.to_json
+  end
+
+
   def home
     @details = {
       camp_id: 'MEGA-MOBILE-DEALS',
