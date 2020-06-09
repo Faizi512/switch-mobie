@@ -390,6 +390,9 @@ input:hover ~ .input-deposit:after{
 
 }
 @media only screen and (max-width: 520px) {
+  .w-195{
+    width: 125px !important;
+  }
   .div-deals{
     height: auto !important;
   }
@@ -409,6 +412,12 @@ input:hover ~ .input-deposit:after{
   }
   .fs-md-22{
     font-size: 22px !important;
+  }
+  .fs-md-23{
+    font-size: 23px !important;
+  }
+  .fs-md-20{
+    font-size: 20px !important;
   }
   .fs-md-19{
     font-size: 19px !important;
@@ -493,8 +502,12 @@ input:hover ~ .input-deposit:after{
 }
 
 @media only screen and (max-width: 322px) {
+
   .fs-sm-22{
     font-size: 22px !important;
+  }
+  .fs-sm-20{
+    font-size: 20px !important;
   }
   .bolder {
     font-size: 18px;
