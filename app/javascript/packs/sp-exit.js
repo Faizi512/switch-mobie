@@ -18,7 +18,7 @@ class SpExit extends Common {
     window.Parsley.on('field:error', function() {
       $(".btn-success").removeClass("in-progress")
     });
-    
+
   }
 
   successUrl(){
@@ -51,6 +51,7 @@ class SpExit extends Common {
       optindate: this.getFormattedCurrentDate(),
       optinurl: 'http://deals.megamobiledeals.com/sp-exit',
       ipaddress: this.ip_Address,
+      tps_result: this.tps_result,
       timestamp: new Date,
       user_agent: window.navigator.userAgent,
     }

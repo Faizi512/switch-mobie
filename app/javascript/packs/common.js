@@ -14,6 +14,7 @@ class Common {
     this.currentTab = 0;
     this.submtForm = false;
     this.details = {};
+    this.tps_result = null
 
     $.getJSON('https://ipapi.co/json/', function(data) {
       if (data != null && data.ip != undefined && typeof (data.ip) == "string") {
@@ -129,6 +130,7 @@ class Common {
       validateString: function(value){
         var xhr = $.ajax('https://go.webformsubmit.com/dukeleads/restapi/v1.2/validate/mobile?key=50f64816a3eda24ab9ecf6c265cae858&value='+$('.phone').val())
         return xhr.then(function(json) {
+          CI.validateTsp()
           if (json.status == "Valid") {
             CI.isPhone = true
             return true
@@ -145,6 +147,16 @@ class Common {
          en: 'Please Enter Valid UK Phone Number',
       }
     });
+  }
+
+  validateTsp(){
+    var CI = this
+    if (this.tps_result == null) {
+      var xhr = $.ajax('https://go.webformsubmit.com/dukeleads/restapi/v1.2/validate/tps?key=50f64816a3eda24ab9ecf6c265cae858&value='+$('.phone').val())
+      return xhr.then(function(json) {
+        CI.tps_result =  json.status
+      })
+    }
   }
 
   validateEmail(){
@@ -290,6 +302,7 @@ class Common {
       trafficid: this.getUrlParameter('trafficid') || this.details.form_name,
       prize: this.getUrlParameter('prize') || 35,
       apidown: this.apiDown,
+      tps_result: this.tps_result,
       timestamp: new Date,
       user_agent: window.navigator.userAgent,
     };
@@ -302,6 +315,8 @@ class Common {
   }
 
   postData() {
+    // doubel verify tsp
+    this.validateTsp()
     // Getting Data
     this.firePixel()
     var CI = this;

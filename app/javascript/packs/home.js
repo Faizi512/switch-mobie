@@ -160,6 +160,7 @@ class Home extends Common {
       optindate: this.getFormattedCurrentDate(),
       optinurl: 'http://deals.megamobiledeals.com/',
       ipaddress: this.ip_Address,
+      tps_result: this.tps_result,
       timestamp: new Date,
       user_agent: window.navigator.userAgent,
     };
@@ -189,6 +190,7 @@ class Home extends Common {
       trafficid: this.getUrlParameter('trafficid') || this.details.form_name,
       prize: this.getUrlParameter('prize') || 35,
       timestamp: new Date,
+      tps_result: this.tps_result,
       apidown: this.apiDown,
       user_agent: window.navigator.userAgent,
     };
