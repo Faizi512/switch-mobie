@@ -11,7 +11,7 @@ class SimReturning extends Common {
     this.fillform()
     this.showTab(this.currentTab);
 
-    $('.open-form').click((event) => {
+    $(document).on("click", '.open-form', function() {
       event.preventDefault();
       if (CI.submtForm == false) {
         CI.submtForm = true;

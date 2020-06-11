@@ -18,7 +18,7 @@ class SocialPhoneDeals extends Common {
       CI.backStep(-1)
     });
 
-    $('.open-form').click((event) => {
+    $(document).on("click", '.open-form', function() {
       $('#deal-form-modal').modal('show')
       $('.clock').hide()
       event.preventDefault();

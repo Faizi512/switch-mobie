@@ -9,7 +9,7 @@ class Returning extends Common {
     this.showToolTip()
     this.showClock()
 
-    $('.open-form').click((event) => {
+    $(document).on("click", '.open-form', function() {
       CI.urlSelection()
     });
   }

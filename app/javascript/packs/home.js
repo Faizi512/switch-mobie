@@ -58,7 +58,7 @@ class Home extends Common {
       CI.checklastStep()
     });
 
-    $('.open-form').click((event) => {
+    $(document).on("click", '.open-form', function() {
       $('#deal-form-modal').modal('show')
       $('.clock').hide()
       event.preventDefault();
