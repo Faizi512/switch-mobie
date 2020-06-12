@@ -334,7 +334,7 @@ module PagesHelper
 
   def sp_exit
     @details = {
-      camp_id: 'ENERGY-PREMIUM',
+      camp_id: 'MOBILE-INTO-ENERGY',
       success_url: 'https://mtrk5.co.uk/?a=14118&c=33110',
       bad_success_url: 'https://mtrk5.co.uk/?a=14118&c=33110',
       form_name: 'SP-Exit',
