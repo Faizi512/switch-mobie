@@ -347,6 +347,21 @@ module PagesHelper
     }.to_json
   end
 
+def credit_report
+    @details = {
+      camp_id: 'GUY-CREDIT-REPORT',
+      success_url: '',
+      bad_success_url: '',
+      form_name: 'Credit-Report',
+      optin_url: '/credit-report',
+      sid: 1,
+      ssid: nil,
+      source:'',
+      quick_submit: false,
+      submit_on_load: false,
+    }.to_json
+  end
+
 
   def home
     @details = {
