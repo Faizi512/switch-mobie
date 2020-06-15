@@ -8,7 +8,7 @@
           <div class="row details w-100 align-items-center">
             <div class="col-md-5 col">
               <div class="phone-img text-center">
-                <%= image_tag("phone/iphone11-2.png") %>
+                <%= image_tag("phone/iphone11-2.png", alt: "iPhone11 image") %>
               </div>
             </div>
             <div class="col px-0 mobile mobile-price">
@@ -157,13 +157,17 @@
           </div>
           <% if @bc %>
             <div class="row mt-5">
+              <div class="col-12">
+                <button class="btn btn-primary o-btn open-form w-100">Get Deal</button>
+              </div>
+            </div>
           <% else %>
             <div class="row mt-4">
-          <% end %>
-            <div class="col-12">
-              <button class="btn btn-primary o-btn open-form w-100">Get Deal</button>
+              <div class="col-12">
+                <button class="btn btn-primary o-btn open-form w-100">Get Deal</button>
+              </div>
             </div>
-          </div>
+          <% end %>
         </div>
       </div>
 <!-- second deal -->
@@ -173,7 +177,7 @@
           <div class="row details w-100 align-items-center">
             <div class="col-md-5 col">
               <div class="phone-img text-center">
-                <%= image_tag("sim/three-sim.png") %>
+                <%= image_tag("sim/three-sim.png", alt: "Three-Sim image") %>
               </div>
             </div>
             <div class="col px-0 mobile mobile-price">
@@ -297,7 +301,7 @@
             </div>
           </div>
         </div>
-      <div>
+      </div>
     </div>
   </div>
 </section>
