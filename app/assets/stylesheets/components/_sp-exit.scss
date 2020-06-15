@@ -21,6 +21,10 @@
   .img-tp{
     width: 110px;
   }
+  .z-high{
+    z-index: 9;
+    position: relative;
+  }
   .bg-blue-gradient{
     background-image: linear-gradient(to bottom,#27278e,#115);
   }
