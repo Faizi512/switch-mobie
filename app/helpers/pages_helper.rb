@@ -341,7 +341,7 @@ module PagesHelper
       optin_url: '/sp-exit',
       sid: 1,
       ssid: nil,
-      source:'sp-exit',
+      source:'mmd-exit',
       quick_submit: false,
       submit_on_load: false,
     }.to_json
@@ -350,8 +350,8 @@ module PagesHelper
 def credit_report
     @details = {
       camp_id: 'GUY-CREDIT-REPORT',
-      success_url: 'https://mtrk5.co.uk/?a=14118&c=33110',
-      bad_success_url: 'https://mtrk5.co.uk/?a=14118&c=33110',
+      success_url: '',
+      bad_success_url: '',
       form_name: 'Credit-Report',
       optin_url: '/credit-report',
       sid: 1,

@@ -65,22 +65,6 @@ class Home extends Common {
     });
   }
 
-  urlSelection(){
-    window.location = this.details.success_url+this.additionalParamsFoBC()+this.paramsforSuccess()
-  }
-
-  successUrl(){
-    var CI = this;
-    $("#loaderPopup").css('height', '100%')
-    setTimeout(function(){
-      if (CI.redirectUrl) {
-        CI.urlSelection()
-      }else{
-        CI.successUrl()
-      }
-    }, 1000)
-  }
-
   checklastStep(){
     var CI = this
     if($("input[name='free-credit']:checked").length > 0 && $("input[name='casino']:checked").length > 0){
@@ -119,7 +103,6 @@ class Home extends Common {
     $(".postcode_holder").html($(".postcode").val() || this.getUrlParameter("postcode")  || "");
     // Form Submisson
     this.updateFacebookAudience(data)
-    this.sendMmdExitLead()
     this.submitLead(data, this.details.camp_id)
   }
 

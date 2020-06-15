@@ -1,5 +1,5 @@
-<%= javascript_pack_tag 'credit-report', 'data-turbolinks-track': 'reload', defer: true %>
-<%= render 'layouts/sp-exit/header' %>
+  <%= javascript_pack_tag 'credit-report', 'data-turbolinks-track': 'reload', defer: true %>
+  <%= render 'layouts/sp-exit/header' %>
 <div id="credit-report" class="bg-white border-top border-bottom">
   <div class="bg-blue-img">
     <div class="container mt-md-5 mt-4">
@@ -139,9 +139,9 @@
                     <label class="d-flex justify-content-start mb-2 h5  f-25">Date Of Birth</label>
                     <div class="field row  text-center w-100 mx-auto mt-3">
                       <div class="col-md-4">
-                        <select name="dayOfBirth "
+                        <select name="dayOfBirth " 
                         class="form-control dayOfBirth dob w-100 mb-2"
-                        id="dayOfBirth"
+                        id="dayOfBirth" 
                         required=""
                         data-parsley-group="block-2"
                         data-parsley-required="true"
@@ -181,9 +181,9 @@
                         </select>
                       </div>
                       <div class="col-md-4">
-                        <select name="monthOfBirth"
-                        class="form-control monthOfBirth dob w-100 mb-2"
-                        id="monthOfBirth"
+                        <select name="monthOfBirth" 
+                        class="form-control monthOfBirth dob w-100 mb-2" 
+                        id="monthOfBirth" 
                         required=""
                         data-parsley-group="block-2"
                         data-parsley-required="true"
@@ -204,9 +204,9 @@
                         </select>
                       </div>
                       <div class="col-md-4">
-                        <select name="yearOfBirth"
+                        <select name="yearOfBirth" 
                         class="form-control yearOfBirth dob w-100 mb-2"
-                        id="yearOfBirth"
+                        id="yearOfBirth" 
                         required=""
                         data-parsley-group="block-2"
                         data-parsley-required="true"
@@ -375,6 +375,5 @@
     </div>
   </div>
 </div>
-<%= render 'layouts/credit-report/network_logos' %>
+<%= render 'layouts/common/network_logos' %>
 <%= render 'layouts/common/footer' %>
-<%= render 'layouts/common/waiting_loader' %>

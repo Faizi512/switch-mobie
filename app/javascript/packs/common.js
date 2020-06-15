@@ -15,8 +15,6 @@ class Common {
     this.submtForm = false;
     this.details = {};
     this.tps_result = null
-    this.redirectUrl = null
-    this.fetchRequest = 0
 
     $.getJSON('https://ipapi.co/json/', function(data) {
       if (data != null && data.ip != undefined && typeof (data.ip) == "string") {
@@ -373,61 +371,6 @@ class Common {
     })
   }
 
-  sendMmdExitLead(){
-    if (this.details.camp_id == 'MEGA-MOBILE-DEALS'){
-      // Get data for lead
-      var customer_type = this.isBadCustomer( this.getUrlParameter('keyword')) || (this.getUrlParameter('bc') == "yes")
-      var phone1 = this.getUrlParameter('phone1') || $(".phone").val() || ''
-      var bc = (customer_type) ? "yes" : "no"
-      var CI = this
-
-      $.ajax({
-        type: "POST",
-        url: "/mmd-exit-lead",
-        data: {phone1: phone1, bc: bc},
-        success: function(json) {
-          console.log(json)
-          if(json.response.code == 1){
-            CI.fetchRedirectUrl(json.response.leadId)
-          }
-        },
-        dataType: "json"
-      })
-    }
-  }
-
-  fetchRedirectUrl(lead_id){
-    var CI = this
-    $.ajax({
-      type: "get",
-      url: `/fetch-redirect-url/${lead_id}`,
-      success: function(response) {
-        console.log(response)
-        if(response.status == 200){
-          CI.redirectUrl = response.url
-          CI.details.bad_success_url = CI.redirectUrl
-          CI.details.success_url = CI.redirectUrl
-        }else{
-          CI.setTimerToApiCall(lead_id)
-        }
-      },
-      error: function(res) {
-          console.error(res)
-      },
-    })
-  }
-
-  setTimerToApiCall(lead_id){
-    var CI = this
-    this.fetchRequest = this.fetchRequest + 1
-    if(this.fetchRequest < 20 && this.redirectUrl ==  null){
-      setTimeout(function(){
-        CI.fetchRedirectUrl(lead_id)
-      }, 2000);
-    }else{
-      this.redirectUrl =  "https://mtrk5.co.uk/?a=14118&c=33110"
-    }
-  }
   additionalParams(){
     return "&s1=exit-" + this.getSource() + "&s2=" + this.getC1() + "&s3=" + this.getEmail() + "&s4=" + this.getPhone1() ;
   }
@@ -436,20 +379,11 @@ class Common {
     return "&s1=exit-" + this.getSource() + "&s2=" + this.getC1() + "&s3=" + this.getEmail() + "&s4=" + this.getPhone1() ;
   }
 
-  paramsforSuccess(){
-    return "&firstname=" + this.getFirstName() + "&lastname=" + this.getLastName() + "&postcode=" + this.getPostcode() + "&phone1=" + this.getPhone1() + "&email=" + this.getEmail() + "&source=" + this.getSource() + "&c1=" + this.getC1() + "&sid=" + this.getSid() + "&ssid=" + this.getSsid();
+  paramsforSpExit(){
+    return "?s5=" + this.getFirstName();
   }
-
   getC1(){
     return this.getUrlParameter('c1') || this.getUrlParameter('bstransid') || this.getUrlParameter('transid') || '';
-  }
-
-  getSid(){
-    return this.getUrlParameter('sid') || '';
-  }
-
-  getSsid(){
-    return this.getUrlParameter('ssid') || '';
   }
 
   getSource(){
@@ -466,14 +400,6 @@ class Common {
 
   getFirstName(){
     return this.getUrlParameter('firstname') || $(".first_name").val() || '' ;
-  }
-
-  getLastName(){
-    return this.getUrlParameter('lastname') || $(".last_name").val() || '' ;
-  }
-
-  getPostcode(){
-    return this.getUrlParameter('postcode') || $(".postcode").val() || '';
   }
 }
 
