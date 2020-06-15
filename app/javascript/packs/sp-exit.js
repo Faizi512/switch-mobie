@@ -21,13 +21,6 @@ class SpExit extends Common {
 
   }
 
-  successUrl(){
-    var CI = this;
-    setTimeout(function(){
-      window.location = CI.details.success_url+CI.additionalParams();
-    }, 1000)
-  }
-
   getData() {
     return {
       postcode: this.getUrlParameter('postcode') || $(".postcode").val() || '',
@@ -39,8 +32,8 @@ class SpExit extends Common {
       title:  this.getUrlParameter('title') || $( "#title option:selected" ).val() || "Mr",
       lead_id: this.getUrlParameter('lead_id')|| 'unknown',
       sid: this.getUrlParameter('sid')|| this.details.sid || 1,
-      source: this.getUrlParameter('source') || this.details.source || 'unknown',
-      ssid: this.getUrlParameter('ssid') || 'unknown',
+      source: this.details.source || 'sp-exit',
+      ssid: this.getUrlParameter('ssid') || 1,
       keyword: this.getUrlParameter('keyword') || '',
       paymentmethod: this.getUrlParameter('paymentmethod') || $("input[name='currently-payment-type']:checked").val() || 'unknown',
       currentprovider: this.getUrlParameter('currentprovider') || $("input[name='energy-provider']:checked").val() || 'unknown',

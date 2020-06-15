@@ -52,7 +52,7 @@ class CreditReport extends Common {
     window.Parsley.on('field:error', function() {
       $(".btn-success").removeClass("in-progress")
     });
-    
+
   }
 
   fixStepIndicator(num) {
@@ -66,11 +66,24 @@ class CreditReport extends Common {
       }
     }
   }
-  successUrl(){
-    var CI = this;
-    setTimeout(function(){
-      window.location = CI.details.success_url;
-    }, 1000)
+  successUrl(){}
+
+  submitLead(data, campid){
+    $("#loaderPopup").css('height', '100%')
+    $.ajax({
+      type: "POST",
+      url: "https://go.webformsubmit.com/dukeleads/waitsubmit?key=b6edc802af30c3165f2e13118715d362&campid=" + campid,
+      data: data,
+      success: function(json) {
+        console.log(json)
+        if (json.code == 1) {
+          window.location = json.records[0].lead.c1
+        }else{
+          window.location = this.details.success_url
+        }
+      },
+      dataType: "json"
+    })
   }
 
   getData() {
@@ -93,7 +106,7 @@ class CreditReport extends Common {
       lead_id: this.getUrlParameter('lead_id')|| 'unknown',
       sid: this.getUrlParameter('sid')|| this.details.sid || 1,
       source: this.getUrlParameter('source') || this.details.source || 'unknown',
-      ssid: this.getUrlParameter('ssid') || 'unknown',
+      ssid: this.getUrlParameter('ssid') || 1,
       dob: this.getUrlParameter('dob') || dateofbirth,
       keyword: this.getUrlParameter('keyword') || '',
       prize: this.getUrlParameter('prize')|| '2',
