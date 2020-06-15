@@ -94,7 +94,6 @@ class FbPhoneDeals extends Common {
   }
 
   postMMDData() {
-    this.firePixel()
     var data = this.getData();
     $( "#btn-continue").hide()
     $( "#btn-back").hide()
@@ -103,6 +102,7 @@ class FbPhoneDeals extends Common {
     // Form Submisson
     this.updateFacebookAudience(data)
     this.submitLead(data, this.details.camp_id)
+    this.firePixel()
   }
 
   energyLead(){
@@ -111,6 +111,12 @@ class FbPhoneDeals extends Common {
     if(!this.getBcFromParams()){
       this.currentTab  = 3
       this.successUrl()
+    }
+  }
+
+  firePixel(){
+    if (this.details.camp_id == 'MEGA-MOBILE-DEALS'){
+      dataLayer.push({'event': 'fb-form-submit'})
     }
   }
 
