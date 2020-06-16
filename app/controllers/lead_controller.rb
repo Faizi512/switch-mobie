@@ -41,7 +41,7 @@ class LeadController < ApplicationController
       campaign = record[:deliveries][0][:reference]
       case campaign # a_variable is the variable we want to compare
       when "Exit 1 (Energy)"
-        @redirect_url = "/sp-exit?exit=1"
+        @redirect_url = "https://bill-switchers.com/sp-exit?exit=1"
       when "Exit 2 (Credit)"
         @redirect_url = "/credit-report?exit=1"
       else
