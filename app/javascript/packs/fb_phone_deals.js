@@ -33,22 +33,22 @@ class FbPhoneDeals extends Common {
       if (this.value == "yes") {
         CI.financeLead()
       }
-      CI.nextStep(1);
+      CI.successUrl();
     });
 
-    $("input[name='free-credit']").click(function() {
-      if (this.value == "yes") {
-        CI.freeCreditLead()
-      }
-      CI.checklastStep()
-    });
+    // $("input[name='free-credit']").click(function() {
+    //   if (this.value == "yes") {
+    //     CI.freeCreditLead()
+    //   }
+    //   CI.checklastStep()
+    // });
 
-    $("input[name='casino']").click(function() {
-      if (this.value == "yes") {
-        CI.casinoLead()
-      }
-      CI.checklastStep()
-    });
+    // $("input[name='casino']").click(function() {
+    //   if (this.value == "yes") {
+    //     CI.casinoLead()
+    //   }
+    //   CI.checklastStep()
+    // });
 
     $( "#btn-continue" ).click(() => {
       CI.nextStep(1)
@@ -64,12 +64,12 @@ class FbPhoneDeals extends Common {
     });
   }
 
-   checklastStep(){
-    var CI = this
-    if($("input[name='free-credit']:checked").length > 0 && $("input[name='casino']:checked").length > 0){
-      this.successUrl()
-    }
-  }
+  //  checklastStep(){
+  //   var CI = this
+  //   if($("input[name='free-credit']:checked").length > 0 && $("input[name='casino']:checked").length > 0){
+  //     this.successUrl()
+  //   }
+  // }
 
   nextStep(n) {
     this.showCircle()
@@ -126,14 +126,14 @@ class FbPhoneDeals extends Common {
     this.submitLead(data, "MMD-finance")
   }
 
-  freeCreditLead(){
-    var data = this.getData();
-    this.submitLead(data, "MMD-free-credit")
-  }
-  casinoLead(){
-    var data = this.getData();
-    this.submitLead(data, "MMD-Casino")
-  }
+  // freeCreditLead(){
+  //   var data = this.getData();
+  //   this.submitLead(data, "MMD-free-credit")
+  // }
+  // casinoLead(){
+  //   var data = this.getData();
+  //   this.submitLead(data, "MMD-Casino")
+  // }
 
   handleBadCustomerForm(){
     if (this.currentTab == 2) {
