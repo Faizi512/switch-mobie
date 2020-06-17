@@ -119,10 +119,15 @@ class Home extends Common {
   handleBadCustomerForm(){
     if (this.currentTab == 2) {
       this.mmdLead()
-    }else if (this.currentTab == 4) {
-      $( "#btn-continue").hide()
-      $( "#btn-back").hide()
-      this.energyLead()
+      if(this.getBcFromParams()){
+        if (this.currentTab == 4) {
+          $( "#btn-continue").hide()
+          $( "#btn-back").hide()
+          this.energyLead()
+        }
+      }else{
+        this.successUrl()
+      }
     }
   }
 
