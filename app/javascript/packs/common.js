@@ -33,7 +33,6 @@ class Common {
     }
   }
 
-
   getFormDetails(form){
     var data = $(form)[0].dataset.details
     this.details = JSON.parse(data)

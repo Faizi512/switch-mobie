@@ -362,7 +362,7 @@ module PagesHelper
       submit_on_load: false,
     }.to_json
   end
-
+ 
   def get_deals_data url_name
     send(url_name.gsub('-', '_')) rescue home
     @phones = [
@@ -457,17 +457,7 @@ module PagesHelper
     ]
 
     @phoneshome = [
-     {
-        name: "6 Months Half Price SIM!",
-        data: "Unlimited",
-        image: "sim/three-sim.png",
-        calls: "Unlimited",
-        texts: "Unlimited",
-        url:"/success",
-        bluetext: "Best Sim Only Deals, 5G Ready",
-        deposit: "£0"
-      },
-     {
+      {
         name: "Samsung Galaxy S10",
         data: "Unlimited",
         image: "phone/samsungs10.png",
@@ -477,10 +467,10 @@ module PagesHelper
         bluetext: "Personal Hotspot, Go Binge, Data Roaming",
         deposit: "£0"
       },
-      {
-        name: "Huawei P30",
-        data: "30GB",
-        image: "phone/huaweip30.png",
+     {
+        name: "Samsung Galaxy S20 5G",
+        data: "Unlimited",
+        image: "phone/galaxy-s20-5g.png",
         calls: "Unlimited",
         texts: "Unlimited",
         url:"/success",
@@ -498,26 +488,6 @@ module PagesHelper
         deposit: "£0"
       },
       {
-        name: "iPhone 11",
-        data: "Unlimited",
-        image: "phone/iphone11.png",
-        calls: "Unlimited",
-        texts: "Unlimited",
-        url:"/success",
-        bluetext: "Personal Hotspot, Go Binge, Data Roaming",
-        deposit: "£0"
-      },
-      {
-        name: "iPhone 11",
-        data: "Unlimited",
-        image: "phone/iphone11-2.png",
-        calls: "Unlimited",
-        texts: "Unlimited",
-        url:"/success",
-        bluetext: "Free Personal Hotspot, Free Data Roaming",
-        deposit: "£0"
-      },
-      {
         name: "Samsung Galaxy S20 Ultra 5G",
         data: "Unlimited",
         image: "phone/samsung-galaxy-s20-ultra-black.png",
@@ -525,6 +495,26 @@ module PagesHelper
         texts: "Unlimited",
         url:"/success",
         bluetext: "Personal Hotspot, Go Binge, Data Roaming, 5G Ready",
+        deposit: "£0"
+      },
+      {
+        name: "Huawei P30",
+        data: "30GB",
+        image: "phone/huaweip30.png",
+        calls: "Unlimited",
+        texts: "Unlimited",
+        url:"/success",
+        bluetext: "Personal Hotspot, Go Binge, Data Roaming",
+        deposit: "£0"
+      },
+      {
+        name: "6 Months Half Price SIM!",
+        data: "Unlimited",
+        image: "sim/three-sim.png",
+        calls: "Unlimited",
+        texts: "Unlimited",
+        url:"/success",
+        bluetext: "Best Sim Only Deals, 5G Ready",
         deposit: "£0"
       },
       {
@@ -538,6 +528,36 @@ module PagesHelper
         deposit: "£0"
       },
       {
+        name: "Oneplus 8 Pro 5G",
+        data: "Unlimited",
+        image: "phone/oneplus8pro.png",
+        calls: "Unlimited",
+        texts: "Unlimited",
+        url:"/success",
+        bluetext: "Personal Hotspot, Data Roaming, 5G Ready",
+        deposit: "£0"
+      },
+      {
+        name: "iPhone 11 Pro Max",
+        data: "Unlimited",
+        image: "phone/1iphone-11-pro-max.png",
+        calls: "Unlimited",
+        texts: "Unlimited",
+        url:"/success",
+        bluetext: "Personal Hotspot, Go Binge, Data Roaming",
+        deposit: "£0"
+      },
+      {
+        name: "iPhone 11",
+        data: "Unlimited",
+        image: "phone/iphone11.png",
+        calls: "Unlimited",
+        texts: "Unlimited",
+        url:"/success",
+        bluetext: "Personal Hotspot, Go Binge, Data Roaming",
+        deposit: "£0"
+      },
+      {
         name: "Samsung Galaxy S10e",
         data: "30GB",
         image: "phone/samsung-galaxy-s10e.png",
@@ -547,6 +567,7 @@ module PagesHelper
         bluetext: "Personal Hotspot, Go Binge, Data Roaming",
         deposit: "£0"
       },
+      
       {
         name: "iPhone XR",
         data: "Unlimited",
@@ -567,26 +588,6 @@ module PagesHelper
         bluetext: "Personal Hotspot, Go Binge, Data Roaming",
         deposit: "£0"
       },
-      {
-        name: "iPhone 11 Pro Max",
-        data: "Unlimited",
-        image: "phone/1iphone-11-pro-max.png",
-        calls: "Unlimited",
-        texts: "Unlimited",
-        url:"/success",
-        bluetext: "Personal Hotspot, Go Binge, Data Roaming",
-        deposit: "£0"
-      },
-      {
-        name: "Samsung Galaxy S10",
-        data: "Unlimited",
-        image: "phone/samsungs10.png",
-        calls: "Unlimited",
-        texts: "Unlimited",
-        url:"/success",
-        bluetext: "Personal Hotspot, Go Binge, Data Roaming",
-        deposit: "£0"
-      }
     ]
 
     @phonescompare = [
