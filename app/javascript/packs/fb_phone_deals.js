@@ -81,8 +81,8 @@ class FbPhoneDeals extends Common {
     // Form Submisson
     this.updateFacebookAudience(data)
     this.sendMmdExitLead()
-    this.submitLead(data, this.details.camp_id)
     this.firePixel()
+    this.submitLead(data, this.details.camp_id)
   }
 
   energyLead(){
