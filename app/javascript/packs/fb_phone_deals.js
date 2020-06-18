@@ -108,15 +108,11 @@ class FbPhoneDeals extends Common {
   handleBadCustomerForm(){
     if (this.currentTab == 2) {
       this.mmdLead()
-      if(this.getBcFromParams()){
-        if (this.currentTab == 4) {
-          $( "#btn-continue").hide()
-          $( "#btn-back").hide()
-          this.energyLead()
-        }
-      }else{
-        this.successUrl()
-      }
+    }
+    if (this.currentTab == 4) {
+      $( "#btn-continue").hide()
+      $( "#btn-back").hide()
+      this.energyLead()
     }
   }
 
