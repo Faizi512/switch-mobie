@@ -11,6 +11,7 @@ class LeadController < ApplicationController
   end
 
   def redirect_webhook
+    puts "---------------" * 30
     if params[:records]
       params[:records].each do |record|
         decide_url(record)
