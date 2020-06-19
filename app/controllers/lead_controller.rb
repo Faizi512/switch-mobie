@@ -44,6 +44,8 @@ class LeadController < ApplicationController
         @redirect_url = "https://bill-switchers.com/sp-exit?exit=1"
       when "Exit 2 (Credit)"
         @redirect_url = "/credit-report?exit=1"
+      when "Exit 4 (sweetmobile)"
+        @redirect_url = "http://lcuktrack.go2cloud.org/aff_c?offer_id=1&aff_id=1000&aff_sub=exit"
       else
         @redirect_url = "https://mtrk5.co.uk/?a=14118&c=33110"
       end
