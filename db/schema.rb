@@ -10,13 +10,14 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_06_12_064752) do
+ActiveRecord::Schema.define(version: 2020_06_19_102318) do
 
   create_table "leads", force: :cascade do |t|
     t.integer "lead_id"
     t.string "redirect_url"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.string "delivery_name"
   end
 
 end

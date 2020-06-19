@@ -4,7 +4,7 @@ class LeadController < ApplicationController
     lead = Lead.find_by(lead_id: params[:id])
     if lead.present?
       lead.delete
-      render json: {status: 200, url: lead.redirect_url}
+      render json: {status: 200, lead: lead}
     else
       render json: {status: 400}
     end
@@ -15,7 +15,7 @@ class LeadController < ApplicationController
       params[:records].each do |record|
         decide_url(record)
         lead = record[:lead][:id]
-        Lead.create(lead_id: lead, redirect_url: @redirect_url)
+        Lead.create(lead_id: lead, redirect_url: @redirect_url, delivery_name: @delivery_name)
       end
       render json: {status: 200}
     else
@@ -39,11 +39,12 @@ class LeadController < ApplicationController
   private
     def decide_url record
       campaign = record[:deliveries][0][:reference]
+      @delivery_name = campaign
       case campaign # a_variable is the variable we want to compare
       when "Exit 1 (Energy)"
-        @redirect_url = "https://bill-switchers.com/sp-exit?exit=1"
+        @redirect_url = "https://bill-switchers.com/sp-exit?check=1"
       when "Exit 2 (Credit)"
-        @redirect_url = "/credit-report?exit=1"
+        @redirect_url = "/credit-report?check=1"
       when "Exit 4 (sweetmobile)"
         @redirect_url = "http://lcuktrack.go2cloud.org/aff_c?offer_id=1&aff_id=1000&aff_sub=exit"
       else

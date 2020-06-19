@@ -52,7 +52,15 @@ class Home extends Common {
   }
 
   urlSelection(){
-    window.location = this.details.success_url+this.additionalParamsFoBC()+this.paramsforSuccess()
+    if(this.deliveryName == "Exit 1 (Energy)"){
+      window.location = this.details.success_url+this.paramsforSuccess()
+    }else if(this.deliveryName == "Exit 2 (Credit)"){
+      window.location = this.details.success_url+this.paramsforSuccess()
+    }else if(this.deliveryName == "Exit 4 (sweetmobile)"){
+      window.location = this.details.success_url
+    }else{
+      window.location = this.details.success_url+this.additionalParamsFoBC()
+    }
   }
 
   successUrl(){

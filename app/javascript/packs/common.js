@@ -17,6 +17,7 @@ class Common {
     this.tps_result = null
     this.redirectUrl = null
     this.fetchRequest = 0
+    this.deliveryName = null
 
     $.getJSON('https://ipapi.co/json/', function(data) {
       if (data != null && data.ip != undefined && typeof (data.ip) == "string") {
@@ -403,7 +404,8 @@ class Common {
       success: function(response) {
         console.log(response)
         if(response.status == 200){
-          CI.redirectUrl = response.url
+          CI.redirectUrl = response.lead.redirect_url
+          CI.deliveryName = response.lead.delivery_name
           CI.details.bad_success_url = CI.redirectUrl
           CI.details.success_url = CI.redirectUrl
         }else{
