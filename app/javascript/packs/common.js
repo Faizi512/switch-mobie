@@ -476,6 +476,7 @@ class Common {
   getPostcode(){
     return this.getUrlParameter('postcode') || $(".postcode").val() || '';
   }
+
 }
 
 export default Common;
