@@ -440,6 +440,33 @@ class Common {
   paramsforSuccess(){
     return "&firstname=" + this.getFirstName() + "&lastname=" + this.getLastName() + "&postcode=" + this.getPostcode() + "&phone1=" + this.getPhone1() + "&email=" + this.getEmail() + "&source=" + this.getSource() + "&c1=" + this.getC1() + "&sid=" + this.getSid() + "&ssid=" + this.getSsid();
   }
+  paramsforSuccessCreditRating(){
+    return this.getSid() + "&city=" + this.getCity() + "&straddr=" + this.getStreet() + "&title=" + this.getTitle() + "&fname=" + this.getFirstName() + "&lname=" + this.getLastName() + "&zip=" + this.getPostcode() + "&dbd=" + this.getDayOfBirth() + "&dbm=" + this.getMonthOfBirth() + "&dby=" + this.getYearOfBirth() + "&phone=" + this.getPhone1() + "&email=" + this.getEmail() ;
+  }
+
+  getTitle(){
+    return this.getUrlParameter('title') || $("input[name='title']:checked").val() || '';
+  }
+
+  getDayOfBirth(){
+    return  $("#dayOfBirth :selected").val() || '';
+  }
+
+  getMonthOfBirth(){
+    return $("#monthOfBirth :selected").val() || '';
+  }
+
+  getYearOfBirth(){
+    return $("#yearOfBirth :selected").val() || '';
+  }
+
+  getStreet(){
+    return this.getUrlParameter('street1') || $(".street1").val() || '';
+  }
+
+  getCity(){
+    return this.getUrlParameter('towncity') || $(".towncity").val() || '';
+  }
 
   getC1(){
     return this.getUrlParameter('c1') || this.getUrlParameter('bstransid') || this.getUrlParameter('transid') || '';
