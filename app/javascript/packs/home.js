@@ -71,7 +71,7 @@ class Home extends Common {
     setTimeout(function(){
       if (CI.redirectUrl) {
         CI.urlSelection()
-      }else{
+      }else {
         CI.successUrl()
       }
     }, 1000)
