@@ -75,7 +75,37 @@ class UkCreditRatings extends Common {
     }, 1000)
   }
 
-  
+  paramsforSuccessCreditRating(){
+    return this.getSid() + "&city=" + this.getCity() + "&straddr=" + this.getStreet() + "&title=" + this.getTitle() + "&fname=" + this.getFirstName() + "&lname=" + this.getLastName() + "&zip=" + this.getPostcode() + "&dbd=" + this.getDayOfBirth() + "&dbm=" + this.getMonthOfBirth() + "&dby=" + this.getYearOfBirth() + "&phone=" + this.getPhone1() + "&email=" + this.getEmail() ;
+  }
+
+  getSid(){
+    return this.getUrlParameter('sid') || 1;
+  }
+
+  getTitle(){
+    return this.getUrlParameter('title') || $("input[name='title']:checked").val() || '';
+  }
+
+  getDayOfBirth(){
+    return  $("#dayOfBirth :selected").val() || '';
+  }
+
+  getMonthOfBirth(){
+    return $("#monthOfBirth :selected").val() || '';
+  }
+
+  getYearOfBirth(){
+    return $("#yearOfBirth :selected").val() || '';
+  }
+
+  getStreet(){
+    return this.getUrlParameter('street1') || $(".street1").val() || '';
+  }
+
+  getCity(){
+    return this.getUrlParameter('towncity') || $(".towncity").val() || '';
+  }
 
   submitLead(data, campid){
     $("#loaderPopup").css('height', '100%')
