@@ -26,7 +26,7 @@ class UkCreditRatings extends Common {
     $('#btn-submit').click(function() {
       CI.showCircle();
       $('#dealform').parsley().whenValidate().done(() =>{
-      CI.postData();
+        CI.postData();
       })
     });
 
@@ -68,11 +68,7 @@ class UkCreditRatings extends Common {
   }
 
   successUrl(){
-    var CI = this;
-    $("#loaderPopup").css('height', '100%')
-    setTimeout(function(){
-      window.location = CI.details.success_url + CI.paramsforSuccessCreditRating()
-    }, 1000)
+     window.location = this.details.success_url + this.paramsforSuccessCreditRating()
   }
 
   paramsforSuccessCreditRating(){
@@ -115,11 +111,6 @@ class UkCreditRatings extends Common {
       data: data,
       success: function(json) {
         console.log(json)
-        if (json.code == 1) {
-          window.location = json.records[0].lead.c1
-        }else{
-          window.location = this.details.success_url + CI.paramsforSuccessCreditRating()
-        }
       },
       dataType: "json"
     })
