@@ -347,6 +347,21 @@ module PagesHelper
     }.to_json
   end
 
+  def e_deals
+    @details = {
+      camp_id: 'MEGA-MOBILE-DEALS',
+      success_url: 'https://bill-switchers.com/sp-exit?exit=1',
+      bad_success_url: 'https://mtrk5.co.uk/?a=14118&c=33110',
+      form_name: 'e_deals',
+      optin_url: '/e_deals',
+      sid: 1,
+      ssid: nil,
+      source:'',
+      quick_submit: false,
+      submit_on_load: false,
+    }.to_json
+  end
+
   def uk_credit_ratings
     @details = {
       camp_id: 'GUY-CREDIT-REPORT',

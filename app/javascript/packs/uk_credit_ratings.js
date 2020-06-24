@@ -95,14 +95,6 @@ class UkCreditRatings extends Common {
     return $("#yearOfBirth :selected").val() || '';
   }
 
-  getStreet(){
-    return this.getUrlParameter('street1') || $(".street1").val() || '';
-  }
-
-  getCity(){
-    return this.getUrlParameter('towncity') || $(".towncity").val() || '';
-  }
-
   submitLead(data, campid){
     $("#loaderPopup").css('height', '100%')
     $.ajax({
