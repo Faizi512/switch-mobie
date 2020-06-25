@@ -11,6 +11,10 @@ class Home extends Common {
     this.fillform()
     this.showTab(this.currentTab);
 
+    $('.carousel').carousel({
+      interval: 2000
+    })
+    
     window.Parsley.on('field:error', function() {
       $(".btn-success").removeClass("in-progress")
     });
