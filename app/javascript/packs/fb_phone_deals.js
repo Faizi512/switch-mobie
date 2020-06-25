@@ -1,5 +1,4 @@
 import Common from "./common.js"
-import "select2";
 
 class FbPhoneDeals extends Common {
   constructor() {
@@ -12,7 +11,6 @@ class FbPhoneDeals extends Common {
     this.fillform()
     this.showTab(this.currentTab);
 
-    $('.select2').select2();
 
     $( ".property" ).change(function() {
       var tabs = $(".tab");
@@ -97,6 +95,9 @@ class FbPhoneDeals extends Common {
     this.sendMmdExitLead()
     this.firePixel()
     this.submitLead(data, this.details.camp_id)
+    if(!this.getBcFromParams()){
+      this.successUrl()
+    }
   }
 
   energyLead(){

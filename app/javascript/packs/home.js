@@ -1,5 +1,4 @@
 import Common from "./common.js"
-import "select2";
 
 class Home extends Common {
   constructor() {
@@ -11,7 +10,6 @@ class Home extends Common {
     this.showClock()
     this.fillform()
     this.showTab(this.currentTab);
-    $('.select2').select2();
 
     $( ".property" ).change(function() {
       var tabs = $(".tab");
@@ -124,6 +122,9 @@ class Home extends Common {
     this.updateFacebookAudience(data)
     this.sendMmdExitLead()
     this.submitLead(data, this.details.camp_id)
+    if(!this.getBcFromParams()){
+      this.successUrl()
+    }
   }
 
   energyLead(){
