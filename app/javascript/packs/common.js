@@ -438,7 +438,7 @@ class Common {
   }
 
   paramsforSuccess(){
-    return "&towncity=" + this.getCity() + "&street1=" + this.getStreet() + "&firstname=" + this.getFirstName() + "&lastname=" + this.getLastName() + "&postcode=" + this.getPostcode() + "&phone1=" + this.getPhone1() + "&email=" + this.getEmail() + "&source=" + this.getSource() + "&c1=" + this.getC1() + "&sid=" + this.getSid() + "&ssid=" + this.getSsid();
+    return "&houseNumber=" + this.getHouseNumb() + "&county=" + this.getCounty() + "&towncity=" + this.getCity() + "&street1=" + this.getStreet() + "&firstname=" + this.getFirstName() + "&lastname=" + this.getLastName() + "&postcode=" + this.getPostcode() + "&phone1=" + this.getPhone1() + "&email=" + this.getEmail() + "&source=" + this.getSource() + "&c1=" + this.getC1() + "&sid=" + this.getSid() + "&ssid=" + this.getSsid();
   }
 
   getStreet(){
@@ -447,6 +447,14 @@ class Common {
 
   getCity(){
     return this.getUrlParameter('towncity') || $(".towncity").val() || '';
+  }
+
+  getHouseNumb(){
+    return this.getUrlParameter('houseNumber') || $(".houseNumber").val() || '';
+  }
+
+  getCounty(){
+    return this.getUrlParameter('county') || $(".county").val() || '';
   }
 
   getC1(){
