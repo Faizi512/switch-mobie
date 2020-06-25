@@ -19,6 +19,7 @@ class Home extends Common {
       $('.towncity').val($(this).find("option:selected").data("city"))
       $('.street1').val($(this).find("option:selected").data("street"))
       $('.county').val($(this).find("option:selected").data("province"))
+      $('.houseNumber').val($(this).find("option:selected").data("housenum"))
     });
 
     window.Parsley.on('field:error', function() {
@@ -235,6 +236,7 @@ class Home extends Common {
                   data-street="${result[i].line_1}"
                   data-city="${result[i].town_or_city}"
                   data-province="${result[i].county}"
+                  data-housenum="${result[i].building_number}"
                   >
                   ${result[i].formatted_address.join(" ").replace(/\s+/g,' ')}
                   </option>
@@ -246,6 +248,8 @@ class Home extends Common {
               $('.towncity').val($("#property").find("option:selected").data("city"))
               $('.street1').val($("#property").find("option:selected").data("street"))
               $('.county').val($("#property").find("option:selected").data("province"))
+              $('.houseNumber').val($("#property").find("option:selected").data("housenum"))
+
 
             return true
           }else{

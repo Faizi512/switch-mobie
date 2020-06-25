@@ -8,13 +8,7 @@ class CreditReport extends Common {
     this.getFormDetails('#dealform')
     this.showToolTip()
     this.showTab(this.currentTab);
-
-    $( ".property" ).change(function() {
-      $('.towncity').val($(this).find("option:selected").data("city"))
-      $('.street1').val($(this).find("option:selected").data("street"))
-      $('.county').val($(this).find("option:selected").data("province"))
-      $('.houseNumber').val($(this).find("option:selected").data("housenumber"))
-    });
+    $(".tab").removeClass("in-progress")
 
     $( ".nextStep" ).click(function() {
       CI.nextStep(1);
@@ -30,11 +24,6 @@ class CreditReport extends Common {
       })
     });
 
-    $(".dob").change(function() {
-      if ($("#dayOfBirth :selected").val() !== "" && $("#monthOfBirth :selected").val() !== "" && $("#yearOfBirth :selected").val() !== "" ) {
-        CI.nextStep(1);
-      }
-    });
 
     $( ".gender" ).change(function() {
       if ($("input[name='gender']:checked").val() !== "") {
@@ -51,6 +40,7 @@ class CreditReport extends Common {
 
     window.Parsley.on('field:error', function() {
       $(".btn-success").removeClass("in-progress")
+      $(".tab").removeClass("in-progress")
     });
 
   }
@@ -58,8 +48,8 @@ class CreditReport extends Common {
   fixStepIndicator(num) {
     var progress = document.getElementById('progressBar');
     if(num >= 0) {
-      progress.style.width = (num*33.33)+"%";
-      $('.progress-percent').text((num*33.33) + "%" + " Complete");
+      progress.style.width = (num*45)+"%";
+      $('.progress-percent').text((num*45) + "%" + " Complete");
       $('.progress-steps').text("Step " + (num + 1) + "/4");
       if( num ==  0){
         $('.progress-percent').text("");
@@ -69,6 +59,7 @@ class CreditReport extends Common {
   successUrl(){}
 
   submitLead(data, campid){
+    var CI = this
     $("#loaderPopup").css('height', '100%')
     $.ajax({
       type: "POST",
@@ -79,7 +70,7 @@ class CreditReport extends Common {
         if (json.code == 1) {
           window.location = json.records[0].lead.c1
         }else{
-          window.location = this.details.success_url
+          window.location = CI.details.success_url
         }
       },
       dataType: "json"
@@ -118,49 +109,6 @@ class CreditReport extends Common {
       timestamp: new Date,
       user_agent: window.navigator.userAgent,
     }
-  }
-
-  validatePostcode(){
-    var CI = this;
-    $(".tab").addClass("in-progress")
-    var xhr = $.ajax(`https://api.getAddress.io/find/${CI.getUrlParameter('postcode')}?api-key=NjGHtzEyk0eZ1VfXCKpWIw25787&expand=true`)
-    return xhr.then(function(json) {
-      if (json.addresses.length > 0) {
-        var result = json.addresses
-        var adresses = []
-         adresses.push( `
-          <option
-          disabled=""
-          selected=""
-          >
-          Select Your Property
-          </option>
-        `)
-        for (var i = 0; i < result.length; i++) {
-          adresses.push( `
-              <option
-              data-street="${result[i].line_1}"
-              data-city="${result[i].town_or_city}"
-              data-province="${result[i].county}"
-              data-housenumber="${result[i].building_number}"
-              >
-              ${result[i].formatted_address.join(" ").replace(/\s+/g,' ')}
-              </option>
-            `)
-          }
-          $('#property').html(adresses)
-          $(".tab").removeClass("in-progress")
-          $('#address').show()
-          $('.towncity').val($("#property").find("option:selected").data("city"))
-          $('.street1').val($("#property").find("option:selected").data("street"))
-          $('.county').val($("#property").find("option:selected").data("province"))
-          $('.houseNumber').val($("#property").find("option:selected").data("housenumber"))
-
-        return true
-      }else{
-        $(".tab").removeClass("in-progress")
-      }
-    })
   }
 }
 
