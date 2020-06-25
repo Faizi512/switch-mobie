@@ -219,7 +219,7 @@ class Common {
       this.currentTab = 0
       $(form).parsley().validate()
       return false
-    }else if( $('.postcode').val().length < 3){
+    }else if( $('.postcode').val().length < 3 || $( "#property option:selected" ).val() ==""){
       tabs[1].style.display = "block";
       tabs[0].style.display = "none";
       tabs[2].style.display = "none";
@@ -438,7 +438,15 @@ class Common {
   }
 
   paramsforSuccess(){
-    return "&firstname=" + this.getFirstName() + "&lastname=" + this.getLastName() + "&postcode=" + this.getPostcode() + "&phone1=" + this.getPhone1() + "&email=" + this.getEmail() + "&source=" + this.getSource() + "&c1=" + this.getC1() + "&sid=" + this.getSid() + "&ssid=" + this.getSsid();
+    return "&towncity=" + this.getCity() + "&street1=" + this.getStreet() + "&firstname=" + this.getFirstName() + "&lastname=" + this.getLastName() + "&postcode=" + this.getPostcode() + "&phone1=" + this.getPhone1() + "&email=" + this.getEmail() + "&source=" + this.getSource() + "&c1=" + this.getC1() + "&sid=" + this.getSid() + "&ssid=" + this.getSsid();
+  }
+
+  getStreet(){
+    return this.getUrlParameter('street1') || $(".street1").val() || '';
+  }
+
+  getCity(){
+    return this.getUrlParameter('towncity') || $(".towncity").val() || '';
   }
 
   getC1(){

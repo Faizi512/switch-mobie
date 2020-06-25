@@ -69,6 +69,59 @@
   pointer-events: none;
   opacity: 0.8;
 }
+.tab.in-progress:before {
+  content: "";
+  display: block;
+  position: absolute;
+  z-index: 1;
+  top: 45%;
+  left: 45%;
+  border-radius: 100%;
+  box-sizing: border-box;
+  margin-top: -62.5px;
+  margin-left: 0px;
+  width: 80px;
+  height: 80px;
+  border: 5px solid rgba(52, 48, 48, 0.15);
+  border-top-color: rgba(67, 59, 59, 0.8);
+  -moz-animation: spin 0.6s linear 300;
+  -webkit-animation: spin 0.6s linear 300;
+  animation: spin 0.6s linear 300;
+}
+
+.tab.in-progress{
+  pointer-events: none;
+  opacity: 0.8;
+}
+
+.form.in-progress:before {
+  content: "";
+  display: block;
+  position: absolute;
+  z-index: 1;
+  left: 45%;
+  right: 50%;
+  transform: translate(-50%);
+  border-radius: 100%;
+  box-sizing: border-box;
+  margin-top: -62.5px;
+  margin-left: 0px;
+  width: 140px;
+  height: 140px;
+  border: 10px solid rgba(52, 48, 48, 0.15);
+  border-top-color: rgba(67, 59, 59, 0.8);
+  -moz-animation: spin 0.6s linear 300;
+  -webkit-animation: spin 0.6s linear 300;
+  animation: spin 0.6s linear 300;
+}
+
+.form.in-progress{
+  pointer-events: none;
+  opacity: 0.7;
+}
+#address{
+  display: none;
+}
 
 input:checked ~ label {
   background: #F7F7F7;
@@ -109,4 +162,12 @@ i {
 }
 .text-orange{
   color: #f57200 !important;
+}
+
+@media only screen and (max-width: 520px) {
+  .form.in-progress:before {
+    left: 32%;
+    right: 50%;
+    transform: translate(-50%);
+  }
 }

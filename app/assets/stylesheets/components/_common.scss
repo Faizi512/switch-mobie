@@ -75,6 +75,16 @@
 .lh-n{line-height:normal}
 .lh-0{line-height:0px}
 
+.left-0r{
+  border-bottom-left-radius: 0px !important;
+  border-top-left-radius: 0px !important;
+}
+.findAddress-btn{
+  position: absolute;
+  bottom: 0px;
+  right: 9px;
+}
+
 /*radio btn */
 
 .input-deposit{ 
@@ -133,6 +143,63 @@ input:hover ~ .input-deposit:after{
   background: #3ebbe9;
 }
 /*radio btn end*/
+
+.input-deals{ 
+  font-size: 23px !important;
+  font-weight: 800px;
+  background-color: white;
+  width: 100%;
+  border: 1px solid transparent;
+  display: flex;
+  justify-content: center;
+  color: #ff8c00;
+}
+.input-deals:hover{
+  border: 1px solid #344eb0;
+}
+.input-deals:after{
+  width: 32px;
+  height: 32px;
+  content: "";
+  border: 2px solid #e7e7ee;
+  background-color: #e7e7ee;
+  border-radius: 50%;
+  z-index: 2;
+  position: absolute;
+  left: 6%;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  transform: translateY(-50%);
+  cursor: pointer;
+}
+input:checked ~ .input-deals:after{
+  background-color: #fff;
+  border-color: #fff;
+  background-image: url('radiodott.png');
+  background-repeat: no-repeat;
+  background-position: 7px 7px;
+  -webkit-transition: all .2s ease-in-out;
+  transition: all .2s ease-in-out
+}
+input:checked ~ .input-deals{
+  color: white !important;
+  background: #3ebbe9;
+  border: 1px solid #3ebbe9 !important;
+}
+.input-deals-radio{
+  width: 80%;
+  left: 21px;
+  height: 55px;
+}
+input:hover ~ .input-deals{
+  border: 1px solid #3ebbe9;
+  color: white !important;
+  background: #3ebbe9;
+}
+input:hover ~ .input-deals:after{
+  border: 4px solid white;
+  background: #3ebbe9;
+}
 
 .w-95{
   width: 95% !important;
@@ -346,7 +413,9 @@ input:hover ~ .input-deposit:after{
   border-radius: 50%;
   border:3px solid white;
 }
-
+.brnds-logo{
+  width: 120px;
+}
 @media only screen  and (min-width: 750px) and (max-width: 768px) {
   .o-btn{
   font-size: 15px !important;
@@ -390,6 +459,12 @@ input:hover ~ .input-deposit:after{
 
 }
 @media only screen and (max-width: 520px) {
+  .brnds-logo{
+    width: 90px;
+  }
+  .input-deals:after{
+    left: 4%;
+  }
   .w-195{
     width: 125px !important;
   }

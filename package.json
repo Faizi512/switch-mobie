@@ -13,6 +13,7 @@
     "parsley-bundler": "^0.0.2",
     "parsleyjs": "^2.9.2",
     "popper.js": "^1.16.0",
+    "select2": "^4.0.13",
     "turbolinks": "^5.2.0"
   },
   "version": "0.1.0",
