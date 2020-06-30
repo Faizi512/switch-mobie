@@ -9,6 +9,7 @@
               <div class="row align-items-center">
                 <div class="img">
                   <%= image_tag(phone[:image], class: "horizonatal-box-img p-3", alt: "Phone image" ) %>
+                  <input type="hidden" id="phone_name" name="phone_name" value="<%= phone[:handset] %>">
                 </div>
                 <div class="col-6 mobile price-details">
                   <div class="detail-box p-3 rounded">

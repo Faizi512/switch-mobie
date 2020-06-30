@@ -10,6 +10,7 @@ class FbPhoneDeals extends Common {
     this.showClock()
     this.fillform()
     this.showTab(this.currentTab);
+    this.phoneName = null;
 
 
     $( ".property" ).change(function() {
@@ -57,6 +58,7 @@ class FbPhoneDeals extends Common {
     });
 
     $(document).on("click", '.open-form', function() {
+      CI.phoneName = $(this).find('input').val()
       $('#deal-form-modal').modal('show')
       $('.clock').hide()
       event.preventDefault();
@@ -167,6 +169,7 @@ class FbPhoneDeals extends Common {
       phone1: this.getUrlParameter('phone1') || $(".phone").val() || '',
       sid: this.getUrlParameter('sid') || this.details.sid ||1,
       ssid: this.getUrlParameter('ssid') || this.details.ssid ||1,
+      handset:this.getUrlParameter('handset') || this.phoneName || '',
       ad_set:this.getUrlParameter('ad_set') || 1,
       source: this.getUrlParameter('source') || "taboola",
       c1: this.getUrlParameter('c1') || this.getUrlParameter('bstransid') || this.getUrlParameter('transid') || '',

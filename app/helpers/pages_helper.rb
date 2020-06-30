@@ -495,9 +495,21 @@ module PagesHelper
         texts: "Unlimited",
         url:"/success",
         bluetext: "Personal Hotspot, Go Binge, Data Roaming",
-        deposit: "£0"
+        deposit: "£0",
+        handset: ""
       },
-     {
+      {
+        name: "Samsung A20",
+        data: "Unlimited",
+        image: "phone/samsung-a20.webp",
+        calls: "Unlimited",
+        texts: "Unlimited",
+        url:"/success",
+        bluetext: "Personal Hotspot, Data Roaming",
+        deposit: "£0",
+        handset: "Samsung A20"
+      },
+      {
         name: "Samsung Galaxy S20 5G",
         data: "Unlimited",
         image: "phone/galaxy-s20-5g.png",
@@ -505,7 +517,30 @@ module PagesHelper
         texts: "Unlimited",
         url:"/success",
         bluetext: "Personal Hotspot, Go Binge, Data Roaming",
-        deposit: "£0"
+        deposit: "£0",
+        handset: ""
+      },
+      {
+        name: "iPhone SE 128GB",
+        data: "Unlimited",
+        image: "phone/iphonese.jpg",
+        calls: "Unlimited",
+        texts: "Unlimited",
+        url:"/success",
+        bluetext: "Personal Hotspot, Data Roaming",
+        deposit: "£0",
+        handset: "iPhone SE"
+      },
+      {
+        name: "Samsung A10",
+        data: "Unlimited",
+        image: "phone/samsung-a10.jpg",
+        calls: "Unlimited",
+        texts: "Unlimited",
+        url:"/success",
+        bluetext: "Personal Hotspot, Data Roaming",
+        deposit: "£0",
+        handset: "Samsung A10"
       },
       {
         name: "Apple iPhone 11 Pro",
@@ -515,7 +550,19 @@ module PagesHelper
         texts: "Unlimited",
         url:"/success",
         bluetext: "",
-        deposit: "£0"
+        deposit: "£0",
+        handset: ""
+      },
+      {
+        name: "Huawei Y7",
+        data: "Unlimited",
+        image: "phone/huaweiy7.jpg",
+        calls: "Unlimited",
+        texts: "Unlimited",
+        url:"/success",
+        bluetext: "Personal Hotspot, Data Roaming",
+        deposit: "£0",
+        handset: "Huawei Y7"
       },
       {
         name: "Samsung Galaxy S20 Ultra 5G",
@@ -525,7 +572,8 @@ module PagesHelper
         texts: "Unlimited",
         url:"/success",
         bluetext: "Personal Hotspot, Go Binge, Data Roaming, 5G Ready",
-        deposit: "£0"
+        deposit: "£0",
+        handset: ""
       },
       {
         name: "Huawei P30",
@@ -535,7 +583,8 @@ module PagesHelper
         texts: "Unlimited",
         url:"/success",
         bluetext: "Personal Hotspot, Go Binge, Data Roaming",
-        deposit: "£0"
+        deposit: "£0",
+        handset: ""
       },
       {
         name: "6 Months Half Price SIM!",
@@ -545,7 +594,8 @@ module PagesHelper
         texts: "Unlimited",
         url:"/success",
         bluetext: "Best Sim Only Deals, 5G Ready",
-        deposit: "£0"
+        deposit: "£0",
+        handset: ""
       },
       {
         name: "Samsung Galaxy S20 Plus 5G",
@@ -555,7 +605,8 @@ module PagesHelper
         texts: "Unlimited",
         url:"/success",
         bluetext: "Personal Hotspot, Data Roaming, 5G Ready",
-        deposit: "£0"
+        deposit: "£0",
+        handset: ""
       },
       {
         name: "Oneplus 8 Pro 5G",
@@ -565,7 +616,8 @@ module PagesHelper
         texts: "Unlimited",
         url:"/success",
         bluetext: "Personal Hotspot, Data Roaming, 5G Ready",
-        deposit: "£0"
+        deposit: "£0",
+        handset: ""
       },
       {
         name: "iPhone 11 Pro Max",
@@ -575,7 +627,8 @@ module PagesHelper
         texts: "Unlimited",
         url:"/success",
         bluetext: "Personal Hotspot, Go Binge, Data Roaming",
-        deposit: "£0"
+        deposit: "£0",
+        handset: ""
       },
       {
         name: "iPhone 11",
@@ -585,7 +638,8 @@ module PagesHelper
         texts: "Unlimited",
         url:"/success",
         bluetext: "Personal Hotspot, Go Binge, Data Roaming",
-        deposit: "£0"
+        deposit: "£0",
+        handset: ""
       },
       {
         name: "Samsung Galaxy S10e",
@@ -595,7 +649,8 @@ module PagesHelper
         texts: "Unlimited",
         url:"/success",
         bluetext: "Personal Hotspot, Go Binge, Data Roaming",
-        deposit: "£0"
+        deposit: "£0",
+        handset: ""
       },
       
       {
@@ -606,7 +661,8 @@ module PagesHelper
         texts: "Unlimited",
         url:"/success",
         bluetext: "Personal Hotspot, Go Binge, Data Roaming",
-        deposit: "£0"
+        deposit: "£0",
+        handset: ""
       },
       {
         name: "iPhone XS",
@@ -616,7 +672,8 @@ module PagesHelper
         texts: "Unlimited",
         url:"/success",
         bluetext: "Personal Hotspot, Go Binge, Data Roaming",
-        deposit: "£0"
+        deposit: "£0",
+        handset: ""
       },
     ]
 
