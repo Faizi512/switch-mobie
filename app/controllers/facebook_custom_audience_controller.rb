@@ -51,7 +51,7 @@ class FacebookCustomAudienceController < ApplicationController
   def create
     send_data_to_autopilot
     # Test app credientails "Custom Audience - Test1"
-    access_token = 'EAAMQHbZBRdBsBALaAQI1OdZCNEOLIa4yGOTk9I4isSC0iZARcwn5FZClkIJieLDPUnEYMgFy1It0j5BP151xiTz7gXh1uKGiWq1YXYjLnru4ZBU5rOsRZBqH5uteBkZAK9T2xqg6h5vRs1kUMBIFlT7JocYdmR0QZANSsZCP2NHbXeawdjfreRtTg'
+    access_token = 'EAAMQHbZBRdBsBAJ2gECk16KMiTipR0xzZCFT36IApBBJEsxaxLGvNkArWVnt0uxeuZBAHgqrPZAnNZAziJuOH2BCtYZB1sXvZAUMPLxdKkCPD3jJmzuDZBmgx6j1rTVYqbZA8mZArTpZA8JT1P1qit1pJk7iyH9v7JXOFuam8IbGwsMfY29L69dMV2q'
     app_secret = 'd1308ffbfcf0b3f21425fa5ed1c22e5c'
     app_id = '862144884208667'
     id = 'act_611454116359143'
@@ -79,7 +79,7 @@ class FacebookCustomAudienceController < ApplicationController
       ]
     }
 
-    uri = URI("https://graph.facebook.com/v6.0/#{audience_id}/users")
+    uri = URI("https://graph.facebook.com/v7.0/#{audience_id}/users")
     http = Net::HTTP.new(uri.host, uri.port)
 
     http.use_ssl = true
