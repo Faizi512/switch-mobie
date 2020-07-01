@@ -98,9 +98,6 @@ class FbPhoneDeals extends Common {
     this.sendMmdExitLead()
     this.firePixel()
     this.submitLead(data, this.details.camp_id)
-    // if(!this.getBcFromParams()){
-    //   this.successUrl()
-    // }
   }
 
   energyLead(){
