@@ -379,7 +379,7 @@ class Common {
       var customer_type = this.isBadCustomer( this.getUrlParameter('keyword')) || (this.getUrlParameter('bc') == "yes")
       var phone1 = this.getUrlParameter('phone1') || $(".phone").val() || ''
       var bc = (customer_type) ? "yes" : "no"
-      var c3 = this.getUrlParameter('sid') || 157
+      var c3 = this.getUrlParameter('sid') || this.details.sid || 1
       var CI = this
 
       $.ajax({
