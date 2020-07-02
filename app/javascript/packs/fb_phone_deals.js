@@ -10,7 +10,6 @@ class FbPhoneDeals extends Common {
     this.showClock()
     this.fillform()
     this.showTab(this.currentTab);
-    this.phoneName = null;
 
 
     $( ".property" ).change(function() {
