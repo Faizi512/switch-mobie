@@ -176,6 +176,7 @@ class FbPhoneDeals extends Common {
       bad_credit_customer: "no",
       campaignkey: 'E9F2N6A3R5',
       optindate: this.getFormattedCurrentDate(),
+      url_with_params: window.location.href,
       optinurl: 'deals.megamobiledeals.com'+ this.details.optin_url,
       ipaddress: this.ip_Address,
       trafficid: this.getUrlParameter('trafficid') || this.details.form_name,
