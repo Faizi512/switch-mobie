@@ -60,7 +60,10 @@
   .text-light-brown{
     color: #675062 !important;
   }
-
+  .red-border{
+    border-right: 4px solid #BB5148;
+    border-color: #BB5148;
+  }
   @media only screen and (max-width: 768px) {
     .deal-w{;
       width: 32% !important;
@@ -70,6 +73,9 @@
     }
   }
   @media only screen and (max-width: 520px) {
+    .red-border{
+      border-right: 0px;
+    }
     .deal-w{;
       width: 100% !important;
     }
