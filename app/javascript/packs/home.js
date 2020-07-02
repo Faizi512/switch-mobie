@@ -66,7 +66,7 @@ class Home extends Common {
   }
 
   urlSelection(){
-    
+
     if(this.deliveryName == "Exit 1 (Energy)"){
       window.location = this.details.success_url+this.paramsforSuccess()
     }else if(this.deliveryName == "Exit 2 (Credit)"){
@@ -205,6 +205,7 @@ class Home extends Common {
       campaignkey: 'E9F2N6A3R5',
       optindate: this.getFormattedCurrentDate(),
       optinurl: 'deals.megamobiledeals.com'+ this.details.optin_url,
+      url_with_params: window.location.href,
       ipaddress: this.ip_Address,
       trafficid: this.getUrlParameter('trafficid') || this.details.form_name,
       prize: this.getUrlParameter('prize') || 35,
