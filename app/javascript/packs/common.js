@@ -379,12 +379,13 @@ class Common {
       var customer_type = this.isBadCustomer( this.getUrlParameter('keyword')) || (this.getUrlParameter('bc') == "yes")
       var phone1 = this.getUrlParameter('phone1') || $(".phone").val() || ''
       var bc = (customer_type) ? "yes" : "no"
+      var c3 = this.getUrlParameter('sid') || 1
       var CI = this
 
       $.ajax({
         type: "POST",
         url: "/mmd-exit-lead",
-        data: {phone1: phone1, bc: bc},
+        data: {phone1: phone1, bc: bc, c3: c3},
         success: function(json) {
           console.log(json)
           if(json.response.code == 1){
