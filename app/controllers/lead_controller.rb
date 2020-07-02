@@ -25,7 +25,7 @@ class LeadController < ApplicationController
   end
 
   def mmd_exit_lead
-    url = "https://dukeleads.leadbyte.co.uk/api/submit.php?returnjson=yes&campid=MMDEXIT&sid=1&phone1=#{params[:phone1]}&bc=#{params[:bc]}"
+    url = "https://dukeleads.leadbyte.co.uk/api/submit.php?returnjson=yes&campid=MMDEXIT&sid=1&phone1=#{params[:phone1]}&bc=#{params[:bc]}&c3=#{params[:c3]}"
     uri = URI(url)
     http = Net::HTTP.new(uri.host, uri.port)
     http.use_ssl = true
