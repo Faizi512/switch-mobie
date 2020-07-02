@@ -381,8 +381,8 @@ class Common {
       var phone1 = this.getUrlParameter('phone1') || $(".phone").val() || ''
       var bc = (customer_type) ? "yes" : "no"
       var c3 = this.getUrlParameter('sid') || this.details.sid || 1
-      var handset = this.getUrlParameter('handset') || this.phoneName || '',
-      var source = this.getUrlParameter('source') || this.details.source || 'google3',
+      var handset = this.getUrlParameter('handset') || this.phoneName || ''
+      var source = this.getUrlParameter('source') || this.details.source || 'google3'
       var CI = this
 
       $.ajax({
