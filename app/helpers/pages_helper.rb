@@ -377,7 +377,7 @@ module PagesHelper
     }.to_json
   end
 
-  def handset
+  def handsets
     @details = {
       camp_id: 'MEGA-MOBILE-DEALS',
       success_url: 'https://mtrk5.co.uk/?a=14118&c=33110',
