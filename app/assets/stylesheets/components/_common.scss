@@ -1,7 +1,9 @@
 .fw-500{
   font-weight: 500 !important;
 }
-
+.w500{
+  width: 450px;
+}
 /*fonts size*/
 .fs-8{font-size:8px}
 .fs-9{font-size:9px}
@@ -18,7 +20,7 @@
 .fs-20{font-size:20px}
 .fs-21{font-size:21px}
 .fs-22{font-size:22px}
-.fs-23{font-size:23px}
+.fs-23{font-size:23px !important}
 .fs-24{font-size:24px}
 .fs-25{font-size:25px}
 .fs-26{font-size:26px}
@@ -35,7 +37,7 @@
 .fs-60{font-size:60px}
 
 /*line-height*/
-
+.lh-1{line-height: 1;}
 .lh-8{line-height:8px}
 .lh-9{line-height:9px}
 .lh-10{line-height:10px}
@@ -85,6 +87,41 @@
   right: 9px;
 }
 
+.bt-orng2{
+  background-color: #fa900d !important;
+}
+.bt-orng2:hover{
+  background-color: #ffa940 !important;
+}
+.btn-hot{
+  background: linear-gradient(to right,#f55a00, #ff9b00, #f55a00) !important;
+  border-radius: 50px !important;
+  margin-bottom: -18px;
+  padding: 6px 61px !important;
+  font-size: 20px !important;
+  color: white !important;
+  font-weight: 700 !important;
+}
+.border-orng{
+  border: 1px solid #fa900d;
+}
+.text-org{
+  color: #ffa940 !important;
+}
+.img-box{
+  width: 145px;
+  height: 226px;
+}
+.img-box1{
+  width: 174px;
+  height: 226px;
+}
+.bg-light-orng{
+  background-color: #fa900d !important;
+}
+.bg-blur2{
+  background: radial-gradient(circle at center, #073764 0, #0885cf 50%, #0885cf 100%);
+}
 /*radio btn */
 
 .input-deposit{ 
@@ -463,6 +500,19 @@ input:hover ~ .input-deals:after{
 
 }
 @media only screen and (max-width: 520px) {
+  .w500{
+    width: 250px;
+  }
+  .img-box {
+    width: 118px;
+    height: 198px;
+    margin-top: 18px;
+  }
+  .img-box1{
+    width: 134px;
+    height: 198px;
+    margin-top: 18px;
+  }
   .brnds-logo{
     width: 90px;
   }
