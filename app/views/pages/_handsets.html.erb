@@ -4,8 +4,17 @@
   <div class="container">
     <div class="row w-100 m-0 align-items-center">
       <div class="col-md-6 text-center px-0 mt-3 mt-md-0">
-        <h2 class="fs-36 text-danger font-weight-bold fs-md-22">Get The UK's Best Deals On The Latest Smartphones!</h2>
-        <span class="fs-29 text-org lh-24 fs-md-15">Personal Hotspot | Network Sign Up Offers | Huge Discounts</span>
+        <h2 class="fs-36 text-blue1 font-weight-bold fs-md-22">Get The UK's Best Deals On The Latest Smartphones!</h2>
+        <span class="fs-28 text-org lh-24 fs-md-15">Get The Best Prices From The Top Networks In 2 Minutes</span>
+        <div class="row w-100 mx-0 py-2 mt-2 align-items-center justify-content-around">
+          <%= image_tag("company/02.png", class: "company-top-btn" ) %>
+          <%= image_tag("company/ee.png", class: "company-top-btn" ) %>
+          <%= image_tag("company/id.png", class: "company-top-btn" ) %>
+          <%= image_tag("company/tessco.png", class: "company-top-btn2" ) %>
+          <%= image_tag("company/vodafone.png", class: "company-top-btn2" ) %>
+          <%= image_tag("company/talk.jpg", class: "company-top-btn2" ) %>
+          <%= image_tag("company/giffgaff.svg", class: "company-top-btn2" ) %>
+        </div>
       </div>
       <div class="col-md-6 text-center">
         <%= image_tag("phone/home-samsung.png", class: "w500" ) %>
@@ -18,47 +27,6 @@
     <div class="row justify-content-between">
       <!-- deal 1 -->
       <div class="col-md-6 text-center cursor-p position-relative open-form mt-2 mt-md-4">
-        <div class="">
-          <button class="btn btn-hot"> Save Big</button>
-        </div>
-        <div class="bg-white pt-3 shadow rounded-lg">
-          <p class="fw-500 fs-34 text-dark text-center m-0 py-3">Samsung A20
-          </p>
-          <div class="row px-4">
-            <div class="col-6 ">
-              <%= image_tag("phone/samsung-a20.webp", class: "img-box" ) %>
-              <input type="hidden" id="phone_name" name="phone_name" value="samsung-a20">
-            </div>
-            <div class="col-6 text-center">
-              <div class="row justify-content-center mx-1 mx-md-0">
-                <div class="col-md-5 px-0 bg-light-orng text-center py-2">
-                  <p class="m-0 fs-20 text-white">No</p>
-                  <p class="m-0 font-weight-bold fs-23 text-white">Upfront</p>
-                </div>
-                <div class="col-md-5 px-0 bg-white text-center p-2 border-orng">
-                  <p class="m-0 font-weight-bold fs-23 py-2 py-md-3">32<span class="small font-weight-bold">GB</span> </p>
-                </div>
-              </div>
-              <div class="mt-2 pl-3 d-none d-md-block">
-                <p class="text-dark m-0 text-left fs-20"><i class="fas fa-globe text-org mr-3"></i><strong>Unlimited</strong> Data</p>
-                <p class="text-dark my-2 text-left fs-20"><i class="fas fa-mobile-alt text-org mr-4"></i><strong>Unlimited</strong> Minutes</p>
-                <p class="text-dark m-0 text-left fs-20"><i class="far fa-comments text-org mr-3"></i><strong>Unlimited</strong> Texts</p>
-              </div>
-              <div class="mt-2 pl-1 d-block d-md-none">
-                <p class="text-dark m-0 text-left fs-15"><i class="fas fa-globe text-org mr-2 fs-18"></i><strong>Unlimited</strong></p>
-                <p class="text-dark my-2 text-left fs-15"><i class="fas fa-mobile-alt text-org mr-3 fs-18"></i><strong>Unlimited</strong></p>
-                <p class="text-dark m-0 text-left fs-15"><i class="far fa-comments text-org mr-2 fs-18"></i><strong>Unlimited</strong></p>
-              </div>
-            </div>
-          </div>
-          <button type="button" class="btn bt-orng2 font-weight-bold fs-23 py-2 rounded-0 mt-3 w-100 text-white">BUY NOW</button>
-        </div>
-      </div>
-      <!-- deal 2 -->
-      <div class="col-md-6 text-center cursor-p position-relative open-form mt-4">
-        <div class="">
-          <button class="btn btn-hot"> Hot Deal</button>
-        </div>
         <div class="bg-white pt-3 shadow rounded-lg">
           <p class="fw-500 fs-34 text-dark text-center m-0 py-3">iPhone SE
           </p>
@@ -69,11 +37,11 @@
             </div>
             <div class="col-6 text-center">
               <div class="row justify-content-center mx-1 mx-md-0">
-                <div class="col-md-5 px-0 bg-light-orng text-center py-2">
-                  <p class="m-0 fs-20 text-white">No</p>
-                  <p class="m-0 font-weight-bold fs-23 text-white">Upfront</p>
+                <div class="col-md-6 px-0 bg-light-orng text-center py-2">
+                  <p class="m-0 fs-20 text-white">£0</p>
+                  <p class="m-0 font-weight-bold fs-18 text-white">Upfront cost</p>
                 </div>
-                <div class="col-md-5 px-0 bg-white text-center p-2 border-orng">
+                <div class="col-md-6 px-0 bg-white text-center p-2 border-orng">
                   <p class="m-0 font-weight-bold fs-23 py-2 py-md-3">128<span class="small font-weight-bold">GB</span> </p>
                 </div>
               </div>
@@ -89,67 +57,35 @@
               </div>
             </div>
           </div>
-          <button type="button" class="btn bt-orng2 font-weight-bold fs-23 py-2 rounded-0 mt-3 w-100 text-white">BUY NOW</button>
-        </div>
-      </div>
-      <!-- deal 3 -->
-      <div class="col-md-6 text-center cursor-p position-relative open-form mt-4">
-        <div class="">
-          <button class="btn btn-hot">Top Pick</button>
-        </div>
-        <div class="bg-white pt-3 shadow rounded-lg">
-          <p class="fw-500 fs-34 text-dark text-center m-0 py-3">Huawei Y7
-          </p>
-          <div class="row px-4">
-            <div class="col-6 ">
-              <%= image_tag("phone/huaweiy7-1.png", class: "img-box1" ) %>
-              <input type="hidden" id="phone_name" name="phone_name" value="huawei-y7">
-            </div>
-            <div class="col-6 text-center">
-              <div class="row justify-content-center mx-1 mx-md-0">
-                <div class="col-md-5 px-0 bg-light-orng text-center py-2">
-                  <p class="m-0 fs-20 text-white">No</p>
-                  <p class="m-0 font-weight-bold fs-23 text-white">Upfront</p>
-                </div>
-                <div class="col-md-5 px-0 bg-white text-center p-2 border-orng">
-                  <p class="m-0 font-weight-bold fs-23 py-2 py-md-3">64<span class="small font-weight-bold">GB</span> </p>
-                </div>
-              </div>
-              <div class="mt-2 pl-3 d-none d-md-block">
-                <p class="text-dark m-0 text-left fs-20"><i class="fas fa-globe text-org mr-3"></i><strong>Unlimited</strong> Data</p>
-                <p class="text-dark my-2 text-left fs-20"><i class="fas fa-mobile-alt text-org mr-4"></i><strong>Unlimited</strong> Minutes</p>
-                <p class="text-dark m-0 text-left fs-20"><i class="far fa-comments text-org mr-3"></i><strong>Unlimited</strong> Texts</p>
-              </div>
-              <div class="mt-2 pl-1 d-block d-md-none">
-                <p class="text-dark m-0 text-left fs-15"><i class="fas fa-globe text-org mr-2 fs-18"></i><strong>Unlimited</strong></p>
-                <p class="text-dark my-2 text-left fs-15"><i class="fas fa-mobile-alt text-org mr-3 fs-18"></i><strong>Unlimited</strong></p>
-                <p class="text-dark m-0 text-left fs-15"><i class="far fa-comments text-org mr-2 fs-18"></i><strong>Unlimited</strong></p>
-              </div>
-            </div>
+          <div class="row w-100 mx-0 py-2 mt-2 align-items-center justify-content-around border-orng">
+            <%= image_tag("company/02.png", class: "company-top-btn" ) %>
+            <%= image_tag("company/ee.png", class: "company-top-btn" ) %>
+            <%= image_tag("company/id.png", class: "company-top-btn" ) %>
+            <%= image_tag("company/tessco.png", class: "company-top-btn2" ) %>
+            <%= image_tag("company/vodafone.png", class: "company-top-btn2" ) %>
+            <%= image_tag("company/talk.jpg", class: "company-top-btn2" ) %>
+            <%= image_tag("company/giffgaff.svg", class: "company-top-btn2" ) %>
           </div>
-          <button type="button" class="btn bt-orng2 font-weight-bold fs-23 py-2 rounded-0 mt-3 w-100 text-white">BUY NOW</button>
+          <button type="button" class="btn bt-orng2 font-weight-bold fs-23 py-2 rounded-0 w-100 text-white">GET PRICES</button>
         </div>
       </div>
-      <!-- deal 4 -->
+      <!-- deal 2 -->
       <div class="col-md-6 text-center cursor-p position-relative open-form mt-4">
-        <div class="">
-          <button class="btn btn-hot"> Hot Deal</button>
-        </div>
         <div class="bg-white pt-3 shadow rounded-lg">
-          <p class="fw-500 fs-34 text-dark text-center m-0 py-3">Samsung A10
+          <p class="fw-500 fs-34 text-dark text-center m-0 py-3">Samsung A20
           </p>
           <div class="row px-4">
             <div class="col-6 ">
-              <%= image_tag("phone/samsung-a10", class: "img-box" ) %>
-              <input type="hidden" id="phone_name" name="phone_name" value="samsung-a10">
+              <%= image_tag("phone/samsung-a20.webp", class: "img-box" ) %>
+              <input type="hidden" id="phone_name" name="phone_name" value="samsung-a20">
             </div>
             <div class="col-6 text-center">
               <div class="row justify-content-center mx-1 mx-md-0">
-                <div class="col-md-5 px-0 bg-light-orng text-center py-2">
-                  <p class="m-0 fs-20 text-white">No</p>
-                  <p class="m-0 font-weight-bold fs-23 text-white">Upfront</p>
+                <div class="col-md-6 px-0 bg-light-orng text-center py-2">
+                  <p class="m-0 fs-20 text-white">£0</p>
+                  <p class="m-0 font-weight-bold fs-18 text-white">Upfront cost</p>
                 </div>
-                <div class="col-md-5 px-0 bg-white text-center p-2 border-orng">
+                <div class="col-md-6 px-0 bg-white text-center p-2 border-orng">
                   <p class="m-0 font-weight-bold fs-23 py-2 py-md-3">32<span class="small font-weight-bold">GB</span> </p>
                 </div>
               </div>
@@ -165,7 +101,104 @@
               </div>
             </div>
           </div>
-          <button type="button" class="btn bt-orng2 font-weight-bold fs-23 py-2 rounded-0 mt-3 w-100 text-white">BUY NOW</button>
+          <div class="row w-100 mx-0 py-2 mt-2 align-items-center justify-content-around border-orng">
+            <%= image_tag("company/02.png", class: "company-top-btn" ) %>
+            <%= image_tag("company/ee.png", class: "company-top-btn" ) %>
+            <%= image_tag("company/id.png", class: "company-top-btn" ) %>
+            <%= image_tag("company/tessco.png", class: "company-top-btn2" ) %>
+            <%= image_tag("company/vodafone.png", class: "company-top-btn2" ) %>
+            <%= image_tag("company/talk.jpg", class: "company-top-btn2" ) %>
+            <%= image_tag("company/giffgaff.svg", class: "company-top-btn2" ) %>
+          </div>
+          <button type="button" class="btn bt-orng2 font-weight-bold fs-23 py-2 rounded-0 w-100 text-white">GET PRICES</button>
+        </div>
+      </div>
+      <!-- deal 3 -->
+      <div class="col-md-6 text-center cursor-p position-relative open-form mt-4">
+        <div class="bg-white pt-3 shadow rounded-lg">
+          <p class="fw-500 fs-34 text-dark text-center m-0 py-3">Huawei Y7
+          </p>
+          <div class="row px-4">
+            <div class="col-6 ">
+              <%= image_tag("phone/huaweiy7-1.png", class: "img-box1" ) %>
+              <input type="hidden" id="phone_name" name="phone_name" value="huawei-y7">
+            </div>
+            <div class="col-6 text-center">
+              <div class="row justify-content-center mx-1 mx-md-0">
+                <div class="col-md-6 px-0 bg-light-orng text-center py-2">
+                  <p class="m-0 fs-20 text-white">£0</p>
+                  <p class="m-0 font-weight-bold fs-18 text-white">Upfront cost</p>
+                </div>
+                <div class="col-md-6 px-0 bg-white text-center p-2 border-orng">
+                  <p class="m-0 font-weight-bold fs-23 py-2 py-md-3">64<span class="small font-weight-bold">GB</span> </p>
+                </div>
+              </div>
+              <div class="mt-2 pl-3 d-none d-md-block">
+                <p class="text-dark m-0 text-left fs-20"><i class="fas fa-globe text-org mr-3"></i><strong>Unlimited</strong> Data</p>
+                <p class="text-dark my-2 text-left fs-20"><i class="fas fa-mobile-alt text-org mr-4"></i><strong>Unlimited</strong> Minutes</p>
+                <p class="text-dark m-0 text-left fs-20"><i class="far fa-comments text-org mr-3"></i><strong>Unlimited</strong> Texts</p>
+              </div>
+              <div class="mt-2 pl-1 d-block d-md-none">
+                <p class="text-dark m-0 text-left fs-15"><i class="fas fa-globe text-org mr-2 fs-18"></i><strong>Unlimited</strong></p>
+                <p class="text-dark my-2 text-left fs-15"><i class="fas fa-mobile-alt text-org mr-3 fs-18"></i><strong>Unlimited</strong></p>
+                <p class="text-dark m-0 text-left fs-15"><i class="far fa-comments text-org mr-2 fs-18"></i><strong>Unlimited</strong></p>
+              </div>
+            </div>
+          </div>
+          <div class="row w-100 mx-0 py-2 mt-2 align-items-center justify-content-around border-orng">
+            <%= image_tag("company/02.png", class: "company-top-btn" ) %>
+            <%= image_tag("company/ee.png", class: "company-top-btn" ) %>
+            <%= image_tag("company/id.png", class: "company-top-btn" ) %>
+            <%= image_tag("company/tessco.png", class: "company-top-btn2" ) %>
+            <%= image_tag("company/vodafone.png", class: "company-top-btn2" ) %>
+            <%= image_tag("company/talk.jpg", class: "company-top-btn2" ) %>
+            <%= image_tag("company/giffgaff.svg", class: "company-top-btn2" ) %>
+          </div>
+          <button type="button" class="btn bt-orng2 font-weight-bold fs-23 py-2 rounded-0 w-100 text-white">GET PRICES</button>
+        </div>
+      </div>
+      <!-- deal 4 -->
+      <div class="col-md-6 text-center cursor-p position-relative open-form mt-4">
+        <div class="bg-white pt-3 shadow rounded-lg">
+          <p class="fw-500 fs-34 text-dark text-center m-0 py-3">Samsung A10
+          </p>
+          <div class="row px-4">
+            <div class="col-6 ">
+              <%= image_tag("phone/samsung-a10", class: "img-box" ) %>
+              <input type="hidden" id="phone_name" name="phone_name" value="samsung-a10">
+            </div>
+            <div class="col-6 text-center">
+              <div class="row justify-content-center mx-1 mx-md-0">
+                <div class="col-md-6 px-0 bg-light-orng text-center py-2">
+                  <p class="m-0 fs-20 text-white">£0</p>
+                  <p class="m-0 font-weight-bold fs-18 text-white">Upfront cost</p>
+                </div>
+                <div class="col-md-6 px-0 bg-white text-center p-2 border-orng">
+                  <p class="m-0 font-weight-bold fs-23 py-2 py-md-3">32<span class="small font-weight-bold">GB</span> </p>
+                </div>
+              </div>
+              <div class="mt-2 pl-3 d-none d-md-block">
+                <p class="text-dark m-0 text-left fs-20"><i class="fas fa-globe text-org mr-3"></i><strong>Unlimited</strong> Data</p>
+                <p class="text-dark my-2 text-left fs-20"><i class="fas fa-mobile-alt text-org mr-4"></i><strong>Unlimited</strong> Minutes</p>
+                <p class="text-dark m-0 text-left fs-20"><i class="far fa-comments text-org mr-3"></i><strong>Unlimited</strong> Texts</p>
+              </div>
+              <div class="mt-2 pl-1 d-block d-md-none">
+                <p class="text-dark m-0 text-left fs-15"><i class="fas fa-globe text-org mr-2 fs-18"></i><strong>Unlimited</strong></p>
+                <p class="text-dark my-2 text-left fs-15"><i class="fas fa-mobile-alt text-org mr-3 fs-18"></i><strong>Unlimited</strong></p>
+                <p class="text-dark m-0 text-left fs-15"><i class="far fa-comments text-org mr-2 fs-18"></i><strong>Unlimited</strong></p>
+              </div>
+            </div>
+          </div>
+          <div class="row w-100 mx-0 py-2 mt-2 align-items-center justify-content-around border-orng">
+            <%= image_tag("company/02.png", class: "company-top-btn" ) %>
+            <%= image_tag("company/ee.png", class: "company-top-btn" ) %>
+            <%= image_tag("company/id.png", class: "company-top-btn" ) %>
+            <%= image_tag("company/tessco.png", class: "company-top-btn2" ) %>
+            <%= image_tag("company/vodafone.png", class: "company-top-btn2" ) %>
+            <%= image_tag("company/talk.jpg", class: "company-top-btn2" ) %>
+            <%= image_tag("company/giffgaff.svg", class: "company-top-btn2" ) %>
+          </div>
+          <button type="button" class="btn bt-orng2 font-weight-bold fs-23 py-2 rounded-0 w-100 text-white">GET PRICES</button>
         </div>
       </div>
     </div>
