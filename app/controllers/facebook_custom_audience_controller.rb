@@ -4,52 +4,8 @@ class FacebookCustomAudienceController < ApplicationController
   require 'rubygems' if RUBY_VERSION < '1.9'
   require 'rest_client'
 
-  def send_data_to_autopilot
-    if params[:bad_credit_customer].downcase == "yes"
-      contact_lit = "contactlist_540914cc-5c2c-4971-a0f4-0faaa4913ce5"
-    else
-      contact_lit = "contactlist_2b0a5144-dedb-41f7-9088-5e621a197291"
-    end
-
-    values = {
-      'contact': {
-        'MailingPostalCode': params[:postcode],
-        'FirstName': params[:firstname],
-        'LastName': params[:lastname],
-        'Email': params[:email],
-        'Phone': params[:phone1],
-        'LeadSource': params[:source],
-        "_autopilot_list": contact_lit,
-        'custom': {
-          'string--bad_credit_customer':  params[:bad_credit_customer],
-          'string--campaign':  params[:campaign],
-          'string--adgroupid':  params[:adgroupid],
-          'string--sid':  params[:sid],
-          'string--ssid':  params[:ssid],
-          'string--ad_set':  params[:ad_set],
-          'string--c1':  params[:c1],
-          'string--keyword':  params[:keyword],
-          'string--trafficid':  params[:trafficid],
-          'string--prize':  params[:prize],
-          'string--ipaddress':  params[:ipaddress],
-          'string--optinurl':  params[:optinurl],
-          'string--optindate':  params[:optindate],
-          'string--campaignkey':  params[:campaignkey],
-        }
-      }
-    }
-
-    headers = {
-      :autopilotapikey => 'f745214713484590b194c550aaadb259',
-      :content_type => 'application/json'
-    }
-    response = RestClient.post 'https://api2.autopilothq.com/v1/contact', values.to_json, headers
-    puts response
-  end
-
 
   def create
-    send_data_to_autopilot
     # Test app credientails "Custom Audience - Test1"
     access_token = 'EAAMQHbZBRdBsBAJ2gECk16KMiTipR0xzZCFT36IApBBJEsxaxLGvNkArWVnt0uxeuZBAHgqrPZAnNZAziJuOH2BCtYZB1sXvZAUMPLxdKkCPD3jJmzuDZBmgx6j1rTVYqbZA8mZArTpZA8JT1P1qit1pJk7iyH9v7JXOFuam8IbGwsMfY29L69dMV2q'
     app_secret = 'd1308ffbfcf0b3f21425fa5ed1c22e5c'
