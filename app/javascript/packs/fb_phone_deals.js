@@ -164,6 +164,8 @@ class FbPhoneDeals extends Common {
       lastname: this.getUrlParameter('lastname') || $(".last_name").val() || '',
       email: this.getUrlParameter('email') || $(".email").val() || '',
       phone1: this.getUrlParameter('phone1') || $(".phone").val() || '',
+      street1: this.getUrlParameter('street1') || $(".street1").val() || 'unknown',
+      towncity: this.getUrlParameter('towncity') || $(".towncity").val() || 'unknown',
       sid: this.getUrlParameter('sid') || this.details.sid ||1,
       ssid: this.getUrlParameter('ssid') || this.details.ssid ||1,
       handset:this.getUrlParameter('handset') || this.phoneName || '',
