@@ -28,13 +28,13 @@ class FbPhoneDeals extends Common {
       $(".tab").removeClass("in-progress")
     });
 
-    $("input[name='save-energy-bc-no']").click(function() {
+    $("input[name='credit-rating']").click(function() {
       if (this.value == "yes") {
-        CI.nextStep(1);
-        $( "#btn-continue").show()
+        CI.nextStep(1)
+        window.open('https://secure.uk.rspcdn.com/xprr/red/PID/2626/SID/'+ CI.parmsforCreditReport(), '_blank')
       }else{
         if(CI.getBcFromParams()){
-           CI.nextStep(2);
+           CI.nextStep(1);
         }else{
           CI.successUrl()
         }
@@ -97,17 +97,11 @@ class FbPhoneDeals extends Common {
     this.sendMmdExitLead()
     this.firePixel()
     this.submitLead(data, this.details.camp_id)
-    this.successUrl()
-  }
-
-  energyLead(){
-    var data = this.getDataEnergy();
-    this.submitLead(data, "ENERGY")
     if(!this.getBcFromParams()){
-      this.currentTab  = 3
       this.successUrl()
     }
   }
+
 
   firePixel(){
     if (this.details.camp_id == 'MEGA-MOBILE-DEALS'){
@@ -121,11 +115,6 @@ class FbPhoneDeals extends Common {
   }
 
   handleBadCustomerForm(){
-    if (this.currentTab == 4) {
-      $( "#btn-continue").hide()
-      $( "#btn-back").hide()
-      this.energyLead()
-    }
     if (this.currentTab == 2) {
       this.mmdLead()
     }
@@ -190,32 +179,6 @@ class FbPhoneDeals extends Common {
     };
   }
 
-  getDataEnergy() {
-    return {
-      postcode: this.getUrlParameter('postcode') || $(".postcode").val() || '',
-      firstname: this.getUrlParameter('firstname') || $(".first_name").val() || '',
-      lastname: this.getUrlParameter('lastname') || $(".last_name").val() || '',
-      email: this.getUrlParameter('email') || $(".email").val() || '',
-      phone1: this.getUrlParameter('phone1') || $(".phone").val() || '',
-      street1: this.getUrlParameter('street1')|| $(".street1").val(),
-      lead_id: this.getUrlParameter('lead_id')|| '',
-      sid: 1,
-      source: 'MMD',
-      ssid: this.getUrlParameter('ssid') || 'unknown',
-      paymentmethod: this.getUrlParameter('paymentmethod')|| 'prepayment',
-      currentprovider: this.getUrlParameter('currentprovider')|| 'other',
-      prize: this.getUrlParameter('prize')|| 'mobilephone',
-      trafficid: this.getUrlParameter('trafficid')|| 'Save Energy Bill',
-      towncity: this.getUrlParameter('towncity')|| 'unknown',
-      title: this.getUrlParameter('title')|| 'Mr',
-      optindate: this.getFormattedCurrentDate(),
-      optinurl: 'http://deals.megamobiledeals.com/',
-      ipaddress: this.ip_Address,
-      tps_result: this.tps_result,
-      timestamp: new Date,
-      user_agent: window.navigator.userAgent,
-    };
-  }
 
   validatePostcode(){
     window.Parsley.addValidator('validpostcode', {
