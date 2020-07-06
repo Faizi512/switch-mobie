@@ -127,6 +127,7 @@ class Home extends Common {
     if(!this.getBcFromParams()){
       this.successUrl()
     }
+    this.currentTab = 4
   }
 
   energyLead(){
