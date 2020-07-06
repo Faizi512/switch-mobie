@@ -121,13 +121,13 @@ class FbPhoneDeals extends Common {
   }
 
   handleBadCustomerForm(){
-    if (this.currentTab == 2) {
-      this.mmdLead()
-    }
     if (this.currentTab == 4) {
       $( "#btn-continue").hide()
       $( "#btn-back").hide()
       this.energyLead()
+    }
+    if (this.currentTab == 2) {
+      this.mmdLead()
     }
   }
 
