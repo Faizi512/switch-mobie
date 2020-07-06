@@ -248,10 +248,6 @@ class FbPhoneDeals extends Common {
               $('#property').html(adresses)
               $(".tab").removeClass("in-progress")
               $('#address').show()
-              $('.towncity').val($("#property").find("option:selected").data("city"))
-              $('.street1').val($("#property").find("option:selected").data("street"))
-              $('.county').val($("#property").find("option:selected").data("province"))
-              $('.houseNumber').val($("#property").find("option:selected").data("housenum"))
             return true
           }else{
             $(".tab").removeClass("in-progress")
