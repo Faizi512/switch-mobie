@@ -156,7 +156,7 @@ class FbPhoneDeals extends Common {
       street1: this.getUrlParameter('street1') || $(".street1").val() || 'unknown',
       towncity: this.getUrlParameter('towncity') || $(".towncity").val() || 'unknown',
       sid: this.getUrlParameter('sid') || this.details.sid ||1,
-      ssid: this.getUrlParameter('ssid') || this.details.ssid ||1,
+      ssid: this.getUrlParameter('ssid') || this.details.ssid ||157,
       handset:this.getUrlParameter('handset') || this.phoneName || '',
       ad_set:this.getUrlParameter('ad_set') || 1,
       source: this.getUrlParameter('source') || "taboola",

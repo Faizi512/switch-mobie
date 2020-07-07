@@ -191,7 +191,7 @@ module PagesHelper
       form_name: 'fb-phone-deals',
       optin_url: '/fb-phone-deals',
       sid: 157,
-      ssid: 1,
+      ssid: 157,
       source:'taboola',
       quick_submit: false,
       submit_on_load: false,
