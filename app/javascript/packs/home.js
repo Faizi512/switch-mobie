@@ -11,6 +11,9 @@ class Home extends Common {
     this.fillform()
     this.showTab(this.currentTab);
 
+    $('.carousel').carousel({
+      interval: 2000
+    })
     $( ".property" ).change(function() {
       var tabs = $(".tab");
       tabs[CI.currentTab].style.display = "none";
