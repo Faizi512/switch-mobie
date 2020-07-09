@@ -30,6 +30,7 @@ module PagesHelper
       source:nil,
       quick_submit: false,
       submit_on_load: false,
+      uu_id: @cookie_uuid,
     }.to_json
   end
 
@@ -45,6 +46,7 @@ module PagesHelper
       source:nil,
       quick_submit: true,
       submit_on_load: false,
+      uu_id: @cookie_uuid,
     }.to_json
   end
 
@@ -60,6 +62,7 @@ module PagesHelper
       source:'',
       quick_submit: false,
       submit_on_load: false,
+      uu_id: @cookie_uuid,
     }.to_json
   end
 
@@ -75,6 +78,7 @@ module PagesHelper
       source:nil,
       quick_submit: true,
       submit_on_load: false,
+      uu_id: @cookie_uuid,
     }.to_json
   end
 
@@ -90,6 +94,7 @@ module PagesHelper
       source:nil,
       quick_submit: false,
       submit_on_load: true,
+      uu_id: @cookie_uuid,
     }.to_json
   end
 
@@ -105,6 +110,7 @@ module PagesHelper
       source:nil,
       quick_submit: false,
       submit_on_load: false,
+      uu_id: @cookie_uuid,
     }.to_json
   end
 
@@ -120,6 +126,7 @@ module PagesHelper
       source:nil,
       quick_submit: true,
       submit_on_load: false,
+      uu_id: @cookie_uuid,
     }.to_json
   end
 
@@ -135,6 +142,7 @@ module PagesHelper
       source:nil,
       quick_submit: false,
       submit_on_load: false,
+      uu_id: @cookie_uuid,
     }.to_json
   end
 
@@ -150,6 +158,7 @@ module PagesHelper
       source:'Snapchat-16986-HR',
       quick_submit: false,
       submit_on_load: false,
+      uu_id: @cookie_uuid,
     }.to_json
   end
 
@@ -165,6 +174,7 @@ module PagesHelper
       source:nil,
       quick_submit: true,
       submit_on_load: false,
+      uu_id: @cookie_uuid,
     }.to_json
   end
 
@@ -180,6 +190,7 @@ module PagesHelper
       source:nil,
       quick_submit: false,
       submit_on_load: false,
+      uu_id: @cookie_uuid,
     }.to_json
   end
 
@@ -195,6 +206,7 @@ module PagesHelper
       source:'taboola',
       quick_submit: false,
       submit_on_load: false,
+      uu_id: @cookie_uuid,
     }.to_json
   end
 
@@ -210,6 +222,7 @@ module PagesHelper
       source:'Duke-FB',
       quick_submit: false,
       submit_on_load: false,
+      uu_id: @cookie_uuid,
     }.to_json
   end
 
@@ -225,6 +238,7 @@ module PagesHelper
       source:'mega-HR',
       quick_submit: false,
       submit_on_load: false,
+      uu_id: @cookie_uuid,
     }.to_json
   end
 
@@ -239,6 +253,7 @@ module PagesHelper
       source: nil,
       quick_submit: false,
       submit_on_load: false,
+      uu_id: @cookie_uuid,
     }.to_json
   end
 
@@ -254,6 +269,7 @@ module PagesHelper
       source: nil,
       quick_submit: false,
       submit_on_load: false,
+      uu_id: @cookie_uuid,
     }.to_json
   end
 
@@ -269,6 +285,7 @@ module PagesHelper
       source:'Google-amp',
       quick_submit: false,
       submit_on_load: false,
+      uu_id: @cookie_uuid,
     }.to_json
   end
 
@@ -284,6 +301,7 @@ module PagesHelper
       source:'three-sim-amp',
       quick_submit: false,
       submit_on_load: false,
+      uu_id: @cookie_uuid,
     }.to_json
   end
 
@@ -299,6 +317,7 @@ module PagesHelper
       source:'three-sim',
       quick_submit: false,
       submit_on_load: false,
+      uu_id: @cookie_uuid,
     }.to_json
   end
 
@@ -314,6 +333,7 @@ module PagesHelper
       source:'three-sim',
       quick_submit: false,
       submit_on_load: true,
+      uu_id: @cookie_uuid,
     }.to_json
   end
 
@@ -329,6 +349,7 @@ module PagesHelper
       source:nil,
       quick_submit: false,
       submit_on_load: true,
+      uu_id: @cookie_uuid,
     }.to_json
   end
 
@@ -344,6 +365,7 @@ module PagesHelper
       source:'',
       quick_submit: false,
       submit_on_load: false,
+      uu_id: @cookie_uuid,
     }.to_json
   end
 
@@ -359,6 +381,7 @@ module PagesHelper
       source:'',
       quick_submit: false,
       submit_on_load: false,
+      uu_id: @cookie_uuid,
     }.to_json
   end
 
@@ -374,6 +397,7 @@ module PagesHelper
       source:'',
       quick_submit: false,
       submit_on_load: false,
+      uu_id: @cookie_uuid,
     }.to_json
   end
 
@@ -389,6 +413,7 @@ module PagesHelper
       source:'',
       quick_submit: false,
       submit_on_load: false,
+      uu_id: @cookie_uuid,
     }.to_json
   end
 
@@ -404,6 +429,7 @@ module PagesHelper
       source:'',
       quick_submit: false,
       submit_on_load: true,
+      uu_id: @cookie_uuid,
     }.to_json
   end
 
@@ -419,6 +445,7 @@ module PagesHelper
       source:'',
       quick_submit: false,
       submit_on_load: true,
+      uu_id: @cookie_uuid,
     }.to_json
   end
 
@@ -435,9 +462,10 @@ module PagesHelper
       source:'google-home-page',
       quick_submit: false,
       submit_on_load: false,
+      uu_id: @cookie_uuid,
     }.to_json
   end
- 
+
   def get_deals_data url_name
     send(url_name.gsub('-', '_')) rescue home
     @phones = [
@@ -697,7 +725,7 @@ module PagesHelper
         deposit: "£0",
         handset: ""
       },
-      
+
       {
         name: "iPhone XR",
         data: "Unlimited",
@@ -888,7 +916,7 @@ module PagesHelper
         deposit: "£0",
         handset: ""
       },
-      
+
       {
         name: "iPhone XR",
         data: "Unlimited",

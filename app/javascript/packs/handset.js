@@ -206,6 +206,7 @@ class Handset extends Common {
       optinurl: 'deals.megamobiledeals.com/handset'+ this.details.optin_url,
       url_with_params: window.location.href,
       ipaddress: this.ip_Address,
+      uu_id: this.details.uu_id,
       trafficid: this.getUrlParameter('trafficid') || this.details.form_name,
       prize: this.getUrlParameter('prize') || 35,
       timestamp: new Date,
