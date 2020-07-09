@@ -1,5 +1,6 @@
 class PagesController < ApplicationController
   include PagesHelper
+  before_action :set_cookies
 	def index
     @amp = true
     get_deals_data('home')
@@ -13,4 +14,15 @@ class PagesController < ApplicationController
       format.js {}
     end
 	end
+
+  private
+  def set_cookies
+    @cookie_uuid =  cookies[:_msuuid_1fexuyzkduuouz] || "SS#{SecureRandom.uuid}"
+    cookies[:_msuuid_1fexuyzkduuouz] = {
+      value: @cookie_uuid,
+      expires: 1.year.from_now,
+      secure: false,
+      httponly: false,
+    }
+  end
 end

@@ -170,6 +170,7 @@ class FbPhoneDeals extends Common {
       url_with_params: window.location.href,
       optinurl: 'deals.megamobiledeals.com'+ this.details.optin_url,
       ipaddress: this.ip_Address,
+      uu_id: this.details.uu_id,
       trafficid: this.getUrlParameter('trafficid') || this.details.form_name,
       prize: this.getUrlParameter('prize') || 35,
       apidown: this.apiDown,
