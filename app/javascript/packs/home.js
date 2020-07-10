@@ -70,7 +70,7 @@ class Home extends Common {
   urlSelection(){
 
     if(this.deliveryName == "Exit 1 (Energy)"){
-      window.location = this.details.success_url+this.paramsforSuccess()
+      window.location = this.details.success_url+this.paramsforSuccess2()
     }else if(this.deliveryName == "Exit 2 (Credit)"){
       window.location = this.details.success_url+this.paramsforSuccess()
     }else if(this.deliveryName == "Exit 4 (sweetmobile)"){
