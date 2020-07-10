@@ -50,6 +50,10 @@ class LeadController < ApplicationController
         @redirect_url = "http://lcuktrack.go2cloud.org/aff_c?offer_id=1&aff_id=1000&aff_sub=exit"
       when "Exit 5 (UK Credit Ratings)"
         @redirect_url = "/uk-credit-ratings?check=1"
+      when "Exit 6 - Awin"
+        @redirect_url = "/rmktg-awin?check=1"
+      when "Exit 5 - Sweet 2"
+        @redirect_url = "/rmktg-sweet?check=1"
       else
         @redirect_url = "https://mtrk5.co.uk/?a=14118&c=33110"
       end
