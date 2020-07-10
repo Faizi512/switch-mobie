@@ -10,7 +10,7 @@ class EDeals extends Common {
     $( ".save-energy" ).change(function() {
       if ($("input[name='save-energy']:checked").val() == "yes") {
         $(".form").addClass("in-progress")
-        window.location = CI.details.success_url + CI.paramsforSuccess()
+        window.location = CI.details.success_url + CI.paramsforSuccess2()
       }else {
         $(".form").addClass("in-progress")
         window.location = CI.details.bad_success_url + CI.additionalParamsFoBC()
