@@ -77,10 +77,6 @@ class Home extends Common {
       window.location = this.details.success_url
     }else if(this.deliveryName == "Exit 5 (UK Credit Ratings)"){
       window.location = this.details.success_url+this.paramsforSuccess()
-    }else if(this.deliveryName == "Exit 6 - Awin"){
-      window.location = this.details.success_url
-    }else if(this.deliveryName == "Exit 5 - Sweet 2"){
-      window.location = this.details.success_url
     }else{
       window.location = this.details.success_url+this.additionalParamsFoBC()
     }
