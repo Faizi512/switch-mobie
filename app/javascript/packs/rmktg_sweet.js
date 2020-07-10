@@ -5,7 +5,10 @@ class RmktgSweet extends Common {
     super();
     var CI = this
     this.getFormDetails('#dealform')
-    this.postData()
+
+    if (this.getUrlParameter('sms') == 'true') {
+      this.postData()
+    }
     
   }
   successUrl(){}
