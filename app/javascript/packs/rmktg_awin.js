@@ -5,9 +5,11 @@ class RmktgAwin extends Common {
     super();
     var CI = this
     this.getFormDetails('#dealform')
-    this.postData()
-    $('a').click((event) => {
-    });
+    
+    if (this.getUrlParameter('sms') == 'true') {
+      this.postData()
+    }
+    
   }
   successUrl(){}
 }
