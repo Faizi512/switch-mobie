@@ -172,7 +172,7 @@ class Home extends Common {
       trafficid: this.getUrlParameter('trafficid') || this.details.form_name,
       prize: this.getUrlParameter('prize') || 35,
       timestamp: new Date,
-      anytrack: this.getUrlParameter('click_id'),
+      anytrack: AnyTrack('formSubmit'),
       utm_source: this.getUrlParameter('utm_source'),
       tps_result: this.tps_result,
       apidown: this.apiDown,
