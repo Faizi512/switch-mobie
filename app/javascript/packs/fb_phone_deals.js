@@ -174,6 +174,8 @@ class FbPhoneDeals extends Common {
       trafficid: this.getUrlParameter('trafficid') || this.details.form_name,
       prize: this.getUrlParameter('prize') || 35,
       apidown: this.apiDown,
+      anytrack: this.getUrlParameter('click_id'),
+      utm_source: this.getUrlParameter('utm_source'),
       tps_result: this.tps_result,
       timestamp: new Date,
       user_agent: window.navigator.userAgent,
