@@ -144,6 +144,7 @@ class Home extends Common {
   }
 
   getData() {
+    var track = AnyTrack('formSubmit') || "";
     var customer_type = this.isBadCustomer( this.getUrlParameter('keyword')) || (this.getUrlParameter('bc') == "yes");
     return {
       postcode: this.getUrlParameter('postcode') || $(".postcode").val() || '',
@@ -172,7 +173,7 @@ class Home extends Common {
       trafficid: this.getUrlParameter('trafficid') || this.details.form_name,
       prize: this.getUrlParameter('prize') || 35,
       timestamp: new Date,
-      anytrack: AnyTrack('formSubmit'),
+      anytrack: track,
       utm_source: this.getUrlParameter('utm_source'),
       tps_result: this.tps_result,
       apidown: this.apiDown,

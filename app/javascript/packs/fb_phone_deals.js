@@ -147,6 +147,7 @@ class FbPhoneDeals extends Common {
   }
 
   getData(){
+    var track = AnyTrack('formSubmit') || "";
     return {
       postcode: this.getUrlParameter('postcode') || $(".postcode").val() || '',
       firstname: this.getUrlParameter('firstname') || $(".first_name").val() || '',
@@ -174,7 +175,7 @@ class FbPhoneDeals extends Common {
       trafficid: this.getUrlParameter('trafficid') || this.details.form_name,
       prize: this.getUrlParameter('prize') || 35,
       apidown: this.apiDown,
-      anytrack: AnyTrack('formSubmit'),
+      anytrack: track,
       utm_source: this.getUrlParameter('utm_source'),
       tps_result: this.tps_result,
       timestamp: new Date,
