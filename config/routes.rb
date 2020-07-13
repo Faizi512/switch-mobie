@@ -12,6 +12,7 @@ Rails.application.routes.draw do
   get '/redirect-webhook' => 'lead#redirect_webhook'
   post '/redirect-webhook' => 'lead#redirect_webhook'
   post '/mmd-exit-lead' => 'lead#mmd_exit_lead'
+  post '/mmd-lead' => 'lead#mmd_lead'
   get '/fetch-redirect-url/:id' => 'lead#fetch_redirect_url'
 
   root 'pages#index'

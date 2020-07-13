@@ -37,6 +37,22 @@ class LeadController < ApplicationController
     render json: {status: 200, response: JSON.parse(response.body)}
   end
 
+  def mmd_lead
+    url = "https://dukeleads.leadbyte.co.uk/api/submit.php"
+    uri = URI(url)
+    params[:returnjson] = "yes"
+    data = params.as_json
+    uri.query = URI.encode_www_form(data)
+
+    res = Net::HTTP.get_response(uri)
+    puts res.body if res.is_a?(Net::HTTPSuccess)
+
+    puts "****" * 30
+    puts res.body
+    puts "****" * 30
+    render json: {status: 200, response: JSON.parse(res.body)}
+  end
+
   private
     def decide_url record
       campaign = record[:deliveries][0][:reference]

@@ -95,7 +95,6 @@ class FbPhoneDeals extends Common {
     // Form Submisson
     this.updateFacebookAudience(data)
     this.sendMmdExitLead()
-    this.firePixel()
     this.submitLead(data, this.details.camp_id)
     if(!this.getBcFromParams()){
       this.successUrl()
