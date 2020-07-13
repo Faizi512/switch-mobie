@@ -384,6 +384,21 @@ module PagesHelper
       uu_id: @cookie_uuid,
     }.to_json
   end
+  def e_deals_awin
+    @details = {
+      camp_id: 'MEGA-MOBILE-DEALS',
+      success_url: 'https://bill-switchers.com/sp-exit?exit=1',
+      bad_success_url: '/rmktg-awin',
+      form_name: 'e-deals-awin',
+      optin_url: '/e-deals-awin',
+      sid: 1,
+      ssid: nil,
+      source:'',
+      quick_submit: false,
+      submit_on_load: false,
+      uu_id: @cookie_uuid,
+    }.to_json
+  end
 
   def uk_credit_ratings
     @details = {
