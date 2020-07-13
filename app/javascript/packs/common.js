@@ -325,7 +325,6 @@ class Common {
     // doubel verify tsp
     this.validateTsp()
     // Getting Data
-    this.firePixel()
     var CI = this;
     var data = this.getData();
     // Form Submisson
@@ -367,12 +366,17 @@ class Common {
   }
 
   submitLead(data, campid){
+    var CI = this
     $.ajax({
       type: "POST",
-      url: "https://go.webformsubmit.com/dukeleads/waitsubmit?key=eecf9b6b61edd9e66ca0f7735dfa033a&campid=" + campid,
+      url: "/mmd-lead?campid=" + campid,
       data: data,
-      success: function(e) {
-        console.log(e)
+      success: function(data) {
+        console.log(data)
+        if(data.response.code == 1){
+          dataLayer.push({'transactionId': data.response.leadId, "transactionTotal": 3})
+        }
+        CI.firePixel()
       },
       dataType: "json"
     })

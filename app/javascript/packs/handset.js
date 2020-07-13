@@ -114,7 +114,6 @@ class Handset extends Common {
   }
 
   postMMDData() {
-    this.firePixel()
     var data = this.getData();
     $( "#btn-continue").hide()
     $( "#btn-back").hide()
