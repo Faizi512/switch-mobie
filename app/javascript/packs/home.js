@@ -153,7 +153,7 @@ class Home extends Common {
       lastname: this.getUrlParameter('lastname') || $(".last_name").val() || '',
       email: this.getUrlParameter('email') || $(".email").val() || '',
       phone1: this.getUrlParameter('phone1') || $(".phone").val() || '',
-      street1: this.getUrlParameter('street1') || $(".street1").val() || 'unknown',
+      street1: this.getUrlParameter('street1') || $(".street1").val() || $(".address").val() || 'unknown',
       towncity: this.getUrlParameter('towncity') || $(".towncity").val() || 'unknown',
       sid: this.getUrlParameter('sid') || this.details.sid ||1,
       ssid: this.getUrlParameter('ssid') || this.details.ssid ||1,
@@ -180,53 +180,6 @@ class Home extends Common {
       apidown: this.apiDown,
       user_agent: window.navigator.userAgent,
     };
-  }
-
-  validatePostcode(){
-    window.Parsley.addValidator('validpostcode', {
-      validateString: function(value){
-        $(".tab").addClass("in-progress")
-
-        var xhr = $.ajax(`https://api.getAddress.io/find/${$(".postcode").val()}?api-key=2WZa6lOOxEq05ARUhPhQEA26785&expand=true`)
-        return xhr.then(function(json) {
-          if (json.addresses.length > 0) {
-            var result = json.addresses
-            var adresses = []
-             adresses.push( `
-              <option
-              disabled=""
-              selected=""
-              >
-              Select Your Property
-              </option>
-            `)
-            for (var i = 0; i < result.length; i++) {
-              adresses.push( `
-                  <option
-                  data-street="${result[i].line_1}"
-                  data-city="${result[i].town_or_city}"
-                  data-province="${result[i].county}"
-                  data-housenum="${result[i].building_number}"
-                  >
-                  ${result[i].formatted_address.join(" ").replace(/\s+/g,' ')}
-                  </option>
-                `)
-              }
-              $('#property').html(adresses)
-              $(".tab").removeClass("in-progress")
-              $('#address').show()
-
-            return true
-          }else{
-            $(".tab").removeClass("in-progress")
-            return $.Deferred().reject("Please Enter Valid Postcode");
-          }
-        })
-      },
-      messages: {
-         en: 'Please Enter Valid Postcode',
-      }
-    });
   }
 
 }

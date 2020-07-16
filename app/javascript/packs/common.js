@@ -125,6 +125,7 @@ class Common {
     this.validatePhone()
     this.validateEmail()
     this.validatePostcode()
+    this.validateApiPostcode()
   }
 
   validatePhone(){
@@ -192,6 +193,62 @@ class Common {
       }
     });
   }
+
+  validateApiPostcode(){
+    window.Parsley.addValidator('validapipostcode', {
+      validateString: function(value){
+        var xhr = $.ajax({
+          url:`https://api.getAddress.io/find/${$(".postcode").val()}?api-key=NjGHtzEyk0eZ1VfXCKpWIw25787&expand=true`,
+          success: function(json){
+
+            if (json.addresses.length > 0) {
+              var result = json.addresses
+              var adresses = []
+               adresses.push( `
+                <option
+                disabled=""
+                selected=""
+                >
+                Select Your Property
+                </option>
+              `)
+              for (var i = 0; i < result.length; i++) {
+                adresses.push( `
+                    <option
+                    data-street="${result[i].line_1}"
+                    data-city="${result[i].town_or_city}"
+                    data-province="${result[i].county}"
+                    >
+                    ${result[i].formatted_address.join(" ").replace(/\s+/g,' ')}
+                    </option>
+                  `)
+                }
+                $('#property').html(adresses)
+                 $(".address-div").remove();
+                $(".property-div").show()
+              return true
+            }else{
+              $(".tab").removeClass("in-progress")
+              return $.Deferred().reject("Please Enter Valid Postcode");
+            }
+          },
+          error: function(error){
+            console.log(error.statusText)
+            xhr.abort();
+            if (error.statusText == "timeout") {
+              $(".property-div").remove();
+              $(".address-div").show();
+            }
+          },
+          timeout: 5000
+        })
+      },
+      messages: {
+         en: 'Please Enter Valid Postcode',
+      }
+    });
+  }
+
 
   showTab(n=0) {
     var tabs = $(".tab");
@@ -289,7 +346,7 @@ class Common {
       lastname: this.getUrlParameter('lastname') || $(".last_name").val() || '',
       email: this.getUrlParameter('email') || $(".email").val() || '',
       phone1: this.getUrlParameter('phone1') || $(".phone").val() || '',
-      street1: this.getUrlParameter('street1') || $(".street1").val() || 'unknown',
+      street1: this.getUrlParameter('street1') || $(".street1").val() || $(".address").val() || 'unknown',
       towncity: this.getUrlParameter('towncity') || $(".towncity").val() || 'unknown',
       handset:this.getUrlParameter('handset') || this.phoneName || '',
       sid: this.getUrlParameter('sid') || this.details.sid ||1,
