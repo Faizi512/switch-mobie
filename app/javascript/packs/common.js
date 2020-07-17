@@ -447,13 +447,14 @@ class Common {
       var bc = (customer_type) ? "yes" : "no"
       var c3 = this.getUrlParameter('sid') || this.details.sid || 1
       var handset = this.getUrlParameter('handset') || this.phoneName || ''
+      var postcode = this.getUrlParameter('postcode') || $(".postcode").val() || ''
       var source = this.getUrlParameter('source') || this.details.source || 'google3'
       var CI = this
 
       $.ajax({
         type: "POST",
         url: "/mmd-exit-lead",
-        data: {phone1: phone1, bc: bc, c3: c3, source: source, handset: handset },
+        data: {phone1: phone1, bc: bc, c3: c3, source: source, handset: handset, postcode: postcode },
         success: function(json) {
           console.log(json)
           if(json.response.code == 1){
