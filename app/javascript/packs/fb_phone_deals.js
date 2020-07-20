@@ -28,19 +28,6 @@ class FbPhoneDeals extends Common {
       $(".tab").removeClass("in-progress")
     });
 
-    $("input[name='credit-rating']").click(function() {
-      if (this.value == "yes") {
-        CI.nextStep(1)
-        window.open('https://secure.uk.rspcdn.com/xprr/red/PID/2626/SID/'+ CI.parmsforCreditReport(), '_blank')
-      }else{
-        if(CI.getBcFromParams()){
-           CI.nextStep(1);
-        }else{
-          CI.successUrl()
-        }
-      }
-    });
-
     $("input[name='finance']").click(function() {
       console.log("fance")
       if (this.value == "yes") {
