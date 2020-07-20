@@ -35,19 +35,6 @@ class Handset extends Common {
       CI.backStep(-1)
     });
 
-    $("input[name='save-energy-bc-no']").click(function() {
-      if (this.value == "yes") {
-        CI.nextStep(1);
-        $( "#btn-continue").show()
-      }else{
-        if(CI.getBcFromParams()){
-           CI.nextStep(2);
-        }else{
-          CI.successUrl()
-        }
-      }
-    });
-
     $("input[name='finance']").click(function() {
       console.log("fance")
       if (this.value == "yes") {
@@ -67,13 +54,15 @@ class Handset extends Common {
   urlSelection(){
 
     if(this.deliveryName == "Exit 1 (Energy)"){
-      window.location = this.details.success_url+this.paramsforSuccess()
+      window.location = this.details.success_url+this.paramsforSuccess2()
     }else if(this.deliveryName == "Exit 2 (Credit)"){
       window.location = this.details.success_url+this.paramsforSuccess()
     }else if(this.deliveryName == "Exit 4 (sweetmobile)"){
       window.location = this.details.success_url
     }else if(this.deliveryName == "Exit 5 (UK Credit Ratings)"){
       window.location = this.details.success_url+this.paramsforSuccess()
+    }else if(this.deliveryName == "Exit 8 (Energy / Awin)"){
+      window.location = this.details.success_url+this.paramsforSuccess2()
     }else{
       window.location = this.details.success_url+this.additionalParamsFoBC()
     }
