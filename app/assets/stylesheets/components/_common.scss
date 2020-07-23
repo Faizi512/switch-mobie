@@ -97,7 +97,7 @@
   background-color: #ffa940 !important;
 }
 .btn-hot{
-  background: linear-gradient(to right,#f55a00, #ff9b00, #f55a00) !important;
+  background: linear-gradient(to right,#f55a00, #ed9692, #f55a00) !important;
   border-radius: 50px !important;
   margin-bottom: -18px;
   padding: 6px 61px !important;
@@ -370,37 +370,52 @@ input:hover ~ .input-deals:after{
   max-width: 1400px;
 }
 .text-orange{
-  color: #f57200;
+  color: #ff524a;
+}
+.btn-dealslist{
+  text-shadow: none !important;
+  font-size: 18px !important;
+}
+.bg-light-pink{
+  background-color: #f8f2f4 !important; 
+}
+.bg-pink{
+  background: #fd5d60 !important;
+}
+.text-pink{
+  color: #ff524a !important;
+}
+.top-btn{
+  color: white !important;
+  text-shadow: #803c00 1px 1px 1px;
+  font: 700 18px arial !important;
+  height: 45px;
+  border-radius: 50px !important;
 }
 .o-btn{
-  border: 1px solid #cc5f00 !important;
-  border-radius: 8px !important;
-  background: #ff8e00 !important;
-  background: -webkit-gradient(linear,left top,left bottom,from(#ff9b00),to(#f57200));
-  background: -moz-linear-gradient(top,#ff9b00,#f57200) !important;
-  background: linear-gradient(to bottom,#ff9b00,#f57200) !important;
-  text-shadow: #803c00 1px 1px 1px !important;
-  font: 700 20px arial !important;
+  border-radius: 50px !important;
+  border: none !important;
+  background: -webkit-gradient(linear,left top,left bottom,from(#ed9692),to(#ff524a));
+  background: -moz-linear-gradient(top,#ed9692,#ff524a);
+  background: linear-gradient(to bottom, #ed9692, #ff524a) ;
+  text-shadow: #803c00 1px 1px 1px;
+  font: 700 18px arial !important;
+  height: 45px;
   &:hover{
-    border: 1px solid #cc5f00 !important;
-    background: -webkit-gradient(linear,left top,left bottom,from(#ff9b00),to(#f57200)) ;
-    background: -moz-linear-gradient(top,#d18e27,#f57200) !important;
-    background: linear-gradient(to bottom,#d18e27,#f57200)!important;
+    background: -webkit-gradient(linear,left top,left bottom,from(#fd5d60),to(#fd5d60)) ;
+    background: -moz-linear-gradient(top,#fd5d60,#fd5d60) !important;
+    background: linear-gradient(to bottom,#fd5d60,#fd5d60)!important;
   }
 }
 .box {
   width: 100%;
   position: relative;
-  border-radius: 4px !important;
-  background-color: #fff !important;
-  border: 1px solid #f0fbff !important;
+  border-right: 1px solid #d1d0d0;
   font-size: 16px;
-  box-shadow: 0 1px 3px 0 #bfbfbf;
-  margin-left: 5px;
-  margin-right: 5px;
 }
 .detail-box {
-  background-color: #f0fbff;
+  background-color: #fd5d60;
+  color: white !important;
   padding: 8px 0;
 }
 .mobile {
@@ -509,6 +524,15 @@ input:hover ~ .input-deals:after{
 
 }
 @media only screen and (max-width: 520px) {
+  .bb-small-none{
+    border-bottom: none !important;
+  }
+  hr{
+    display: none;
+  }
+  .br-md-0{
+    border-right: none !important;
+  }
   .w500{
     width: 250px;
   }
@@ -560,6 +584,9 @@ input:hover ~ .input-deals:after{
   .fs-md-19{
     font-size: 19px !important;
   }
+  .fs-md-18{
+    font-size: 18px !important;
+  }
   .fs-md-17{
     font-size: 17px !important;
   }
@@ -578,7 +605,7 @@ input:hover ~ .input-deals:after{
   }
 
   .fs-24{
-    font-size: 18px
+    font-size: 14px
   }
   .btn-orange-div{
     .o-btn{

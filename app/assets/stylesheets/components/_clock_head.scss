@@ -2,14 +2,7 @@
 .below-header {
   z-index: 2;
   padding-top: 24px;
-  padding-bottom: 24px;
-  background: linear-gradient(
-    120deg,
-    #99e2ff 0%,
-    #99e2ff 70%,
-    #66d4ff 70%,
-    #66d4ff 100%
-  );
+  background: linear-gradient(120deg, #e7dfdf 0%, #edc4c5 70%, #fd5d60 70%, #fd5d60 100%);
   .accepted {
 	  color: #2b417f;
 	  font-family: Heebo;
@@ -63,7 +56,7 @@
     margin-bottom: 2rem;
   }
   .flip-clock-wrapper ul li a div div.inn {
-    background-color: #2b417f;
+    background-color: #b40132;
     color: white;
   }
   .flip-clock-divider {

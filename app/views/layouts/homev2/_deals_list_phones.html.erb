@@ -1,72 +1,59 @@
 <!-- Deals list section -->
-<section  class="bg-light py-5">
+<section  class="bg-light-pink py-5">
   <% @phoneshome.each do |phone| %>
     <div class="container  deals-list mb-3 open-form " data-url="<%= phone[:url] %>">
       <div class="row">
-        <div class="col offset-xl-2 main-div">
+        <div class="col offset-xl-1 main-div">
           <div class="card box">
-            <div class="card-body py-md-0">
-              <div class="row align-items-center">
+            <div class="card-body py-md-0 px-0">
+              <div class="row align-items-center px-3">
                 <div class="img">
                   <%= image_tag(phone[:image], class: "horizonatal-box-img p-3", alt: "Phone image" ) %>
                   <input type="hidden" id="phone_name" name="phone_name" value="<%= phone[:handset] %>">
                 </div>
                 <div class="col-6 mobile price-details">
                   <div class="detail-box p-3 rounded">
-                    <span class="text-muted fs-14 font-weight-normal">
+                    <p class="text-white fs-12 font-weight-normal">
                       <%= phone[:bluetext] %>
-                    </span>
-                    <hr>
-                    <small class="text-muted">Deposit from</small>
-                      <span class="bolder d-block mt-2"><%= phone[:deposit] %>
+                    </p>
+                    <p class="text-white mb-0 font-weight-bold">Deposit from</p>
+                      <span class="text-white d-block"><%= phone[:deposit] %>
                     </span>
                   </div>
                 </div>
-                <div class="col">
-                  <h5 class="font-weight-bold mb-2">
+                <div class="col px-md-0 px-2">
+                  <h5 class="font-weight-bold fs-22">
                     <%= phone[:name] %>
                   </h5>
                   <div class="row features">
-                    <div class="col box text-center">
-                      <h6 class="font-weight-bold mb-0 mt-2 fs-24" ><%= phone[:data] %> </h6>
-                      <span class="text-muted fs-14 font-weight-normal">
+                    <div class="col-md-3 col-6 box text-center">
+                      <h6 class="font-weight-bold mb-0 mt-2 fs-20 fs-md-18" ><%= phone[:data] %> </h6>
+                      <span class="text-muted fs-16 font-weight-normal">
                         Data
                       </span>
                     </div>
-                    <div class="col box text-center">
-                      <h6 class="font-weight-bold mb-0 mt-2 fs-24" ><%= phone[:calls] %></h6>
-                      <span class="text-muted fs-14 font-weight-normal">
+                    <div class="col-md-3 col-6 box text-center">
+                      <h6 class="font-weight-bold mb-0 mt-2 fs-20 fs-md-18" ><%= phone[:calls] %></h6>
+                      <span class="text-muted fs-16 font-weight-normal">
                         Calls
                       </span>
                     </div>
-                    <div class="col box text-center">
-                      <h6 class="font-weight-bold mb-0 mt-2 fs-24" ><%= phone[:texts] %></h6>
-                      <span class="text-muted fs-14 font-weight-normal">
+                    <div class="col-md-3 col-6 box text-center">
+                      <h6 class="font-weight-bold mb-0 mt-2 fs-20 fs-md-18" ><%= phone[:texts] %></h6>
+                      <span class="text-muted fs-16 font-weight-normal">
                         Texts
                       </span>
                     </div>
-                  </div>
-                   <hr>
-                  <div class="row actions">
-                    <div class="col-md-6">
-                      <button class="btn btn-primary o-btn open-form w-100 font-weight-bold">Apply now - it's free!</button>
+                    <div class="col-md-3 col-6 box text-center br-md-0">
+                      <h6 class="font-weight-bold mb-0 mt-2 fs-20 fs-md-18">Deposit from</h6>
+                      <span class="fs-16 font-weight-normal">£0
+                      </span>
                     </div>
-                    <div class="col-md-6">
-                      <button class="btn btn-primary open-form w-100 font-weight-bold">More Info</button>
-                    </div>
+                    
                   </div>
                 </div>
-
-                <div class="col-md-3 desktop">
-                  <div class="detail-box p-3">
-                    <span class="text-muted fs-14 font-weight-normal">
-                      <%= phone[:bluetext] %>
-                    </span>
-                    <hr>
-                    <small class="text-muted">Deposit from</small>
-                      <span class="bolder d-block mt-2">£0
-                    </span>
-                  </div>
+                <div class="col-md-3 col-12 text-center">
+                  <button class="btn btn-dealslist text-white o-btn open-form font-weight-bold px-4">GET DEAL <i class="fas fa-chevron-right ml-2"></i></button>
                 </div>
               </div>
             </div>

@@ -4,7 +4,7 @@
     <div class="row">
       <div class="col-xl-6 open-form" data-url="/success">
         <div class="phone-details box-bg mb-3">
-          <div class="promotion">Deal of the month</div>
+          <div class="promotion">Top Deal</div>
           <div class="row details w-100 align-items-center">
             <div class="col-md-5 col">
               <div class="phone-img text-center">
@@ -14,7 +14,7 @@
             <div class="col px-0 mobile mobile-price">
               <div class="detail-box mt-4 px-4">
                 <div class="row">
-                  <div class="pl-2 col-md-3 col text-center border-bottom">
+                  <div class="pl-2 col-md-3 col-12 text-center border-bottom">
 
                     <% if @bc == true %>
                       <span class="text-muted fs-14 font-weight-normal">
@@ -23,13 +23,13 @@
                     <% end %>
 
                     <h6 class="font-weight-bold mb-0 mt-0 fs-24">£20</h6>
-                    <span class="text-muted fs-14 font-weight-normal">
-                      a month
+                    <span class="text-white fs-14 font-weight-normal">
+                      Per month
                     </span>
                   </div>
                   <div class="pl-2 col-md-3 col text-center">
                     <h6 class="font-weight-bold mb-0 mt-2 fs-24">£0</h6>
-                    <span class="text-muted fs-14 font-weight-normal">
+                    <span class="text-white fs-14 font-weight-normal">
                       Deposit from
                     </span>
                   </div>
@@ -41,7 +41,6 @@
                 <div class="row">
                   <div class="col">
                     <div>
-
                       <% if @bc == true %>
                         <small class="text-muted">All Credit Scores Welcome</small>
                       <% end %>
@@ -56,10 +55,10 @@
                     <div class="upfront">
                       <div class="bold mb-2"> upfront</div>
                       <div class="call d-flex align-items-center mb-2 justify-content-around flex-wrap">
-                        <button type="button" class="btn btn-outline-dark">
+                        <button type="button" class="btn btn-outline-danger">
                           £0
                         </button>
-                        <button type="button" class="btn btn-outline-dark">
+                        <button type="button" class="btn btn-outline-danger">
                           £89
                         </button>
                       </div>
@@ -67,10 +66,10 @@
                     <div class="months">
                       <div class="bold mb-2"> Months</div>
                       <div class="call d-flex align-items-center mb-2 justify-content-around flex-wrap">
-                        <button type="button" class="btn btn-outline-dark">
+                        <button type="button" class="btn btn-outline-danger">
                           24
                         </button>
-                        <button type="button" class="btn btn-outline-dark">
+                        <button type="button" class="btn btn-outline-danger">
                           36
                         </button>
                       </div>
@@ -89,7 +88,7 @@
               <div class="row">
                 <div class="col">
                   <div class="call text-center border-right">
-                     <i class="fas fa-phone-square-alt text-primary fs-26 ">
+                     <i class="fas fa-mobile-alt text-pink fs-26 ">
                      </i>
                     <h6 class="font-weight-bold mb-0 mt-2 fs-18">
                       Unlimited Call
@@ -98,7 +97,7 @@
                 </div>
                 <div class="col border-right">
                   <div class="call text-center ">
-                    <i class="fas fa-sms text-primary fs-26 "></i>
+                    <i class="far fa-comments text-pink fs-26 "></i>
                     <h6 class="font-weight-bold mb-0 mt-2 fs-18">
                       Unlimited sms
                     </h6>
@@ -106,7 +105,7 @@
                 </div>
                 <div class="col">
                   <div class="call text-center ">
-                    <i class="fas fa-signal text-primary fs-26 "></i>
+                    <i class="fas fa-broadcast-tower text-pink fs-26 "></i>
                     <h6 class="font-weight-bold mb-0 mt-2 fs-18" >Unlimited Data
                     </h6>
                   </div>
@@ -116,7 +115,7 @@
               <div class="row">
                 <div class="col">
                   <div class="call text-center border-right">
-                    <i class="fas fa-money-bill-alt text-primary fs-26 "></i>
+                    <i class="far fa-money-bill-alt text-pink fs-26 "></i>
                     <h6 class="font-weight-bold mb-0 mt-2 fs-18">
                       Pay Monthly
                     </h6>
@@ -124,7 +123,7 @@
                 </div>
                 <div class="col border-right">
                   <div class="call text-center ">
-                    <i class="fas fa-credit-card text-primary fs-26 ">
+                    <i class="fas fa-money-check text-pink fs-26 ">
                     </i>
                     <h6 class="font-weight-bold mb-0 mt-2 fs-18" >
                       <% if @bc %>
@@ -138,13 +137,13 @@
                 <div class="col">
                   <div class="call text-center ">
                     <% if @bc %>
-                      <i class="fas fa-check-double text-primary fs-26 ">
+                      <i class="fas fa-check-double text-pink fs-26 ">
                       </i>
                       <h6 class="font-weight-bold mb-0 mt-2 fs-18" >
                         100% Approvals
                       </h6>
                     <% else %>
-                      <i class="fas fa-truck text-primary fs-26 ">
+                      <i class="fas fa-truck text-pink fs-26 ">
                       </i>
                       <h6 class="font-weight-bold mb-0 mt-2 fs-18" >
                         Next Day Delivery
@@ -164,7 +163,7 @@
           <% else %>
             <div class="row mt-4">
               <div class="col-12">
-                <button class="btn btn-primary o-btn open-form w-100">Get Deal</button>
+                <button class="btn btn-primary o-btn open-form w-100">Get Offer Now</button>
               </div>
             </div>
           <% end %>
@@ -173,7 +172,7 @@
 <!-- second deal -->
       <div class=" col-xl-6 open-form" data-url="/success">
         <div class="phone-details box-bg">
-          <div class="promotion">Deal of the month</div>
+          <div class="promotion">Save Big !</div>
           <div class="row details w-100 align-items-center">
             <div class="col-md-5 col">
               <div class="phone-img text-center">
@@ -183,7 +182,7 @@
             <div class="col px-0 mobile mobile-price">
               <div class="detail-box mt-4 px-4">
                 <div class="row">
-                  <div class="pl-2 col-md-3 col text-center border-bottom">
+                  <div class="pl-2 col-md-3 col-12 text-center border-bottom">
 
                     <% if @bc == true %>
                       <span class="text-muted fs-14 font-weight-normal">
@@ -192,13 +191,13 @@
                     <% end %>
 
                     <h6 class="font-weight-bold mb-0 mt-0 fs-24">50%</h6>
-                    <span class="text-muted fs-14 font-weight-normal">
-                      discount
+                    <span class="text-white fs-14 font-weight-normal">
+                      Discount
                     </span>
                   </div>
                   <div class="pl-2 col-md-3 col text-center">
                     <h6 class="font-weight-bold mb-0 mt-2 fs-24">£0</h6>
-                    <span class="text-muted fs-14 font-weight-normal">
+                    <span class="text-white fs-14 font-weight-normal">
                       Deposit from
                     </span>
                   </div>
@@ -221,13 +220,13 @@
                     <div class="upfront">
                       <div class="bold mb-2"> upfront</div>
                        <div class="call d-flex align-items-center mb-2 justify-content-center flex-wrap">
-                          <button type="button" class="btn btn-outline-dark">£0</button>
+                          <button type="button" class="btn btn-outline-danger">£0</button>
                        </div>
                     </div>
                     <div class="months">
                       <div class="bold mb-2"> Months</div>
                       <div class="call d-flex align-items-center mb-2 justify-content-center flex-wrap">
-                        <button type="button" class="btn btn-outline-dark">24</button>
+                        <button type="button" class="btn btn-outline-danger">24</button>
                       </div>
                     </div>
                   </div>
@@ -242,19 +241,19 @@
               <div class="row">
                 <div class="col">
                   <div class="call text-center border-right">
-                     <i class="fas fa-phone-square-alt text-primary fs-26 "></i>
+                     <i class="fas fa-mobile-alt text-pink fs-26 "></i>
                     <h6 class="font-weight-bold mb-0 mt-2 fs-18"> Unlimited Call</h6>
                   </div>
                 </div>
                 <div class="col border-right">
                   <div class="call text-center ">
-                     <i class="fas fa-sms text-primary fs-26 "></i>
+                     <i class="far fa-comments text-pink fs-26 "></i>
                     <h6 class="font-weight-bold mb-0 mt-2 fs-18" >Unlimited sms</h6>
                   </div>
                 </div>
                 <div class="col">
                   <div class="call text-center ">
-                    <i class="fas fa-signal text-primary fs-26 "></i>
+                    <i class="fas fa-broadcast-tower text-pink fs-26 "></i>
                     <h6 class="font-weight-bold mb-0 mt-2 fs-18" >Unlimited Data
                     </h6>
                   </div>
@@ -264,27 +263,27 @@
               <div class="row">
                 <div class="col">
                   <div class="call text-center border-right">
-                     <i class="fas fa-money-bill-alt text-primary fs-26 "></i>
+                     <i class="far fa-money-bill-alt text-pink fs-26 "></i>
                     <h6 class="font-weight-bold mb-0 mt-2 fs-18">6 Months Half Price
                     </h6>
                   </div>
                 </div>
                 <div class="col border-right">
                   <div class="call text-center ">
-                     <i class="fas fa-wifi text-primary fs-26"></i>
+                     <i class="fas fa-satellite-dish text-pink fs-26"></i>
                     <h6 class="font-weight-bold mb-0 mt-2 fs-18" >5G Ready</h6>
                   </div>
                 </div>
                 <div class="col">
                   <div class="call text-center ">
                     <% if @bc %>
-                      <i class="fas fa-check-double text-primary fs-26 ">
+                      <i class="fas fa-check-double text-pink fs-26 ">
                       </i>
                       <h6 class="font-weight-bold mb-0 mt-2 fs-18" >
                         100% Approvals
                       </h6>
                     <% else %>
-                      <i class="fas fa-truck text-primary fs-26 ">
+                      <i class="fas fa-truck text-pink fs-26 ">
                       </i>
                       <h6 class="font-weight-bold mb-0 mt-2 fs-18" >
                         Next Day Delivery
@@ -297,7 +296,7 @@
           </div>
           <div class="row mt-4">
             <div class="col-12">
-              <button class="btn btn-primary o-btn open-form w-100"> Get Deal</button>
+              <button class="btn btn-primary o-btn open-form w-100"> Get Offer Now</button>
             </div>
           </div>
         </div>
