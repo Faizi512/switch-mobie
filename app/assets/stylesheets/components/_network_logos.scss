@@ -26,12 +26,27 @@
   justify-content: center;
   height: 100px;
   padding: 25px;
-  .network-log {
-    max-width: 100%;
-    max-height: 100%;
-    width: auto;
-    height: auto;
-  }
+}
+.network-log {
+  max-width: 100%;
+  max-height: 100%;
+  width: auto;
+  height: auto;
+}
+.network-log1{
+  max-width: 100%;
+  max-height: 100%;
+  width: 90px;
+}
+.network-log2 {
+  max-width: 100%;
+  max-height: 100%;
+  width: 35px;
+}
+.network-log3 {
+  max-width: 100%;
+  max-height: 100%;
+  width: 75px;
 }
 .form-logos{
   img{
@@ -40,5 +55,16 @@
     @media only screen and (max-width: 768px) {
       height: 25px;
     }
+  }
+}
+@media only screen and (max-width: 520px) {
+  .network-log1 {
+    width: 57px;
+  }
+  .network-log2 {
+    width: 20px;
+  }
+  .network-log3 {
+    width: 40px;
   }
 }

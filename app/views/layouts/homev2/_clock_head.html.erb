@@ -3,33 +3,11 @@
   <div class="below-header">
     <div class="container">
       <div class="row">
-        <div class="col-xl-6 col-sm-12 d-flex flex-wrap">
-
-          <% if @bc == true %>
-            <h2 class="text-center">
-              <span class="accepted">Get Accepted For The Latest Smartphone Deals!</span>
-              <br>
-              <span class="approvel desktop">100% approval | All Credit Scores Welcome | No upfront payments</span>
-              <span class="approvel mobile">100% approval<br> All Credit Scores Welcome <br> No upfront payments</span>
-              <button class="btn btn-danger open-form w-100 d-none btn-b">Get Your Deal
-                <i class="far fa-arrow-alt-circle-right text-white pl-2"></i>
-              </button>
-            </h2>
-
-          <% else %>
-            <h2 class="text-center">
-              <span class="accepted">Get The UK's Best Deals On The Latest Smartphones!</span>
-              <br>
-              <span class="approvel desktop">No upfront payments | Network Sign Up Offers | Huge Discounts</span>
-              <span class="approvel mobile">No upfront payments <br> Network Sign Up Offers <br> Huge Discounts </span>
-              <button class="btn btn-danger open-form w-100 d-none btn-b">Get Your Deal
-                <i class="far fa-arrow-alt-circle-right text-white pl-2"></i>
-              </button>
-            </h2>
-
-          <%end%>
-
-          <div class="row d-flex justify-content-center w-100 desktop">
+        <div class="col-xl-6 col-sm-12 align-self-center">
+          <h2 class="text-center">
+            <span class="accepted">Get Accepted For The Latest Smartphone Deals!</span>
+          </h2>
+          <div class="row text-center w-100 d-none d-md-block">
             <%= image_tag("banner-img.png", class: "open-form pl-3", width: "350", alt: "Phones header" ) %>
           </div>
         </div>

@@ -360,7 +360,7 @@ class Common {
       bad_credit_customer: (customer_type) ? "yes" : "no",
       campaignkey: 'E9F2N6A3R5',
       optindate: this.getFormattedCurrentDate(),
-      optinurl: 'deals.megamobiledeals.com'+ this.details.optin_url,
+      optinurl: 'hitphones.com'+ this.details.optin_url,
       ipaddress: this.ip_Address,
       uu_id: this.details.uu_id,
       trafficid: this.getUrlParameter('trafficid') || this.details.form_name,
