@@ -132,7 +132,7 @@ module PagesHelper
 
   def get_deals_data url_name
     send(url_name.gsub('-', '_')) rescue home
-    
+
     @phoneshome = [
       {
         name: "Samsung Galaxy S10",
@@ -148,7 +148,7 @@ module PagesHelper
       {
         name: "Samsung A20",
         data: "Unlimited",
-        image: "phone/samsung-a20.webp",
+        image: "phone/samsung-a20.png",
         calls: "Unlimited",
         texts: "Unlimited",
         url:"/success",
