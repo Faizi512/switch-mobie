@@ -100,7 +100,7 @@
   background-color: #ffa940 !important;
 }
 .btn-hot{
-  background: linear-gradient(to right,#f55a00, #1EBFFB, #f55a00) !important;
+  background: linear-gradient(to right,#f55a00, #9ce2fc, #f55a00) !important;
   border-radius: 50px !important;
   margin-bottom: -18px;
   padding: 6px 61px !important;
@@ -174,8 +174,8 @@ input:checked ~ .input-deposit:after{
 }
 input:checked ~ .input-deposit{
   color: white !important;
-  background: #5c88dd;
-  border: 1px solid #5c88dd !important;
+  background: #42baec;
+  border: 1px solid #42baec !important;
 }
 .input-deposit-radio{
   width: 80%;
@@ -183,13 +183,13 @@ input:checked ~ .input-deposit{
   height: 55px;
 }
 input:hover ~ .input-deposit{
-  border: 1px solid #5c88dd;
+  border: 1px solid #42baec;
   color: white !important;
-  background: #5c88dd;
+  background: #42baec;
 }
 input:hover ~ .input-deposit:after{
   border: 4px solid white;
-  background: #5c88dd;
+  background: #42baec;
 }
 
 /*radio btn end*/
@@ -205,7 +205,7 @@ input:hover ~ .input-deposit:after{
   border: 1px solid transparent;
   display: flex;
   justify-content: center;
-  color: #5c88dd;
+  color: #42baec;
 }
 .input-deals:hover{
   border: 1px solid #344eb0;
@@ -236,8 +236,8 @@ input:checked ~ .input-deals:after{
 }
 input:checked ~ .input-deals{
   color: white !important;
-  background: #5c88dd;
-  border: 1px solid #5c88dd !important;
+  background: #42baec;
+  border: 1px solid #42baec !important;
 }
 .input-deals-radio{
   width: 80%;
@@ -245,13 +245,13 @@ input:checked ~ .input-deals{
   height: 55px;
 }
 input:hover ~ .input-deals{
-  border: 1px solid #5c88dd;
+  border: 1px solid #42baec;
   color: white !important;
-  background: #5c88dd;
+  background: #42baec;
 }
 input:hover ~ .input-deals:after{
   border: 4px solid white;
-  background: #5c88dd;
+  background: #42baec;
 }
 
 .w-95{
@@ -373,20 +373,20 @@ input:hover ~ .input-deals:after{
   max-width: 1400px;
 }
 .text-orange{
-  color: #5c88dd;
+  color: #42baec;
 }
 .btn-dealslist{
   text-shadow: none !important;
   font-size: 18px !important;
 }
 .bg-light-pink{
-  background-color: #e9f7ff !important; 
+  background-color: #f5fdff !important; 
 }
 .bg-pink{
-  background: #5c88dd !important;
+  background: #42baec !important;
 }
 .text-pink{
-  color: #5c88dd !important;
+  color: #42baec !important;
 }
 .top-btn{
   color: white !important;
@@ -398,16 +398,12 @@ input:hover ~ .input-deals:after{
 .o-btn{
   border-radius: 50px !important;
   border: none !important;
-  background: -webkit-gradient(linear,left top,left bottom,from(#1EBFFB),to(#5c88dd));
-  background: -moz-linear-gradient(top,#1EBFFB,#5c88dd);
-  background: linear-gradient(to bottom, #1EBFFB, #5c88dd) ;
+  background: #42baec !important;
   text-shadow: #803c00 1px 1px 1px;
   font: 700 18px arial !important;
   height: 45px;
   &:hover{
-    background: -webkit-gradient(linear,left top,left bottom,from(#5c88dd),to(#5c88dd)) ;
-    background: -moz-linear-gradient(top,#5c88dd,#5c88dd) !important;
-    background: linear-gradient(to bottom,#5c88dd,#5c88dd)!important;
+    background: #1a95c8!important;
   }
 }
 .box {
@@ -417,7 +413,7 @@ input:hover ~ .input-deals:after{
   font-size: 16px;
 }
 .detail-box {
-  background-color: #5c88dd;
+  background-color: #42baec;
   color: white !important;
   padding: 8px 0;
 }
