@@ -256,6 +256,7 @@ class Common {
     tabs[n].style.display = "block";
     this.fixStepIndicator(n)
     $(".btn-success").removeClass("in-progress")
+    $(".postcode").focus();
   }
 
   fillform(){
