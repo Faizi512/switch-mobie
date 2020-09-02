@@ -113,26 +113,17 @@
   .h-50{
     height: 50px !important;
   }
+  @media screen and (max-width: 3072px) and (min-width: 2561px) {
+    .background-header{
+      height: 43vh;
+    }
+  }
   @media screen and (max-width: 2561px) and (min-width: 2200px) {
     .background-header{
       height: 40vh;
     }
   }
-  @media screen and (max-width: 2200px) and (min-width: 1850px) {
-    .background-header{
-      height: 35vh;
-    }
-  }
-  @media screen and (max-width: 1850px) and (min-width: 1580px) {
-    .background-header{
-      height: 30vh;
-    }
-  }
-  @media screen and (max-width: 1580px) and (min-width: 1300px) {
-    .background-header{
-      height: 25vh;
-    }
-  }
+
    
   @media only screen and (max-width: 1025px) {
     .input-div{
