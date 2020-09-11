@@ -243,7 +243,7 @@ module PagesHelper
         calls: "Unlimited",
         texts: "Unlimited",
         url:"/success",
-        bluetext: "",
+        bluetext: "Personal Hotspot, Data Roaming",
         deposit: "£0",
         handset: ""
       },
@@ -371,6 +371,6 @@ module PagesHelper
       },
     ]
 
-    
+
   end
 end

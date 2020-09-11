@@ -136,7 +136,7 @@
 }
 /*radio btn */
 
-.input-deposit{ 
+.input-deposit{
   font-size: 23px !important;
   font-weight: 800px;
   background-color: white;
@@ -197,7 +197,7 @@ input:hover ~ .input-deposit:after{
   max-height: 210px !important;
 }
 
-.input-deals{ 
+.input-deals{
   font-size: 23px !important;
   font-weight: 800px;
   background-color: white;
@@ -380,10 +380,16 @@ input:hover ~ .input-deals:after{
   font-size: 18px !important;
 }
 .bg-light-pink{
-  background-color: #f5fdff !important; 
+  background-color: #f5fdff !important;
 }
 .bg-pink{
   background: #42baec !important;
+}
+.bg-green{
+  background-color: #59c1a9;
+}
+.bg-light-green{
+  background-color: #ace0d3;
 }
 .text-pink{
   color: #42baec !important;

@@ -1,5 +1,6 @@
 
 #mobile-go{
+  $basee-color: #59c1a9;
   $base-color: #42BAEC;
   min-height: 100vh !important;
   .font-cabin{
@@ -23,7 +24,16 @@
     width: 100%;
   }
   .text-jam{
-    color: $base-color;
+    color: $basee-color;
+  }
+  .progress{
+    height: 5px;
+  }
+  .progress-bar{
+    width: 100%;
+  }
+  .fa-check-square{
+    color: #59c1a9
   }
   .input-radio{
     background-color: white;
@@ -71,11 +81,11 @@
   .btn-offers{
     border-radius: 50px !important;
     color: #fff;
-    background-color: $base-color;
-    border-color: $base-color;
+    background-color: $basee-color;
+    border-color: $basee-color;
   }
   .btn-offers:hover{
-    background-color: #1a95c8;
+    background-color: #3faf95;
     box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15) !important;
   }
   .text-green{
@@ -123,8 +133,12 @@
       height: 50vh;
     }
   }
+  @media screen and (min-width: 768px) {
+    .w-md-100{
+      width: 100% !important;
+    }
+  }
 
-   
   @media only screen and (max-width: 1025px) {
     .input-div{
       width: 50%;
@@ -147,6 +161,9 @@
       background-size: contain;
       background-position: center top;
       height: 198px;
+    }
+    .pb-ms-2{
+      padding-bottom: 0.5rem;
     }
   }
   @media only screen and (max-width: 520px) {
@@ -212,11 +229,11 @@
   flex: 1;
 }
 .custom-progress-bar li:last-child {
-   text-align: right; 
+   text-align: right;
   /* right: 0px; */
 }
 .custom-progress-bar li:first-child {
-   text-align: left; 
+   text-align: left;
 }
 .custom-progress-bar li:before {
   box-sizing: content-box;
