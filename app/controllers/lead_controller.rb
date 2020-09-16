@@ -25,16 +25,17 @@ class LeadController < ApplicationController
   end
 
   def mmd_exit_lead
-    url = "https://dukeleads.leadbyte.co.uk/api/submit.php?returnjson=yes&campid=MMDEXIT&sid=1&phone1=#{params[:phone1]}&bc=#{params[:bc]}&c3=#{params[:c3]}&handset=#{params[:handset]}&source=#{params[:source]}&postcode=#{params[:postcode]}"
+    url = "https://dukeleads.leadbyte.co.uk/api/submit.php"
     uri = URI(url)
-    http = Net::HTTP.new(uri.host, uri.port)
-    http.use_ssl = true
-    request = Net::HTTP::Get.new(url, {'Content-Type' => 'application/json'})
-    response = http.request(request)
-    puts "****" * 30
-    puts JSON.parse(response.body)
-    puts "****" * 30
-    render json: {status: 200, response: JSON.parse(response.body)}
+    params[:returnjson] = "yes"
+    data = params.as_json
+    uri.query = URI.encode_www_form(data)
+    res = Net::HTTP.get_response(uri)
+    puts res.body if res.is_a?(Net::HTTPSuccess)
+    puts "--****---" * 30
+    puts res.body
+    puts "---****----" * 30
+    render json: {status: 200, response: JSON.parse(res.body)}
   end
 
   def mmd_lead
@@ -87,7 +88,7 @@ class LeadController < ApplicationController
       when "Exit e2save - pay monthly contract deals"
         @redirect_url = "https://www.awin1.com/cread.php?awinmid=422&awinaffid=652417&clickref=EXIT+pay+monthly+contract+deals&ued=https%3A%2F%2Fwww.e2save.com%2Fcontract"
       else
-        @redirect_url = "https://mtrk5.co.uk/?a=14118&c=33110"
+        @redirect_url = "https://mobiledealhunter.co.uk?/success"
       end
     end
 end

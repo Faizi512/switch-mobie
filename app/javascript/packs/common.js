@@ -361,7 +361,7 @@ class Common {
       bad_credit_customer: (customer_type) ? "yes" : "no",
       campaignkey: 'E9F2N6A3R5',
       optindate: this.getFormattedCurrentDate(),
-      optinurl: 'mobilegogo.co.uk'+ this.details.optin_url,
+      optinurl: 'mobiledealhunter.co.uk'+ this.details.optin_url,
       ipaddress: this.ip_Address,
       uu_id: this.details.uu_id,
       trafficid: this.getUrlParameter('trafficid') || this.details.form_name,
@@ -454,13 +454,18 @@ class Common {
 
       $.ajax({
         type: "POST",
-        url: "/mmd-exit-lead",
+        url: "/mmd-exit-lead?campid=MMDEXIT",
         data: {phone1: phone1, bc: bc, c3: c3, source: source, handset: handset, postcode: postcode },
         success: function(json) {
           console.log(json)
           if(json.response.code == 1){
             CI.fetchRedirectUrl(json.response.leadId)
           }
+        },
+        error: function(s){
+          setTimeout(function(){
+            CI.redirectUrl =  "https://mobiledealhunter.co.uk?/success?check=1"
+          }, 2000);
         },
         dataType: "json"
       })
@@ -492,12 +497,12 @@ class Common {
   setTimerToApiCall(lead_id){
     var CI = this
     this.fetchRequest = this.fetchRequest + 1
-    if(this.fetchRequest < 20 && this.redirectUrl ==  null){
+    if(this.fetchRequest < 10 && this.redirectUrl ==  null){
       setTimeout(function(){
         CI.fetchRedirectUrl(lead_id)
       }, 2000);
     }else{
-      this.redirectUrl =  "https://mtrk5.co.uk/?a=14118&c=33110"
+      this.redirectUrl =  "https://mobiledealhunter.co.uk?/success?check=1"
     }
   }
   additionalParams(){
