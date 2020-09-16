@@ -168,7 +168,7 @@ class Home extends Common {
       bad_credit_customer: (customer_type) ? "yes" : "no",
       campaignkey: 'E9F2N6A3R5',
       optindate: this.getFormattedCurrentDate(),
-      optinurl: 'mobilegogo.co.uk'+ this.details.optin_url,
+      optinurl: 'mobiledealhunter.co.uk'+ this.details.optin_url,
       url_with_params: window.location.href,
       ipaddress: this.ip_Address,
       uu_id: this.details.uu_id,

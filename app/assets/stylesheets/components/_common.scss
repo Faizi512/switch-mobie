@@ -77,6 +77,17 @@
 .lh-n{line-height:normal}
 .lh-0{line-height:0px}
 
+.bg-img-success{
+  background-image: asset-url('bg-img.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  height: 85vh;
+}
+.fs-185{
+  font-size: 155px;
+}
+
 .display-n{
   display: none;
 }
@@ -389,7 +400,7 @@ input:hover ~ .input-deals:after{
   background-color: #59c1a9;
 }
 .bg-light-green{
-  background-color: #ace0d3;
+  background-color: #dbf5ef;
 }
 .text-pink{
   color: #42baec !important;
