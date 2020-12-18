@@ -7,8 +7,9 @@ class Home extends Common {
     this.validate("#dealform")
     this.getFormDetails('#dealform')
     this.showToolTip()
-    this.showClock()
     this.fillform()
+    this.popupTerms()
+    this.popupPrivacy()
     this.showTab(this.currentTab);
 
     $('.carousel').carousel({
@@ -36,14 +37,6 @@ class Home extends Common {
 
     $( "#btn-back" ).click(function() {
       CI.backStep(-1)
-    });
-
-    $("input[name='finance']").click(function() {
-      console.log("fance")
-      if (this.value == "yes") {
-        CI.financeLead()
-      }
-      CI.successUrl()
     });
 
     $(document).on("click", '.open-form', function() {
@@ -76,6 +69,8 @@ class Home extends Common {
       window.location = this.details.success_url
     }else if(this.deliveryName == "Exit 10 (E 2 Save)"){
       window.location = this.details.success_url
+    }else if(this.deliveryName == "Exit Sweet-Mobile"){
+      window.location = this.details.success_url+this.paramsforSuccess()
     }else{
       window.location = this.details.success_url+this.additionalParamsFoBC()
     }
@@ -130,14 +125,11 @@ class Home extends Common {
     }
   }
 
-  financeLead(){
-    var data = this.getData();
-    this.submitLead(data, "MMD-finance")
-  }
-
   handleBadCustomerForm(){
+    var CI = this;
     if (this.currentTab == 2) {
       this.mmdLead()
+      CI.successUrl();
     }
   }
 
@@ -157,7 +149,7 @@ class Home extends Common {
       street1: this.getUrlParameter('street1') || $(".street1").val() || $(".address").val() || 'unknown',
       towncity: this.getUrlParameter('towncity') || $(".towncity").val() || 'unknown',
       sid: this.getUrlParameter('sid') || this.details.sid ||1,
-      ssid: this.getUrlParameter('ssid') || this.details.ssid ||1,
+      ssid: 157,
       handset:this.getUrlParameter('handset') || this.phoneName || '',
       ad_set:this.getUrlParameter('ad_set') || 1,
       source: this.getUrlParameter('source') || this.details.source || 'google3',
@@ -168,7 +160,7 @@ class Home extends Common {
       bad_credit_customer: (customer_type) ? "yes" : "no",
       campaignkey: 'E9F2N6A3R5',
       optindate: this.getFormattedCurrentDate(),
-      optinurl: 'mobiledealhunter.co.uk'+ this.details.optin_url,
+      optinurl: 'switch-mobile.co.uk'+ this.details.optin_url,
       url_with_params: window.location.href,
       ipaddress: this.ip_Address,
       uu_id: this.details.uu_id,
@@ -177,6 +169,7 @@ class Home extends Common {
       timestamp: new Date,
       anytrack: track,
       utm_source: this.getUrlParameter('utm_source'),
+      matchtype: this.getUrlParameter('matchtype') || "",
       tps_result: this.tps_result,
       apidown: this.apiDown,
       user_agent: window.navigator.userAgent,

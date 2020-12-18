@@ -11,16 +11,51 @@
 
   .overlay-content {
     position: relative;
-    top: 5%;
     width: 100%;
     text-align: center;
-    margin-top: 30px;
+    height: 100vh;
   }
   .footer {
     text-align: center;
     padding: 25px 0;
-    font-size: 12px;
-    color: #747474;
+    font-size: 30px !important;
+    color: white;
+  }
+  .text-gree{
+    color: #297b76 !important;
+  }
+  .bg-greenf{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: #aba1f8 !important
+  }
+  .form-logos-img{
+    .network-log{
+      width: 40px;
+      @media only screen and (max-width: 520px) {
+        width: 23px;
+        margin: 0 10px;
+      }
+    }
+    .network-log1{
+      width: 60px;
+      @media only screen and (max-width: 520px) {
+        width: 39px;
+        margin: 0 10px;
+      }
+    }
+    .network-log2{
+      width: 32px;
+      @media only screen and (max-width: 520px) {
+        width: 20px;
+        margin: 0 10px;
+      }
+    }
   }
 
+}
+.maxw-100{
+  max-width: 100% !important;
 }

@@ -1,10 +1,10 @@
 
 #mobile-go{
-  $basee-color: #59c1a9;
-  $base-color: #42BAEC;
+  $basee-color: #aba1f8;
+  $base-color: #8e81ee;
   min-height: 100vh !important;
   .font-cabin{
-    font-family: 'Cabin Sketch', cursive !important;
+    font-family: 'Prompt', sans-serif !important;
   }
   .head-logo{
     width: 180px;
@@ -27,7 +27,10 @@
     color: $basee-color;
   }
   .progress{
-    height: 5px;
+    height: 11px;
+  }
+  .w-42{
+    width: 42%;
   }
   .progress-bar{
     width: 100%;
@@ -80,12 +83,13 @@
   }
   .btn-offers{
     border-radius: 50px !important;
-    color: #fff;
-    background-color: $basee-color;
-    border-color: $basee-color;
+    color: $basee-color;
+    background-color: white;
+    border: 3px solid $basee-color;
   }
   .btn-offers:hover{
-    background-color: #3faf95;
+    color: white;
+    background-color: $basee-color;
     box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15) !important;
   }
   .text-green{
@@ -94,12 +98,12 @@
   .onoffswitch-inner:before {
     content: "Yes";
     padding-left: 10px;
-    background-color: #42baec !important;
+    background-color: #aba1f8 !important;
     color: #FFFFFF;
     text-align: left;
   }
   input:checked ~ label {
-    background: #F7F7F7;
+    background: #6e5def;
     border-color: #177699 !important;
   }
   .validate.success{

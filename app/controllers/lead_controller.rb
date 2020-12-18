@@ -78,17 +78,21 @@ class LeadController < ApplicationController
       when "(Energy / Voxi)"
         @redirect_url = "/e-deals-voxi?check=1"
       when "Voxi Exit"
-        @redirect_url = "https://www.awin1.com/cread.php?awinmid=10951&awinaffid=652417&clickref=social-exit-voxi&ued=https%3A%2F%2Fwww.voxi.co.uk%2Fplans"
+        @redirect_url = "https://www.awin1.com/cread.php?awinmid=10951&awinaffid=652417&ued=https%3A%2F%2Fwww.voxi.co.uk%2Facquisition%2Fplans"
       when "(Energy / E2Save)"
         @redirect_url = "/e-deals-e2save?check=1"
       when "Exit 10 (E 2 Save)"
         @redirect_url = "https://www.awin1.com/cread.php?awinmid=422&awinaffid=652417&clickref=exit&ued=https%3A%2F%2Fwww.e2save.com%2F"
+      when "Exit Sweet-Mobile"
+        @redirect_url = "https://dl.reliatrk.com/?a=2&c=4"
       when "Exit e2save - cashback deals"
         @redirect_url = "https://www.awin1.com/cread.php?awinmid=422&awinaffid=652417&clickref=EXIT+chasback+deals&ued=https%3A%2F%2Fwww.e2save.com%2Fcontract%2Fcashback-deals"
       when "Exit e2save - pay monthly contract deals"
         @redirect_url = "https://www.awin1.com/cread.php?awinmid=422&awinaffid=652417&clickref=EXIT+pay+monthly+contract+deals&ued=https%3A%2F%2Fwww.e2save.com%2Fcontract"
+      when "Exit VOXI Google"
+        @redirect_url = "https://www.awin1.com/cread.php?awinmid=10951&awinaffid=652417&ued=https%3A%2F%2Fwww.voxi.co.uk%2Facquisition%2Fplans"
       else
-        @redirect_url = "https://mobiledealhunter.co.uk?/success"
+        @redirect_url = "https://mtrk11.co.uk/?a=14118&c=33110"
       end
     end
 end

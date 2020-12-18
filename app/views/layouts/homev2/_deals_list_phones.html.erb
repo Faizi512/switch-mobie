@@ -3,69 +3,54 @@
   <div class="container">
     <div class="col-lg-10 ml-auto">
       <% @phoneshome.each do |phone| %>
-        <div class=" row w-100 m-0 bg-white rounded shadow mb-3 p-3">
-            <div class=" row w-100 justify-content-md-start justify-content-center align-items-center m-0 px-md-5 pl-2 pb-2">
-              <h5 class="m-0 text-md-left font-weight-bold"><%= phone[:name] %></h5>
-            </div>
-            <div class="col-md-2 text-md-right text-center pb-ms-2 align-self-center">
-                <%= image_tag(phone[:image], class: "", width: "80" ) %>
-            </div>
-            <ul class="m-0 col-md-3 list-unstyled">
-              <li class="d-flex align-items-start">
-                <i class="mt-1 mx-2 fas fa-check-square"></i>
-                <p class="mb-0">Free Delivery</p>
-              </li>
-              <li class="d-flex align-items-start">
-                <i class="mt-1 mx-2 fas fa-check-square"></i>
-                <p class="my-0">12 Months Contract</p>
-              </li>
-              <li class="d-flex align-items-start">
-                <i class="mt-1 mx-2 fas fa-check-square"></i>
-                <p class="m-0"><%= phone[:bluetext] %></p>
-              </li>
-            </ul>
-          <div class="row col-lg-5 m-0">
+        <div class=" row w-100 m-0 bg-white rounded shadow mb-3 border">
+          <div class="col-md-2 text-md-left text-center pb-ms-2 align-self-center border-right py-2">
+              <%= image_tag(phone[:image], class: "", width: "120" ) %>
+          </div>
+          <div class="row col-lg-7 m-0 py-3 border-right">
             <div class="col-md-12 px-1 text-md-left text-center mt-md-0 mt-2">
+
+              <div class=" row w-100 justify-content-md-start justify-content-center align-items-center m-0 pl-3">
+                <h5 class="m-0 text-md-left font-weight-bold"><%= phone[:name] %></h5>
+              </div>
+              <div class="row w-100 mx-0 align-items-center pt-2">
+                <div class="col-12">
+                  <p class="m-0 text-md-left "><i class="fas fa-check-double"></i> <%= phone[:bluetext] %></p>
+                </div>
+              </div>
               <div class="row w-100 m-0">
-                <div class="col-4 text-center align-self-center mb-2">
+                <div class="col-3 text-center align-self-center mb-2">
                   <div class="pt-2">
-                    <div class="progress">
-                      <div class="progress-bar bg-success" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
-                    </div>
+                    <h5 class="font-weight-bold text-jam">Unlimited</h5>
                   </div>
-                  <div class="py-3" >
-                    <p class="mb-0 fs-md-12"><%= phone[:data] %></p>
-                    <p class="m-0 fs-md-11">Data</p>
+                  <div class="py-" >
+                    <%= image_tag('company/data.png', class: "", width: "40" ) %>
                   </div>
                 </div>
-                <div class="col-4 text-center align-self-center mb-2">
+                <div class="col-3 text-center align-self-center mb-2">
                   <div class="pt-2">
-                    <div class="progress">
-                      <div class="progress-bar bg-warning" role="progressbar"  aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
-                    </div>
+                    <h5 class="font-weight-bold text-jam">Unlimited</h5>
                   </div>
-                  <div class="py-3">
-                    <p class="mb-0 fs-md-12"><%= phone[:texts] %></p>
-                    <p class="m-0 fs-md-11">Texts</p>
+                  <div class="py-">
+                    <%= image_tag('company/text.png', class: "", width: "40" ) %>
                   </div>
                 </div>
-                <div class="col-4 text-center align-self-center mb-2">
+                <div class="col-3 text-center align-self-center mb-2">
                   <div class="pt-2">
-                    <div class="progress">
-                      <div class="progress-bar bg-info" role="progressbar"  aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
-                    </div>
+                    <h5 class="font-weight-bold text-jam">Unlimited</h5>
                   </div>
-                  <div class="py-3">
-                    <p class="mb-0 fs-md-12"><%= phone[:calls] %></p>
-                    <p class="m-0 fs-md-11">Minutes</p>
+                  <div class="py-">
+                    <%= image_tag('company/phone-call.png', class: "", width: "40" ) %>
                   </div>
+                </div>
+                <div class="col-3 text-center align-self-center">
+                  <h5 class="mt-0 text-jam  fw-400"><span class="font-weight-bold">
+                    <%= phone[:deposit] %></span> Upfront</h5>
                 </div>
               </div>
             </div>
           </div>
-          <div class="col-md-2 text-center align-self-center px-0">
-            <h5 class="mt-0 text-jam  fw-400"><span class="font-weight-bold">
-            <%= phone[:deposit] %></span> Upfornt</h5>
+          <div class="col-md-3 text-center align-self-center">
             <div class="pt-2 pb-3  text-center align-self-center">
               <button  type="button" class="font-weight-bold px-md-0 px-5 py-2 fs-md-12 btn w-md-100 btn-offers open-form">GET PLAN </button>
             </div>

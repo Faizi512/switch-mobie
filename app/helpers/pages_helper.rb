@@ -166,7 +166,7 @@ module PagesHelper
       camp_id: 'MEGA-MOBILE-DEALS',
       success_url: 'https://mtrk5.co.uk/?a=14118&c=33110',
       bad_success_url: 'https://mtrk5.co.uk/?a=14118&c=33110',
-      form_name: 'Mega-Mobile-Deals',
+      form_name: 'Switch-Mobile',
       optin_url: '',
       sid: nil,
       ssid: nil,
@@ -182,6 +182,17 @@ module PagesHelper
 
     @phoneshome = [
       {
+        name: "iPhone 12",
+        data: "Unlimited",
+        image: "iphone_12_black.png",
+        calls: "Unlimited",
+        texts: "Unlimited",
+        url:"/success",
+        bluetext: "Personal Hotspot, Go Binge, Data Roaming",
+        deposit: "£0",
+        handset: ""
+      },
+      {
         name: "Samsung Galaxy S10",
         data: "Unlimited",
         image: "phone/samsungs10.png",
@@ -189,6 +200,39 @@ module PagesHelper
         texts: "Unlimited",
         url:"/success",
         bluetext: "Personal Hotspot, Go Binge, Data Roaming",
+        deposit: "£0",
+        handset: ""
+      },
+      {
+        name: "Samsung Galaxy Note 20 Ultra 5G",
+        data: "Unlimited",
+        image: "phone/note-20-b.png",
+        calls: "Unlimited",
+        texts: "Unlimited",
+        url:"/success",
+        bluetext: "Personal Hotspot, Data Roaming",
+        deposit: "£0",
+        handset: ""
+      },
+      {
+        name: "Apple iPhone 11 Pro",
+        data: "Unlimited",
+        image: "phone/iphone11pro.png",
+        calls: "Unlimited",
+        texts: "Unlimited",
+        url:"/success",
+        bluetext: "",
+        deposit: "£0",
+        handset: ""
+      },
+      {
+        name: "Samsung Galaxy Note 20 5G",
+        data: "Unlimited",
+        image: "phone/note-20.jpg",
+        calls: "Unlimited",
+        texts: "Unlimited",
+        url:"/success",
+        bluetext: "",
         deposit: "£0",
         handset: ""
       },
@@ -235,17 +279,6 @@ module PagesHelper
         bluetext: "Personal Hotspot, Data Roaming",
         deposit: "£0",
         handset: "Samsung A10"
-      },
-      {
-        name: "Apple iPhone 11 Pro",
-        data: "Unlimited",
-        image: "phone/iphone11pro.png",
-        calls: "Unlimited",
-        texts: "Unlimited",
-        url:"/success",
-        bluetext: "Personal Hotspot, Data Roaming",
-        deposit: "£0",
-        handset: ""
       },
       {
         name: "Huawei Y7",

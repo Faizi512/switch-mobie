@@ -35,6 +35,26 @@ class Common {
     }
   }
 
+  popupTerms(){
+    $( ".close-b" ).click(function() {
+      $('.modal2').hide();
+    });
+
+    $('.term-text').click(function(){
+      $('.modal2').show();
+    });
+  }
+
+  popupPrivacy(){
+    $( ".close-bu" ).click(function() {
+      $('.modal3').hide();
+    });
+
+    $('.privacy-text').click(function(){
+      $('.modal3').show();
+    });
+  }
+
   getFormDetails(form){
     var data = $(form)[0].dataset.details
     this.details = JSON.parse(data)
@@ -115,6 +135,9 @@ class Common {
           if(field.$element.hasClass('approve')){
             return $('.error-checkbox')
           }
+          if(field.$element.hasClass('postcode')){
+            return $('.postcode-error')
+          }
           if(field.$element.hasClass('error-on-button')){
             return $(field.element.closest(".tab").querySelector(".error-box"))
           }
@@ -135,15 +158,19 @@ class Common {
         var xhr = $.ajax('https://go.webformsubmit.com/dukeleads/restapi/v1.2/validate/mobile?key=50f64816a3eda24ab9ecf6c265cae858&value='+$('.phone').val())
         return xhr.then(function(json) {
           CI.validateTsp()
-          if (json.status == "Valid") {
+          var skipresponse = ["EC_ABSENT_SUBSCRIBER", "EC_ABSENT_SUBSCRIBER_SM", "EC_CALL_BARRED", "EC_SYSTEM_FAILURE","EC_SM_DF_memoryCapacityExceeded", "EC_NO_RESPONSE", "EC_NNR_noTranslationForThisSpecificAddress", "EC_NNR_MTPfailure", "EC_NNR_networkCongestion"]
+          if (skipresponse.includes(json.response) ) {
             CI.isPhone = true
             return true
-          }else if(json.status == "Error"){
-             CI.isPhone = true
-             CI.apiDown =  true
+          }
+          else if (json.status == "Valid") {
+            CI.isPhone = true
             return true
-          }else{
+          }else if(json.status == "Invalid"){
             return $.Deferred().reject("Please Enter Valid UK Phone Number");
+          }else{
+            CI.isPhone = true
+            return true
           }
         })
       },
@@ -172,8 +199,11 @@ class Common {
           if (json.status == "Valid") {
             CI.isEmail = true
             return true
-          }else{
+          }else if(json.status == "Invalid"){
             return $.Deferred().reject("Please Enter Valid Email Address");
+          }else{
+            CI.isEmail = true
+            return true
           }
         })
       },
@@ -197,7 +227,7 @@ class Common {
   validateApiPostcode(){
     window.Parsley.addValidator('validapipostcode', {
       validateString: function(value){
-        var xhr = $.ajax({
+       return $.ajax({
           url:`https://api.getAddress.io/find/${$(".postcode").val()}?api-key=NjGHtzEyk0eZ1VfXCKpWIw25787&expand=true`,
           success: function(json){
 
@@ -232,10 +262,10 @@ class Common {
               return $.Deferred().reject("Please Enter Valid Postcode");
             }
           },
-          error: function(error){
-            console.log(error.statusText)
-            xhr.abort();
-            if (error.statusText == "timeout") {
+          error: function(request){
+            console.log(request.statusText)
+            request.abort();
+            if (request.statusText == "timeout") {
               $(".property-div").remove();
               $(".address-div").show();
             }
@@ -301,10 +331,6 @@ class Common {
     var progress = document.getElementById('progressBar');
     if(num >= 0) {
       progress.style.width = (num*33)+"%";
-      progress.innerText = "Progress " + (num*33) + "%";
-      if( num ==  0){
-        progress.innerText = '';
-      }
     }
   }
   backStep(n){
@@ -361,13 +387,14 @@ class Common {
       bad_credit_customer: (customer_type) ? "yes" : "no",
       campaignkey: 'E9F2N6A3R5',
       optindate: this.getFormattedCurrentDate(),
-      optinurl: 'mobiledealhunter.co.uk'+ this.details.optin_url,
+      optinurl: 'switch-mobile.co.uk'+ this.details.optin_url,
       ipaddress: this.ip_Address,
       uu_id: this.details.uu_id,
       trafficid: this.getUrlParameter('trafficid') || this.details.form_name,
       prize: this.getUrlParameter('prize') || 35,
       apidown: this.apiDown,
       tps_result: this.tps_result,
+      matchtype: this.getUrlParameter('matchtype') || "",
       timestamp: new Date,
       user_agent: window.navigator.userAgent,
     };
@@ -423,21 +450,35 @@ class Common {
     })
   }
 
-  submitLead(data, campid){
+  submitLead(formData, campid){
     var CI = this
+    CI.firePixel();
     $.ajax({
       type: "POST",
-      url: "/mmd-lead?campid=" + campid,
-      data: data,
+      url: "https://go.webformsubmit.com/dukeleads/waitsubmit?key=eecf9b6b61edd9e66ca0f7735dfa033a&campid=" + campid,
+      data: formData,
       success: function(data) {
         console.log(data)
-        if(data.response.code == 1){
-          dataLayer.push({'transactionId': data.response.leadId, "transactionTotal": 3})
+        if(data.code == 1 && data.records[0].response.code == 1){
+          dataLayer.push({'transactionId': data.records[0].response.leadId, "transactionTotal": 3})
+          CI.submitCustomerIo(formData, data.records[0].response.leadId)
         }
-        CI.firePixel()
+        if(data.code == 1 && data.records[0].status != "Rejected"){
+           window.location = "/success2"
+        }
       },
       dataType: "json"
     })
+  }
+
+  submitCustomerIo(formData, leadId){
+     try {
+      const timestamp = Math.round(new Date() / 1000)
+      var phone = `+44${parseInt(formData.phone1.toString().split("").splice(-10).join(""))}`
+      _cio.identify($.extend(formData, {id: leadId, lead_date: timestamp, created_at: timestamp, phone: phone}))
+      _cio.track("leadSold");
+    }
+    catch (e) {}
   }
 
   sendMmdExitLead(){
@@ -451,7 +492,6 @@ class Common {
       var postcode = this.getUrlParameter('postcode') || $(".postcode").val() || ''
       var source = this.getUrlParameter('source') || this.details.source || 'google3'
       var CI = this
-
       $.ajax({
         type: "POST",
         url: "/mmd-exit-lead?campid=MMDEXIT",
@@ -464,7 +504,7 @@ class Common {
         },
         error: function(s){
           setTimeout(function(){
-            CI.redirectUrl =  "https://mobiledealhunter.co.uk?/success?check=1"
+            CI.redirectUrl =  "https://mobilegogo.co.uk/success?check=1"
           }, 2000);
         },
         dataType: "json"
@@ -502,7 +542,7 @@ class Common {
         CI.fetchRedirectUrl(lead_id)
       }, 2000);
     }else{
-      this.redirectUrl =  "https://mobiledealhunter.co.uk?/success?check=1"
+      this.redirectUrl =  "https://mobilegogo.co.uk/success?check=1"
     }
   }
   additionalParams(){
