@@ -23,6 +23,9 @@
     height: 60vh;
     width: 100%;
   }
+  .h-280{
+    height: 255px;
+  }
   .text-jam{
     color: $basee-color;
   }
@@ -195,6 +198,11 @@
     }
     .input-radio{
       justify-content: center;
+    }
+  }
+  @media only screen and (max-width: 320px) {
+    .h-280{
+      height: 215px;
     }
   }
 
