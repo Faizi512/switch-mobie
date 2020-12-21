@@ -221,7 +221,7 @@ module PagesHelper
         calls: "Unlimited",
         texts: "Unlimited",
         url:"/success",
-        bluetext: "",
+        bluetext: "Personal Hotspot, Go Binge, Data Roaming, 5G Ready",
         deposit: "£0",
         handset: ""
       },
@@ -232,7 +232,7 @@ module PagesHelper
         calls: "Unlimited",
         texts: "Unlimited",
         url:"/success",
-        bluetext: "",
+        bluetext: "Personal Hotspot, Data Roaming, 5G Ready",
         deposit: "£0",
         handset: ""
       },
