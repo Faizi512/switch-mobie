@@ -459,13 +459,11 @@ class Common {
       data: formData,
       success: function(data) {
         console.log(data)
-        if(data.code == 1 && data.records[0].status != "Rejected"){
-           window.location = "/uk-credit-ratings"
-        }
         if(data.code == 1 && data.records[0].response.code == 1){
           dataLayer.push({'transactionId': data.records[0].response.leadId, "transactionTotal": 3})
           CI.submitCustomerIo(formData, data.records[0].response.leadId)
         }
+        window.location = "/success2"
       },
       dataType: "json"
     })

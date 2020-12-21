@@ -119,11 +119,11 @@ class Home extends Common {
     $(".postcode_holder").html($(".postcode").val() || this.getUrlParameter("postcode")  || "");
     // Form Submisson
     this.updateFacebookAudience(data)
-    this.sendMmdExitLead()
+    // this.sendMmdExitLead()
     this.submitLead(data, this.details.camp_id)
-    if(!this.getBcFromParams()){
-      this.successUrl()
-    }
+    // if(!this.getBcFromParams()){
+    //   this.successUrl()
+    // }
   }
 
   handleBadCustomerForm(){
