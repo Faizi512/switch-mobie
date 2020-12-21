@@ -459,12 +459,12 @@ class Common {
       data: formData,
       success: function(data) {
         console.log(data)
+        if(data.code == 1 && data.records[0].status != "Rejected"){
+           window.location = "/uk-credit-ratings"
+        }
         if(data.code == 1 && data.records[0].response.code == 1){
           dataLayer.push({'transactionId': data.records[0].response.leadId, "transactionTotal": 3})
           CI.submitCustomerIo(formData, data.records[0].response.leadId)
-        }
-        if(data.code == 1 && data.records[0].status != "Rejected"){
-           window.location = "/success2"
         }
       },
       dataType: "json"
@@ -504,7 +504,7 @@ class Common {
         },
         error: function(s){
           setTimeout(function(){
-            CI.redirectUrl =  "https://mobilegogo.co.uk/success?check=1"
+            CI.redirectUrl =  "https://mtrk11.co.uk/?a=14118&c=33110"
           }, 2000);
         },
         dataType: "json"
@@ -542,7 +542,7 @@ class Common {
         CI.fetchRedirectUrl(lead_id)
       }, 2000);
     }else{
-      this.redirectUrl =  "https://mobilegogo.co.uk/success?check=1"
+      this.redirectUrl =  "https://mtrk11.co.uk/?a=14118&c=33110"
     }
   }
   additionalParams(){
