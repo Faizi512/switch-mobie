@@ -161,6 +161,23 @@ module PagesHelper
     }.to_json
   end
 
+  def compare
+    @details = {
+      camp_id: 'MEGA-MOBILE-DEALS',
+      success_url: 'https://mtrk5.co.uk/?a=14118&c=33110',
+      bad_success_url: 'https://mtrk5.co.uk/?a=14118&c=33110',
+      form_name: 'compare',
+      optin_url: '/compare',
+      sid: nil,
+      ssid: nil,
+      source:'google-home-page2',
+      quick_submit: false,
+      submit_on_load: false,
+      uu_id: @cookie_uuid,
+    }.to_json
+  end
+
+
   def home
     @details = {
       camp_id: 'MEGA-MOBILE-DEALS',
