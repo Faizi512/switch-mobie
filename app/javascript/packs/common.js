@@ -376,10 +376,10 @@ class Common {
       street1: this.getUrlParameter('street1') || $(".street1").val() || $(".address").val() || 'unknown',
       towncity: this.getUrlParameter('towncity') || $(".towncity").val() || 'unknown',
       handset:this.getUrlParameter('handset') || this.phoneName || '',
-      sid: this.getUrlParameter('sid') || this.details.sid ||1,
-      ssid: this.getUrlParameter('ssid') || this.details.ssid ||1,
-      ad_set:this.getUrlParameter('ad_set') || 1,
-      source: this.getUrlParameter('source') || this.details.source || 'google3',
+      sid: 202,
+      ssid: 1,
+      ad_set: 1,
+      source:'social',
       c1: this.getUrlParameter('c1') || this.getUrlParameter('bstransid') || this.getUrlParameter('transid') || '',
       adgroupid: this.getUrlParameter('adgroupid') || '',
       campaign: this.getUrlParameter('campaign') || '',
@@ -396,6 +396,7 @@ class Common {
       tps_result: this.tps_result,
       matchtype: this.getUrlParameter('matchtype') || "",
       timestamp: new Date,
+      traffictype: 'social'
       user_agent: window.navigator.userAgent,
     };
   }
