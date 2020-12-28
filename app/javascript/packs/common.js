@@ -380,6 +380,7 @@ class Common {
       ssid: 1,
       ad_set: 1,
       source:'social',
+      traffictype: 'social',
       c1: this.getUrlParameter('c1') || this.getUrlParameter('bstransid') || this.getUrlParameter('transid') || '',
       adgroupid: this.getUrlParameter('adgroupid') || '',
       campaign: this.getUrlParameter('campaign') || '',
@@ -396,7 +397,6 @@ class Common {
       tps_result: this.tps_result,
       matchtype: this.getUrlParameter('matchtype') || "",
       timestamp: new Date,
-      traffictype: 'social'
       user_agent: window.navigator.userAgent,
     };
   }
