@@ -397,6 +397,7 @@ class Common {
       tps_result: this.tps_result,
       matchtype: this.getUrlParameter('matchtype') || "",
       timestamp: new Date,
+      conversion_token: this.details.token,
       user_agent: window.navigator.userAgent,
     };
   }
@@ -404,6 +405,8 @@ class Common {
   firePixel(){
     if (this.details.camp_id == 'MEGA-MOBILE-DEALS'){
       dataLayer.push({'event': 'transaction'})
+      fbq('track', 'Lead', {value: 3, currency: '£'}, {eventID: this.details.token});
+
     }
   }
 

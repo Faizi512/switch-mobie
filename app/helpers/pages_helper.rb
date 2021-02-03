@@ -31,6 +31,7 @@ module PagesHelper
       quick_submit: false,
       submit_on_load: false,
       uu_id: @cookie_uuid,
+      token: @randon_token,
     }.to_json
   end
 
@@ -47,6 +48,7 @@ module PagesHelper
       quick_submit: false,
       submit_on_load: false,
       uu_id: @cookie_uuid,
+      token: @randon_token,
     }.to_json
   end
   def e_deals_awin
@@ -62,6 +64,7 @@ module PagesHelper
       quick_submit: false,
       submit_on_load: false,
       uu_id: @cookie_uuid,
+      token: @randon_token,
     }.to_json
   end
 
@@ -78,6 +81,7 @@ module PagesHelper
       quick_submit: false,
       submit_on_load: false,
       uu_id: @cookie_uuid,
+      token: @randon_token,
     }.to_json
   end
 
@@ -94,6 +98,7 @@ module PagesHelper
       quick_submit: false,
       submit_on_load: true,
       uu_id: @cookie_uuid,
+      token: @randon_token,
     }.to_json
   end
 
@@ -110,6 +115,7 @@ module PagesHelper
       quick_submit: false,
       submit_on_load: true,
       uu_id: @cookie_uuid,
+      token: @randon_token,
     }.to_json
   end
 
@@ -126,6 +132,7 @@ module PagesHelper
       quick_submit: false,
       submit_on_load: false,
       uu_id: @cookie_uuid,
+      token: @randon_token,
     }.to_json
   end
 
@@ -142,6 +149,7 @@ module PagesHelper
       quick_submit: false,
       submit_on_load: false,
       uu_id: @cookie_uuid,
+      token: @randon_token,
     }.to_json
   end
 
@@ -158,6 +166,7 @@ module PagesHelper
       quick_submit: false,
       submit_on_load: false,
       uu_id: @cookie_uuid,
+      token: @randon_token,
     }.to_json
   end
 
@@ -174,6 +183,7 @@ module PagesHelper
       quick_submit: false,
       submit_on_load: false,
       uu_id: @cookie_uuid,
+      token: @randon_token,
     }.to_json
   end
 
@@ -191,6 +201,7 @@ module PagesHelper
       quick_submit: false,
       submit_on_load: false,
       uu_id: @cookie_uuid,
+      token: @randon_token,
     }.to_json
   end
 

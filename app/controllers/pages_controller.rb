@@ -18,6 +18,7 @@ class PagesController < ApplicationController
   private
   def set_cookies
     @cookie_uuid =  cookies[:_msuuid_1fexuyzkduuouz] || "SS#{SecureRandom.uuid}"
+    @randon_token =  SecureRandom.uuid
     cookies[:_msuuid_1fexuyzkduuouz] = {
       value: @cookie_uuid,
       expires: 1.year.from_now,
