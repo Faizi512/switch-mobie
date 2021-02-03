@@ -174,6 +174,7 @@ class Home extends Common {
       matchtype: this.getUrlParameter('matchtype') || "",
       tps_result: this.tps_result,
       apidown: this.apiDown,
+      conversion_token: this.details.token,
       user_agent: window.navigator.userAgent,
     };
   }
