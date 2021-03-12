@@ -1,5 +1,5 @@
 import Common from "./common.js"
-
+import _ from 'lodash'
 class Home extends Common {
   constructor() {
     super();
@@ -41,12 +41,36 @@ class Home extends Common {
     });
 
     $(document).on("click", '.open-form', function() {
-      CI.phoneName = $(this).find('input').val()
-      $('#deal-form-modal').modal('show')
-      $('.clock').hide()
-      event.preventDefault();
+      var user = localStorage.getItem("user_data")
+      if (user != null) {
+        $("#loaderPopup").css('height', '100%')
+        CI.postMMDData()
+        event.stopPropagation()
+      } else {
+        CI.phoneName = $(this).find('input').val()
+        $('#deal-form-modal').modal('show')
+        $('.clock').hide()
+        event.stopPropagation();
+      }
     });
   }
+
+  updateUserInStorage(){
+    var CI=this
+    var previousData = this.getItemFromStorage("user_data")
+    var currentData = this.getData();
+    var userData = _.mergeWith(currentData,previousData, (current, previous) => current == "" || current == "unknown"  ? previous : current)
+    CI.setItemToStorage("user_data", userData)
+  }
+
+  getItemFromStorage(name){
+    return JSON.parse(localStorage.getItem(name))
+  }
+
+  setItemToStorage(name, data){
+    return localStorage.setItem(name, JSON.stringify(data))
+  }
+
 
   urlSelection(){
 
@@ -112,7 +136,17 @@ class Home extends Common {
   }
 
   postMMDData() {
-    var data = this.getData();
+    if( this.getItemFromStorage("user_data") != null){
+      this.updateUserInStorage()
+      this.submitLead(this.getItemFromStorage("user_data"), this.details.camp_id)
+    }
+    else{
+      var data = this.getData();
+      this.setItemToStorage("user_data", data)
+      console.log("Postdata: "+new Date())
+      this.submitLead(data, this.details.camp_id)
+    }
+
     $( "#btn-continue").hide()
     $( "#btn-back").hide()
     $( ".progress").hide()
@@ -120,7 +154,6 @@ class Home extends Common {
     // Form Submisson
     this.updateFacebookAudience(data)
     // this.sendMmdExitLead()
-    this.submitLead(data, this.details.camp_id)
     // if(!this.getBcFromParams()){
     //   this.successUrl()
     // }
