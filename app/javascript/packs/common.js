@@ -424,10 +424,9 @@ class Common {
   }
 
   successUrl(){
-    var CI = this;
     setTimeout(function(){
-      CI.urlSelection()
-    }, 1000)
+      window.location = "/success2"
+    }, 2000)
   }
 
   urlSelection(){
