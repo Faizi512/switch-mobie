@@ -71,46 +71,12 @@ class Home extends Common {
     return localStorage.setItem(name, JSON.stringify(data))
   }
 
-
-  urlSelection(){
-
-    if(this.deliveryName == "Exit 1 (Energy)"){
-      window.location = this.details.success_url+this.paramsforSuccess2()
-    }else if(this.deliveryName == "Exit 2 (Credit)"){
-      window.location = this.details.success_url+this.paramsforSuccess()
-    }else if(this.deliveryName == "Exit 4 (sweetmobile)"){
-      window.location = this.details.success_url
-    }else if(this.deliveryName == "Exit 5 (UK Credit Ratings)"){
-      window.location = this.details.success_url+this.paramsforSuccess()
-    }else if(this.deliveryName == "Exit 8 (Energy / Awin)"){
-      window.location = this.details.success_url+this.paramsforSuccess2()
-    }else if(this.deliveryName == "Exit Lotto"){
-      window.location = this.details.success_url+this.paramsforSuccess2()
-    }else if(this.deliveryName == "(Energy / Voxi)"){
-      window.location = this.details.success_url+this.paramsforSuccess2()
-    }else if(this.deliveryName == "(Energy / E2Save)"){
-      window.location = this.details.success_url+this.paramsforSuccess2()
-    }else if(this.deliveryName == "Voxi Exit"){
-      window.location = this.details.success_url
-    }else if(this.deliveryName == "Exit 10 (E 2 Save)"){
-      window.location = this.details.success_url
-    }else if(this.deliveryName == "Exit Sweet-Mobile"){
-      window.location = this.details.success_url+this.paramsforSuccess()
-    }else{
-      window.location = this.details.success_url+this.additionalParamsFoBC()
-    }
-  }
-
   successUrl(){
     var CI = this;
     $("#loaderPopup").css('height', '100%')
     setTimeout(function(){
-      if (CI.redirectUrl) {
-        CI.urlSelection()
-      }else {
-        CI.successUrl()
-      }
-    }, 1000)
+      window.location = "/success2"
+    }, 2000)
   }
 
   nextStep(n) {
