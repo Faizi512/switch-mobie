@@ -453,7 +453,25 @@ class Common {
     })
   }
 
+  submitLeadToStore(formData){
+    console.log(formData)
+    var CI = this
+    $.ajax({
+      type: "POST",
+      url: 'https://dukestore.herokuapp.com/api/v1/lead',
+      dataType: 'json',
+      data: {lead: formData},
+      success: function(data) {
+        console.log(data)
+      },
+      error: function(request){
+        console.log(request.statusText)
+      }
+    })
+  }
+
   submitLead(formData, campid){
+    this.submitLeadToStore(formData)
     var CI = this
     CI.firePixel();
     $.ajax({
