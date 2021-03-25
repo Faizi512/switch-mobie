@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_06_19_102318) do
+ActiveRecord::Schema.define(version: 2021_03_24_054111) do
 
   create_table "leads", force: :cascade do |t|
     t.integer "lead_id"
@@ -18,6 +18,10 @@ ActiveRecord::Schema.define(version: 2020_06_19_102318) do
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.string "delivery_name"
+  end
+
+  create_table "share_domains", force: :cascade do |t|
+    t.string "url"
   end
 
 end

@@ -431,7 +431,10 @@ module PagesHelper
         handset: ""
       },
     ]
-
-
   end
+
+  def data_share_domains
+    ShareDomain.pluck(:url)
+  end
+
 end
