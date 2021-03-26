@@ -25,6 +25,8 @@ class Home extends Common {
       $('.street1').val($(this).find("option:selected").data("street"))
       $('.county').val($(this).find("option:selected").data("province"))
       $('.houseNumber').val($(this).find("option:selected").data("housenum"))
+      $('.street2').val($(this).find("option:selected").data("street2"))
+      $('.building').val($(this).find("option:selected").data("building"))
     });
 
     window.Parsley.on('field:error', function() {
@@ -102,7 +104,10 @@ class Home extends Common {
   }
 
   postMMDData() {
+    var CI = this;
     if( this.getItemFromStorage("user_data") != null){
+      CI.userStorage = true
+      this.USTransaction();
       this.updateUserInStorage()
       this.submitLead(this.getItemFromStorage("user_data"), this.details.camp_id)
     }
@@ -147,6 +152,8 @@ class Home extends Common {
       email: this.getUrlParameter('email') || $(".email").val() || '',
       phone1: this.getUrlParameter('phone1') || $(".phone").val() || '',
       street1: this.getUrlParameter('street1') || $(".street1").val() || $(".address").val() || 'unknown',
+      street2: this.getUrlParameter('street2') || $(".street2").val() || 'unknown',
+      building: this.getUrlParameter('building') || $(".building").val() || 'unknown',
       towncity: this.getUrlParameter('towncity') || $(".towncity").val() || 'unknown',
       sid: this.getUrlParameter('sid') || 202,
       ssid: this.getUrlParameter('ssid') || 1,
@@ -175,6 +182,7 @@ class Home extends Common {
       apidown: this.apiDown,
       conversion_token: this.details.token,
       user_agent: window.navigator.userAgent,
+      lead_from_local_storage: this.userStorage,
     };
   }
 

@@ -19,6 +19,7 @@ class Common {
     this.fetchRequest = 0
     this.deliveryName = null
     this.phoneName = null;
+    this.userStorage = false
 
     $.getJSON('https://ipapi.co/json/', function(data) {
       if (data != null && data.ip != undefined && typeof (data.ip) == "string") {
@@ -245,9 +246,12 @@ class Common {
               for (var i = 0; i < result.length; i++) {
                 adresses.push( `
                     <option
-                    data-street="${result[i].line_1}"
+                    data-street="${result[i].thoroughfare || result[i].line_1}"
                     data-city="${result[i].town_or_city}"
-                    data-province="${result[i].county}"
+                    data-province="${result[i].county || result[i].town_or_city}"
+                    data-street2="${result[i].line_2}"
+                    data-building="${result[i].building_name || result[i].sub_building_name || result[i].building_number || result[i].sub_building_number}"
+                    data-house-number="${result[i].building_number || result[i].sub_building_number || result[i].building_name || result[i].sub_building_name || result[i].line_1}"
                     >
                     ${result[i].formatted_address.join(" ").replace(/\s+/g,' ')}
                     </option>
@@ -374,6 +378,8 @@ class Common {
       email: this.getUrlParameter('email') || $(".email").val() || '',
       phone1: this.getUrlParameter('phone1') || $(".phone").val() || '',
       street1: this.getUrlParameter('street1') || $(".street1").val() || $(".address").val() || 'unknown',
+      street2: this.getUrlParameter('street2') || $(".street2").val() || 'unknown',
+      building: this.getUrlParameter('building') || $(".building").val() || 'unknown',
       towncity: this.getUrlParameter('towncity') || $(".towncity").val() || 'unknown',
       handset:this.getUrlParameter('handset') || this.phoneName || '',
       sid: this.getUrlParameter('sid') || 202,
@@ -399,6 +405,7 @@ class Common {
       timestamp: new Date,
       conversion_token: this.details.token,
       user_agent: window.navigator.userAgent,
+      lead_from_local_storage: this.userStorage,
     };
   }
 
@@ -408,6 +415,10 @@ class Common {
       fbq('track', 'Lead', {value: 3, currency: '£'}, {eventID: this.details.token});
 
     }
+  }
+
+  USTransaction(){
+    dataLayer.push({'event': 'USTransaction'})
   }
 
   postData() {
