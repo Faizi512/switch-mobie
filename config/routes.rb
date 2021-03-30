@@ -16,5 +16,6 @@ Rails.application.routes.draw do
   get '/fetch-redirect-url/:id' => 'lead#fetch_redirect_url'
 
   root 'pages#index'
+  get '/data_share' => 'pages#data_share'
   get '/:page_name' => 'pages#show'
 end
