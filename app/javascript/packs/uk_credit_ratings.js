@@ -14,6 +14,8 @@ class UkCreditRatings extends Common {
       $('.street1').val($(this).find("option:selected").data("street"))
       $('.county').val($(this).find("option:selected").data("province"))
       $('.houseNumber').val($(this).find("option:selected").data("housenumber"))
+      $('.street2').val($(this).find("option:selected").data("street2"))
+      $('.building').val($(this).find("option:selected").data("building"))
     });
 
     $( ".nextStep" ).click(function() {
@@ -121,6 +123,8 @@ class UkCreditRatings extends Common {
       phone1: this.getUrlParameter('phone1') || '',
       street1: this.getUrlParameter("street1") || $(".street1").val() || 'unknown',
       towncity: this.getUrlParameter('towncity')|| $(".towncity").val() || 'unknown',
+      street2: this.getUrlParameter('street2') || $(".street2").val() || 'unknown',
+      building: this.getUrlParameter('building') || $(".building").val() || 'unknown',
       county: this.getUrlParameter('county')|| $(".county").val() || 'unknown',
       housenumber: this.getUrlParameter('houseNumber')|| $(".houseNumber").val() || 'unknown',
       title:  this.getUrlParameter('title') || $("input[name='title']:checked").val() || "Mr",
@@ -139,6 +143,7 @@ class UkCreditRatings extends Common {
       ipaddress: this.ip_Address,
       timestamp: new Date,
       user_agent: window.navigator.userAgent,
+      lead_from_local_storage: this.userStorage,
     }
   }
 
@@ -177,6 +182,8 @@ class UkCreditRatings extends Common {
           $('.street1').val($("#property").find("option:selected").data("street"))
           $('.county').val($("#property").find("option:selected").data("province"))
           $('.houseNumber').val($("#property").find("option:selected").data("housenumber"))
+          $('.street2').val($("#property").find("option:selected").data("street2"))
+          $('.building').val($("#property").find("option:selected").data("building"))
 
         return true
       }else{

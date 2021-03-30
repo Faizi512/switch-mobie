@@ -89,6 +89,8 @@ class CreditReport extends Common {
       email: this.getUrlParameter('email') || '',
       phone1: this.getUrlParameter('phone1') || '',
       street1: this.getUrlParameter("street1") || $(".street1").val() || 'unknown',
+      street2: this.getUrlParameter('street2') || $(".street2").val() || 'unknown',
+      building: this.getUrlParameter('building') || $(".building").val() || 'unknown',
       towncity: this.getUrlParameter('towncity')|| $(".towncity").val() || 'unknown',
       county: this.getUrlParameter('county')|| $(".county").val() || 'unknown',
       housenumber: this.getUrlParameter('houseNumber')|| $(".houseNumber").val() || 'unknown',
@@ -108,6 +110,7 @@ class CreditReport extends Common {
       ipaddress: this.ip_Address,
       timestamp: new Date,
       user_agent: window.navigator.userAgent,
+      lead_from_local_storage: this.userStorage,
     }
   }
 }
