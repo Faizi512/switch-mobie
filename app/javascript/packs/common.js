@@ -20,6 +20,7 @@ class Common {
     this.deliveryName = null
     this.phoneName = null;
     this.userStorage = false
+    this.adoptedUrl = null
 
     $.getJSON('https://ipapi.co/json/', function(data) {
       if (data != null && data.ip != undefined && typeof (data.ip) == "string") {
@@ -406,6 +407,7 @@ class Common {
       conversion_token: this.details.token,
       user_agent: window.navigator.userAgent,
       lead_from_local_storage: this.userStorage,
+      adopted_url: this.adoptedUrl,
     };
   }
 

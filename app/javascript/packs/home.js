@@ -60,6 +60,11 @@ class Home extends Common {
   updateUserInStorage(){
     var CI=this
     var previousData = this.getItemFromStorage("user_data")
+    if (previousData.adopted_url == null) {
+      this.adoptedUrl = previousData.optinurl
+    }else{
+      this.adoptedUrl = previousData.adopted_url
+    }
     var currentData = this.getData();
     var userData = _.mergeWith(currentData,previousData, (current, previous) => current == "" || current == "unknown"  ? previous : current)
     CI.setItemToStorage("user_data", userData)
@@ -124,10 +129,6 @@ class Home extends Common {
     $(".postcode_holder").html($(".postcode").val() || this.getUrlParameter("postcode")  || "");
     // Form Submisson
     this.updateFacebookAudience(data)
-    // this.sendMmdExitLead()
-    // if(!this.getBcFromParams()){
-    //   this.successUrl()
-    // }
   }
 
   handleBadCustomerForm(){
@@ -183,6 +184,7 @@ class Home extends Common {
       conversion_token: this.details.token,
       user_agent: window.navigator.userAgent,
       lead_from_local_storage: this.userStorage,
+      adopted_url: this.adoptedUrl,
     };
   }
 
