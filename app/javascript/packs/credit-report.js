@@ -111,6 +111,7 @@ class CreditReport extends Common {
       timestamp: new Date,
       user_agent: window.navigator.userAgent,
       lead_from_local_storage: this.userStorage,
+      campaign_name: this.details.camp_id,
     }
   }
 }
