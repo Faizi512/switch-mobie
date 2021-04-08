@@ -60,11 +60,6 @@ class Home extends Common {
   updateUserInStorage(){
     var CI=this
     var previousData = this.getItemFromStorage("user_data")
-    if (previousData.adopted_url == null) {
-      this.adoptedUrl = previousData.optinurl
-    }else{
-      this.adoptedUrl = previousData.adopted_url
-    }
     var currentData = this.getData();
     var userData = _.mergeWith(currentData,previousData, (current, previous) => current == "" || current == "unknown"  ? previous : current)
     CI.setItemToStorage("user_data", userData)
@@ -75,6 +70,11 @@ class Home extends Common {
   }
 
   setItemToStorage(name, data){
+    if (data.adopted_url == "" ||  data.adopted_url == null) {
+      data.adopted_url = data.optinurl
+    }else{
+      this.adoptedUrl = data.adopted_url
+    }
     return localStorage.setItem(name, JSON.stringify(data))
   }
 

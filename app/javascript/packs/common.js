@@ -20,7 +20,7 @@ class Common {
     this.deliveryName = null
     this.phoneName = null;
     this.userStorage = false
-    this.adoptedUrl = null
+    this.adoptedUrl = ""
 
     $.getJSON('https://ipapi.co/json/', function(data) {
       if (data != null && data.ip != undefined && typeof (data.ip) == "string") {
