@@ -185,6 +185,7 @@ class Home extends Common {
       user_agent: window.navigator.userAgent,
       lead_from_local_storage: this.userStorage,
       adopted_url: this.adoptedUrl,
+      campaign_name: this.details.camp_id,
     };
   }
 
