@@ -118,6 +118,7 @@ class Home extends Common {
     }
     else{
       var data = this.getData();
+      debugger
       this.setItemToStorage("user_data", data)
       console.log("Postdata: "+new Date())
       this.submitLead(data, this.details.camp_id)
@@ -186,6 +187,11 @@ class Home extends Common {
       lead_from_local_storage: this.userStorage,
       adopted_url: this.adoptedUrl,
       campaign_name: this.details.camp_id,
+      device:this.device || '',
+      device_browser:this.deviceBrowser || '',
+      devive_search_engine:this.deviveSearchEngine || '',
+      device_brand:this.deviceBrand || '',
+      device_name:this.deviceName || '',
     };
   }
 

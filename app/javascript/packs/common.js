@@ -26,6 +26,7 @@ class Common {
     this.deviveSearchEngine=null
     this.debiceBrand=null
     this.deviceName=null
+    this.deviceDetection()
 
     $.getJSON('https://ipapi.co/json/', function(data) {
       if (data != null && data.ip != undefined && typeof (data.ip) == "string") {
