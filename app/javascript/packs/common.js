@@ -21,6 +21,12 @@ class Common {
     this.phoneName = null;
     this.userStorage = false
     this.adoptedUrl = ""
+    this.device=null
+    this.deviceBrowser=null
+    this.deviveSearchEngine=null
+    this.debiceBrand=null
+    this.deviceName=null
+    this.deviceDetection()
 
     $.getJSON('https://ipapi.co/json/', function(data) {
       if (data != null && data.ip != undefined && typeof (data.ip) == "string") {
@@ -35,6 +41,14 @@ class Common {
     window.FontAwesomeConfig = {
       searchPseudoElements: true
     }
+  }
+
+  deviceDetection(){
+    this.device=FRUBIL.device.class_code   //Desktop
+    this.deviceBrowser=FRUBIL.client.class_code // Browser
+    this.deviveSearchEngine=FRUBIL.client.name_code // Chrome
+    this.deviceBrand=FRUBIL.device.brand_code // Samsung
+    this.deviceName=FRUBIL.device.marketname // Galaxy A5
   }
 
   popupTerms(){
@@ -409,6 +423,11 @@ class Common {
       lead_from_local_storage: this.userStorage,
       adopted_url: this.adoptedUrl,
       campaign_name: this.details.camp_id,
+      device:this.device || '',
+      device_browser:this.deviceBrowser || '',
+      devive_search_engine:this.deviveSearchEngine || '',
+      device_brand:this.deviceBrand || '',
+      device_name:this.deviceName || '',
     };
   }
 

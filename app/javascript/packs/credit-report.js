@@ -112,6 +112,11 @@ class CreditReport extends Common {
       user_agent: window.navigator.userAgent,
       lead_from_local_storage: this.userStorage,
       campaign_name: this.details.camp_id,
+      device:this.device || '',
+      device_browser:this.deviceBrowser || '',
+      devive_search_engine:this.deviveSearchEngine || '',
+      device_brand:this.deviceBrand || '',
+      device_name:this.deviceName || '',
     }
   }
 }
