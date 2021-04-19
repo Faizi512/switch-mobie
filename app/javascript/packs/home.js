@@ -118,7 +118,6 @@ class Home extends Common {
     }
     else{
       var data = this.getData();
-      debugger
       this.setItemToStorage("user_data", data)
       console.log("Postdata: "+new Date())
       this.submitLead(data, this.details.camp_id)
