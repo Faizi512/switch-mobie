@@ -51,6 +51,25 @@ class Common {
     this.deviceName=FRUBIL.device.marketname // Galaxy A5
   }
 
+  togglePopUp() {
+    $( ".close-btn1" ).click(function() {
+     $('.modal4').hide();
+    })
+
+    $('.partner-text').click(function(){
+      $('.modal4').show();
+    })
+  }
+
+  toggleCheckBox(){
+    var chk1 = $("input[type='checkbox'][name='agree']");
+    var chk2 = $("input[type='checkbox'][name='partners-tp']");
+
+    chk1.on('change', function(){
+      chk2.prop('checked',this.checked);
+    });
+  }
+
   popupTerms(){
     $( ".close-b" ).click(function() {
       $('.modal2').hide();
