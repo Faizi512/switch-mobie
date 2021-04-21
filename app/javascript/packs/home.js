@@ -12,6 +12,8 @@ class Home extends Common {
     this.popupPrivacy()
     this.showTab(this.currentTab);
     this.showClock()
+    this.togglePopUp()
+    this.toggleCheckBox()
 
     $('.carousel').carousel({
       interval: 2000

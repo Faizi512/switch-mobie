@@ -1,4 +1,25 @@
-<a href="javascript:;" class="" data-toggle="tooltip" data-placement="right" title=
-  "O2,  EE limited, Vodafone, Mobile Deal, Loanable, Voxi, Monetise Media, Bill Buddy, Utilita, Lead 365, Scores Matter, Bill Switchers, Sunshine Mobile, Experian, Flex Mobile Limited, Flexible group limited, Go Groopie, Discount Experts, Breeze Mobile, Get A Loan Today, Help to clear my debt, Sky, Yes Catalogue, Accepted Mobile, Flava, Utilita Mobile">
-  Partners
-</a>
+<a href="javascript:;" class="partner-text text-decoration-none">Partners</a>
+<div class="modal4 popup" id="tooltip-model">
+  <div class="modal4-dialog modal-lg mx-auto" role="document">
+    <div class="modal4-content px-md-3 px-2">
+      <div class="d-flex align-items-center justify-content-between">
+        <h2 class="text-center font-weight-bold m-0">Our Partners</h2>
+        <span class="close-btn1" aria-hidden="true">&times;</span>
+      </div>
+      <div class="modal4-body">
+      	<form class="partner-form" id="partner-form">
+      		<div class="row align-items-center">
+      			<% @partners.each do |partner| %>
+			       	<div class="col-md-6">
+			       		<div class="custom-control custom-checkbox mr-sm-2">
+							    <input type="checkbox" name="partners-tp" class="custom-control-input" id="<%= partner[:class_id] %>">
+							    <label class="custom-control-label text-left text-secondary label-size bg-white" for="<%= partner[:class_id] %>"><%= partner[:name] %></label>
+							  </div>
+			       	</div>
+						<% end %>
+      		</div>
+				</form>
+      </div>
+    </div>
+  </div>
+</div>
