@@ -32,6 +32,7 @@ module PagesHelper
       submit_on_load: false,
       uu_id: @cookie_uuid,
       token: @randon_token,
+      ipaddress: request.remote_ip,
     }.to_json
   end
 
@@ -49,6 +50,7 @@ module PagesHelper
       submit_on_load: false,
       uu_id: @cookie_uuid,
       token: @randon_token,
+      ipaddress: request.remote_ip,
     }.to_json
   end
   def e_deals_awin
@@ -65,6 +67,7 @@ module PagesHelper
       submit_on_load: false,
       uu_id: @cookie_uuid,
       token: @randon_token,
+      ipaddress: request.remote_ip,
     }.to_json
   end
 
@@ -82,6 +85,7 @@ module PagesHelper
       submit_on_load: false,
       uu_id: @cookie_uuid,
       token: @randon_token,
+      ipaddress: request.remote_ip,
     }.to_json
   end
 
@@ -99,6 +103,7 @@ module PagesHelper
       submit_on_load: true,
       uu_id: @cookie_uuid,
       token: @randon_token,
+      ipaddress: request.remote_ip,
     }.to_json
   end
 
@@ -116,6 +121,7 @@ module PagesHelper
       submit_on_load: true,
       uu_id: @cookie_uuid,
       token: @randon_token,
+      ipaddress: request.remote_ip,
     }.to_json
   end
 
@@ -133,6 +139,7 @@ module PagesHelper
       submit_on_load: false,
       uu_id: @cookie_uuid,
       token: @randon_token,
+      ipaddress: request.remote_ip,
     }.to_json
   end
 
@@ -150,6 +157,7 @@ module PagesHelper
       submit_on_load: false,
       uu_id: @cookie_uuid,
       token: @randon_token,
+      ipaddress: request.remote_ip,
     }.to_json
   end
 
@@ -167,6 +175,7 @@ module PagesHelper
       submit_on_load: false,
       uu_id: @cookie_uuid,
       token: @randon_token,
+      ipaddress: request.remote_ip,
     }.to_json
   end
 
@@ -184,6 +193,7 @@ module PagesHelper
       submit_on_load: false,
       uu_id: @cookie_uuid,
       token: @randon_token,
+      ipaddress: request.remote_ip,
     }.to_json
   end
 
@@ -202,6 +212,7 @@ module PagesHelper
       submit_on_load: false,
       uu_id: @cookie_uuid,
       token: @randon_token,
+      ipaddress: request.remote_ip,
     }.to_json
   end
 
