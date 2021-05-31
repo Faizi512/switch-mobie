@@ -429,7 +429,7 @@ class Common {
       campaignkey: 'E9F2N6A3R5',
       optindate: this.getFormattedCurrentDate(),
       optinurl: 'switch-mobile.co.uk'+ this.details.optin_url,
-      ipaddress: this.ip_Address,
+      ipaddress: this.details.ipaddress,
       uu_id: this.details.uu_id,
       trafficid: this.getUrlParameter('trafficid') || this.details.form_name,
       prize: this.getUrlParameter('prize') || 35,

@@ -107,7 +107,7 @@ class CreditReport extends Common {
       c1: this.getUrlParameter('transid')|| this.getUrlParameter('c1') || 'unknown',
       optindate: this.getFormattedCurrentDate(),
       optinurl: 'http://switch-mobile.co.uk/credit-report',
-      ipaddress: this.ip_Address,
+      ipaddress: this.details.ipaddress,
       timestamp: new Date,
       user_agent: window.navigator.userAgent,
       lead_from_local_storage: this.userStorage,
