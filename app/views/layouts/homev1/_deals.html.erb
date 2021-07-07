@@ -1,0 +1,66 @@
+<section class="bg-light py-md-5" id="deals-section">
+  <div class="container">
+    <div class="row mx-0 p-0 justify-content-between">
+      <% @featured_deals.each_with_index do |deal, index| %>
+        <div class="col-md-6 <% if index== 0 %>pr-md-3 <% else %>pl-md-3<% end %> px-0 mt-5 mt-md-0">
+          <div class="featured-deal shadow-custom bg-white px-4 pt-5 pb-4 position-relative overflow-hidden">
+            <div class="deal-ribbon bg-purple position-absolute text-center pb-2 pt-5 px-5">
+              <h6 class="text-uppercase mb-0 text-white">DEAL OF<br/> THE MONTH</h6>
+            </div>
+            <div class="title">
+              <h4 class="mb-3 text-blue"><%= deal[:name] %></h4>
+            </div>
+            <div class="row w-100 px-0 py-3 mx-0">
+              <div class="col-4 p-0">
+                <div class="featured-deal-img">
+                  <%= image_tag(deal[:image], class: "h-100"  ) %>
+                </div>
+              </div>
+              <div class="col-8 pl-3 p-md-0">
+                <div class="deal-features d-md-flex mb-md-3">
+                  <ul class="list-unstyled col-md-6 p-0 m-0">
+                    <li class="mb-1"><i class="fa fa-check mr-1 text-purple"></i>Unlimited Call</li>
+                    <li class="mb-1"><i class="fa fa-check mr-1 text-purple"></i>Unlimited Sms</li>
+                  </ul>
+                  <ul class="list-unstyled col-md-6 p-0 m-0">
+                    <li class="mb-1"><i class="fa fa-check mr-1 text-purple"></i>Unlimited Data</li>
+                    <li class="mb-1"><i class="fa fa-check mr-1 text-purple"></i>Next Day Delivery</li>
+                  </ul>
+                </div>
+                <div class="d-md-block d-none">
+                  <h2 class="mb-3">
+                    <%= deal[:deposit] %><span class="fs-18"> Upfront / per month</span>
+                  </h2>
+                </div>
+              </div>
+            </div>
+            <div class="d-md-none d-block">
+              <h2 class="mb-3">
+                <%= deal[:deposit] %><span class="fs-18"> Upfront / per month</span>
+              </h2>
+            </div>
+            <button onClick="document.getElementById('banner-section').scrollIntoView();"  class="shadow fw-500 btn w-100 bg-purple text-uppercase rounded-pill text-white">Get Deal</button>
+          </div>
+        </div>
+      <% end %>
+    </div>
+  </div>
+  <div class="container pt-5">
+    <div class="row w-100 mx-0 bg-white py-4 shadow-custom">
+      <div class="col-12 text-center pb-4">
+        <h3 class="text-blue">Choose Your Phone</h3>
+      </div>
+      <% @phones.each do |phone| %>
+        <div class="col-md-2 col-6 text-center choose-phones py-3">
+          <div class="phone-img">
+            <%= image_tag(phone[:image], class: "w-100 h-100" ) %>
+          </div>
+          <button onClick="document.getElementById('banner-section').scrollIntoView();" class="btn btn-sm px-2 mt-3 bg-blue rounded-pill text-white">
+            <%= phone[:name] %>
+          </button>
+        </div>
+      <% end %>
+      </div>
+    </div>
+  </div>
+</section>

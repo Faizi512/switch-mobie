@@ -1,0 +1,183 @@
+<!-- Below header section Flipclock -->
+<section class="mb-0" id="banner-section">
+  <div class="bg-gradient h-100">
+    <div class="container">
+      <div class="row mx-0 w-100">
+        <div class="col-12 px-0 py-md-4 p-0">
+          <h1 class="text-center text-white my-3 banner-head">
+            Get <span class="text-purple">Accepted</span> For Your <span class="text-purple">Mobile Deal</span> Today!
+          </h1>
+        </div>
+        <div class="col-12 p-0">
+          <div class="row mx-0 w-100 align-items-center banner-content">
+            <div class="col-md-6 px-0 py-3 py-md-0">
+              <div class="banner-image">
+                <%= image_tag("phones-main-banner.png", class: "w-100 h-100", alt: "Phones header" ) %>
+              </div>
+            </div>
+            <div class="col-md-5 ml-auto px-0 py-3 py-md-0">
+              <div class="shadow banner-form">
+                <div class="bg-blue text-center py-4 rounded-top">
+                  <h5 class="text-white mb-0">Get <span class="text-purple">ACCEPTED</span> in just 30 seconds!</h5>
+                </div>
+                <form class="form bg-white py-3 position-relative" id="dealform" data-details="<%= @details %>" method="post" action="javascript:;">
+                  <div class="tab" id="slide1">
+                    <div class="row justify-content-center p-0 mx-0 w-100">
+                      <div class="form-group col-lg-10 col-12">
+                        <label>First Name*</label>
+                        <input
+                        name="first_name"
+                        required
+                        data-parsley-required="true"
+                        data-parsley-required-message="Please Enter First Name" data-parsley-pattern-message="First Name Must Be Alphabetic" data-parsley-pattern="/^[a-zA-Z ]*$/"
+                        data-parsley-group="block-0"
+                        type="text"
+                        class="first_name form-control hero-input ignoreStep3"
+                        placeholder="First Name" >
+                         <i class="validate success fa fa-check-circle"></i>
+                        <i class="validate error fa fa-times-circle"></i>
+                      </div>
+                      <div class="form-group col-lg-10 col-12">
+                        <label>Last Name*</label>
+                        <input
+                        name="last_name"
+                        required
+                        data-parsley-required="true"
+                        data-parsley-required-message="Please Enter Last Name"
+                        data-parsley-group="block-0"
+                        data-parsley-pattern-message="Last Name Must Be Alphabetic" data-parsley-pattern="/^[a-zA-Z ]*$/"
+                        type="text"
+                        class="form-control ignoreStep3 last_name"
+                        placeholder="Surname" >
+                         <i class="validate success fa fa-check-circle"></i>
+                        <i class="validate error fa fa-times-circle"></i>
+                      </div>
+                    </div>
+                  </div>
+                  <div  class="tab display-none" id="slide2">
+                    <div class="row justify-content-center mx-0 w-100">
+                      <!-- postcode -->
+                      <div class="form-group col-lg-10 col-12">
+                        <label>Postcode*</label>
+                        <div class="w-100 position-relative">
+                          <input
+                          name="postcode"
+                          required
+                          data-parsley-required="true"
+                          data-parsley-required-message="Please Enter Postcode"
+                          data-parsley-group="block-1"
+                          data-parsley-validapipostcode
+                          type="text"
+                          class="postcode form-control ignoreStep4 approve"
+                          placeholder="Postcode">
+                          <button type="button" class="btn btn-success rounded-right left-0r findAddress-btn">Find Address</button>
+                        </div>
+                        <div class="error-checkbox"></div>
+                      </div>
+
+
+                      <div class="form-group col-lg-10 col-12 property-div display-none">
+                        <label>Your Property*</label>
+                        <input type="hidden" name="towncity" class="towncity" >
+                        <input type="hidden" name="street1" class="street1" >
+                        <input type="hidden" name="county" class="county" >
+                        <input type="hidden" name="houseNumber" class="houseNumber" >
+                        <input type="hidden" name="street2" class="street2" >
+                        <input type="hidden" name="building" class="building" >
+                        <select
+                          id="property"
+                          name="property"
+                          class="property w-100 form-control ignoreStep4 text-dark"
+                          data-parsley-required="true"
+                          data-parsley-required-message="Please Select Your property"
+                          data-parsley-group="block-1"
+                          required>
+                        </select>
+                      </div>
+
+                      <div class="form-group col-lg-10 col-12 address-div display-none">
+                        <label class="d-flex justify-content-start  text-black f-25 mb-2">
+                          First Line Of Address
+                        </label>
+                        <input
+                          placeholder="Address"
+                          id="address"
+                          name="address"
+                          class="address form-control ignoreStep4"
+                          data-parsley-required="true"
+                          data-parsley-required-message="Please Enter Your Address"
+                          data-parsley-group="block-1"
+                          type="text"
+                          >
+                      </div>
+                    </div>
+                  </div>
+                  <div  class="tab phoneEmailTab display-none" id="slide3">
+                    <div class="row justify-content-center mx-0 w-100">
+                      <div class="input-group mb-3 col-lg-10 phone-div">
+                        <label class="w-100">Mobile Number*</label>
+                        <input
+                        type="number"
+                        name="telephone"
+                        required
+                        data-parsley-required="true"
+                        data-parsley-required-message="Please Enter Valid Uk Phone Number"
+                        data-parsley-type="number"
+                        data-parsley-group="block-2"
+                        data-parsley-validphone
+                        class="form-control phone telephone"
+                        placeholder="Mobile Number">
+                        <div class="input-group-append">
+                          <span class="input-group-text">
+                             <%= image_tag("privacy.png", class: "privcy pull-right", alt: "Privacy image" ) %>
+                          </span>
+                        </div>
+                      </div>
+                      <div class="input-group mb-3 col-lg-10 email-div">
+                        <label class="w-100">Email Address*</label>
+                        <div class="clearfix"></div>
+                        <input
+                        type="email"
+                        name="email"
+                        required
+                        data-parsley-required="true"
+                        data-parsley-required-message="Please Enter Valid Email Address"
+                        data-parsley-type="email"
+                        data-parsley-type-message="Please Enter Valid Email Address"
+                        data-parsley-group="block-2"
+                        data-parsley-validemail
+                        value=""
+                        class="form-control nme_inpu email"
+                        placeholder="Email Address">
+                        <div class="input-group-append">
+                          <span class="input-group-text">
+                            <%= image_tag("privacy.png", class: "privcy pull-right", alt: "Privacy image") %>
+                          </span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-lg-10 col-12 btn-div justify-content-center">
+                    <div class="row justify-content-center mx-0 w-100">
+                      <div class="col-lg-6 col-md-6 col-sm-6 col-6">
+                        <button id="btn-back" type="button" class="btn btn-primary btn-lg o-btn">Back</button>
+                      </div>
+                      <div class="col-lg-6 col-md-6 col-sm-6 col-6 text-center">
+                        <i class="lodr but_loader display-none position-absolute">
+                          <%= image_tag("button-ajax-loader.gif", alt: "loader image") %>
+                        </i>
+                        <button id="btn-continue" type="button" class="btn btn-success btn-lg o-btn nextStep" >Continue</button>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="lds-dual-ring position-absolute d-none load">
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

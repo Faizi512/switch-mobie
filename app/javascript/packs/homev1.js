@@ -1,6 +1,6 @@
 import Common from "./common.js"
 import _ from 'lodash'
-class Home extends Common {
+class Homev1 extends Common {
   constructor() {
     super();
     var CI = this;
@@ -89,6 +89,14 @@ class Home extends Common {
     }, 2000)
   }
 
+  showTab(n=0) {
+    var tabs = $(".tab");
+    if (!tabs[n]) return;
+    tabs[n].style.display = "block";
+    $(".btn-success").removeClass("in-progress")
+    $(".postcode").focus();
+  }
+
   nextStep(n) {
     this.showCircle()
     var CI = this;
@@ -96,10 +104,12 @@ class Home extends Common {
       group: 'block-' + this.currentTab
     }).done(() =>{
       var tabs = $(".tab");
-      tabs[CI.currentTab].style.display = "none";
+      if (CI.currentTab != tabs.length-1) {
+        tabs[CI.currentTab].style.display = "none";
+        CI.currentTab = CI.currentTab + n;
+        CI.showTab(CI.currentTab);
+      }
       CI.handleBadCustomerForm()
-      CI.currentTab = CI.currentTab + n;
-      CI.showTab(CI.currentTab);
     })
   }
 
@@ -125,10 +135,7 @@ class Home extends Common {
       console.log("Postdata: "+new Date())
       this.submitLead(data, this.details.camp_id)
     }
-
-    $( "#btn-continue").hide()
-    $( "#btn-back").hide()
-    $( ".progress").hide()
+    $(".load").removeClass("d-none");
     $(".postcode_holder").html($(".postcode").val() || this.getUrlParameter("postcode")  || "");
     // Form Submisson
     this.updateFacebookAudience(data)
@@ -198,4 +205,4 @@ class Home extends Common {
   }
 
 }
-export default new Home();
+export default new Homev1();
