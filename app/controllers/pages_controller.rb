@@ -7,6 +7,10 @@ class PagesController < ApplicationController
     @bc = isbadCustomer(params[:keyword]) || params[:bc] == "yes"
 	end
 
+  def homev1
+    home_deals
+  end
+
 	def show
     get_deals_data( params[:page_name] )
     respond_to do |format|
@@ -14,6 +18,7 @@ class PagesController < ApplicationController
       format.js {}
     end
 	end
+
   def data_share
     response.headers.except! 'X-Frame-Options'
     render layout: 'data_share'

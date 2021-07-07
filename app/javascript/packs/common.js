@@ -265,7 +265,6 @@ class Common {
        return $.ajax({
           url:`https://api.getAddress.io/find/${$(".postcode").val()}?api-key=NjGHtzEyk0eZ1VfXCKpWIw25787&expand=true`,
           success: function(json){
-
             if (json.addresses.length > 0) {
               var result = json.addresses
               var adresses = []
@@ -371,6 +370,7 @@ class Common {
       progress.style.width = (num*33)+"%";
     }
   }
+
   backStep(n){
     if (this.currentTab > 0) {
       $('.nextStep').prop('disabled', false);

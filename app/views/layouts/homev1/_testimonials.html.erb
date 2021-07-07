@@ -1,0 +1,32 @@
+<section class="bg-light pb-4" id="testimonials">
+  <div class="container">
+    <div class="row p-0 mx-0 w-100 bg-white shadow-custom py-4 justify-content-around">
+      <div class="col-12 d-md-flex text-center justify-content-center align-items-center mb-3 header">
+        <div class="position-relative">
+          <h3 class="mb-0 bg-blue text-white py-2 px-4 rounded position-relative">
+            Reviews
+          </h3>
+          <span class="d-none d-md-block"><i class="fas fa-square-full text-blue position-absolute pointer"></i></span>
+        </div>
+        <%= image_tag('stars-5.svg', class: 'ml-4 d-none d-md-block',height: '32px') %>
+      </div>
+      <% @testimonials.each do |testimonial| %>
+        <div class="col-md-3 col-12 my-3">
+          <div class="bg-gray p-4 position-relative comment mb-2">
+            <em><%= testimonial[:comment] %></em>
+            <i class="fas fa-square-full text-gray position-absolute pointer"></i>
+          </div>
+          <div class="d-flex pt-4 align-items-center">
+            <div class="testimonial-img rounded-circle overflow-hidden">
+              <%= image_tag(testimonial[:image]) %>
+            </div>
+            <div class="details ml-3">
+              <p class="mb-0 fw-500 name fs-14 fw-500"><%= testimonial[:name] %></p>
+              <p class="mb-0 time text-muted fs-10"><%= testimonial[:time] %></p>
+            </div>
+          </div>
+        </div>
+      <% end %>
+    </div>
+  </div>
+</section>

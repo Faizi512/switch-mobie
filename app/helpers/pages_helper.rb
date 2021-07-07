@@ -216,6 +216,87 @@ module PagesHelper
     }.to_json
   end
 
+  def home_deals
+    @details = {
+      camp_id: 'MEGA-MOBILE-DEALS',
+      success_url: 'https://mtrk5.co.uk/?a=14118&c=33110',
+      bad_success_url: 'https://mtrk5.co.uk/?a=14118&c=33110',
+      form_name: 'Switch-Mobile',
+      optin_url: '/new',
+      sid: nil,
+      ssid: nil,
+      source:'google-home-page',
+      quick_submit: false,
+      submit_on_load: false,
+      uu_id: @cookie_uuid,
+      token: @randon_token,
+      ipaddress: request.remote_ip,
+    }.to_json
+
+    @featured_deals = [
+      {
+        name: "iPhone 12",
+        image: "iphone_12_black.png",
+        url:"/success",
+        deposit: "£0"
+      },
+      {
+        name: "iPhone 11 Pro Max",
+        image: "phone/1iphone-11-pro-max.png",
+        url:"/success",
+        deposit: "£0"
+      }
+    ]
+
+    @phones = [
+      {
+        name: "iPhone 12",
+        image: "iphone_12_black.png"
+      },
+      {
+        name: "iPhone 11",
+        image: "phone/iphone11.png",
+      },
+      {
+        name: "Galaxy S20",
+        image: "phone/samsung-galaxy-s20-plus.png"
+      },
+      {
+        name: "iPhone 11",
+        image: "phone/iphone11.png"
+      },
+      {
+        name: "iPhone XS",
+        image: "phone/iphonexs.png"
+      },
+      {
+        name: "Galaxy S10",
+        image: "phone/samsungs10.png"
+      }
+    ]
+
+    @testimonials = [
+      {
+        name: 'Natasha M',
+        comment: 'Brilliant service, ordered my phone and it arrived the next day. Absolutely delighted!',
+        time: 'March 14, 2021',
+        image: 'cmnt1.png'
+      },
+      {
+        name: 'Lee M',
+        comment: 'Really helpful staff, got an amazing deal on my SIM only plan, saving over £15 per month now',
+        time: 'March 28, 2021',
+        image: 'cmnt2.png'
+      },
+      {
+        name: 'Michael B',
+        comment: 'Got the latest iPhone with no upfront payment - really good offer.',
+        time: 'April 2, 2021',
+        image: 'cmnt3.png'
+      }
+    ]
+  end
+
   def get_deals_data url_name
     send(url_name.gsub('-', '_')) rescue home
 
