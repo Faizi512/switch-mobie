@@ -1,66 +1,44 @@
-<section class="bg-light py-md-5" id="deals-section">
-  <div class="container">
-    <div class="row mx-0 p-0 justify-content-between">
-      <% @featured_deals.each_with_index do |deal, index| %>
-        <div class="col-md-6 <% if index== 0 %>pr-md-3 <% else %>pl-md-3<% end %> px-0 mt-5 mt-md-0">
-          <div class="featured-deal shadow-custom bg-white px-4 pt-5 pb-4 position-relative overflow-hidden">
-            <div class="deal-ribbon bg-purple position-absolute text-center pb-2 pt-5 px-5">
-              <h6 class="text-uppercase mb-0 text-white">DEAL OF<br/> THE MONTH</h6>
-            </div>
-            <div class="title">
-              <h4 class="mb-3 text-blue"><%= deal[:name] %></h4>
-            </div>
-            <div class="row w-100 px-0 py-3 mx-0">
-              <div class="col-4 p-0">
-                <div class="featured-deal-img">
-                  <%= image_tag(deal[:image], class: "h-100"  ) %>
-                </div>
-              </div>
-              <div class="col-8 pl-3 p-md-0">
-                <div class="deal-features d-md-flex mb-md-3">
-                  <ul class="list-unstyled col-md-6 p-0 m-0">
-                    <li class="mb-1"><i class="fa fa-check mr-1 text-purple"></i>Unlimited Call</li>
-                    <li class="mb-1"><i class="fa fa-check mr-1 text-purple"></i>Unlimited Sms</li>
-                  </ul>
-                  <ul class="list-unstyled col-md-6 p-0 m-0">
-                    <li class="mb-1"><i class="fa fa-check mr-1 text-purple"></i>Unlimited Data</li>
-                    <li class="mb-1"><i class="fa fa-check mr-1 text-purple"></i>Next Day Delivery</li>
-                  </ul>
-                </div>
-                <div class="d-md-block d-none">
-                  <h2 class="mb-3">
-                    <%= deal[:deposit] %><span class="fs-18"> Upfront / per month</span>
-                  </h2>
-                </div>
-              </div>
-            </div>
-            <div class="d-md-none d-block">
-              <h2 class="mb-3">
-                <%= deal[:deposit] %><span class="fs-18"> Upfront / per month</span>
-              </h2>
-            </div>
-            <button onClick="document.getElementById('banner-section').scrollIntoView();"  class="shadow fw-500 btn w-100 bg-purple text-uppercase rounded-pill text-white">Get Deal</button>
-          </div>
-        </div>
-      <% end %>
-    </div>
+<section id="deals">
+  <div class="col-md-12 col-10 mx-auto py-5">
+    <h3 class="mb-0 fw-500 text-center">Most popular phones of the month</h3>
   </div>
-  <div class="container pt-5">
-    <div class="row w-100 mx-0 bg-white py-4 shadow-custom">
-      <div class="col-12 text-center pb-4">
-        <h3 class="text-blue">Choose Your Phone</h3>
-      </div>
-      <% @phones.each do |phone| %>
-        <div class="col-md-2 col-6 text-center choose-phones py-3">
-          <div class="phone-img">
-            <%= image_tag(phone[:image], class: "w-100 h-100" ) %>
+  <div class="wrapper">
+    <div class="row p-md-5 p-0 mx-0 w-100">
+      <div class="col-3 d-lg-block d-none border-right">
+        <div class="border sticky-top sticky-banner">
+          <div class="phone-deal p-5">
+            <h3 class="text-white">POPULAR CONTRACT DEALS</h3>
           </div>
-          <button onClick="document.getElementById('banner-section').scrollIntoView();" class="btn btn-sm px-2 mt-3 bg-blue rounded-pill text-white">
-            <%= phone[:name] %>
-          </button>
+          <div class="phone-img position-absolute">
+            <%= image_tag( 'iphonexs.png', width: '180px')%>
+          </div>
+          <div class="py-4 text-center">
+            <button class="btn rounded-pill shadow fw-bold text-white text-uppercase px-3 deal-banner-btn open-form">Check Now</button>
+          </div>
         </div>
-      <% end %>
+      </div>
+      <div class="col-lg-9">
+        <div class="row p-0 mx-0 w-100">
+          <% @phones.each do |phone| %>
+            <div class="col-md-4 col-6 mb-5">
+              <h5 class="deal-phone-name text-center mb-3 fw-bold">
+                <%= phone[:name] %>
+              </h5>
+              <div class="deal-phone-img mb-3">
+                <%= image_tag(phone[:image], class: "w-100 h-100" ) %>
+              </div>
+              <div class="deal-phone-description text-center">
+                <h5 class="mb-0">£0.00</h5>
+                <p class="text-muted fs-14 mb-0">Upfront/<span class="fs-12">per month</span></p>
+                <button class="btn btn-sm px-3 mt-3 rounded-pill text-blue bg-white col-md-8 deal-phone-button open-form">
+                  Get Deal
+                </button>
+              </div>
+            </div>
+          <% end %>
+        </div>
       </div>
     </div>
   </div>
 </section>
+
