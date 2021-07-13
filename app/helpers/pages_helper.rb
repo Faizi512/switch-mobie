@@ -262,38 +262,172 @@ module PagesHelper
         image: "phone/samsung-galaxy-s20-plus.png"
       },
       {
-        name: "iPhone 11",
-        image: "phone/iphone11.png"
-      },
-      {
         name: "iPhone XS",
         image: "phone/iphonexs.png"
       },
       {
         name: "Galaxy S10",
         image: "phone/samsungs10.png"
+      },
+      {
+        name: "iPhone 11 Pro",
+        image: "phone/iphone11pro.png"
+      },
+      {
+        name: "Note 20 5G",
+        image: "phone/note-20.jpg"
+      },
+      {
+        name: "Samsung A20",
+        image: "phone/samsung-a20.png"
+      },
+      {
+        name: "Galaxy S20 5G",
+        image: "phone/galaxy-s20-5g.png"
+      },
+      {
+        name: "iPhone SE 128GB",
+        image: "phone/iphonese.jpg"
+      },
+      {
+        name: "S20 Ultra 5G",
+        image: "phone/samsung-galaxy-s20-ultra-black.png"
+      },
+      {
+        name: "Huawei P30",
+        image: "phone/huaweip30.png"
       }
     ]
 
     @testimonials = [
       {
-        name: 'Natasha M',
+        name: 'Sophie',
         comment: 'Brilliant service, ordered my phone and it arrived the next day. Absolutely delighted!',
-        time: 'March 14, 2021',
-        image: 'cmnt1.png'
+        date: 'May 21, 2021',
+        image: 'comment1.jpg'
       },
       {
-        name: 'Lee M',
-        comment: 'Really helpful staff, got an amazing deal on my SIM only plan, saving over £15 per month now',
-        time: 'March 28, 2021',
-        image: 'cmnt2.png'
-      },
-      {
-        name: 'Michael B',
+        name: 'John',
         comment: 'Got the latest iPhone with no upfront payment - really good offer.',
-        time: 'April 2, 2021',
-        image: 'cmnt3.png'
+        date: 'Jan 04, 2021',
+        image: 'comment3.jpg'
+      },
+      {
+        name: 'Elizabeth',
+        comment: 'Really helpful staff, got an amazing deal on my SIM only plan, saving over £15 per month now',
+        date: 'March 03, 2021',
+        image: 'comment2.jpg'
       }
+    ]
+    @partners = [
+      {
+        class_id: "o2",
+        name: "O2",
+      },
+      {
+        class_id: "ee-limited",
+        name: "EE limited",
+      },
+      {
+        class_id: "vodafone",
+        name: "Vodafone",
+      },
+      {
+        class_id: "mobile-deal",
+        name: "Mobile Deal",
+      },
+      {
+        class_id: "loanable",
+        name: "Loanable",
+      },
+      {
+        class_id: "voxi",
+        name: "Voxi",
+      },
+      {
+        class_id: "monetise-media",
+        name: "Monetise Media",
+      },
+      {
+        class_id: "bill-buddy",
+        name: "Bill Buddy",
+      },
+      {
+        class_id: "lead-365",
+        name: "Lead 365",
+      },
+      {
+        class_id: "scores-matter",
+        name: "Scores Matter",
+      },
+      {
+        class_id: "bill-switchers",
+        name: "Bill Switchers",
+      },
+      {
+        class_id: "sunshine-mobile",
+        name: "Sunshine Mobile",
+      },
+      {
+        class_id: "experian",
+        name: "Experian",
+      },
+      {
+        class_id: "flex-mobile",
+        name: "Flex Mobile Limited",
+      },
+      {
+        class_id: "flexible-group",
+        name: "Flexible group limited",
+      },
+      {
+        class_id: "go-groopie",
+        name: "Go Groopie",
+      },
+      {
+        class_id: "discount-experts",
+        name: "Discount Experts",
+      },
+      {
+        class_id: "breeze-mobile",
+        name: "Breeze Mobile",
+      },
+      {
+        class_id: "get-a-loan-today",
+        name: "Get A Loan Today",
+      },
+      {
+        class_id: "my-debt",
+        name: "Help to clear my debt",
+      },
+      {
+        class_id: "sky",
+        name: "SKY",
+      },
+      {
+        class_id: "yes-catalogue",
+        name: "Yes Catalogue",
+      },
+      {
+        class_id: "accepted-mobile",
+        name: "Accepted Mobile",
+      },
+      {
+        class_id: "flava",
+        name: "Flava",
+      },
+      {
+        class_id: "utilita-mobile",
+        name: "Utilita Mobile",
+      },
+      {
+        class_id: "utilita-broadband",
+        name: "Utilita Broadband",
+      },
+      {
+        class_id: "utilita-energy",
+        name: "Utilita Energy",
+      },
     ]
   end
 

@@ -291,7 +291,7 @@ class Common {
                   `)
                 }
                 $('#property').html(adresses)
-                 $(".address-div").remove();
+                $(".address-div").remove();
                 $(".property-div").show()
               return true
             }else{

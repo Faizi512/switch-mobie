@@ -10,20 +10,77 @@ class Homev1 extends Common {
     this.fillform()
     this.popupTerms()
     this.popupPrivacy()
-    this.showTab(this.currentTab);
     this.showClock()
     this.togglePopUp()
     this.toggleCheckBox()
+    this.currentState = 0
+    var current_fs, next_fs, previous_fs;
 
     $('.carousel').carousel({
       interval: 2000
     })
 
+    // Next button
+    $(".next-button").click(function(){
+      $('#dealform').parsley().whenValidate({
+        group: 'block-' + CI.currentState
+      }).done(() =>{
+        current_fs = $(this).parent().parent();
+        next_fs = $(this).parent().parent().next();
+        $(".prev").css({ 'display' : 'block' });
+        $(current_fs).removeClass("show");
+        $(next_fs).addClass("show");
+        $("#progressbar li").eq($(".card2").index(next_fs)).addClass("active");
+        current_fs.animate({}, {
+          step: function() {
+            current_fs.css({
+              'display': 'none',
+              'position': 'relative'
+            });
+            next_fs.css({
+              'display': 'block'
+            });
+          }
+        });
+        if (CI.currentState == 2) {
+          if (CI.isPhone == true && CI.isEmail == true){
+            CI.postData()
+          }else{
+            $('#dealform').parsley().validate()
+          }
+          return true
+        }
+        CI.currentState += 1
+        CI.handleBadCustomerForm()
+      })
+    });
+
+    // Previous button
+    $(".prev").click(function(){
+      CI.currentState -= 1
+      current_fs = $(this).parent().parent();
+      previous_fs = $(this).parent().parent().prev();
+      $(current_fs).removeClass("show");
+      $(previous_fs).addClass("show");
+      $(".prev").css({ 'display' : 'block' });
+      if($(".show").hasClass("first-screen")) {
+        $(".prev").css({ 'display' : 'none' });
+      }
+      $("#progressbar li").eq($(".card2").index(current_fs)).removeClass("active");
+      current_fs.animate({}, {
+        step: function() {
+          current_fs.css({
+            'display': 'none',
+            'position': 'relative'
+          });
+          previous_fs.css({
+            'display': 'block'
+          });
+        }
+      });
+    });
+
     $( ".property" ).change(function() {
-      var tabs = $(".tab");
-      tabs[CI.currentTab].style.display = "none";
-      CI.currentTab = CI.currentTab + 1;
-      CI.showTab(CI.currentTab);
       $('.towncity').val($(this).find("option:selected").data("city"))
       $('.street1').val($(this).find("option:selected").data("street"))
       $('.county').val($(this).find("option:selected").data("province"))
@@ -37,14 +94,6 @@ class Homev1 extends Common {
       $(".tab").removeClass("in-progress")
     });
 
-    $( "#btn-continue" ).click(() => {
-      CI.nextStep(1)
-    });
-
-    $( "#btn-back" ).click(function() {
-      CI.backStep(-1)
-    });
-
     $(document).on("click", '.open-form', function() {
       var user = localStorage.getItem("user_data")
       if (user != null) {
@@ -52,7 +101,6 @@ class Homev1 extends Common {
         CI.postMMDData()
         event.stopPropagation()
       } else {
-        CI.phoneName = $(this).find('input').val()
         $('#deal-form-modal').modal('show')
         $('.clock').hide()
         event.stopPropagation();
@@ -87,30 +135,6 @@ class Homev1 extends Common {
     setTimeout(function(){
       window.location = "/success2"
     }, 2000)
-  }
-
-  showTab(n=0) {
-    var tabs = $(".tab");
-    if (!tabs[n]) return;
-    tabs[n].style.display = "block";
-    $(".btn-success").removeClass("in-progress")
-    $(".postcode").focus();
-  }
-
-  nextStep(n) {
-    this.showCircle()
-    var CI = this;
-    $('#dealform').parsley().whenValidate({
-      group: 'block-' + this.currentTab
-    }).done(() =>{
-      var tabs = $(".tab");
-      if (CI.currentTab != tabs.length-1) {
-        tabs[CI.currentTab].style.display = "none";
-        CI.currentTab = CI.currentTab + n;
-        CI.showTab(CI.currentTab);
-      }
-      CI.handleBadCustomerForm()
-    })
   }
 
   mmdLead(){
