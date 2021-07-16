@@ -1,63 +1,51 @@
-$primary-color: #1d39f2;
-$secondary-color: #2b3f82;
 $red-color: #ff0044;
 
-#new-home-page{
-  .bg-gradient{
-    background-image: linear-gradient(104deg, #273f83 50%, #fa0e44d6 100%);
-  }
-  .text-danger{
-    color: $red-color !important;
-  }
-  .bg-danger{
-    background-color: $red-color !important;
-  }
-  .bg-gray{
-    background-color: #f5f6f8 !important;
-  }
-  .text-gray{
-    color: #f5f6f8 !important;
-  }
-  .text-blue{
-    color: $primary-color !important;
-  }
-  .text-purple{
-    color: $secondary-color;
-  }
-  .bg-blue{
-    background-color: $primary-color !important;
-  }
-  .bg-purple{
-    background-color: $secondary-color !important;
-  }
-  .text-light-500{
-    color: #BFBFBF;
-  }
-  .wrapper{
-    width: 100%;
-    margin: 0 auto;
-    max-width: 1380px;
-  }
-  .shadow-custom{
-    box-shadow: 0 1px 2px rgba(60, 64, 67, 0.3), 0 1px 3px 1px rgba(60, 64, 67, 0.15) !important;
-  }
+.wrapper{
+  width: 100%;
+  margin: 0 auto;
+  max-width: 1380px;
+}
 
-  #main-banner{
-    .banner-button{
-      background-color: $red-color;
-      box-shadow: 0 0.5rem 1rem rgba(255, 0, 68 , 0.33) !important;
-    }
-    .main-banner-img{
-      height: 400px;
-      img{
-        object-fit: contain;
+#new-social-page{
+  #banner{
+    .banner-content{
+      background-color: #E0F4FF !important;
+      .banner-text{
+        border: 2px solid black;
+        .upper-text, .lower-text{
+          white-space: nowrap;
+          background-color: #E0F4FF !important;
+          left: 50%;
+        }
+        .upper-text{
+          font-size: 1.5rem;
+          font-weight: 500;
+          transform: translate(-50%, -50%);
+          top: 0;
+        }
+        .lower-text{
+          font-size: 18px;
+          transform: translate(-50%, 50%);
+          bottom: 0;
+        }
+        h2{
+          font-size: 52px;
+        }
       }
-      @media screen and (max-width: 575px){
-        height: 365px;
+      .banner-image{
+        @media screen and (min-width: 575px){
+          height: 350px;
+        }
+        @media screen and (max-width: 575px){
+          img{
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+          }
+        }
       }
     }
   }
-
   #network-logos{
     .network-icon{
       height: 45px;
@@ -67,134 +55,52 @@ $red-color: #ff0044;
       }
     }
   }
-
-  #deals{
-    .phone-deal{
-      height: 450px;
-      background-image: linear-gradient(45deg, #273f83 30%, #fa0e44d6 100%);
-      clip-path:polygon(0% 0%, 300% 0%, 0% 100%, 0% 100%);
+  #cta{
+    background-image: url('grab.jpg');
+    background-size: cover;
+    @media screen and (max-width: 575px){
+      background-size: cover;
+      background-position: 50% 24%;
     }
-    .phone-img{
-      left: 50%;
-      top: 55%;
-      transform: translate(-50%, -50%);
+    .cta-img{
+      height: 350px;
     }
-    .deal-banner-btn{
-      background-color: $red-color;
-      box-shadow: 0 0.5rem 1rem rgba(255, 0, 68 , 0.33) !important;
-    }
-    .deal-phone-button{
-      border: 2px solid $primary-color;
-      &:hover{
-        background-color: $primary-color !important;
-        color: #fff !important;
-      }
-    }
-    .deal-phone-name{
-      @media screen and (max-width: 575px){
-        height: 40px;
-      }
-    }
-    .sticky-banner{
-      top: 20px;
-    }
-    .deal-phone-img{
-      height: 250px;
-      img{
-        object-fit: contain;
+  }
+  #usp-section{
+    @media screen and (max-width: 575px){
+      h4{
+        font-size: 1.3rem !important;
       }
     }
   }
-
-  #testimonials{
-    background-image: linear-gradient(135deg, #fa0e44d6 0%, #273f83 100%);
-    .comments{
-      transition: 0.3s all ease-in-out;
-      background-color: rgba(255,255,255,0.18);
-      .description{
-        height: 90px;
-        @media screen and (max-width: 575px){
-          height: 110px;
-        }
-        @media (min-width: 575px) and (max-width: 768px){
-          height: 164px;
-        }
-        @media (min-width: 769px) and (max-width: 992px){
-          height: 156px;
-        }
-        @media (min-width: 992px) and (max-width: 1200px){
-          height: 126px;
-        }
-      }
-      .user-image{
-        top:0;
-        transform: translateY(-50%);
-        border-width: 2px!important;
-        height: 80px;
-        width: 80px;
+  #services{
+    background-color: #fef2cc !important;
+    .service-box{
+      border-radius: 35px;
+      .service-img{
+        left: 50%;
+        bottom: 0%;
+        transform: translate(-50%, 50%);
+        height: 140px;
+        width: 140px;
         img{
-          object-fit: cover;
+          object-fit:contain;
         }
       }
-      .quote-img{
-        font-size: 52px;
-        right: 0;
-        bottom: -14px;
-        opacity: 0.8;
-        @media (min-width: 992px) and (max-width: 1200px){
-          font-size: 42px;
-        }
-         @media (min-width: 768px) and (max-width: 992px){
-          font-size: 32px;
-          bottom: -6px;
-        }
+      @media (min-width: 575px) and (min-width: 575px){
+        height: 420px;
       }
-      &:hover{
-        transform: scale(1.02);
-        box-shadow: 0 16px 32px rgba(60, 64, 67, 0.3), 0 1px 3px 1px rgba(60, 64, 67, 0.15) !important;
-        cursor: pointer;
+      @media screen and (max-width: 575px){
+        padding-bottom: 5rem !important;
+      }
+    }
+    .service-btn{
+      padding-top: 5.5rem!important;
+      button{
+        border: 2px solid #000;
       }
     }
   }
-
-  #services-section{
-    .featured-box{
-      transition: 0.6s all ease-in-out;
-      .featured-inner{
-        border-color: transparent !important;
-      }
-      .featured-description{
-        color: gray;
-      }
-      .featured-box-border{
-        top: 0;
-        left: 0;
-        right: 0;
-        bottom: 0;
-        transform: scale(0);
-        transition: 0.5s all ease-in-out;
-      }
-      &:hover{
-        .featured-inner, h6{
-          color: #fff !important;
-          .featured-description{
-            color: #fff !important;
-            .arrow-icon{
-              transform: rotate(360deg);
-              color: #fff !important;
-            }
-          }
-        }
-        .featured-box-border{
-          transform: scale(1);
-        }
-        cursor: pointer;
-        transform: translateY(-10px);
-        background-color: #5a3c7b;
-      }
-    }
-  }
-
   #multi-step-form{
     .onoffswitch-label, input:checked ~ label{
       border-color: #fa0e44 !important;
