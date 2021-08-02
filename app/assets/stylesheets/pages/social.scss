@@ -1,4 +1,4 @@
-$red-color: #ff0044;
+$red-color: #5dbde6;
 
 .wrapper{
   width: 100%;
@@ -46,6 +46,67 @@ $red-color: #ff0044;
       }
     }
   }
+  .btn-round{
+    border-radius: 50px !important;
+    color: #5dbde6 !important;
+    background: aliceblue !important;
+    box-shadow:  0 0.5rem 1rem #0000002d !important;
+  }
+  .btn-round:hover{
+    box-shadow:  0 1rem 3rem #0000002d !important;
+  }
+
+  #testimonials{
+    background-color: white;
+    .comments{
+      transition: 0.3s all ease-in-out;
+      background-color: #eaf8ff;
+      .description{
+        height: 90px;
+        @media screen and (max-width: 575px){
+          height: 110px;
+        }
+        @media (min-width: 575px) and (max-width: 768px){
+          height: 164px;
+        }
+        @media (min-width: 769px) and (max-width: 992px){
+          height: 156px;
+        }
+        @media (min-width: 992px) and (max-width: 1200px){
+          height: 126px;
+        }
+      }
+      .user-image{
+        top:0;
+        transform: translateY(-50%);
+        border-width: 2px!important;
+        height: 80px;
+        width: 80px;
+        img{
+          object-fit: cover;
+        }
+      }
+      .quote-img{
+        font-size: 52px;
+        right: 0;
+        bottom: -14px;
+        opacity: 0.8;
+        color: #67b8d9;
+        @media (min-width: 992px) and (max-width: 1200px){
+          font-size: 42px;
+        }
+         @media (min-width: 768px) and (max-width: 992px){
+          font-size: 32px;
+          bottom: -6px;
+        }
+      }
+      &:hover{
+        transform: scale(1.02);
+        box-shadow: 0 16px 32px #6e92ae4d, 0 1px 3px 1px #9ec6e466 !important;
+        cursor: pointer;
+      }
+    }
+  }
   #network-logos{
     .network-icon{
       height: 45px;
@@ -67,6 +128,9 @@ $red-color: #ff0044;
     }
   }
   #usp-section{
+    .fa-check-square{
+      color: #47a9d2;
+    }
     @media screen and (max-width: 575px){
       h4{
         font-size: 1.3rem !important;
@@ -74,12 +138,12 @@ $red-color: #ff0044;
     }
   }
   #services{
-    background-color: #fef2cc !important;
+    background-color: #82c5e1 !important;
     .service-box{
       border-radius: 35px;
       .service-img{
         left: 50%;
-        bottom: 0%;
+        top: -38%;
         transform: translate(-50%, 50%);
         height: 140px;
         width: 140px;
@@ -95,7 +159,7 @@ $red-color: #ff0044;
       }
     }
     .service-btn{
-      padding-top: 5.5rem!important;
+      
       button{
         border: 2px solid #000;
       }
@@ -103,12 +167,12 @@ $red-color: #ff0044;
   }
   #multi-step-form{
     .onoffswitch-label, input:checked ~ label{
-      border-color: #fa0e44 !important;
+      border-color: #5dbde6 !important;
     }
     .onoffswitch-inner:before {
       content: "Yes";
       padding-left: 10px;
-      background-color: #fa0e44;
+      background-color: #5dbde6;
       color: #FFFFFF;
       text-align: left;
     }
@@ -359,6 +423,11 @@ $red-color: #ff0044;
       #progressbar {
         left: -25px
       }
+    }
+  }
+  @media screen and (max-width: 520px) {
+    .fs-sm-20{
+      font-size: 20px !important;
     }
   }
 }

@@ -568,6 +568,27 @@ module PagesHelper
       ipaddress: request.remote_ip,
     }.to_json
 
+    @testimonials = [
+      {
+        name: 'Jade',
+        comment: 'So far so good. Everything is working the way it should. Would definitely recommend',
+        date: 'Jan 21, 2021',
+        image: 'coment1.png'
+      },
+      {
+        name: 'Emma',
+        comment: 'Great service, intuitive menues, great delivery time.',
+        date: 'March 04, 2021',
+        image: 'coment2.png'
+      },
+      {
+        name: 'Amelia',
+        comment: 'Fast delivery and good knowledge, wait for good discount promo codes and it gets delivered fast with tracking.',
+        date: 'April 03, 2021',
+        image: 'coment3.png'
+      }
+    ]
+
     partners_list
   end
 
