@@ -319,116 +319,7 @@ module PagesHelper
         image: 'comment2.jpg'
       }
     ]
-    @partners = [
-      {
-        class_id: "o2",
-        name: "O2",
-      },
-      {
-        class_id: "ee-limited",
-        name: "EE limited",
-      },
-      {
-        class_id: "vodafone",
-        name: "Vodafone",
-      },
-      {
-        class_id: "mobile-deal",
-        name: "Mobile Deal",
-      },
-      {
-        class_id: "loanable",
-        name: "Loanable",
-      },
-      {
-        class_id: "voxi",
-        name: "Voxi",
-      },
-      {
-        class_id: "monetise-media",
-        name: "Monetise Media",
-      },
-      {
-        class_id: "bill-buddy",
-        name: "Bill Buddy",
-      },
-      {
-        class_id: "lead-365",
-        name: "Lead 365",
-      },
-      {
-        class_id: "scores-matter",
-        name: "Scores Matter",
-      },
-      {
-        class_id: "bill-switchers",
-        name: "Bill Switchers",
-      },
-      {
-        class_id: "sunshine-mobile",
-        name: "Sunshine Mobile",
-      },
-      {
-        class_id: "experian",
-        name: "Experian",
-      },
-      {
-        class_id: "flex-mobile",
-        name: "Flex Mobile Limited",
-      },
-      {
-        class_id: "flexible-group",
-        name: "Flexible group limited",
-      },
-      {
-        class_id: "go-groopie",
-        name: "Go Groopie",
-      },
-      {
-        class_id: "discount-experts",
-        name: "Discount Experts",
-      },
-      {
-        class_id: "breeze-mobile",
-        name: "Breeze Mobile",
-      },
-      {
-        class_id: "get-a-loan-today",
-        name: "Get A Loan Today",
-      },
-      {
-        class_id: "my-debt",
-        name: "Help to clear my debt",
-      },
-      {
-        class_id: "sky",
-        name: "SKY",
-      },
-      {
-        class_id: "yes-catalogue",
-        name: "Yes Catalogue",
-      },
-      {
-        class_id: "accepted-mobile",
-        name: "Accepted Mobile",
-      },
-      {
-        class_id: "flava",
-        name: "Flava",
-      },
-      {
-        class_id: "utilita-mobile",
-        name: "Utilita Mobile",
-      },
-      {
-        class_id: "utilita-broadband",
-        name: "Utilita Broadband",
-      },
-      {
-        class_id: "utilita-energy",
-        name: "Utilita Energy",
-      },
-    ]
+    partners_list
   end
 
   def get_deals_data url_name
@@ -657,6 +548,51 @@ module PagesHelper
         handset: ""
       },
     ]
+    partners_list
+  end
+
+  def social_page
+    @details = {
+      camp_id: 'MEGA-MOBILE-DEALS',
+      success_url: 'https://mtrk5.co.uk/?a=14118&c=33110',
+      bad_success_url: 'https://mtrk5.co.uk/?a=14118&c=33110',
+      form_name: 'Switch-Mobile',
+      optin_url: '/social',
+      sid: nil,
+      ssid: nil,
+      source:'google-home-page',
+      quick_submit: false,
+      submit_on_load: false,
+      uu_id: @cookie_uuid,
+      token: @randon_token,
+      ipaddress: request.remote_ip,
+    }.to_json
+
+    @testimonials = [
+      {
+        name: 'Jade',
+        comment: 'So far so good. Everything is working the way it should. Would definitely recommend',
+        date: 'Jan 21, 2021',
+        image: 'coment1.png'
+      },
+      {
+        name: 'Emma',
+        comment: 'Great service, intuitive menues, great delivery time.',
+        date: 'March 04, 2021',
+        image: 'coment2.png'
+      },
+      {
+        name: 'Amelia',
+        comment: 'Fast delivery and good knowledge, wait for good discount promo codes and it gets delivered fast with tracking.',
+        date: 'April 03, 2021',
+        image: 'coment3.png'
+      }
+    ]
+
+    partners_list
+  end
+
+  def partners_list
     @partners = [
       {
         class_id: "o2",
@@ -766,6 +702,14 @@ module PagesHelper
         class_id: "utilita-energy",
         name: "Utilita Energy",
       },
+      {
+        class_id: "btc--scale",
+        name: "BtcScale",
+      },
+      {
+        class_id: "your-news-daily",
+        name: "Your News Daily",
+      }
     ]
   end
 

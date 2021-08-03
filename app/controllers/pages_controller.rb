@@ -11,6 +11,10 @@ class PagesController < ApplicationController
     home_deals
   end
 
+  def social
+    social_page
+  end
+
 	def show
     get_deals_data( params[:page_name] )
     respond_to do |format|
