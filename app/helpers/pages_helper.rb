@@ -709,6 +709,10 @@ module PagesHelper
       {
         class_id: "your-news-daily",
         name: "Your News Daily",
+      },
+      {
+        class_id: "hutcheson-3",
+        name: "Hutcheson 3",
       }
     ]
   end
