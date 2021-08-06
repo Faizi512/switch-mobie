@@ -251,50 +251,62 @@ module PagesHelper
     @phones = [
       {
         name: "iPhone 12",
+        btn_text: "Exclusive Deal",
         image: "iphone_12_black.png"
       },
       {
         name: "iPhone 11",
+        btn_text: "Get Deal",
         image: "phone/iphone11.png",
       },
       {
         name: "Galaxy S20",
+        btn_text: "Exclusive Deal",
         image: "phone/samsung-galaxy-s20-plus.png"
       },
       {
         name: "iPhone XS",
+        btn_text: "Get Deal",
         image: "phone/iphonexs.png"
       },
       {
         name: "Galaxy S10",
+        btn_text: "Get Deal",
         image: "phone/samsungs10.png"
       },
       {
         name: "iPhone 11 Pro",
+        btn_text: "Exclusive Deal",
         image: "phone/iphone11pro.png"
       },
       {
         name: "Note 20 5G",
+        btn_text: "Exclusive Deal",
         image: "phone/note-20.jpg"
       },
       {
         name: "Samsung A20",
+        btn_text: "Get Deal",
         image: "phone/samsung-a20.png"
       },
       {
         name: "Galaxy S20 5G",
+        btn_text: "Exclusive Deal",
         image: "phone/galaxy-s20-5g.png"
       },
       {
         name: "iPhone SE 128GB",
+        btn_text: "Get Deal",
         image: "phone/iphonese.jpg"
       },
       {
         name: "S20 Ultra 5G",
+        btn_text: "Get Deal",
         image: "phone/samsung-galaxy-s20-ultra-black.png"
       },
       {
         name: "Huawei P30",
+        btn_text: "Exclusive Deal",
         image: "phone/huaweip30.png"
       }
     ]
@@ -304,19 +316,19 @@ module PagesHelper
         name: 'Sophie',
         comment: 'Brilliant service, ordered my phone and it arrived the next day. Absolutely delighted!',
         date: 'May 21, 2021',
-        image: 'comment1.jpg'
+        image: 'comment1.png'
       },
       {
         name: 'John',
         comment: 'Got the latest iPhone with no upfront payment - really good offer.',
         date: 'Jan 04, 2021',
-        image: 'comment3.jpg'
+        image: 'comment3.png'
       },
       {
         name: 'Elizabeth',
         comment: 'Really helpful staff, got an amazing deal on my SIM only plan, saving over £15 per month now',
         date: 'March 03, 2021',
-        image: 'comment2.jpg'
+        image: 'comment2.png'
       }
     ]
     partners_list
