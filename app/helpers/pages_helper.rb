@@ -262,7 +262,7 @@ module PagesHelper
       {
         name: "Galaxy S20",
         btn_text: "Exclusive Deal",
-        image: "phone/samsung-galaxy-s20-plus.png"
+        image: "phone/s20-5g.png"
       },
       {
         name: "iPhone XS",
@@ -292,7 +292,7 @@ module PagesHelper
       {
         name: "Galaxy S20 5G",
         btn_text: "Exclusive Deal",
-        image: "phone/galaxy-s20-5g.png"
+        image: "phone/samsung-galaxy-s20-5g1.jpg"
       },
       {
         name: "iPhone SE 128GB",
@@ -302,7 +302,7 @@ module PagesHelper
       {
         name: "S20 Ultra 5G",
         btn_text: "Get Deal",
-        image: "phone/samsung-galaxy-s20-ultra-black.png"
+        image: "phone/s20-ultra-5g.png"
       },
       {
         name: "Huawei P30",
