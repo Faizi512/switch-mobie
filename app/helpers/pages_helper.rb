@@ -314,7 +314,7 @@ module PagesHelper
     @testimonials = [
       {
         name: 'Sophie',
-        comment: 'Brilliant service, ordered my phone and it arrived the next day. Absolutely delighted!',
+        comment: 'Brilliant service, ordered my phone and it arrived very soon. Absolutely delighted!',
         date: 'May 21, 2021',
         image: 'comment1.png'
       },
