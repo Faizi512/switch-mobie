@@ -282,7 +282,7 @@ module PagesHelper
       {
         name: "Note 20 5G",
         btn_text: "Exclusive Deal",
-        image: "phone/note-20.jpg"
+        image: "phone/samsung-galaxy-note20-ultra.png"
       },
       {
         name: "Samsung A20",
