@@ -1,14 +1,13 @@
-<section class="p-md-5 px-3 py-5" id="testimonials">
+<section class="p-lg-5 px-3 pb-5" id="testimonials">
   <div class="wrapper">
     <div class="row mx-0 w-100 p-0">
       <div class="col-12 text-center text-dark mb-3">
         <h3 class="fw-bold">Our happy customer's reviews</h3>
-        <h5>our visitors' testimonials</h5>
       </div>
       <% @testimonials.each do |testimonial| %>
         <div class="col-md-4 col-12 text-secondary mb-3 mt-5">
           <div class="comments h-100 rounded-lg">
-            <div class="p-lg-5 py-5 px-4">
+            <div class="p-lg-5 py-5 px-3">
               <div class="user-image rounded-circle overflow-hidden border position-absolute border-white">
                 <%= image_tag(testimonial[:image], class: 'w-100 h-100') %>
               </div>

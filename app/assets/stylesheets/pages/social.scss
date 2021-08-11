@@ -126,12 +126,17 @@ $red-color: #5dbde6;
     .cta-img{
       height: 350px;
     }
+    @media screen and (max-width: 520px){
+      h3{
+        font-size: 18px !important;
+      }
+    }
   }
   #usp-section{
     .fa-check-square{
       color: #47a9d2;
     }
-    @media screen and (max-width: 575px){
+    @media screen and (max-width: 769px){
       h4{
         font-size: 1.3rem !important;
       }
@@ -152,10 +157,13 @@ $red-color: #5dbde6;
         }
       }
       @media (min-width: 575px) and (min-width: 575px){
-        height: 420px;
+        height: 345px;
+      }
+      @media (max-width: 769px) and (min-width: 575px){
+        height: 425px;
       }
       @media screen and (max-width: 575px){
-        padding-bottom: 5rem !important;
+        padding-bottom: 4rem !important;
       }
     }
     .service-btn{
