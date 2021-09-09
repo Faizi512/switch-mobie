@@ -339,6 +339,28 @@ module PagesHelper
 
     @phoneshome = [
       {
+        name: "Samsung Galaxy Z Fold3 5G",
+        data: "Unlimited",
+        image: "z-fold3.png",
+        calls: "Unlimited",
+        texts: "Unlimited",
+        url:"/success",
+        bluetext: "Personal Hotspot, Go Binge, Data Roaming",
+        deposit: "£0",
+        handset: ""
+      },
+      {
+        name: "Samsung Galaxy Z Flip3 5G",
+        data: "Unlimited",
+        image: "z-flip3.png",
+        calls: "Unlimited",
+        texts: "Unlimited",
+        url:"/success",
+        bluetext: "Personal Hotspot, Data Roaming",
+        deposit: "£0",
+        handset: ""
+      },
+      {
         name: "iPhone 12",
         data: "Unlimited",
         image: "iphone_12_black.png",
@@ -350,9 +372,20 @@ module PagesHelper
         handset: ""
       },
       {
-        name: "Samsung Galaxy S10",
+        name: "Samsung Galaxy S21 Ultra 5G",
         data: "Unlimited",
-        image: "phone/samsungs10.png",
+        image: "samsung-galaxy-s21-ultra1.png",
+        calls: "Unlimited",
+        texts: "Unlimited",
+        url:"/success",
+        bluetext: "Personal Hotspot, Data Roaming",
+        deposit: "£0",
+        handset: ""
+      },
+      {
+        name: "iPhone 12 Pro Max",
+        data: "Unlimited",
+        image: "iphone-12-pro.png",
         calls: "Unlimited",
         texts: "Unlimited",
         url:"/success",
@@ -383,9 +416,9 @@ module PagesHelper
         handset: ""
       },
       {
-        name: "Samsung Galaxy Note 20 5G",
+        name: "Samsung Galaxy S21",
         data: "Unlimited",
-        image: "phone/note-20.jpg",
+        image: "samsung-galaxy-s21.png",
         calls: "Unlimited",
         texts: "Unlimited",
         url:"/success",
