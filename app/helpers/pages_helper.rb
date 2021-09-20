@@ -250,6 +250,36 @@ module PagesHelper
 
     @phones = [
       {
+        name: "iPhone 13 Pro Max",
+        btn_text: "Exclusive Deal",
+        image: view_context.image_url("phone/apple-iphone-13-pro-max.png"),  
+      },
+      {
+        name: "Samsung Galaxy Z Fold3 5G",
+        btn_text: "Exclusive Deal",
+        image: view_context.image_url("z-fold3.png"),
+      },
+      {
+        name: "iPhone 13",
+        btn_text: "Exclusive Deal",
+        image: view_context.image_url("phone/apple-iphone-13.png"),
+      },
+      {
+        name: "iPhone 13 Pro",
+        btn_text: "Exclusive Deal",
+        image: view_context.image_url("phone/apple-iphone-13-pro.png"),
+      },
+      {
+        name: "Samsung Galaxy Z Flip3 5G",
+        btn_text: "Exclusive Deal",
+        image: view_context.image_url("z-flip3.png"),
+      },
+      {
+        name: "iPhone 13 Mini",
+        btn_text: "Exclusive Deal",
+        image: view_context.image_url("phone/apple-iphone-13-mini.png"),
+      },
+      {
         name: "iPhone 12",
         btn_text: "Exclusive Deal",
         image: "iphone_12_black.png"
@@ -339,26 +369,70 @@ module PagesHelper
 
     @phoneshome = [
       {
-        name: "Samsung Galaxy Z Fold3 5G",
+        name: "iPhone 13 Pro Max",
         data: "Unlimited",
-        image: "z-fold3.png",
+        image: view_context.image_url("phone/apple-iphone-13-pro-max.png"),
         calls: "Unlimited",
         texts: "Unlimited",
         url:"/success",
         bluetext: "Personal Hotspot, Go Binge, Data Roaming",
         deposit: "£0",
-        handset: ""
+        handset: "",
+      },
+      {
+        name: "Samsung Galaxy Z Fold3 5G",
+        data: "Unlimited",
+        image: view_context.image_url("z-fold3.png"),
+        calls: "Unlimited",
+        texts: "Unlimited",
+        url:"/success",
+        bluetext: "Personal Hotspot, Go Binge, Data Roaming",
+        deposit: "£0",
+        handset: "",
+      },
+      {
+        name: "iPhone 13",
+        data: "Unlimited",
+        image: view_context.image_url("phone/apple-iphone-13.png"),
+        calls: "Unlimited",
+        texts: "Unlimited",
+        url:"/success",
+        bluetext: "Personal Hotspot, Go Binge, Data Roaming",
+        deposit: "£0",
+        handset: "",
+      },
+      {
+        name: "iPhone 13 Pro",
+        data: "Unlimited",
+        image: view_context.image_url("phone/apple-iphone-13-pro.png"),
+        calls: "Unlimited",
+        texts: "Unlimited",
+        url:"/success",
+        bluetext: "Personal Hotspot, Go Binge, Data Roaming",
+        deposit: "£0",
+        handset: "",
       },
       {
         name: "Samsung Galaxy Z Flip3 5G",
         data: "Unlimited",
-        image: "z-flip3.png",
+        image: view_context.image_url("z-flip3.png"),
         calls: "Unlimited",
         texts: "Unlimited",
         url:"/success",
-        bluetext: "Personal Hotspot, Data Roaming",
+        bluetext: "Personal Hotspot, Go Binge, Data Roaming",
         deposit: "£0",
-        handset: ""
+        handset: "",
+      },
+      {
+        name: "iPhone 13 Mini",
+        data: "Unlimited",
+        image: view_context.image_url("phone/apple-iphone-13-mini.png"),
+        calls: "Unlimited",
+        texts: "Unlimited",
+        url:"/success",
+        bluetext: "Personal Hotspot, Go Binge, Data Roaming",
+        deposit: "£0",
+        handset: "",
       },
       {
         name: "iPhone 12",
