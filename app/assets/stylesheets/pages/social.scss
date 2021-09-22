@@ -117,10 +117,14 @@ $red-color: #5dbde6;
     }
   }
   #cta{
-    background-image: url('grab.jpg');
+    background-image: url('iphone-13-bg.jpg');
     background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
     @media screen and (max-width: 575px){
-      background-size: cover;
+      background-color: rgba(255,255,255,0.05);
+      background-blend-mode: overlay;
+      background-size: 180%;
       background-position: 50% 24%;
     }
     .cta-img{
