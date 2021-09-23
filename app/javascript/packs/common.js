@@ -28,12 +28,6 @@ class Common {
     this.deviceName=null
     this.deviceDetection()
 
-    $.getJSON('https://ipapi.co/json/', function(data) {
-      if (data != null && data.ip != undefined && typeof (data.ip) == "string") {
-        CI.ip_Address = data.ip;
-      }
-    });
-
     $('#deal-form-modal').on('hide.bs.modal', function (e) {
       $('.clock').show()
     });

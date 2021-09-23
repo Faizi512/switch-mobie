@@ -1,4 +1,5 @@
 import Common from "./common.js"
+import _ from 'lodash'
 
 class ExclusiveIphoneDeals extends Common {
   constructor() {
@@ -14,14 +15,9 @@ class ExclusiveIphoneDeals extends Common {
     this.showClock()
     this.togglePopUp()
     this.toggleCheckBox()
+    var current_fs, next_fs, previous_fs;
 
-    $( ".property" ).change(function() {
-      CI.TogglePopUp()
-      CI.ToggleCheckBox()
-      var tabs = $(".tab");
-      tabs[CI.currentTab].style.display = "none";
-      CI.currentTab = CI.currentTab + 1;
-      CI.showTab(CI.currentTab);
+    $( ".property" ).change(function() {      
       $('.towncity').val($(this).find("option:selected").data("city"))
       $('.street1').val($(this).find("option:selected").data("street"))
       $('.county').val($(this).find("option:selected").data("province"))
@@ -35,12 +31,72 @@ class ExclusiveIphoneDeals extends Common {
       $(".tab").removeClass("in-progress")
     });
 
-    $( "#btn-continue" ).click(() => {
-      CI.nextStep(1)
+    // Next button
+    $(".next-button").click(function(){
+      $('#dealform').parsley().whenValidate({
+        group: 'block-' + CI.currentTab
+      }).done(() =>{
+        current_fs = $(this).parent().parent();
+        next_fs = $(this).parent().parent().next();
+        $(".prev").css({ 'display' : 'block' });
+        $(current_fs).removeClass("show");
+        $(next_fs).addClass("show");
+        $("#progressbar li").eq($(".card2").index(next_fs)).addClass("active");
+        current_fs.animate({}, {
+          step: function() {
+            current_fs.css({
+              'display': 'none',
+              'position': 'relative'
+            });
+            next_fs.css({
+              'display': 'block'
+            });
+          }
+        });
+        if (CI.currentTab == 2) {
+          if (CI.isPhone == true && CI.isEmail == true){
+            CI.postData()
+          }else{
+            $('#dealform').parsley().validate()
+          }
+          return true
+        }
+        CI.currentTab += 1
+      })
     });
 
-    $( "#btn-back" ).click(function() {
-      CI.backStep(-1)
+    // Previous button
+    $(".prev").click(function(){
+      CI.currentTab -= 1
+      current_fs = $(this).parent().parent();
+      previous_fs = $(this).parent().parent().prev();
+      $(current_fs).removeClass("show");
+      $(previous_fs).addClass("show");
+      $(".prev").css({ 'display' : 'block' });
+      if($(".show").hasClass("first-screen")) {
+        $(".prev").css({ 'display' : 'none' });
+      }
+      $("#progressbar li").eq($(".card2").index(current_fs)).removeClass("active");
+      current_fs.animate({}, {
+        step: function() {
+          current_fs.css({
+            'display': 'none',
+            'position': 'relative'
+          });
+          previous_fs.css({
+            'display': 'block'
+          });
+        }
+      });
+    });
+
+    $( ".property" ).change(function() {
+      $('.towncity').val($(this).find("option:selected").data("city"))
+      $('.street1').val($(this).find("option:selected").data("street"))
+      $('.county').val($(this).find("option:selected").data("province"))
+      $('.houseNumber').val($(this).find("option:selected").data("housenum"))
+      $('.street2').val($(this).find("option:selected").data("street2"))
+      $('.building').val($(this).find("option:selected").data("building"))
     });
 
     $(document).on("click", '.open-form', function() {
@@ -60,8 +116,6 @@ class ExclusiveIphoneDeals extends Common {
   postData() {
     var CI = this
     $("#loaderPopup").css('height', '100%')
-    this.validateTsp()
-    this.successUrl()
     if( this.getItemFromStorage("user_data") != null){
       this.userStorage = true
       this.USTransaction();
@@ -85,6 +139,19 @@ class ExclusiveIphoneDeals extends Common {
     var currentData = this.getData();
     var userData = _.mergeWith(currentData,previousData, (current, previous) => current == "" || current == "unknown"  ? previous : current)
     CI.setItemToStorage("user_data", userData)
+  }
+
+  getItemFromStorage(name){
+    return JSON.parse(localStorage.getItem(name))
+  }
+
+  setItemToStorage(name, data){
+    if (data.adopted_url == "" ||  data.adopted_url == null) {
+      data.adopted_url = data.optinurl
+    }else{
+      this.adoptedUrl = data.adopted_url
+    }
+    return localStorage.setItem(name, JSON.stringify(data))
   }
 
   handleCreditCheckConsent(){
