@@ -731,95 +731,31 @@ module PagesHelper
   def partners_list
     @partners = [
       {
+        class_id: "dukeleads-fzco",
+        name: "Duke Leads - FZCO",
+      },
+      {
         class_id: "o2",
         name: "O2",
       },
       {
-        class_id: "ee-limited",
-        name: "EE limited",
+        class_id: "dukeleadsltd",
+        name: "Duke Leads Ltd",
       },
       {
-        class_id: "vodafone",
-        name: "Vodafone",
-      },
-      {
-        class_id: "mobile-deal",
-        name: "Mobile Deal",
-      },
-      {
-        class_id: "loanable",
-        name: "Loanable",
-      },
-      {
-        class_id: "voxi",
-        name: "Voxi",
-      },
-      {
-        class_id: "monetise-media",
-        name: "Monetise Media",
-      },
-      {
-        class_id: "bill-buddy",
-        name: "Bill Buddy",
-      },
-      {
-        class_id: "lead-365",
-        name: "Lead 365",
-      },
-      {
-        class_id: "scores-matter",
-        name: "Scores Matter",
-      },
-      {
-        class_id: "bill-switchers",
-        name: "Bill Switchers",
-      },
-      {
-        class_id: "sunshine-mobile",
-        name: "Sunshine Mobile",
-      },
-      {
-        class_id: "experian",
-        name: "Experian",
-      },
-      {
-        class_id: "flex-mobile",
-        name: "Flex Mobile Limited",
-      },
-      {
-        class_id: "flexible-group",
-        name: "Flexible group limited",
-      },
-      {
-        class_id: "go-groopie",
+        class_id: "gogroopie",
         name: "Go Groopie",
       },
       {
-        class_id: "discount-experts",
+        class_id: "discountexperts",
         name: "Discount Experts",
       },
       {
-        class_id: "breeze-mobile",
-        name: "Breeze Mobile",
-      },
-      {
-        class_id: "get-a-loan-today",
-        name: "Get A Loan Today",
-      },
-      {
-        class_id: "my-debt",
-        name: "Help to clear my debt",
-      },
-      {
-        class_id: "sky",
-        name: "SKY",
-      },
-      {
-        class_id: "yes-catalogue",
+        class_id: "yescatalogue",
         name: "Yes Catalogue",
       },
       {
-        class_id: "accepted-mobile",
+        class_id: "acceptedmobile",
         name: "Accepted Mobile",
       },
       {
@@ -827,28 +763,20 @@ module PagesHelper
         name: "Flava",
       },
       {
-        class_id: "utilita-mobile",
-        name: "Utilita Mobile",
+        class_id: "utilita",
+        name: "Utilita",
       },
       {
-        class_id: "utilita-broadband",
-        name: "Utilita Broadband",
+        class_id: "hutchison3",
+        name: "Hutchison 3",
       },
       {
-        class_id: "utilita-energy",
-        name: "Utilita Energy",
+        class_id: "123casino",
+        name: "123 Casino",
       },
       {
-        class_id: "btc--scale",
-        name: "BtcScale",
-      },
-      {
-        class_id: "your-news-daily",
-        name: "Your News Daily",
-      },
-      {
-        class_id: "hutcheson-3",
-        name: "Hutcheson 3",
+        class_id: "go4discounts",
+        name: "Go4Discounts"
       }
     ]
   end
