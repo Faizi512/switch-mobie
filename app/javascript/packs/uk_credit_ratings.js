@@ -144,6 +144,8 @@ class UkCreditRatings extends Common {
       timestamp: new Date,
       user_agent: window.navigator.userAgent,
       lead_from_local_storage: this.userStorage,
+      income_type: this.getUrlParameter("income_type") || '' ,
+      residentialstatus: this.getUrlParameter("residentialstatus") || '' ,
     }
   }
 
