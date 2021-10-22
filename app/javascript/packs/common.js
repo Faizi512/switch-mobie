@@ -449,8 +449,9 @@ class Common {
   firePixel(){
     if (this.details.camp_id == 'MEGA-MOBILE-DEALS'){
       dataLayer.push({'event': 'transaction'})
-      fbq('track', 'Lead', {value: 3, currency: '£'}, {eventID: this.details.token});
 
+      // Commented Pixel as per Sohail's instructions - Added Pixel through GTM
+      // fbq('track', 'Lead', {value: 3, currency: '£'}, {eventID: this.details.token});
     }
   }
 
