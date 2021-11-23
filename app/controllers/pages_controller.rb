@@ -38,5 +38,14 @@ class PagesController < ApplicationController
       secure: false,
       httponly: false,
     }
+    Time.zone = ('GMT');
+    @endDate = "1637884799";
+    @timerendDate = @endDate;
+    cookies[:timerEndDate] = {
+      value: @timerendDate,
+      expires: 3.day.from_now,
+      secure: false,
+      httponly: false,
+    }
   end
 end
