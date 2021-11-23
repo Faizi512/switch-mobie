@@ -97,7 +97,7 @@ class Common {
 
   showClock(){
     var clockElement = $(".clock");
-    var clock = new FlipClock(clockElement, 6600, {
+    var clock = new FlipClock(clockElement, 198000, {
         countdown: true
     })
   }
