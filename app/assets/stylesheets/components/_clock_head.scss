@@ -4,7 +4,9 @@
   background-size: cover !important;
   background-position: center !important;
   background-repeat: no-repeat !important;
-  background: asset-url('gradient2.png');
+  background: asset-url('bg-color.png');
+  background-color: black;
+  overflow: hidden;
   .accepted {
 	  color: #2b417f;
 	  font-family: 'Prompt', sans-serif ;
@@ -68,12 +70,29 @@
       font-weight: 600;
       top: 6.5em;
       right: -6rem !important;
+      color: white;
     }
   }
+  .flip-clock-dot{
+    background: white;
+  }
   /*End*/
+
   .sims-img {
     height: 254px;
   }
+  .sale-img{
+    top: -22px;
+    right: -21%;
+    transform: rotate(45deg);
+    width: 45%;
+  }
+@media only screen and (max-width: 1024px) {
+  .sale-img{
+    right: -17%;
+  }
+}
+
 @media only screen and (max-width: 768px) {
   .image {
     width: 8rem;
@@ -101,13 +120,43 @@
   .flip-clock-dot {
     width: 7px;
     height: 7px;
-    left: 2px;
+    left: -4px;
+  }
+  .flip-clock-divider {
+    .flip-clock-label {
+      right: -5rem !important;
+    }
+  }
+  .sale-img {
+    top: -68px;
+    right: -27px;
+    transform: rotate(0deg);
+    width: 64%;
   }
 
 }
+@media only screen and (max-width: 540px) {
+  .sale-img {
+    top: -30px;
+    right: -5px;
+    transform: rotate(9deg);
+    width: 35%;
+  }
+}
 @media only screen and (max-width: 520px) {
+  .sale-img {
+    top: -6px;
+    right: -5px;
+    transform: rotate(9deg);
+    width: 35%;
+  }
   .accepted {
     font-size: 23px !important;
+  }
+  .flip-clock-dot {
+    width: 7px;
+    height: 7px;
+    left: 2px;
   }
 }
 @media only screen and (max-width: 376px) {
@@ -116,16 +165,15 @@
     height: 7px;
     left: -2px;
   }
+  .sale-img {
+    top: 0px;
+    transform: rotate(11deg);
+  }
 }
 
 @media only screen and (max-width: 320px) {
   .sims-img {
     height: 225px;
-  }
-  .flip-clock-divider {
-    .flip-clock-label {
-      right: -5rem !important;
-    }
   }
 }
 
