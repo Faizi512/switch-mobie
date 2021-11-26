@@ -1,5 +1,6 @@
 import Common from "./common.js"
 import _ from 'lodash'
+
 class Home extends Common {
   constructor() {
     super();
@@ -62,11 +63,19 @@ class Home extends Common {
 
   showClock(){
     var clockElement = $(".clock");
-    var currentDate = Math.round(new Date().getTime() / 1000); 
-    var curntukTime = currentDate.toLocaleString('en-UK', { timeZone: 'Europe/London' });
-    var currentUkTime = parseFloat(curntukTime .replace(/,/g, ''));
+    var d = new Date();
+    var localTime = d.getTime();
+    var localOffset = d.getTimezoneOffset() * 60000;
+    var utc = localTime + localOffset;
+    var offset = 0;
+    var uktime = utc + (3600000*offset);
+    var nd = new Date(uktime);
+    var h = nd.getHours();
+    var m = nd.getMinutes();
+    var s = nd.getSeconds();
+    var secondsUntilEndOfDate = (24*60*60) - (h*60*60) - (m*60) - s;
     var cookie = this.getCookie("timerEndDate");
-    var counter = cookie-currentUkTime;
+    var counter = cookie-s;
     var clock = new FlipClock( clockElement,  counter,{
       countdown: true,
     });
