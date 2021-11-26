@@ -39,7 +39,8 @@ class PagesController < ApplicationController
       httponly: false,
     }
     Time.zone = ('GMT');
-    @endDate = "1637884799";
+    # debugger
+    @endDate = DateTime.current.seconds_until_end_of_day;
     @timerendDate = @endDate;
     cookies[:timerEndDate] = {
       value: @timerendDate,
