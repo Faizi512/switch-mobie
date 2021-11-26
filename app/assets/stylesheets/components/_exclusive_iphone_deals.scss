@@ -5,11 +5,12 @@ $red-color: #f46c22;
 #iphone_deals{
 	font-family: 'Quicksand', sans-serif;
 	.bg-header{
-		background: asset-url('iphone-13/whyapple.png');
+		background: asset-url('bg-color.png');
 		background-position: center;
 		background-size: cover;
 		background-repeat: no-repeat;
-		height: 550px;
+		min-height: 490px;
+    background-color: black;
 	}
 	.btn-orang{
 		background: linear-gradient(to right, #f46c22 0%, #f09838 80%) !important;
@@ -323,9 +324,6 @@ $red-color: #f46c22;
 		}
 		.fs-sm-21{
 			font-size: 21px;
-		}
-		.bg-header{
-			height: 250px;
 		}
 		.bg-ios{
 			height: 300px;
