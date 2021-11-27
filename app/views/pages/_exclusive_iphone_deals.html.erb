@@ -1,18 +1,26 @@
 <%= javascript_pack_tag 'exclusive-iphone-deals', 'data-turbolinks-track': 'reload', defer: true %>
 
 <div id="iphone_deals">
-	<div class="bg-header">
 		<a class="navbar-brand w-100 text-center mx-0" href="javascript:;">
-		  <%= image_tag("logo.png", class: "open-form w-195 py-md-5 pt-2" ) %>
+		  <%= image_tag("logo.png", class: "open-form w-195 py-2" ) %>
 		</a>
+	<div class="bg-header">
 		<div class="container">
 			<div class="row w-100 mx-0 align-items-center justify-content-center py-md-5">
-				<h2 class="w-75 font-weight-bold text-center fs-sm-21">iPhone 13 Pro Max. Even more Pro</h2>
-				<p class="small text-center mb-0 w-75 fs-sm-11">6.7-inch Super Retina XDR display with ProMotion for a faster, more responsive feel</p>
-				<p class="small text-center w-75 fs-sm-11">Cinematic mode adds shallow depth of field and shifts focus automatically in your videos</p>
-				<div class="w-100 text-center">
-					<button class="btn btn-orang open-form px-md-5 px-4 font-weight-bold shadow">Get Deal Now</button>
+				<div class="col-md-5 text-center align-self-center">
+					<h2 class="font-weight-bold text-center fs-sm-21 pt-4">iPhone 13 Pro Max. Even more Pro</h2>
+					<p class="small text-center mb-0 fs-sm-11">6.7-inch Super Retina XDR display with ProMotion for a faster, more responsive feel</p>
+					<p class="small text-center fs-sm-11">Cinematic mode adds shallow depth of field and shifts focus automatically in your videos</p>
+					<%= image_tag("iphone-13/Apple-iPhone-13.png", class: "maxw-100 pt-4" ) %>
+					<div class="w-100 text-center mb-4 mb-md-0">
+						<button class="btn btn-orang open-form px-md-5 px-4 w-75 font-weight-bold shadow">Get Deal Now</button>
+					</div>
 				</div>
+				<div class="col-md-5 offset-md-2 text-center align-self-center px-0 position-relative ">
+          <%= image_tag("f-sale.gif", class: "position-absolute sale-img" ) %>
+          <%= image_tag("cm.gif", class: " maxw-100 px-4 px-md-2 mt-5 mb-2" ) %>
+          <h2 class="font-weight-bold text-white ">Get deals before offers expire</h2>
+        </div>
 			</div>
 		</div>
 	</div>
