@@ -11,8 +11,8 @@ class Home extends Common {
     this.fillform()
     this.popupTerms()
     this.popupPrivacy()
-    this.showTab(this.currentTab);
     this.showClock()
+    this.showTab(this.currentTab);
     this.togglePopUp()
     this.toggleCheckBox()
 
