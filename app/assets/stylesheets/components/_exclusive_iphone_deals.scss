@@ -340,8 +340,17 @@ $red-color: #f46c22;
       }
     }
   }
+  @media only screen and (max-width: 768px) {
+    .bg-header{
+      background-position: left;
+    }
+  }
+  
 
 	@media only screen and (max-width: 520px) {
+    .bg-header{
+      background-position: center;
+    }
     .fs-50{
       font-size: 36px;
     }
