@@ -1,26 +1,36 @@
 <!-- Below header section Flipclock -->
 <section class="mb-0">
-  <div class="below-header">
+  <div class="below-header position-relative">
     <div class="container">
       <div class="row mx-0 w-100">
-        <div class="col-md-7 align-self-center px-0 open-form">
-          <h2 class="text-center mt-3 lh-sm-24">
-            <span class="accepted">Get The Best Deals On The Latest Smartphones!</span>
-            <br>
-            <span class="font-weight-bold desktop">iPhone 13 Deal <br> Unlimited | Data | Text | Minutes</span>
-            <span class="approvel mobile">iPhone 13 Deal <br> Unlimited | Data | Text | Min</span>
-          </h2>
-          <div class="row mx-0 w-100 justify-content-center">
-            <%= image_tag("apple-iphone-13-and-pro.png", class: " maxw-100 h-280", width: "350", alt: "Phones header" ) %>
-          </div>
-          <div class="py-2 text-center">
-            <button class="btn btn-offers w-42 font-weight-bold"> GET DEAL NOW</button>
-          </div>
+        <div class="img-sale-div position-absolute">
+          <%= image_tag("sale.png", class: "img-sale" ) %>
         </div>
-        <div class="col-md-5 text-center align-self-center px-0 position-relative">
-          <%= image_tag("f-sale.gif", class: "position-absolute sale-img" ) %>
-          <%= image_tag("cm.gif", class: " maxw-100 px-4 px-md-2 mt-5 mb-2" ) %>
-          <h2 class="font-weight-bold text-white ">Grab Limited Time Sale Discounts Before Ends</h2>
+        <div class="col-md-6 mt-5 pt-5 text-md-left text-center">
+          <%= image_tag("smartphones.png", class: "img-smatphone" ) %>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-12">
+          <div class="header-text-div rounded-lg p-3 shadow w-100 mb-3">
+            <h1 class="text-center font-weight-bold text-white display-4 fs-sm-30">Get Latest Smartphones Deals</h1>
+            <div class="row">
+              <div class="col-md-4 mb-2 px-md-2 px-lg-3 px-3">
+                <button class="btn btn-yellow open-form w-100 py-3 shadow-sm font-weight-bold px-1"> Fastest Approvals</button>
+              </div>
+              <div class="col-md-4 mb-2 px-md-2 px-lg-3 px-3">
+                <button class="btn btn-yellow open-form w-100 py-3 shadow-sm font-weight-bold px-1">Unlimited Data & Calls</button>
+              </div>
+              <div class="col-md-4 mb-2 px-md-2 px-lg-3 px-3">
+                <button class="btn btn-yellow open-form w-100 py-3 shadow-sm font-weight-bold px-1"> You Choose When To Pay</button>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-md-7 mx-auto">
+                <button class="btn btn-warning open-form w-100 py-3 shadow-sm font-weight-bold text-purple mt-4 "> Find Discount Deals Now</button>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </div>

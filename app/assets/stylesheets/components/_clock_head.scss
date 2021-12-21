@@ -4,9 +4,9 @@
   background-size: cover !important;
   background-position: center !important;
   background-repeat: no-repeat !important;
-  background: asset-url('bg-color.png');
-  background-color: black;
+  background: asset-url('christ-bg.png');
   overflow: hidden;
+  min-height: 600px;
   .accepted {
 	  color: #2b417f;
 	  font-family: 'Prompt', sans-serif ;
@@ -87,6 +87,31 @@
     transform: rotate(45deg);
     width: 45%;
   }
+  .img-smatphone{
+    width: 65%;
+  }
+  .img-sale-div{
+    left: 35%;
+  }
+  .img-sale{
+    width: 50%;
+  }
+  .header-text-div{
+    background-color: #6f42c1 !important;
+    bottom: 0;
+  }
+  .btn-yellow{
+    background-color: #fee50a !important;
+    color: #6f42c1 !important;
+    border: 2px solid #fee50a !important;
+  }
+  .btn-yellow:hover{
+    background-color: #6f42c1 !important;
+    color: #fee50a !important;
+  }
+  .text-purple{
+    color: #6f42c1 !important;
+  }
 @media only screen and (max-width: 1024px) {
   .sale-img{
     right: -17%;
@@ -94,6 +119,15 @@
 }
 
 @media only screen and (max-width: 768px) {
+  .img-sale{
+    width: 61%;
+  }
+   .img-smatphone{
+    width: 100%;
+  }
+  .header-text-div{
+    position: relative;
+  }
   .image {
     width: 8rem;
     margin: 0 auto;
@@ -136,14 +170,54 @@
 
 }
 @media only screen and (max-width: 540px) {
+  .below-header {
+    background-position: left !important;
+  }
+  .img-sale-div{
+    left: 26%;
+  }
+  .img-sale{
+    width: 75%;
+  }
+  .img-smatphone{
+    padding-top: 2rem;
+    width: 100%;
+  }
+  .header-text-div{
+    position: relative;
+  }
+  .fs-sm-30{
+    font-size: 30px !important;
+  }
   .sale-img {
     top: -30px;
     right: -5px;
     transform: rotate(9deg);
     width: 35%;
   }
+  .snow-btm-img{
+    height: 6% !important;
+  }
 }
 @media only screen and (max-width: 520px) {
+  .img-sale-div{
+    left: 26%;
+  }
+  .img-smatphone{
+    padding-top: 0rem;
+  }
+  .below-header {
+    background-position: left !important;
+  }
+  .header-text-div{
+    position: relative;
+  }
+  .fs-sm-30{
+    font-size: 30px !important;
+  }
+  .snow-btm-img{
+    height: 6% !important;
+  }
   .sale-img {
     top: -6px;
     right: -5px;

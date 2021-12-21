@@ -2,11 +2,13 @@
 <%= render 'layouts/sp-exit/header' %>
 
 <div id="samsung-deals" class="border-top">
-	<div class="bg-header">
+	<div class="bg-header position-relative">
+		<div class="snow-img-div w-100 position-absolute">
+			<%= image_tag("snow-bottom2.png", class: "w-100" ) %>
+		</div>
 		<div class="container">
 			<div class="row pt-md-4">
 				<h1 class="font-weight-bold w-100 py-md-4 pt-4 mb-0 text-center text-white">Click & Go Exclusive Mobile Deals</h1>
-				
 				<div class="col-md-6 d-none d-md-block">
 					<h3 class="font-weight-bold text-center text-md-left text-warning">With <span class="text-white">Switch Mobile</span> find the perfect combination of mobile phone and sim plan exclusive for your needs!</h3>
 					<div class="row py-4 d-none d-md-flex">
@@ -50,7 +52,7 @@
 					</div>
 				</div>
 				<div class="col-md-6 text-center align-self-end">
-					<%= image_tag("cyberm.gif", class: "w-75" ) %>
+					<%= image_tag("christmas-sale.png", class: "w-50" ) %>
 					<h2 class="text-center text-warning">Grab Limited Time Sale Discounts Before Ends</h2>
 					<%= image_tag("s21-iphone.png", class: "w-100" ) %>
 					<div class="w-100 mx-auto text-center mb-4 d-md-none d-block">
