@@ -195,9 +195,10 @@ class Common {
           else if (json.status == "Valid") {
             CI.isPhone = true
             return true
-          }else if(json.status == "Invalid"){
+          }else if(json.status == "Invalid" || json.status == "Error"){
             return $.Deferred().reject("Please Enter Valid UK Phone Number");
-          }else{
+          }
+          else{
             CI.isPhone = true
             return true
           }
