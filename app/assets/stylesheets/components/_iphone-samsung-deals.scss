@@ -33,6 +33,17 @@
 		bottom: 0;
 		right: 0;
 	}
+	.bg-light-clor{
+		background-color: #ffffffd9;
+	}
+	.progress-bar{
+		background-color: #aba1f8;
+	}
+	label{
+		color: #aba1f8;
+		font-weight: 700;
+		font-family: 'muli', sans-serif;
+	}
 	.btn-orange-header{
 		color: white !important;
     border: 2px solid white !important;
@@ -84,8 +95,21 @@
 	.deal-div{
 		border: 2px solid #1729a0 !important;
 	}
-
+	@media only screen and (max-width: 768px) {
+		.fs-sm-12{
+			font-size: 12px;
+		}
+	}
 	@media only screen and (max-width: 520px) {
+		.fs-sm-12{
+			font-size: 12px;
+		}
+		.fs-sm-20{
+			font-size: 20px;
+		}
+		.fs-sm-18{
+			font-size: 18px;
+		}
 		.icon1{
 			width: 35px;
 		}
