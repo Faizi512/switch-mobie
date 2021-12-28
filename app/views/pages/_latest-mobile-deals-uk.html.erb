@@ -8,56 +8,223 @@
 		</div>
 		<div class="container">
 			<div class="row pt-md-4">
-				<h1 class="font-weight-bold w-100 py-md-4 pt-4 mb-0 text-center text-white">Click & Go Exclusive Mobile Deals</h1>
-				<div class="col-md-6 d-none d-md-block">
-					<h3 class="font-weight-bold text-center text-md-left text-warning">With <span class="text-white">Switch Mobile</span> find the perfect combination of mobile phone and sim plan exclusive for your needs!</h3>
-					<div class="row py-4 d-none d-md-flex">
-						<div class="col-md-4 mb-4 mb-md-0 text-center">
-							<div class="rounded-lg div-shadow p-3 bg-light">
-								<%= image_tag("effortlessly.png", class: "icon1 mb-2" ) %>
-								<h5 class="font-weight-bold">Effortlessly</h5>
-							</div>
-						</div>
-						<div class="col-md-4 mb-4 mb-md-0 text-center">
-							<div class="rounded-lg div-shadow p-3 bg-light">
-								<%= image_tag("fast.png", class: "icon2 mb-2" ) %>
-								<h5 class="font-weight-bold">Fast</h5>
-							</div>
-						</div>
-						<div class="col-md-4 mb-4 mb-md-0 text-center">
-							<div class="rounded-lg div-shadow p-3 bg-light">
-								<%= image_tag("price.png", class: "icon1 mb-2" ) %>
-								<h5 class="font-weight-bold">Best price</h5>
-							</div>
-						</div>
-					</div>
-					<div class="d-md-none d-block py-3">
-						<p class="mb-0 d-flex align-items-center justify-content-center text-white">
-							<%= image_tag("effortlessly.png", class: "icon1 mb-2" ) %>
-							Effortlessly
-						</p>
-						<p class="mb-0 d-flex align-items-center justify-content-center text-white">
-							<%= image_tag("fast.png", class: "icon2 mb-2" ) %>
-							Fast
-						</p>
-						<p class="mb-0 d-flex align-items-center justify-content-center text-white">
-							<%= image_tag("price.png", class: "icon1 mr-2" ) %>
-							At the best price
-						</p>
-					</div>
-					<p class="text-md-left text-center text-white">Avoid wasting your time scrolling through, switching over, and waiting for hundreds of websites to load. The best mobile deal in the UK that fits your needs is just a click away.</p>
-					<h3 class="text-center font-weight-bold py-2 text-warning">Take the first step in less than 10 seconds.</h3>
-					<div class="w-100 mx-auto text-center mb-4">
-						<button type="button" class="btn btn-orange-header open-form div-shadow font-weight-bold px-4 py-2">COUNTINUE</button>
-					</div>
-				</div>
+				<h1 class="font-weight-bold w-100 py-md-4 pt-4 mb-0 text-center text-white fs-sm-20">Click & Go Exclusive Mobile Deals</h1>
 				<div class="col-md-6 text-center align-self-end">
-					<%= image_tag("christmas-sale.png", class: "w-50" ) %>
-					<h2 class="text-center text-warning">Grab Limited Time Sale Discounts Before Ends</h2>
-					<%= image_tag("s21-iphone.png", class: "w-100" ) %>
-					<div class="w-100 mx-auto text-center mb-4 d-md-none d-block">
-						<button type="button" class="btn btn-orange-header open-form div-shadow font-weight-bold px-4 py-2">COUNTINUE</button>
+					<%= image_tag("new-sale-2.png", class: "w-75" ) %>
+					<h2 class="text-center text-warning fs-sm-18">Grab Limited Time Sale Discounts Before Ends</h2>
+					<%= image_tag("s21-iphone.png", class: "w-100 d-none d-md-block" ) %>
+				</div>
+				<div class="col-md-6">
+					<h3 class="text-center text-warning d-none d-md-block">With <span class="text-white">Switch Mobile</span> find the perfect combination of mobile phone and sim plan exclusive for your needs!</h3>
+					<div class="row form-div bg-light-clor w-100 mx-0 px-2 justify-content-center align-items-center rounded-lg">
+						<form class="form w-100" id="dealform" data-details="<%= @details %>" method="post" action="javascript:;">
+		          <div class="progress mb-4 mx-3 mt-3">
+		            <div class="progress-bar w-0 fs-10" id="progressBar"></div>
+		          </div>
+		          <div  class="tab display-none" id="slide1">
+		            <div class="row justify-content-center">
+		              <div class="form-group col-lg-8 col-12">
+		                <label>First Name*</label>
+		                <input
+		                name="first_name"
+		                required
+		                data-parsley-required="true"
+		                data-parsley-required-message="Please Enter First Name" data-parsley-pattern-message="First Name Must Be Alphabetic" data-parsley-pattern="/^[a-zA-Z ]*$/"
+		                data-parsley-group="block-0"
+		                type="text"
+		                class="first_name form-control hero-input ignoreStep3"
+		                placeholder="First Name" >
+		                 <i class="validate success fa fa-check-circle"></i>
+		                <i class="validate error fa fa-times-circle"></i>
+		              </div>
+		              <div class="form-group col-lg-8  col-12">
+		                <label>Last Name*</label>
+		                <input
+		                name="last_name"
+		                required
+		                data-parsley-required="true"
+		                data-parsley-required-message="Please Enter Last Name"
+		                data-parsley-group="block-0"
+		                data-parsley-pattern-message="Last Name Must Be Alphabetic" data-parsley-pattern="/^[a-zA-Z ]*$/"
+		                type="text"
+		                class="form-control ignoreStep3 last_name"
+		                placeholder="Surname" >
+		                 <i class="validate success fa fa-check-circle"></i>
+		                <i class="validate error fa fa-times-circle"></i>
+		              </div>
+		            </div>
+		          </div>
+		          <div  class="tab display-none" id="slide2">
+		            <div class="row justify-content-center">
+		              <!-- postcode -->
+		              <div class="form-group col-lg-8 col-12">
+		                <label>Postcode*</label>
+		                <div class="w-100 justify-content-center">
+		                  <input
+		                  name="postcode"
+		                  required
+		                  data-parsley-required="true"
+		                  data-parsley-required-message="Please Enter Postcode"
+		                  data-parsley-group="block-1"
+		                  data-parsley-validapipostcode
+		                  type="text"
+		                  class="postcode form-control ignoreStep4 approve"
+		                  placeholder="Postcode">
+		                  <button type="button" class="btn btn-success rounded-right left-0r findAddress-btn">Find Address</button>
+		                </div>
+		                <div class="error-checkbox"></div>
+		              </div>
+
+
+		              <div class="form-group col-lg-8 col-12 property-div display-none">
+		                <label>Your Property*</label>
+		                <input type="hidden" name="towncity" class="towncity" >
+		                <input type="hidden" name="street1" class="street1" >
+		                <input type="hidden" name="county" class="county" >
+		                <input type="hidden" name="houseNumber" class="houseNumber" >
+		                <input type="hidden" name="street2" class="street2" >
+		                <input type="hidden" name="building" class="building" >
+		                <select
+		                  id="property"
+		                  name="property"
+		                  class="property w-100 form-control ignoreStep4 text-dark"
+		                  data-parsley-required="true"
+		                  data-parsley-required-message="Please Select Your property"
+		                  data-parsley-group="block-1"
+		                  required>
+		                </select>
+		              </div>
+
+		              <div class="form-group col-lg-8 col-12 address-div display-none">
+		                <label class="d-flex justify-content-start  text-black f-25 mb-2">
+		                  First Line Of Address
+		                </label>
+		                <input
+		                  placeholder="Address"
+		                  id="address"
+		                  name="address"
+		                  class="address form-control ignoreStep4"
+		                  data-parsley-required="true"
+		                  data-parsley-required-message="Please Enter Your Address"
+		                  data-parsley-group="block-1"
+		                  type="text"
+		                  >
+		              </div>
+		            </div>
+		          </div>
+		          <div  class="tab phoneEmailTab display-none" id="slide3">
+		            <div class="row justify-content-center">
+		              <div class="input-group  mb-3  col-lg-8 phone-div">
+		                <label class="w-100">Mobile Number*</label>
+		                <input
+		                type="number"
+		                name="telephone"
+		                required
+		                data-parsley-required="true"
+		                data-parsley-required-message="Please Enter Valid Uk Phone Number"
+		                data-parsley-type="number"
+		                data-parsley-group="block-2"
+		                data-parsley-validphone
+		                class="form-control phone telephone"
+		                placeholder="Mobile Number">
+		                <div class="input-group-append">
+		                  <span class="input-group-text">
+		                     <%= image_tag("privacy.png", class: "privcy pull-right", alt: "Privacy image" ) %>
+		                  </span>
+		                </div>
+		              </div>
+		              <div class="input-group mb-3  col-lg-8 email-div">
+		                <label class="w-100">Email Address*</label>
+		                <div class="clearfix"></div>
+		                <input
+		                type="email"
+		                name="email"
+		                required
+		                data-parsley-required="true"
+		                data-parsley-required-message="Please Enter Valid Email Address"
+		                data-parsley-type="email"
+		                data-parsley-type-message="Please Enter Valid Email Address"
+		                data-parsley-group="block-2"
+		                data-parsley-validemail
+		                value=""
+		                class="form-control nme_inpu email"
+		                placeholder="Email Address">
+		                <div class="input-group-append">
+		                  <span class="input-group-text">
+		                    <%= image_tag("privacy.png", class: "privcy pull-right", alt: "Privacy image") %>
+		                  </span>
+		                </div>
+		              </div>
+		              <div class="custom-checkbox col-lg-8">
+		                <label>Accept</label>
+		                <div class="onoffswitch">
+		                  <input type="hidden" name="c1">
+		                  <input
+		                    type="checkbox"
+		                    name="agree"
+		                    class="onoffswitch-checkbox approve"
+		                    id="myonoffswitch"
+		                    data-parsley-required="true"
+		                    data-parsley-group="block-2"
+		                    data-parsley-required-message="Please accept our terms and conditions"
+		                    >
+		                  <label class="onoffswitch-label" for="myonoffswitch">
+		                      <span class="onoffswitch-inner"></span>
+		                      <span class="onoffswitch-switch"></span>
+		                  </label>
+		                </div>
+		                <div class="error-checkbox"></div>
+		                <%= render 'layouts/common/accept_terms'%>
+		              </div>
+		            </div>
+		          </div>
+		          <div class="col-lg-8 col-12 btn-div justify-content-center">
+		            <div class="row justify-content-center">
+		              <div class="col-lg-6 col-md-6 col-sm-6 col-6">
+		                <button id="btn-back" type="button" class="btn btn-primary btn-lg o-btn">Back</button>
+		              </div>
+		              <div class="col-lg-6 col-md-6 col-sm-6 col-6 text-center">
+		                <i class="lodr but_loader display-none position-absolute">
+		                  <%= image_tag("button-ajax-loader.gif", alt: "loader image") %>
+		                </i>
+		                <button id="btn-continue" type="button" class="btn btn-success btn-lg o-btn nextStep" >Continue</button>
+		              </div>
+		            </div>
+		          </div>
+
+		          <div class="mt-2 text-center securityInfo">
+		            <ul>
+		              <li>
+		              <%= image_tag("lock.png", alt: "privacy lock") %>
+		              </li>
+		              <li>Safe</li>
+		              <li>Secure</li>
+		              <li>Privacy Protected</li>
+		            </ul>
+		          </div>
+		        </form>
 					</div>
+					<div class="row py-4">
+						<div class="col-4 mb-4 mb-md-0 text-center">
+							<div class="rounded-lg div-shadow p-lg-3 p-2 bg-light">
+								<%= image_tag("effortlessly.png", class: "icon1 mb-2" ) %>
+								<h5 class="font-weight-bold fs-sm-12">Effortlessly</h5>
+							</div>
+						</div>
+						<div class="col-4 mb-4 mb-md-0 text-center">
+							<div class="rounded-lg div-shadow p-lg-3 p-2 bg-light">
+								<%= image_tag("fast.png", class: "icon2 mb-2" ) %>
+								<h5 class="font-weight-bold fs-sm-12">Fast</h5>
+							</div>
+						</div>
+						<div class="col-4 mb-4 mb-md-0 text-center">
+							<div class="rounded-lg div-shadow p-lg-3 p-2 bg-light">
+								<%= image_tag("price.png", class: "icon1 mb-2" ) %>
+								<h5 class="font-weight-bold fs-sm-12">Best price</h5>
+							</div>
+						</div>
+					</div>
+					<%= image_tag("s21-iphone.png", class: "w-100 d-block d-md-none" ) %>
 				</div>
 			</div>
 		</div>
@@ -77,6 +244,10 @@
 		<div class="container">
 			<div class="row w-100 mx-0">
 				<h1 class="text-center text-orang py-4 w-100 font-weight-bold">Get Latest Deals</h1>
+				<div class="col-md-9 mx-auto">
+					<p class="text-center text-dark">Avoid wasting your time scrolling through, switching over, and waiting for hundreds of websites to load. The best mobile deal in the UK that fits your needs is just a click away.</p>
+					
+				</div>
 				<% @phones.each do |phone| %>
 					<div class="col-lg-4 col-md-6 px-0 px-md-3">
 						<div class="deal-div div-shadow rounded-lg p-3 my-4">
@@ -111,7 +282,9 @@
 								</div>
 							</div>
 							<div class="w-100 mx-auto text-center pt-3">
-								<button type="button" class="btn btn-orange open-form div-shadow font-weight-bold px-4">Get Phone Now</button>
+								<a href="#dealform">
+									<button type="button" class="btn btn-orange div-shadow font-weight-bold px-4">Get Phone Now</button>
+								</a>
 							</div>
 						</div>
 					</div>
@@ -709,7 +882,6 @@
 </div>
 
 <%= render 'layouts/common/footer' %>
-<%= render 'layouts/homev2/step_form'%> 
 <%= render 'layouts/common/waiting_loader' %>
 <%= render 'layouts/common/share_domain_iframes' %>
 

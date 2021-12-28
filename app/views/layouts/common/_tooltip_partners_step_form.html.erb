@@ -9,7 +9,7 @@
       	<form class="partner-form" id="partner-form">
       		<div class="row align-items-center">
       			<% @partners.each do |partner| %>
-			       	<div class="col-md-6">
+			       	<div class="col-md-6 text-left">
 			       		<div class="custom-control custom-checkbox mr-sm-2">
 							    <input type="checkbox" name="partners-tp" class="custom-control-input" id="<%= partner[:class_id] %>">
 							    <label class="custom-control-label text-left text-secondary label-size bg-white" for="<%= partner[:class_id] %>"><%= partner[:name] %></label>
