@@ -6,7 +6,7 @@
     <div class="row p-md-5 p-0 mx-0 w-100">
       <div class="col-3 d-lg-block d-none border-right">
         <div class="border sticky-top sticky-banner">
-          <div class="phone-deal p-5">
+          <div class="phone-deal p-xl-5 p-lg-3">
             <h3 class="text-white">POPULAR CONTRACT DEALS</h3>
           </div>
           <div class="phone-img position-absolute">
@@ -20,7 +20,7 @@
       <div class="col-lg-9">
         <div class="row p-0 mx-0 w-100">
           <% @phones.each do |phone| %>
-            <div class="col-md-4 col-6 mb-5">
+            <div class="col-lg-4 col-6 mb-5">
               <h5 class="deal-phone-name text-center mb-3 fw-bold">
                 <%= phone[:name] %>
               </h5>
@@ -30,10 +30,12 @@
               <div class="deal-phone-description text-center">
                 <h5 class="mb-0">£0.00</h5>
                 <p class="text-muted fs-14 mb-0">Upfront</p>
-                <button class="btn btn-sm px-3 mt-3 rounded-pill text-blue bg-white col-md-8 deal-phone-button open-form">
+                <a href="#form-card">
+                  <button class="btn btn-sm px-3 mt-3 rounded-pill text-blue bg-white col-xl-8 col-lg-12 col-md-8 deal-phone-button open-form">
                   <%= phone[:btn_text] %>
+                  </button>
                   
-                </button>
+                </a>
               </div>
             </div>
           <% end %>
