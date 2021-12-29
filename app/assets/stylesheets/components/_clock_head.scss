@@ -37,6 +37,12 @@
 	  flex: 1 1 auto;
 	}
 }
+.bg-light-clr{
+  background-color: #ffffffcf !important;
+}
+.form-width{
+  width: 75%;
+}
 .image {
   width: 95px;
   object-fit: contain;
@@ -91,7 +97,7 @@
     width: 65%;
   }
   .img-sale-div{
-    left: 35%;
+    left: 38%;
   }
   .img-sale{
     width: 50%;
@@ -119,6 +125,12 @@
 }
 
 @media only screen and (max-width: 768px) {
+  .form-width{
+    width: 100%;
+  }
+  .btn-yellow{
+    font-size: 12px !important;
+  }
   .img-sale{
     width: 61%;
   }
@@ -170,6 +182,9 @@
 
 }
 @media only screen and (max-width: 540px) {
+  .form-width{
+    width: 100%;
+  }
   .below-header {
     background-position: left !important;
   }

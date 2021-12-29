@@ -1,0 +1,225 @@
+<%= javascript_pack_tag 'home', 'data-turbolinks-track': 'reload', defer: true %>
+<div id="mobile-go">
+  <%= render 'layouts/noscript/home' %>
+  <%= render 'layouts/homev2/header' %>
+  <!-- Below header section Flipclock -->
+	<section class="mb-0">
+	  <div class="below-header position-relative">
+	    <div class="container">
+	      <div class="row mx-0 w-100">
+	        <div class="img-sale-div text-center w-100">
+	          <%= image_tag("new-sale.png", class: "w-25" ) %>
+	        	<h5 class="text-center w-100 mb-3 text-dark d-md-none d-bock">Get Latest Smartphones Deals</h5>
+	        </div>
+	      </div>
+	      <div class="row mx-0 w-100">
+	        <div class="col-md-4 mt-md-5 pt-md-5 text-md-left text-center align-self-end">
+	          <%= image_tag("smartphones.png", class: "w-100" ) %>
+	        </div>
+	        <div class="col-md-8 mt-md-5 pt-md-5 text-md-left text-center align-self-end">
+	        	<div class="bg-light-clr p-3 rounded-lg mb-3 mb-md-0 form-width">
+		          <form class="form" id="dealform" data-details="<%= @details %>" method="post" action="javascript:;">
+		          	<h4 class="text-center text-jam font-weight-bold">YOUR FAVOURITE MOBILE DEAL IS JUST ONE STEP AWAY</h4>
+			          <div class="progress mb-3">
+			            <div class="progress-bar w-0 fs-10" id="progressBar"></div>
+			          </div>
+			          <div  class="tab display-none" id="slide1">
+			            <div class="row justify-content-center">
+			              <div class="form-group col-lg-8 col-12">
+			                <label class="text-jam text-left w-100">First Name*</label>
+			                <input
+			                name="first_name"
+			                required
+			                data-parsley-required="true"
+			                data-parsley-required-message="Please Enter First Name" data-parsley-pattern-message="First Name Must Be Alphabetic" data-parsley-pattern="/^[a-zA-Z ]*$/"
+			                data-parsley-group="block-0"
+			                type="text"
+			                class="first_name form-control hero-input ignoreStep3"
+			                placeholder="First Name" >
+			                 <i class="validate success fa fa-check-circle"></i>
+			                <i class="validate error fa fa-times-circle"></i>
+			              </div>
+			              <div class="form-group col-lg-8  col-12">
+			                <label class="text-jam text-left w-100">Last Name*</label>
+			                <input
+			                name="last_name"
+			                required
+			                data-parsley-required="true"
+			                data-parsley-required-message="Please Enter Last Name"
+			                data-parsley-group="block-0"
+			                data-parsley-pattern-message="Last Name Must Be Alphabetic" data-parsley-pattern="/^[a-zA-Z ]*$/"
+			                type="text"
+			                class="form-control ignoreStep3 last_name"
+			                placeholder="Surname" >
+			                 <i class="validate success fa fa-check-circle"></i>
+			                <i class="validate error fa fa-times-circle"></i>
+			              </div>
+			            </div>
+			          </div>
+			          <div  class="tab display-none" id="slide2">
+			            <div class="row justify-content-center">
+			              <!-- postcode -->
+			              <div class="form-group col-lg-8  col-12">
+			                <label class="text-jam text-left w-100">Postcode*</label>
+			                <div class="w-100 justify-content-center">
+			                  <input
+			                  name="postcode"
+			                  required
+			                  data-parsley-required="true"
+			                  data-parsley-required-message="Please Enter Postcode"
+			                  data-parsley-group="block-1"
+			                  data-parsley-validapipostcode
+			                  type="text"
+			                  class="postcode form-control ignoreStep4 approve"
+			                  placeholder="Postcode">
+			                  <button type="button" class="btn btn-success rounded-right left-0r findAddress-btn">Find Address</button>
+			                </div>
+			                <div class="error-checkbox"></div>
+			              </div>
+
+
+			              <div class="form-group col-lg-8 col-12 property-div display-none">
+			                <label class="text-jam text-left w-100">Your Property*</label>
+			                <input type="hidden" name="towncity" class="towncity" >
+			                <input type="hidden" name="street1" class="street1" >
+			                <input type="hidden" name="county" class="county" >
+			                <input type="hidden" name="houseNumber" class="houseNumber" >
+			                <input type="hidden" name="street2" class="street2" >
+			                <input type="hidden" name="building" class="building" >
+			                <select
+			                  id="property"
+			                  name="property"
+			                  class="property w-100 form-control ignoreStep4 text-dark"
+			                  data-parsley-required="true"
+			                  data-parsley-required-message="Please Select Your property"
+			                  data-parsley-group="block-1"
+			                  required>
+			                </select>
+			              </div>
+
+			              <div class="form-group col-lg-8 col-12 address-div display-none">
+			                <label class="d-flex justify-content-start text-jam text-left w-100 f-25 mb-2">
+			                  First Line Of Address
+			                </label>
+			                <input
+			                  placeholder="Address"
+			                  id="address"
+			                  name="address"
+			                  class="address form-control ignoreStep4"
+			                  data-parsley-required="true"
+			                  data-parsley-required-message="Please Enter Your Address"
+			                  data-parsley-group="block-1"
+			                  type="text"
+			                  >
+			              </div>
+			            </div>
+			          </div>
+			          <div  class="tab phoneEmailTab display-none" id="slide3">
+			            <div class="row justify-content-center">
+			              <div class="input-group  mb-3  col-lg-8 phone-div">
+			                <label class="w-100 text-jam text-left w-100">Mobile Number*</label>
+			                <input
+			                type="number"
+			                name="telephone"
+			                required
+			                data-parsley-required="true"
+			                data-parsley-required-message="Please Enter Valid Uk Phone Number"
+			                data-parsley-type="number"
+			                data-parsley-group="block-2"
+			                data-parsley-validphone
+			                class="form-control phone telephone"
+			                placeholder="Mobile Number">
+			                <div class="input-group-append">
+			                  <span class="input-group-text">
+			                     <%= image_tag("privacy.png", class: "privcy pull-right", alt: "Privacy image" ) %>
+			                  </span>
+			                </div>
+			              </div>
+			              <div class="input-group mb-3  col-lg-8 email-div">
+			                <label class="w-100 text-jam text-left w-100">Email Address*</label>
+			                <div class="clearfix"></div>
+			                <input
+			                type="email"
+			                name="email"
+			                required
+			                data-parsley-required="true"
+			                data-parsley-required-message="Please Enter Valid Email Address"
+			                data-parsley-type="email"
+			                data-parsley-type-message="Please Enter Valid Email Address"
+			                data-parsley-group="block-2"
+			                data-parsley-validemail
+			                value=""
+			                class="form-control nme_inpu email"
+			                placeholder="Email Address">
+			                <div class="input-group-append">
+			                  <span class="input-group-text">
+			                    <%= image_tag("privacy.png", class: "privcy pull-right", alt: "Privacy image") %>
+			                  </span>
+			                </div>
+			              </div>
+			              <div class="custom-checkbox col-lg-8">
+			                <label class="text-jam text-left w-100">Accept</label>
+			                <div class="onoffswitch">
+			                  <input type="hidden" name="c1">
+			                  <input
+			                    type="checkbox"
+			                    name="agree"
+			                    class="onoffswitch-checkbox approve"
+			                    id="myonoffswitch"
+			                    data-parsley-required="true"
+			                    data-parsley-group="block-2"
+			                    data-parsley-required-message="Please accept our terms and conditions"
+			                    >
+			                  <label class="onoffswitch-label" for="myonoffswitch">
+			                      <span class="onoffswitch-inner"></span>
+			                      <span class="onoffswitch-switch"></span>
+			                  </label>
+			                </div>
+			                <div class="error-checkbox"></div>
+			                <%= render 'layouts/common/accept_terms'%>
+			              </div>
+			            </div>
+			          </div>
+			          <div class="col-lg-8 col-12 btn-div justify-content-center mb-0">
+			            <div class="row justify-content-center">
+			              <div class="col-lg-6 col-md-6 col-sm-6 col-6">
+			                <button id="btn-back" type="button" class="btn btn-primary btn-lg o-btn">Back</button>
+			              </div>
+			              <div class="col-lg-6 col-md-6 col-sm-6 col-6 text-center">
+			                <i class="lodr but_loader display-none position-absolute">
+			                  <%= image_tag("button-ajax-loader.gif", alt: "loader image") %>
+			                </i>
+			                <button id="btn-continue" type="button" class="btn btn-success btn-lg o-btn nextStep" >Continue</button>
+			              </div>
+			            </div>
+			          </div>
+			        </form>
+			      </div>
+	        </div>
+	      </div>
+	      <div class="row w-100 mx-0">
+	        <div class="col-12">
+	          <div class="header-text-div rounded-lg p-2 shadow w-100 mb-3">
+	            <div class="row w-100 mx-0">
+	              <div class="col-md-4 my-2 px-md-2 px-lg-3 px-3">
+	                <button class="btn btn-yellow py-2 shadow-sm font-weight-bold w-100"> Fastest Approvals</button>
+	              </div>
+	              <div class="col-md-4 my-2 px-md-2 px-lg-3 px-3">
+	                <button class="btn btn-yellow py-2 shadow-sm font-weight-bold w-100">Unlimited Data & Calls</button>
+	              </div>
+	              <div class="col-md-4 my-2 px-md-2 px-lg-3 px-3">
+	                <button class="btn btn-yellow py-2 shadow-sm font-weight-bold w-100"> You Choose When To Pay</button>
+	              </div>
+	            </div>
+	          </div>
+	        </div>
+	      </div>
+	    </div>
+	  </div>
+	</section>
+  <%= render 'layouts/homev2/deals_list_phones'  %>
+  <%= render 'layouts/homev2/network_logos'%>
+  <%= render 'layouts/common/footer' %>
+  <%= render 'layouts/common/waiting_loader' %>
+  <%= render 'layouts/common/share_domain_iframes' %>
+</div>
