@@ -6,7 +6,7 @@
   background-repeat: no-repeat !important;
   background: asset-url('christ-bg.png');
   overflow: hidden;
-  min-height: 600px;
+  min-height: 535px;
   .accepted {
 	  color: #2b417f;
 	  font-family: 'Prompt', sans-serif ;
@@ -41,7 +41,7 @@
   background-color: #ffffffcf !important;
 }
 .form-width{
-  width: 75%;
+  width: 100%;
 }
 .image {
   width: 95px;
@@ -100,7 +100,7 @@
     left: 38%;
   }
   .img-sale{
-    width: 50%;
+    width: 19%;
   }
   .header-text-div{
     background-color: #6f42c1 !important;
@@ -118,13 +118,31 @@
   .text-purple{
     color: #6f42c1 !important;
   }
+@media only screen and (max-width: 1280px) {
+  .img-sale{
+    width: 65%;
+  }
+}
 @media only screen and (max-width: 1024px) {
   .sale-img{
     right: -17%;
   }
+  .img-sale{
+    width: 72%;
+  }
 }
 
 @media only screen and (max-width: 768px) {
+  .img-sale-div{
+    left: 46%;
+  }
+  .img-sale{
+    width: 19%;
+  }
+  .below-header {
+    background-position: left !important;
+    min-height: 468px;
+  }
   .form-width{
     width: 100%;
   }
@@ -189,10 +207,10 @@
     background-position: left !important;
   }
   .img-sale-div{
-    left: 26%;
+    left: 38%;
   }
   .img-sale{
-    width: 75%;
+    width: 60%;
   }
   .img-smatphone{
     padding-top: 2rem;
@@ -216,7 +234,7 @@
 }
 @media only screen and (max-width: 520px) {
   .img-sale-div{
-    left: 26%;
+    left: 38%;
   }
   .img-smatphone{
     padding-top: 0rem;
