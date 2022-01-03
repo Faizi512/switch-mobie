@@ -8,9 +8,16 @@ $red-color: #ff0044;
     background-size: cover !important;
     background-position: center !important;
     background-repeat: no-repeat !important;
-    background: asset-url('winter-deals-banner1.png');
+    background: asset-url('winter-deals-banner2.png');
     overflow: hidden;
-    min-height: 600px;
+    min-height: 500px;
+  }
+  .bg-white-line{
+    background-size: contain !important;
+    background-position: center !important;
+    background-repeat: no-repeat !important;
+    background: asset-url('deals-shade.png');
+    overflow: hidden;
   }
   .font-cookie{
     font-family: 'Cookie', cursive !important;
@@ -25,7 +32,7 @@ $red-color: #ff0044;
     color: #e40a3e;
   }
   .fs-head{
-    font-size: 110px;
+    font-size: 85px;
     line-height: 56px;
   }
   .font-weight-400{
