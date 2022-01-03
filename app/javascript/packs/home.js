@@ -24,6 +24,7 @@ class Home extends Common {
       var tabs = $(".tab");
       tabs[CI.currentTab].style.display = "none";
       CI.currentTab = CI.currentTab + 1;
+      $(".below-header").addClass("min-h-600");
       CI.showTab(CI.currentTab);
       $('.towncity').val($(this).find("option:selected").data("city"))
       $('.street1').val($(this).find("option:selected").data("street"))
