@@ -1,6 +1,6 @@
 
 #mobile-go{
-  $basee-color: #aba1f8;
+  $basee-color: #6f42c1;
   $base-color: #8e81ee;
   min-height: 100vh !important;
   .font-cabin{
@@ -15,6 +15,16 @@
   .bold-border{
     border-left: 5px solid $base-color;
   }
+  .form-width{
+    width: 100% !important;
+  }
+  .div-form{
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    width: 85%;
+    transform: translate(-50%);
+  }
   .background-header{
     background: asset-url('banner-deal1.jpg');
     background-size: cover;
@@ -23,11 +33,20 @@
     height: 60vh;
     width: 100%;
   }
+  .w-19{
+    width: 19%;
+  }
   .h-280{
     height: 255px;
   }
+  .text-yellow{
+    color: #fee50a !important;
+  }
   .text-jam{
     color: $basee-color;
+  }
+  .min-h-600{
+    min-height: 600px;
   }
   .progress{
     height: 11px;
@@ -155,6 +174,16 @@
     }
   }
   @media only screen and (max-width: 768px) {
+    .min-h-600{
+      min-height: auto;
+    }
+    .div-form{
+      position: relative;
+      left: auto;
+      bottom: auto;
+      width: auto;
+      transform: none;
+    }
     .fs-md-12{
       font-size: 12px !important;
     }

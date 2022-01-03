@@ -8,18 +8,18 @@
 	    <div class="container">
 	      <div class="row mx-0 w-100">
 	        <div class="img-sale-div text-center w-100">
-	          <%= image_tag("new-sale.png", class: "w-25" ) %>
+	          <%= image_tag("winter-sale-3d.png", class: "w-19" ) %>
 	        	<h5 class="text-center w-100 mb-3 text-dark d-md-none d-bock">Get Latest Smartphones Deals</h5>
 	        </div>
 	      </div>
-	      <div class="row mx-0 w-100">
-	        <div class="col-md-4 mt-md-5 pt-md-5 text-md-left text-center align-self-end">
+	      <div class="row div-form flex-sm-row-revers">
+	        <div class="col-md-4 text-md-left text-center align-self-end">
 	          <%= image_tag("smartphones.png", class: "w-100" ) %>
 	        </div>
-	        <div class="col-md-8 mt-md-5 pt-md-5 text-md-left text-center align-self-end">
+	        <div class="col-md-6 text-md-left text-center align-self-end">
 	        	<div class="bg-light-clr p-3 rounded-lg mb-3 mb-md-0 form-width">
 		          <form class="form" id="dealform" data-details="<%= @details %>" method="post" action="javascript:;">
-		          	<h4 class="text-center text-jam font-weight-bold">YOUR FAVOURITE MOBILE DEAL IS JUST ONE STEP AWAY</h4>
+		          	<h4 class="text-center text-jam font-weight-bold fs-17">YOUR FAVOURITE MOBILE DEAL IS JUST ONE STEP AWAY</h4>
 			          <div class="progress mb-3">
 			            <div class="progress-bar w-0 fs-10" id="progressBar"></div>
 			          </div>
@@ -196,23 +196,21 @@
 			        </form>
 			      </div>
 	        </div>
-	      </div>
-	      <div class="row w-100 mx-0">
-	        <div class="col-12">
-	          <div class="header-text-div rounded-lg p-2 shadow w-100 mb-3">
-	            <div class="row w-100 mx-0">
-	              <div class="col-md-4 my-2 px-md-2 px-lg-3 px-3">
-	                <button class="btn btn-yellow py-2 shadow-sm font-weight-bold w-100"> Fastest Approvals</button>
-	              </div>
-	              <div class="col-md-4 my-2 px-md-2 px-lg-3 px-3">
-	                <button class="btn btn-yellow py-2 shadow-sm font-weight-bold w-100">Unlimited Data & Calls</button>
-	              </div>
-	              <div class="col-md-4 my-2 px-md-2 px-lg-3 px-3">
-	                <button class="btn btn-yellow py-2 shadow-sm font-weight-bold w-100"> You Choose When To Pay</button>
-	              </div>
-	            </div>
+		      <div class="row w-100 mx-0">
+	          <div class="header-text-div rounded-lg p-2 shadow w-100">
+	          	<ul class="list-unstyled mb-0 d-flex justify-content-around flex-md-row flex-column">
+	          		<li class="d-flex align-items-center text-white justify-content-center justify-content-md-left">
+	          			<i class="far fa-check-square mr-2 text-yellow"></i>Fastest Approvals
+	          		</li>
+	          		<li class="d-flex align-items-center text-white justify-content-center justify-content-md-left">
+	          			<i class="far fa-check-square mr-2 text-yellow"></i>Unlimited Data & Calls
+	          		</li>
+	          		<li class="d-flex align-items-center text-white justify-content-center justify-content-md-left">
+	          			<i class="far fa-check-square mr-2 text-yellow"></i>You Choose When To Pay
+	          		</li>
+	          	</ul>
 	          </div>
-	        </div>
+		      </div>
 	      </div>
 	    </div>
 	  </div>
