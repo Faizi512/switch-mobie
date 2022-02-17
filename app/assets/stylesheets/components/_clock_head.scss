@@ -4,7 +4,7 @@
   background-size: cover !important;
   background-position: center !important;
   background-repeat: no-repeat !important;
-  background: asset-url('christ-bg.png');
+  background: linear-gradient(to bottom, #007ea5, #99e2ff);
   overflow: hidden;
   min-height: 535px;
   .accepted {
@@ -18,7 +18,86 @@
 	  line-height: 1.3;
 	  font-size: 29px;
 	}
-
+  .font-stencil{
+    font-family: 'Stardos Stencil', cursive !important;
+  }
+  .fs-100{
+    font-size: 100px;
+  }
+  .fs-200{
+    font-size: 300px;
+  }
+  .font-hind-siliguri{
+    font-family: 'Hind Siliguri', sans-serif !important;
+  }
+  .font-Nunito{
+    font-family: 'Nunito', sans-serif !important;
+  }
+  .font-Dosis{
+    font-family: 'Dosis', sans-serif !important;
+  }
+  .btn-orange{
+    box-shadow: 1px 19px 7px 1px rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    background-color: #ffbc00;
+    width: 62%;
+    font-size: 33px;
+    border-radius: 50px;
+    color: white !important;
+  }
+  .light-gradient{
+    box-shadow: 1px 24px 7px 1px rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    background: linear-gradient(to bottom, #f6f6f6, #99e2ff);
+    border-bottom-right-radius: 30px;
+    border-bottom-left-radius: 30px;
+    border-top-right-radius: 30px;
+    border-top-left-radius: 5px;
+  }
+  .text-shadow{
+    text-shadow: 0px 4px 10px #929292;
+  }
+  .text-blu{
+    color: #00367C !important;
+  }
+  .text-orng{
+    color: #9734bb !important;
+  }
+  .lh-30{
+    line-height: 20px;
+  }
+  .img-div-svg{
+    position: absolute;
+    top: -50px;
+    left: 50%;
+    transform: translate(-50%);
+    width: 100%;
+  }
+  .border-font {
+    color: transparent;
+    -webkit-text-stroke-width: 3px;
+    -webkit-text-stroke-color: #fadf33;
+  }
+  .border-font-light {
+    color: transparent;
+    -webkit-text-stroke-width: 2px;
+    -webkit-text-stroke-color: #fadf33;
+  }
+  .gradient-bg{
+    position: relative;
+    border: 0.1px solid #a78de6;
+    box-shadow: 1px 24px 7px 1px rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    background: linear-gradient(to bottom right, #015c99, #b021c0);
+    border-bottom-right-radius: 30px;
+    border-bottom-left-radius: 30px;
+    border-top-right-radius: 30px;
+    border-top-left-radius: 5px;
+  }
+  .overly-text{
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%);
+    opacity: 0.1;
+    top: 22%;
+  }
 	.btn-b {
     cursor: pointer;
     width: 85% !important;
@@ -94,7 +173,7 @@
     width: 45%;
   }
   .img-smatphone{
-    width: 65%;
+    width: 79%;
   }
   .img-sale-div{
     left: 38%;
@@ -124,6 +203,9 @@
   }
 }
 @media only screen and (max-width: 1024px) {
+  .fs-18 {
+    font-size: 16px !important;
+  }
   .sale-img{
     right: -17%;
   }
@@ -132,7 +214,34 @@
   }
 }
 
+@media only screen and (max-width: 912px) {
+  .fs-100 {
+    font-size: 73px !important;
+  }
+  .fs-200 {
+    font-size: 200px !important;
+  }
+  .fs-50{
+    font-size: 37px !important;
+  }
+  .img-div-svg{
+    top: -34px !important;
+  }
+  .img-smatphone{
+    width: 80%;
+  }
+  .fs-xlg{
+    font-size: x-large !important;
+  }
+  .btn-orange{
+    width: 80% !important;  
+  }
+}
+
 @media only screen and (max-width: 768px) {
+  .fs-lg-22{
+    font-size: auto !important;
+  }
   .img-sale-div{
     left: 46%;
   }
@@ -152,8 +261,8 @@
   .img-sale{
     width: 61%;
   }
-   .img-smatphone{
-    width: 100%;
+  .img-smatphone{
+    width: 80%;
   }
   .header-text-div{
     position: relative;
@@ -200,6 +309,33 @@
 
 }
 @media only screen and (max-width: 540px) {
+  .btn-orange{
+    width: 75% !important;  
+  }
+  .border-font {
+    -webkit-text-stroke-width: 2px !important;
+  }
+  .border-font-light {
+    -webkit-text-stroke-width: 1px !important;
+  }
+  .fs-sm-9{
+    font-size: 16px !important;
+  }
+  .fs-sm-27{
+    font-size: 47px !important;
+  }
+  .fs-sm-19{
+    font-size: 27px !important;
+  }
+  .overly-text{
+    top: 6% !important;
+  }
+  .fs-100{
+    font-size: 89px !important;
+  }
+  .fs-200{
+    font-size: 235px !important;
+  }
   .form-width{
     width: 100%;
   }
@@ -213,8 +349,7 @@
     width: 60%;
   }
   .img-smatphone{
-    padding-top: 2rem;
-    width: 100%;
+    width: 72%;
   }
   .header-text-div{
     position: relative;
@@ -233,11 +368,29 @@
   }
 }
 @media only screen and (max-width: 520px) {
+  .fs-sm-9{
+    font-size: 11px !important;
+  }
+  .fs-sm-27{
+    font-size: 27px !important;
+  }
+  .fs-sm-19{
+    font-size: 19px !important;
+  }
+  .overly-text{
+    top: 6% !important;
+  }
+  .fs-100{
+    font-size: 60px !important;
+  }
+  .fs-200{
+    font-size: 164px !important;
+  }
   .img-sale-div{
     left: 38%;
   }
   .img-smatphone{
-    padding-top: 0rem;
+    width: 70% !important;
   }
   .below-header {
     background-position: left !important;
@@ -267,6 +420,9 @@
   }
 }
 @media only screen and (max-width: 376px) {
+  .fs-sm-9{
+    font-size: 10px !important;
+  }
   .flip-clock-dot {
     width: 7px;
     height: 7px;
@@ -281,6 +437,35 @@
 @media only screen and (max-width: 320px) {
   .sims-img {
     height: 225px;
+  }
+}
+@media only screen and (max-width: 280px) {
+  .btn-orange{
+    width: 90% !important;  
+  }
+  .overly-text{
+    top: 10% !important;
+  }
+  .fs-100 {
+    font-size: 42px !important;
+  }
+  .fs-200{
+    font-size: 123px !important;
+  }
+  .fs-xs-22{
+    font-size: 22px !important;
+  }
+  .fs-sm-27{
+    font-size: 24px !important;
+  }
+  .fs-sm-19{
+    font-size: 13px !important;
+  }
+  .fs-xs-16{
+    font-size: 16px !important;
+  }
+  .fs-xs-7{
+    font-size: 7px !important;
   }
 }
 
