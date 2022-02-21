@@ -25,10 +25,18 @@
     font-size: 100px;
   }
   .fs-200{
-    font-size: 300px;
+    font-size: 245px;
+  }
+  .font-stancil-reg{
+    font-family: 'stencil-std', sans-serif !important;
+    font-weight: 400;
+    font-style: normal;
   }
   .font-hind-siliguri{
     font-family: 'Hind Siliguri', sans-serif !important;
+  }
+  .font-Playfair{
+    font-family: 'Playfair Display', serif !important;
   }
   .font-Nunito{
     font-family: 'Nunito', sans-serif !important;
@@ -96,7 +104,7 @@
     left: 50%;
     transform: translate(-50%);
     opacity: 0.1;
-    top: 22%;
+    top: 11%;
   }
 	.btn-b {
     cursor: pointer;
@@ -215,11 +223,14 @@
 }
 
 @media only screen and (max-width: 912px) {
+  .overly-text{
+    top: 14% !important;
+  }
   .fs-100 {
     font-size: 73px !important;
   }
   .fs-200 {
-    font-size: 200px !important;
+    font-size: 170px !important;
   }
   .fs-50{
     font-size: 37px !important;
@@ -309,6 +320,12 @@
 
 }
 @media only screen and (max-width: 540px) {
+  .w-sm-80{
+    width: 76% !important;
+  }
+  .img-div-svg{
+    top: -83px !important;
+  }
   .btn-orange{
     width: 75% !important;  
   }
@@ -328,13 +345,13 @@
     font-size: 27px !important;
   }
   .overly-text{
-    top: 6% !important;
+    top: 17% !important;
   }
   .fs-100{
     font-size: 89px !important;
   }
   .fs-200{
-    font-size: 235px !important;
+    font-size: 200px !important;
   }
   .form-width{
     width: 100%;
@@ -349,7 +366,7 @@
     width: 60%;
   }
   .img-smatphone{
-    width: 72%;
+    width: 61% !important;
   }
   .header-text-div{
     position: relative;
@@ -368,6 +385,12 @@
   }
 }
 @media only screen and (max-width: 520px) {
+  .img-div-svg{
+    top: -60px !important;
+  }
+  .w-sm-80{
+    width: 80% !important;
+  }
   .fs-sm-9{
     font-size: 11px !important;
   }
@@ -378,19 +401,19 @@
     font-size: 19px !important;
   }
   .overly-text{
-    top: 6% !important;
+    top: 22% !important;
   }
   .fs-100{
     font-size: 60px !important;
   }
   .fs-200{
-    font-size: 164px !important;
+    font-size: 144px !important;
   }
   .img-sale-div{
     left: 38%;
   }
   .img-smatphone{
-    width: 70% !important;
+    width: 61% !important;
   }
   .below-header {
     background-position: left !important;
@@ -444,16 +467,16 @@
     width: 90% !important;  
   }
   .overly-text{
-    top: 10% !important;
+    top: 21% !important;
   }
   .fs-100 {
     font-size: 42px !important;
   }
   .fs-200{
-    font-size: 123px !important;
+    font-size: 104px !important;
   }
   .fs-xs-22{
-    font-size: 22px !important;
+    font-size: 19px !important;
   }
   .fs-sm-27{
     font-size: 24px !important;
