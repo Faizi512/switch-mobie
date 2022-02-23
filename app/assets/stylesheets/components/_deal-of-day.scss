@@ -1,10 +1,277 @@
 #deal-of-day{
 	.bg-header{
-		background-image: asset-url('day-deals/d-bg-img.jpeg');
+		background-image: asset-url('day-deals/d-bg-img.png');
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
     overflow-x: hidden;
     min-height: 450px;
 	}
+	.header-deal{
+		min-width: 7.875rem;
+    height: 36px;
+    font-size: 1rem;
+    background-color: #01cebf;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+	}
+	.header-deal:before{
+		position: absolute;
+    content: "";
+    right: 141px;
+    display: block;
+    top: 0px;
+    border-top: 36px solid #01cebf;
+    border-left: 50px solid transparent;
+	}
+	.text-blu{
+		color:  #01cebf;
+	}
+	.btn-blue{
+		background-color: #01cebf !important;
+		border: 2px solid #01cebf !important;
+		font-size: 22px !important;
+		color: white !important;
+		font-weight: 500;
+    width: 80%;
+		&:hover{
+			background-color: transparent !important;
+			color: #01cebf !important;
+		}
+	}
+	.btn-purple {
+    background-color: #2d0194 !important;
+    border: 2px solid #2d0194 !important;
+    font-size: 22px !important;
+    color: white !important;
+    font-weight: 500;
+    width: 37%;
+	}
+	.btn-purple:hover, .btn-purple:focus {
+	  box-shadow: 0 0 0 2px white, 0 0 0 3px #2d0194;
+	}
+
+	.phone-list{
+		min-height: 514px !important; 
+	}
+	.fw-100{
+		font-weight: 100 !important;
+	}
+
+	.bg-feature{
+		background-image: asset-url('day-deals/newiPhone-d.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    overflow-x: hidden;
+	}
+	.findAddress-btn {
+    position: absolute;
+    bottom: 0px;
+    right: 0px;
+    top: 0;
+	}
+	.min-h-form{
+		min-height: 500px;
+	}
+	.error {
+    font-size: 13px;
+    font-weight: 300;
+	}
+	.form-group {
+    margin-bottom: 1.5rem;
+	}
+
+	/*form styles*/
+	#msform {
+    text-align: center;
+    position: relative;
+	}
+
+	#msform fieldset {
+    background: white;
+    border: 0 none;
+    border-radius: 0px;
+    padding: 20px 30px;
+    box-sizing: border-box;
+    width: 80%;
+    margin: 0 10%;
+    position: relative;
+	}
+
+	input:checked ~ label {
+    border-color: #06b4a7 !important;
+	}
+	.onoffswitch-inner:before {
+    background-color: #01cebf;
+	}
+
+	/*Hide all except first fieldset*/
+	#msform fieldset:not(:first-of-type) {
+	  display: none;
+	}
+
+	/*inputs*/
+	#msform input, #msform textarea {
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 0px;
+    width: 100%;
+    box-sizing: border-box;
+    font-family: 'Prompt', sans-serif  !important;
+    color: #2C3E50;
+    font-size: 13px;
+	}
+
+	#msform input:focus, #msform textarea:focus {
+    -moz-box-shadow: none !important;
+    -webkit-box-shadow: none !important;
+    box-shadow: none !important;
+    border: 1px solid #01cebf;
+    outline-width: 0;
+    transition: All 0.5s ease-in;
+    -webkit-transition: All 0.5s ease-in;
+    -moz-transition: All 0.5s ease-in;
+    -o-transition: All 0.5s ease-in;
+	}
+
+	/*buttons*/
+	#msform .action-button {
+    width: 140px;
+    background: #01cebf;
+    font-weight: bold;
+    color: white;
+    border: 0 none;
+    border-radius: 25px;
+    cursor: pointer;
+    padding: 10px 5px;
+    margin: 10px 5px;
+	}
+
+	#msform .action-button:hover, #msform .action-button:focus {
+	  box-shadow: 0 0 0 2px white, 0 0 0 3px #01cebf;
+	}
+
+	#msform .action-button-previous {
+    width: 140px;
+    background: #9dd0cd;
+    font-weight: bold;
+    color: white;
+    border: 0 none;
+    border-radius: 25px;
+    cursor: pointer;
+    padding: 10px 5px;
+    margin: 10px 5px;
+	}
+
+	#msform .action-button-previous:hover, #msform .action-button-previous:focus {
+	  box-shadow: 0 0 0 2px white, 0 0 0 3px #9dd0cd;
+	}
+
+	/*headings*/
+	.fs-title {
+    font-size: 18px;
+    text-transform: uppercase;
+    color: #2C3E50;
+    margin-bottom: 10px;
+    letter-spacing: 2px;
+    font-weight: bold;
+	}
+
+	.fs-subtitle {
+    font-weight: normal;
+    font-size: 13px;
+    color: #666;
+    margin-bottom: 20px;
+	}
+
+	/*progressbar*/
+	#progressbar {
+    margin-bottom: 30px;
+    overflow: hidden;
+    counter-reset: step;
+	}
+
+	#progressbar li {
+    list-style-type: none;
+    color: #2c3e50;
+    text-transform: uppercase;
+    font-size: 9px;
+    width: 33.33%;
+    float: left;
+    position: relative;
+    letter-spacing: 1px;
+	}
+
+	#progressbar li:before {
+    content: counter(step);
+    counter-increment: step;
+    width: 24px;
+    height: 24px;
+    line-height: 26px;
+    display: block;
+    font-size: 12px;
+    color: #333;
+    background: #cccccc;
+    border-radius: 25px;
+    margin: 0 auto 10px auto;
+	}
+
+	/*progressbar connectors*/
+	#progressbar li:after {
+    content: '';
+    width: 100%;
+    height: 2px;
+    background: #cccccc;
+    position: absolute;
+    left: -50%;
+    top: 9px;
+    z-index: -1;
+	}
+
+	#progressbar li:first-child:after {
+    content: none;
+	}
+
+	#progressbar li.active:before, #progressbar li.active:after {
+    background: #01cebf;
+    color: white;
+	}
+	@media only screen and (max-width: 912px) {
+		.btn-purple {
+	    width: 60%;
+		}
+	}
+
+
+	@media only screen and (max-width: 768px) {
+  	.bg-feature{
+			background-image: none;
+		}
+		.btn-purple {
+	    width: 60%;
+		}
+	}
+
+	@media only screen and (max-width: 540px) {
+		.phone-list{
+			min-height: auto !important; 
+		}
+  	#msform fieldset {
+	    padding: 0px;
+	    width: 100%;
+	    margin: 0;
+		}
+		#progressbar {
+	    margin-bottom: 0px;
+	    padding: 0px !important;
+		}
+		.header-deal:before {
+	    right: 140px;
+		}
+
+	}
+	
+
 }

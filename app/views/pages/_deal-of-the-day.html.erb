@@ -1,15 +1,75 @@
-
+<%= javascript_pack_tag 'day-deals', 'data-turbolinks-track': 'reload', defer: true %>
+<%= render 'layouts/sp-exit/header' %>
 <div id="deal-of-day">
 	<div class="bg-header">
 		<div class="container">
-			<div class="row">
-				<div class="col-md-6">
-					
-				</div>
-				<div class="col-md-6">
-					
+			<div class="row mt-md-5 pt-5">
+				<div class="col-lg-6 col-md-8 mx-auto text-center">
+					<h1 class="font-weight-bold text-center text-white">Find the best offers from our latest deals, all in one place.</h1>
+					<button class="btn btn-purple mt-4 px-4 open-form rounded-pill"> Find Now </button>
 				</div>
 			</div>
 		</div>
 	</div>
+	<div class="bg-light">
+		<div class="container">
+			<div class="row py-md-5 my-md-5 mb-5">
+				<h1 class="text-blu font-weight-bold mb-md-5 mb-4 w-100 text-center">Our Most Popular Phones</h1>
+				<% @phones.each do |phone| %>
+					<div class="col-lg-4 col-md-6 mb-4">
+						<div class="rounded shadow bg-white">
+							<div class="header-deal w-25 ml-auto text-center font-weight-bold text-white">
+								<%= phone[:top_text] %>
+							</div>
+							<div class="p-3 text-center phone-list">
+								<h4><%= phone[:name] %></h4>
+								<%= image_tag(phone[:image], class: "w-195 py-2" ) %>
+								<p class="mb-1">£0 Upfornt</p>
+								<h6 class="font-weight-bold text-center">Unlimited</h6>
+								<p class="text-center text-blu">Calls | SMS | Data</p>
+								<button class="btn btn-blue  px-4 mt-4 open-form"><%= phone[:btn_text] %></button>
+							</div>
+						</div>
+					</div>
+				<% end %>
+			</div>
+		</div>
+	</div>
+	<div class="bg-feature">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-6 d-md-none d-block">
+					<%= image_tag("day-deals/newiPhone-d1.png", class: "w-100" ) %>
+				</div>
+				<div class="col-md-6 align-self-center pb-md-5 py-4">
+					<h1 class="text-blu font-weight-bold">UPGRADE</h1>
+					<h1 class="fw-100">Get a Great New Phone</h1>
+					<p>A dramatically more powerful camera system a display so responsive, every interaction feels new again.The world’s fastest smartphone chip exceptional durability and a huge leap in battery life.</p>
+					<h5>Let’s Pro.</h5>
+					<button class="btn btn-blue px-4 mt-4 open-form"> Get It Now</button>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="bg-light">
+		<div class="container">
+			<div class="row mt-md-5 pt-5">
+				<div class="col-md-6">
+					<%= image_tag("day-deals/galaxy-S21-FEd.png", class: "w-100" ) %>
+				</div>
+				<div class="col-md-6 mt-md-0 mt-4">
+					<h1 class="text-blu font-weight-bold">Galaxy S21 FE 5G</h1>
+					<h5 class="mb-1">Real display vision</h5>
+					<p>The high quality display with Dynamic AMOLED 2X delivers vibrant color and brightness, even in bright sunlight.</p>
+					<h5 class="mb-1">Pro-grade Camera</h5>
+					<p>The powerful pro-grade camera delivers high-quality photos and videos, with a Rear Camera that boasts 12MP Ultra Wide, Wide-angle cameras and a 8MP Telephoto Camera. It also features a Front Camera that includes a 32MP Selfie camera.</p>
+					<button class="btn btn-blue px-4 my-4 open-form"> Get Now</button>
+				</div>
+			</div>
+		</div>
+	</div>
+<%= render 'layouts/day-deal/step-form' %>
 </div>
+<%= render 'layouts/common/footer' %>
+<%= render 'layouts/common/waiting_loader' %>
+
