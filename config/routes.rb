@@ -18,5 +18,6 @@ Rails.application.routes.draw do
   root 'pages#index'
   get '/data_share' => 'pages#data_share'
   get '/new' => 'pages#homev1'
+  get '/set_cookies' => 'pages#set_cookies'
   get '/:page_name' => 'pages#show'
 end

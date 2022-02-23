@@ -1,6 +1,5 @@
 class PagesController < ApplicationController
   include PagesHelper
-  before_action :set_cookies
 	def index
     @amp = true
     get_deals_data('home')
@@ -28,7 +27,6 @@ class PagesController < ApplicationController
     render layout: 'data_share'
   end
 
-  private
   def set_cookies
     @cookie_uuid =  cookies[:_msuuid_1fexuyzkduuouz] || "SS#{SecureRandom.uuid}"
     @randon_token =  SecureRandom.uuid
@@ -39,7 +37,7 @@ class PagesController < ApplicationController
       httponly: false,
     }
     Time.zone = ('GMT');
-    # debugger
+
     @endDate = DateTime.current.seconds_until_end_of_day;
     @timerendDate = @endDate;
     cookies[:timerEndDate] = {

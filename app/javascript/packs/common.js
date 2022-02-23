@@ -26,11 +26,28 @@ class Common {
     this.deviveSearchEngine=null
     this.debiceBrand=null
     this.deviceName=null
+    CI.myCookie=null
+    this.checkCookieExist()
     this.deviceDetection()
 
     $('#deal-form-modal').on('hide.bs.modal', function (e) {
       $('.clock').show()
     });
+
+    $( ".accept-cooky" ).click(function() {
+      CI.CookieEvent()
+      CI.myCookie = true
+      $.ajax({
+        url: "/set_cookies",
+        success: function(){
+        },
+      })
+      $('.cookie-consent').addClass('d-none')
+    })
+
+    $('.reject-cookie').click(function(){
+      $('.cookie-consent').addClass('d-none')
+    })
 
     window.FontAwesomeConfig = {
       searchPseudoElements: true
@@ -458,6 +475,37 @@ class Common {
 
   USTransaction(){
     dataLayer.push({'event': 'USTransaction'})
+  }
+
+  getCookies(name) {
+    var dc = document.cookie;
+    var prefix = name + "=";
+    var begin = dc.indexOf("; " + prefix);
+    if (begin == -1) {
+      begin = dc.indexOf(prefix);
+      if (begin != 0) return null;
+    }
+    else
+    {
+      begin += 2;
+      var end = document.cookie.indexOf(";", begin);
+      if (end == -1) {
+        end = dc.length;
+      }
+    }
+    return decodeURI(dc.substring(begin + prefix.length, end));
+  }
+
+  checkCookieExist() {
+    var CI = this;
+    CI.myCookie = CI.getCookies("_msuuid_1fexuyzkduuouz");
+    if (CI.myCookie == null) {
+      $('.cookie-consent').removeClass('d-none')
+    }
+  }
+
+  CookieEvent(){
+    dataLayer.push({'event': 'cookieconsent'})
   }
 
   postData() {
