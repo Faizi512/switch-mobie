@@ -161,7 +161,10 @@ class Home extends Common {
     }
     else{
       var data = this.getData();
-      this.setItemToStorage("user_data", data)
+      if (CI.myCookie != null)
+      {
+        CI.setItemToStorage("user_data", data)
+      }
       console.log("Postdata: "+new Date())
       this.submitLead(data, this.details.camp_id)
     }
