@@ -6,23 +6,29 @@
           <span aria-hidden="true">&times;</span>
         </button>
       </div>
-      <div class="modal-body">
+      <div class="modal-body pt-0">
         <!-- MultiStep Form -->
         <div class="row">
           <div class="col-md-12">
             <form id="msform" data-details="<%= @details %>" data-parsley-validate="">
               <!-- progressbar -->
-              <ul id="progressbar">
-                <li class="active">Personal Details</li>
-                <li>Address Details</li>
-                <li>Contact Details</li>
-              </ul>
+              <div class="row w-100 mx-0 justify-content-end">
+                <div class="col-12 col-lg-9 mx-auto">
+                  <div class="progressbar-info px-0">
+                    <div>
+                      <p class="progress-percent m-0 fw-bold mb-1">0% Complete</p>
+                    </div>
+                  </div>
+                  <div class="progress p-0">
+                    <div id="progressBar" class="progress-bar bg-grcolor" role="progressbar" aria-valuemin="0" aria-valuemax="100"></div>
+                  </div>
+                </div>
+              </div>
               <!-- fieldsets -->
               <fieldset>
-                <h2 class="fs-title">Personal Details</h2>
-                <h3 class="fs-subtitle">Tell us something more about you</h3>
-                <div class="row justify-content-center">
+                <div class="row justify-content-center mt-4">
                   <div class="form-group col-lg-8 col-12">
+                    <label class=" w-100 text-left mb-1 form-label">First Name</label>
                     <input
                     name="first_name"
                     required
@@ -34,6 +40,7 @@
                     placeholder="First Name" >
                   </div>
                   <div class="form-group col-lg-8  col-12">
+                    <label class=" w-100 text-left mb-1 form-label">Last Name</label>
                     <input
                     name="last_name"
                     required
@@ -49,12 +56,11 @@
                 <input type="button" name="next" class="next action-button" value="Next"/>
               </fieldset>
               <fieldset>
-                <h2 class="fs-title">Address Details</h2>
-                <h3 class="fs-subtitle">Your present address for delivering the product</h3>
-                <div class="row justify-content-center">
+                <div class="row justify-content-center mt-4">
                   <!-- postcode -->
                   <div class="form-group col-lg-8  col-12">
                     <div class="w-100 justify-content-center position-relative">
+                      <label class=" w-100 text-left mb-1 form-label">Postcode</label>
                       <input
                       name="postcode"
                       required
@@ -65,12 +71,12 @@
                       type="text"
                       class="postcode form-control"
                       placeholder="Postcode">
-                      <button type="button" class="btn btn-success rounded-0 findAddress-btn">Find Address</button>
+                      <button type="button" class="btn btn-success rounded-right left-0r findAddress-btn">Find Address</button>
                     </div>
                     <div class="postcode-error"></div>
                   </div>
                   <div class="form-group col-lg-8 col-12 property-div display-none">
-                    <label class="text-left">Your Property*</label>
+                    <label class="text-left  w-100 mb-1 form-label">Your Property</label>
                     <input type="hidden" name="towncity" class="towncity" >
                     <input type="hidden" name="street1" class="street1" >
                     <input type="hidden" name="county" class="county" >
@@ -89,6 +95,7 @@
                   </div>
 
                   <div class="form-group col-lg-8 col-12  address-div display-none">
+                    <label class=" w-100 text-left mb-1 form-label">Address</label>
                     <input
                       placeholder="Address"
                       id="address"
@@ -105,10 +112,9 @@
                 <input type="button" name="next" class="next action-button" value="Next"/>
               </fieldset>
               <fieldset>
-                <h2 class="fs-title">Contact Details</h2>
-                <h3 class="fs-subtitle">Fill in your contact details</h3>
-                <div class="row justify-content-center">
-                  <div class="input-group col-lg-8 col-12  mb-3">
+                <div class="row justify-content-center mt-4">
+                  <div class="input-group col-lg-8 col-12 mb-3">
+                    <label class=" w-100 text-left mb-1 form-label">Phone Number</label>
                     <input
                     type="number"
                     name="telephone"
@@ -122,6 +128,7 @@
                     placeholder="Mobile Number">
                   </div>
                   <div class="input-group col-lg-8 col-12  mb-3 email-div">
+                    <label class=" w-100 text-left mb-1 form-label">Email</label>
                     <div class="clearfix"></div>
                     <input
                     type="email"
@@ -138,7 +145,7 @@
                     placeholder="Email Address">
                   </div>
                   <div class="custom-checkbox col-lg-8 col-12 ">
-                    <h5 class="text-center">Accept</h5>
+                    <label class="text-center form-label">Accept</label>
                     <div class="onoffswitch mx-auto">
                       <input type="hidden" name="c1">
                       <input

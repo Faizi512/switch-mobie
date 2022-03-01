@@ -2,20 +2,34 @@
 <%= render 'layouts/sp-exit/header' %>
 <div id="deal-of-day">
 	<div class="bg-header">
+		<%= image_tag("day-deals/banner1.png", class: "w-25 banner1-phone", alt: "iPhone 13" ) %>
+		<%= image_tag("day-deals/galaxy-s22.png", class: "w-25 banner-phone", alt: "Samsung S22" ) %>
 		<div class="container">
-			<div class="row mt-md-5 pt-5">
-				<div class="col-lg-6 col-md-8 mx-auto text-center">
-					<h1 class="font-weight-bold text-center text-white">Don't Miss Out The Deal of the Day</h1>
-					<p class="text-white text-center">Its time to unbox the your favourite smartphone without any upfront charges</p>
-					<button class="btn btn-purple mt-4 px-4 open-form rounded-pill"> Continue </button>
+			<div class="row my-md-5 my-4">
+				<div class="col-lg-7 col-12 mx-auto align-self-center">
+					<h1 class="font-weight-bold text-white fs-55 text-center text-lg-left">Don't Miss Out <br> The Deal of the Day</h1>
+					<p class="text-white text-md-center text-xl-left">Its time to unbox the your favourite smartphone without any upfront charges</p>
 				</div>
+				<div class="col-lg-5 col-sm-12 open-form">
+          
+          <div class="text-white text-center pb-4 shadow-lg rounded bg-light-head">
+          	<div class="top-head-deal w-25 ml-auto text-center font-weight-bold text-white">
+							Exclusive Deal
+						</div>
+          	<h3 class="font-weight-bold text-white">iPhone 13 Pro Max</h3>
+          	<%= image_tag("phone/apple-iphone-13-pro.png", class: "iphone-deals w-40", alt: "iPhone 13 Pro Max" ) %>
+          	<h4 class="text-white font-weight-bold mt-3">Unlimited</h4>
+          	<p class="text-center text-white">Calls | Data | SMS</p>
+          	<button class="btn btn-purple open-form  py-2 fs-24 mt-4 rounded-pill">Continue</button>     
+          </div>
+        </div>
 			</div>
 		</div>
 	</div>
 	<div class="bg-light">
 		<div class="container">
-			<div class="row py-md-5 my-md-5 mb-5">
-				<h1 class="text-blu font-weight-bold mb-md-5 mb-4 w-100 text-center">Our Most Popular Phones</h1>
+			<div class="row py-md-5 mb-5">
+				<h1 class="text-blu font-weight-bold mb-md-5 mb-4 w-100 text-center mt-3 mt-md-0">Our Most Popular Phones</h1>
 				<% @phones.each do |phone| %>
 					<div class="col-lg-4 col-md-6 mb-4">
 						<div class="rounded shadow bg-white">

@@ -442,7 +442,7 @@ module PagesHelper
       },
       {
         top_text:"Upto 30% OFF",
-        name: "Samsung Galaxy Z Fold3 5G",
+        name: " Galaxy Z Fold3 5G",
         btn_text: "Exclusive Deal",
         image: view_context.image_url("z-fold3.png"),
       },
@@ -460,7 +460,7 @@ module PagesHelper
       },
       {
         top_text:"Exclusive",
-        name: "Samsung Galaxy Z Flip3 5G",
+        name: " Galaxy Z Flip3 5G",
         btn_text: "Exclusive Deal",
         image: view_context.image_url("z-flip3.png"),
       },

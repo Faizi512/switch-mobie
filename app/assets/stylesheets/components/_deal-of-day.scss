@@ -1,11 +1,12 @@
 #deal-of-day{
 	.bg-header{
-		background-image: asset-url('day-deals/d-bg-img.png');
+		background-image: linear-gradient(248deg, #9cfcf8 11.2%, #2d0194 91.1%);
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    overflow-x: hidden;
+    overflow: hidden;
     min-height: 450px;
+    position: relative;
 	}
 	.header-deal{
 		min-width: 7.875rem;
@@ -16,6 +17,40 @@
     align-items: center;
     justify-content: center;
 	}
+	.banner-phone{
+		position: absolute;
+    left: -35px;
+    bottom: -45px;
+	}
+	.banner1-phone{
+		position: absolute;
+    left: -40px;
+    top: -75px;
+	}
+	.fs-55{
+		font-size: 65px !important;
+	}
+	.w-40{
+		width: 40% !important;
+	}
+	.top-head-deal {
+    min-width: 8.3rem;
+    height: 44px;
+    font-size: 1rem;
+    background-color: #2d0194;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+	}
+	.top-head-deal:before {
+    position: absolute;
+    content: "";
+    right: 151px;
+    display: block;
+    top: 3px;
+    border-top: 44px solid #2d0194;
+    border-left: 50px solid transparent;
+	}
 	.header-deal:before{
 		position: absolute;
     content: "";
@@ -25,8 +60,21 @@
     border-top: 36px solid #01cebf;
     border-left: 50px solid transparent;
 	}
+
+	.bg-light-head{
+		background-color: #defffc4d !important;
+		border: 3px solid white !important;
+	}
 	.text-blu{
 		color:  #01cebf;
+	}
+	.bg-green{
+		background-color: #06decea1 !important;
+	}
+	.detail-box {
+    background-color: #ffffff00;
+    color: #2d0194 !important;
+    padding: 8px 0;
 	}
 	.btn-blue{
 		background-color: #01cebf !important;
@@ -53,10 +101,13 @@
 	}
 
 	.phone-list{
-		min-height: 514px !important; 
+		min-height: 505px !important; 
 	}
 	.fw-100{
 		font-weight: 100 !important;
+	}
+	.modal-content{
+		border-radius: 1rem !important;
 	}
 
 	.bg-feature{
@@ -70,7 +121,9 @@
     position: absolute;
     bottom: 0px;
     right: 0px;
-    top: 0;
+	}
+	.property{
+		height: 41px !important;
 	}
 	.min-h-form{
 		min-height: 500px;
@@ -80,7 +133,11 @@
     font-weight: 300;
 	}
 	.form-group {
-    margin-bottom: 1.5rem;
+    margin-bottom: 1rem;
+	}
+	.form-label{
+		font-weight: 600;
+		color: #00b3dc;
 	}
 
 	/*form styles*/
@@ -95,8 +152,8 @@
     border-radius: 0px;
     padding: 20px 30px;
     box-sizing: border-box;
-    width: 80%;
-    margin: 0 10%;
+    width: 100%;
+    margin: 0;
     position: relative;
 	}
 
@@ -111,12 +168,26 @@
 	#msform fieldset:not(:first-of-type) {
 	  display: none;
 	}
+	#msform{
+		::placeholder {
+		  color: #bcc2c8;
+		  opacity: 1; /* Firefox */
+		}
+		:-ms-input-placeholder { /* Internet Explorer 10-11 */
+		 color: #bcc2c8;
+		}
+
+		::-ms-input-placeholder { /* Microsoft Edge */
+		 color: #bcc2c8;
+		}
+	}
 
 	/*inputs*/
 	#msform input, #msform textarea {
     padding: 20px;
-    border: 1px solid #ccc;
-    border-radius: 0px;
+    border: none;
+    background-color: aliceblue;
+    border-radius: 8px !important;
     width: 100%;
     box-sizing: border-box;
     font-family: 'Prompt', sans-serif  !important;
@@ -185,14 +256,37 @@
     color: #666;
     margin-bottom: 20px;
 	}
+	.accept-font{
+		font-family: 'Stardos+Stencil', sans-serif;
+    font-weight: 300;
+	}
 
 	/*progressbar*/
 	#progressbar {
-    margin-bottom: 30px;
     overflow: hidden;
     counter-reset: step;
 	}
-
+	.progress {
+    background-color: #f0f8ff;
+    border-radius: 1.25rem;
+    border: 1px solid #01cebf;
+    height: 25px;
+	}
+	.progress-percent{
+		color: #01cebf;
+	}
+	.bg-grcolor{
+		background-image: linear-gradient(to left, #01cebf, #00b3dc);
+		height: 100%;
+	}
+	.rounded-right {
+    border-top-right-radius: 8px !important;
+    border-bottom-right-radius: 8px !important;
+	}
+	.btn-success {
+    box-shadow: none !important;
+    height: 41px !important;
+	}
 	#progressbar li {
     list-style-type: none;
     color: #2c3e50;
@@ -242,6 +336,9 @@
 		.btn-purple {
 	    width: 60%;
 		}
+		.top-head-deal:before {
+	    right: 188px;
+		}
 	}
 
 
@@ -255,6 +352,12 @@
 	}
 
 	@media only screen and (max-width: 540px) {
+		.top-head-deal:before {
+	    right: 151px;
+		}
+		.fs-55{
+			font-size: 39px !important;
+		}
 		.phone-list{
 			min-height: auto !important; 
 		}
@@ -270,8 +373,15 @@
 		.header-deal:before {
 	    right: 140px;
 		}
-
+		.banner-phone{
+			position: absolute;
+	    left: -5px;
+	    bottom: 0px;
+		}
+		.banner1-phone {
+	    position: absolute;
+	    left: -18px;
+	    top: -41px;
+		}
 	}
-	
-
 }

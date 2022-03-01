@@ -11,6 +11,7 @@ class DayDeals extends Common {
     this.togglePopUp()
     this.toggleCheckBox()
     this.fillform()
+    this.fixStepIndicator(0)
     //jQuery time
     this.current_fs 
     this.next_fs
@@ -30,7 +31,7 @@ class DayDeals extends Common {
         CI.next_fs = $(this).parent().parent().parent().next();
         
         //activate next step on progressbar using the index of this.next_fs
-        $("#progressbar li").eq($("fieldset").index(CI.next_fs)).addClass("active");
+        CI.fixStepIndicator(CI.currentTab)
         
         //show the next fieldset
         CI.next_fs.show(); 
@@ -101,7 +102,7 @@ class DayDeals extends Common {
         }
         else{
           //activate next step on progressbar using the index of this.next_fs
-          $("#progressbar li").eq($("fieldset").index(CI.next_fs)).addClass("active");
+          CI.fixStepIndicator(CI.currentTab)
           //show the next fieldset
           CI.next_fs.show(); 
           //hide the current fieldset with style
@@ -141,7 +142,7 @@ class DayDeals extends Common {
       CI.previous_fs = $(this).parent().prev();
       
       //de-activate current step on progressbar
-      $("#progressbar li").eq($("fieldset").index(CI.current_fs)).removeClass("active");
+      CI.fixStepIndicator(CI.currentTab)
       
       //show the previous fieldset
       CI.previous_fs.show(); 
@@ -214,5 +215,16 @@ class DayDeals extends Common {
     // Form Submisson
     this.updateFacebookAudience(data)
   }
+    fixStepIndicator(num) {
+      var progress = document.getElementById('progressBar');
+      if(num > 0) {
+        progress.style.width = ((num+1) * 33)+"%";
+        $('.progress-percent').text(((num+1) * 33) + "%" + " Complete");
+      }
+      if( num ==  0){
+        progress.style.width = (33)+"%";
+        $('.progress-percent').text("33% Complete");
+      }
+    }
 }
 export default new DayDeals();
