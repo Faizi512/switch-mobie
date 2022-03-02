@@ -99,10 +99,6 @@
 	.btn-purple:hover, .btn-purple:focus {
 	  box-shadow: 0 0 0 2px #f4d1f2, 0 0 0 3px #2d0194;
 	}
-
-	.phone-list{
-		min-height: 505px !important; 
-	}
 	.fw-100{
 		font-weight: 100 !important;
 	}
@@ -181,7 +177,6 @@
 		 color: #bcc2c8;
 		}
 	}
-
 	/*inputs*/
 	#msform input, #msform textarea {
     padding: 20px;
@@ -332,6 +327,11 @@
     background: #01cebf;
     color: white;
 	}
+	.img-div{
+		height: 253px;
+		width: 155px;
+		object-fit: contain;
+	}
 	@media only screen and (max-width: 912px) {
 		.btn-purple {
 	    width: 60%;
@@ -356,10 +356,7 @@
 	    right: 151px;
 		}
 		.fs-55{
-			font-size: 39px !important;
-		}
-		.phone-list{
-			min-height: auto !important; 
+			font-size: 35px !important;
 		}
   	#msform fieldset {
 	    padding: 0px;

@@ -8,9 +8,9 @@
 			<div class="row my-md-5 my-4">
 				<div class="col-lg-7 col-12 mx-auto align-self-center">
 					<h1 class="font-weight-bold text-white fs-55 text-center text-lg-left">Don't Miss Out <br> The Deal of the Day</h1>
-					<p class="text-white text-md-center text-xl-left">Its time to unbox the your favourite smartphone without any upfront charges</p>
+					<p class="text-white text-center text-xl-left">Its time to unbox the your favourite smartphone without any upfront charges</p>
 				</div>
-				<div class="col-lg-5 col-sm-12 open-form">
+				<div class="col-lg-5 col-11 open-form mx-auto">
           
           <div class="text-white text-center pb-4 shadow-lg rounded bg-light-head">
           	<div class="top-head-deal w-25 ml-auto text-center font-weight-bold text-white">
@@ -38,7 +38,9 @@
 							</div>
 							<div class="p-3 text-center phone-list">
 								<h4><%= phone[:name] %></h4>
-								<%= image_tag(phone[:image], class: "w-195 py-2" ) %>
+								<div class="img-div mx-auto">
+									<%= image_tag(phone[:image], class: "w-100" ) %>									
+								</div>
 								<p class="mb-1">£0 Upfornt</p>
 								<h6 class="font-weight-bold text-center">Unlimited</h6>
 								<p class="text-center text-blu">Calls | SMS | Data</p>
