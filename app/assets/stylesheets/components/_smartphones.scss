@@ -1,0 +1,35 @@
+.bg-clip{
+	overflow: hidden;
+	height: 500px;
+}
+.bg-clip::before{
+	background-color: #92dada;
+	clip-path: polygon(0% 0, 0% 125%, 100% 0%);
+  content: "";
+  position: absolute;
+  right: 0;
+  height: 100%;
+  width: 100%;
+  bottom: 0;
+  left: 0;
+}
+.fs-65{
+	font-size: 65px !important;
+}
+.text-orng{
+	color: #FA6E47 !important;
+}
+.mxw-100{
+	max-width: 100% !important;
+}
+.btn-orang {
+  background-color: #FA6E47 !important;
+  border: 2px solid #FA6E47 !important;
+  font-size: 22px !important;
+  color: white !important;
+  font-weight: 500;
+  width: 37%;
+}
+.btn-orang:hover, .btn-orang:focus {
+  box-shadow: 0 0 0 2px #f4d1f2, 0 0 0 3px #FA6E47;
+}
