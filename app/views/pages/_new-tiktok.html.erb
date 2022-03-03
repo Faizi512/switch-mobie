@@ -7,7 +7,232 @@
   <%= render 'layouts/homev1/why-choose-us'  %>
   <%= render 'layouts/homev1/faq' %>
   <%= render 'layouts/common/waiting_loader' %>
-  <%= render 'layouts/homev1/step_form'%>
+  <div class="modal fade" id="deal-form-modal" tabindex="-1" role="dialog" aria-labelledby="ModalCenterTitle" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+    <div class="modal-content deal-form-bo p-0">
+      <div class="modal-body p-0">
+        <div id="multi-step-form">
+          <div class="row d-flex justify-content-center p-0 mx-0 w-100">
+            <div class="col-12 p-0">
+              <div class="card card0 border-0">
+                <div class="row p-0 mx-0 w-100">
+                  <div class="col-12 p-0">
+                    <div class="card card00 p-2 border-0">
+                      <div class="row text-center justify-content-center px-3 mx-0 w-100">
+                        <h3 class="my-4">Get <span class="text-uppercase text-danger">ACCEPTED</span> in just 30 seconds!</h3>
+                      </div>
+                      <form class="form" id="dealform" data-details="<%= @details %>" method="post" action="javascript:;">
+                        <div class="d-flex flex-md-row px-3 mt-4 flex-column-reverse">
+                          <div class="col-md-4 p-0 d-none d-md-block">
+                            <div class="card1">
+                              <ul id="progressbar" class="text-center">
+                                <li class="active step0"></li>
+                                <li class="step0"></li>
+                                <li class="step0"></li>
+                                <li class="step0 d-none"></li>
+                              </ul>
+                              <h6 class="mb-5">Enter your Name</h6>
+                              <h6 class="mb-5">Select your Address</h6>
+                              <h6 class="mb-5">Get Verified</h6>
+                            </div>
+                          </div>
+                            <div class="col-md-8 p-0">
+                              <div class="card2 first-screen show ml-2">
+                                <div class="row px-3 mx-0 w-100">
+                                  <div class="form-group mt-1 mb-1 col-12 p-0">
+                                    <input
+                                    name="first_name"
+                                    required
+                                    data-parsley-required="true"
+                                    data-parsley-required-message="Please Enter First Name"
+                                    data-parsley-pattern-message="First Name Must Be Alphabetic"
+                                    data-parsley-pattern="/^[a-zA-Z ]*$/"
+                                    data-parsley-group="block-0"
+                                    type="text"
+                                    class="first_name form-control bg-transparent"
+                                    >
+                                    <label class="ml-3 form-control-placeholder" for="email">First Name</label>
+                                  </div>
+                                </div>
+                                <div class="row px-3 mt-3 mb-1 mx-0 w-100">
+                                  <div class="form-group mt-1 mb-1 col-12 p-0">
+                                    <input
+                                    name="last_name"
+                                    required
+                                    data-parsley-required="true"
+                                    data-parsley-required-message="Please Enter Last Name"
+                                    data-parsley-pattern-message="First Name Must Be Alphabetic"
+                                    data-parsley-pattern="/^[a-zA-Z ]*$/"
+                                    data-parsley-group="block-0"
+                                    type="text"
+                                    class="last_name form-control bg-transparent"
+                                    >
+                                    <label class="ml-3 form-control-placeholder" for="email">Last Name</label>
+                                  </div>
+                                </div>
+                                <div class="row px-3 mt-1 mb-1 mx-0 w-100 justify-content-center py-3">
+                                  <div class="next-button d-flex justify-content-center align-items-center mt-1">
+                                    Contiue<span class="fa fa-arrow-right ml-2"></span>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="card2 ml-2">
+                                <div class="row px-3 mt-3 mx-0 w-100">
+                                  <div class="form-group mt-1 mb-1 col-12 p-0">
+                                    <input
+                                    name="postcode"
+                                    required
+                                    data-parsley-required="true"
+                                    data-parsley-required-message="Please Enter Postcode"
+                                    data-parsley-group="block-1"
+                                    data-parsley-validapipostcode
+                                    type="text"
+                                    class="postcode form-control ignoreStep4 approve bg-transparent"
+                                    >
+                                    <label class="ml-3 form-control-placeholder" for="pwd">Postcode</label>
+                                    <div class="error-checkbox"></div>
+                                  </div>
+                                </div>
+                                <div class="row px-3 mx-0 w-100">
+                                  <div class="form-group mt-1 mb-1 col-12 p-0 property-div display-none mt-3">
+                                    <input type="hidden" name="towncity" class="towncity" >
+                                    <input type="hidden" name="street1" class="street1" >
+                                    <input type="hidden" name="county" class="county" >
+                                    <input type="hidden" name="houseNumber" class="houseNumber" >
+                                    <input type="hidden" name="street2" class="street2" >
+                                    <input type="hidden" name="building" class="building" >
+                                    <select
+                                      id="property"
+                                      name="property"
+                                      class="property w-100 form-control ignoreStep4 text-dark mb-0"
+                                      data-parsley-required="true"
+                                      data-parsley-required-message="Please Select Your property"
+                                      data-parsley-group="block-1"
+                                      required>
+                                    </select>
+                                  </div>
+                                  <div class="form-group col-lg-7 col-12 address-div display-none">
+                                    <label class="d-flex justify-content-start  text-black f-25 mb-2">
+                                      First Line Of Address
+                                    </label>
+                                    <input
+                                      placeholder="Address"
+                                      id="address"
+                                      name="address"
+                                      class="address form-control ignoreStep4 bg-transparent"
+                                      data-parsley-required="true"
+                                      data-parsley-required-message="Please Enter Your Address"
+                                      data-parsley-group="block-1"
+                                      type="text"
+                                      >
+                                  </div>
+                                </div>
+                                <div class="row px-3 mt-1 mb-1 mx-0 w-100 justify-content-between flex-row-reverse py-3">
+                                  <div class="next-button d-flex justify-content-center align-items-center mt-1 col-8">
+                                    Next<span class="fa fa-arrow-right ml-2"></span>
+                                  </div>
+                                  <div class="prev d-flex justify-content-center align-items-center mt-1 col-3">
+                                    <span class="fa fa-arrow-left mr-2"></span>Prev
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="card2 ml-2">
+                                <div class="row px-3 mx-0 w-100">
+                                  <div class="form-group mt-1 mb-1 col-12 p-0">
+                                    <input
+                                    type="email"
+                                    name="email"
+                                    required
+                                    data-parsley-required="true"
+                                    data-parsley-required-message="Please Enter Valid Email Address"
+                                    data-parsley-type="email"
+                                    data-parsley-type-message="Please Enter Valid Email Address"
+                                    data-parsley-group="block-2"
+                                    data-parsley-validemail
+                                    value=""
+                                    class="form-control nme_inpu email bg-transparent"
+                                    >
+                                    <label class="ml-3 form-control-placeholder" for="email">Email Address</label>
+                                  </div>
+                                </div>
+                                <div class="row px-3 mt-3 mb-1 mx-0 w-100">
+                                  <div class="form-group mt-1 mb-1 col-12 p-0">
+                                    <input
+                                    type="number"
+                                    name="telephone"
+                                    required
+                                    data-parsley-required="true"
+                                    data-parsley-required-message="Please Enter Valid Uk Phone Number"
+                                    data-parsley-type="number"
+                                    data-parsley-group="block-2"
+                                    data-parsley-validphone
+                                    class="form-control phone telephone bg-transparent"
+                                    >
+                                    <label class="ml-3 form-control-placeholder" for="email">Mobile Number</label>
+                                  </div>
+                                </div>
+                                <div class="row px-3 mx-0 w-100 mb-1 mt-3">
+                                  <div class="form-group mt-1 mb-1 col-12 p-0">
+                                    <label>Accept</label>
+                                    <div class="onoffswitch">
+                                      <input type="hidden" name="c1">
+                                      <input
+                                        type="checkbox"
+                                        name="agree"
+                                        class="onoffswitch-checkbox approve"
+                                        id="myonoffswitch"
+                                        data-parsley-required="true"
+                                        data-parsley-group="block-2"
+                                        data-parsley-required-message="Please accept our terms and conditions"
+                                        >
+                                      <label class="onoffswitch-label" for="myonoffswitch">
+                                          <span class="onoffswitch-inner"></span>
+                                          <span class="onoffswitch-switch"></span>
+                                      </label>
+                                    </div>
+                                    <div class="error-checkbox"></div>
+                                    <%= render 'layouts/common/accept_terms'%>
+                                  </div>
+                                </div>
+                                <div class="row px-3 mt-1 mb-1 mx-0 w-100 justify-content-between flex-row-reverse py-3">
+                                  <div class="next-button d-flex justify-content-center align-items-center mt-1 col-8">
+                                    Submit<span class="fa fa-arrow-right ml-2"></span>
+                                  </div>
+                                  <div class="prev d-flex justify-content-center align-items-center mt-1 col-3">
+                                    <span class="fa fa-arrow-left mr-2"></span>Prev
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="card2 ml-2">
+                                  <div class="row px-3 mt-2 mb-4 text-center">
+                                      <h2 class="col-12 text-danger"><strong>Success !</strong></h2>
+                                      <div class="col-12 text-center"><img class="tick" src="https://i.imgur.com/WDI0da4.gif"></div>
+                                  </div>
+                              </div>
+                              <div class="mt-2 text-center securityInfo">
+                                <ul>
+                                  <%= image_tag("lock.png") %>
+                                  <li>Safe</li>
+                                  <li>Secure</li>
+                                  <li>Privacy Protected</li>
+                                </ul>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </form>
+                    </div>
+                  </div>
+                </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
   <%= render 'layouts/homev1/footer' %>
   <%= render 'layouts/common/share_domain_iframes' %>
 </div>
