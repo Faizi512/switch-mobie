@@ -157,10 +157,10 @@
 	}
 
 	input:checked ~ label {
-    border-color: #06b4a7 !important;
+    border-color: #019421 !important;
 	}
 	.onoffswitch-inner:before {
-    background-color: #2d0194;
+    background-color: #019421;
 	}
 
 	/*Hide all except first fieldset*/
@@ -335,6 +335,11 @@
 		width: 155px;
 		object-fit: contain;
 	}
+	.font-border{
+	  color: #2d0194 !important;
+	  -webkit-text-stroke-width: 0.5px !important;
+	  -webkit-text-stroke-color: white !important;
+	}
 	@media only screen and (max-width: 912px) {
 		.btn-purple {
 	    width: 60%;
@@ -355,6 +360,9 @@
 	}
 
 	@media only screen and (max-width: 540px) {
+		.font-weight-bold {
+	    font-weight: 500 !important;
+		}
 		.fs-sm-30{
 			font-size: 30px !important
 		}
