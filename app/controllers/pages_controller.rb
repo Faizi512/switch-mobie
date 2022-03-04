@@ -1,5 +1,7 @@
 class PagesController < ApplicationController
   include PagesHelper
+  before_action :set_user_id
+
 	def index
     @amp = true
     get_deals_data('home')
@@ -25,6 +27,10 @@ class PagesController < ApplicationController
   def data_share
     response.headers.except! 'X-Frame-Options'
     render layout: 'data_share'
+  end
+
+  def set_user_id
+    @user_id = "SS#{SecureRandom.uuid}"
   end
 
   def set_cookies
