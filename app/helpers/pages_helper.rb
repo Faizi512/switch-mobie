@@ -435,19 +435,19 @@ module PagesHelper
 
     @phones = [
       {
-        top_text:"Upto 30% OFF",
+        top_text:"Deal of the day",
         name: "iPhone 13 Pro Max",
         btn_text: "Exclusive Deal",
         image: view_context.image_url("phone/apple-iphone-13-pro-max.png"),  
       },
       {
-        top_text:"Upto 30% OFF",
+        top_text:"Special Offer",
         name: " Galaxy Z Fold3 5G",
         btn_text: "Exclusive Deal",
         image: view_context.image_url("z-fold3.png"),
       },
       {
-        top_text:"Upto 30% OFF",
+        top_text:"Special Offer",
         name: "iPhone 13",
         btn_text: "Exclusive Deal",
         image: view_context.image_url("phone/apple-iphone-13.png"),
@@ -471,73 +471,73 @@ module PagesHelper
         image: view_context.image_url("phone/apple-iphone-13-mini.png"),
       },
       {
-        top_text:"Upto 30% OFF",
+        top_text:"Special Offer",
         name: "iPhone 12",
         btn_text: "Exclusive Deal",
         image: "iphone_12_black.png"
       },
       {
-        top_text:"Upto 30% OFF",
+        top_text:"Special Offer",
         name: "iPhone 11",
         btn_text: "Get Deal",
         image: "phone/iphone11.png",
       },
       {
-        top_text:"Upto 30% OFF",
+        top_text:"Special Deal",
         name: "Galaxy S20",
         btn_text: "Exclusive Deal",
         image: "phone/s20-5g.png"
       },
       {
-        top_text:"Upto 30% OFF",
+        top_text:"Special Deal",
         name: "iPhone XS",
         btn_text: "Get Deal",
         image: "phone/iphonexs.png"
       },
       {
-        top_text:"Upto 30% OFF",
+        top_text:"Special Deal",
         name: "Galaxy S10",
         btn_text: "Get Deal",
         image: "phone/samsungs10.png"
       },
       {
-        top_text:"Upto 30% OFF",
+        top_text:"Special Deal",
         name: "iPhone 11 Pro",
         btn_text: "Exclusive Deal",
         image: "phone/iphone11pro.png"
       },
       {
-        top_text:"Save Upto £100",
+        top_text:"Limited Offer",
         name: "Note 20 5G",
         btn_text: "Exclusive Deal",
         image: "phone/samsung-galaxy-note20-ultra.png"
       },
       {
-        top_text:"Save Upto £100",
+        top_text:"Limited Offer",
         name: "Samsung A20",
         btn_text: "Get Deal",
         image: "phone/samsung-a20.png"
       },
       {
-        top_text:"Save Upto £100",
+        top_text:"Limited Offer",
         name: "Galaxy S20 5G",
         btn_text: "Exclusive Deal",
         image: "phone/samsung-galaxy-s20-5g1.jpg"
       },
       {
-        top_text:"Upto 30% OFF",
+        top_text:"Special Deal",
         name: "iPhone SE 128GB",
         btn_text: "Get Deal",
         image: "phone/iphonese.jpg"
       },
       {
-        top_text:"Upto 30% OFF",
+        top_text:"Special Deal",
         name: "S20 Ultra 5G",
         btn_text: "Get Deal",
         image: "phone/s20-ultra-5g.png"
       },
       {
-        top_text:"Upto 30% OFF",
+        top_text:"Special Deal",
         name: "Huawei P30",
         btn_text: "Exclusive Deal",
         image: "phone/huaweip30.png"

@@ -7,7 +7,7 @@
 		<div class="container">
 			<div class="row my-md-5 my-4">
 				<div class="col-lg-7 col-12 mx-auto align-self-center">
-					<h1 class="font-weight-bold text-white fs-55 text-center text-lg-left">Don't Miss Out <br> The Deal of the Day</h1>
+					<h1 class="font-weight-bold text-white fs-55 text-center text-lg-left mb-3">Don't Miss Out <br> The Deal of the Day</h1>
 					<p class="text-white text-center text-xl-left">Its time to unbox the your favourite smartphone without any upfront charges</p>
 				</div>
 				<div class="col-lg-5 col-11 open-form mx-auto">
@@ -18,7 +18,8 @@
 						</div>
           	<h3 class="font-weight-bold text-white">iPhone 13 Pro Max</h3>
           	<%= image_tag("phone/apple-iphone-13-pro.png", class: "iphone-deals w-40", alt: "iPhone 13 Pro Max" ) %>
-          	<h4 class="text-white font-weight-bold mt-3">Unlimited</h4>
+          	<p class="small mb-1 text-center text-white mt-3">All Variants & Colors Available</p>
+          	<h4 class="text-white font-weight-bold">Unlimited</h4>
           	<p class="text-center text-white">Calls | Data | SMS</p>
           	<button class="btn btn-purple open-form  py-2 fs-24 mt-4 rounded-pill">Continue</button>     
           </div>
@@ -29,7 +30,7 @@
 	<div class="bg-light">
 		<div class="container">
 			<div class="row py-md-5 mb-5">
-				<h1 class="text-blu font-weight-bold mb-md-5 mb-4 w-100 text-center mt-3 mt-md-0">Our Most Popular Phones</h1>
+				<h1 class="text-blu font-weight-bold mb-md-5 mb-4 w-100 text-center mt-3 mt-md-0 fs-sm-30">Select Your Favourite Smartphone</h1>
 				<% @phones.each do |phone| %>
 					<div class="col-lg-4 col-md-6 mb-4">
 						<div class="rounded shadow bg-white">
@@ -41,6 +42,7 @@
 								<div class="img-div mx-auto">
 									<%= image_tag(phone[:image], class: "w-100" ) %>									
 								</div>
+								<p class="font-weight-light small text-blu text-center mb-1">All Variants & Colors Available</p>
 								<p class="mb-1">£0 Upfornt</p>
 								<h6 class="font-weight-bold text-center">Unlimited</h6>
 								<p class="text-center text-blu">Calls | SMS | Data</p>
@@ -63,7 +65,9 @@
 					<h1 class="fw-100">Get a Great New Phone</h1>
 					<p>A dramatically more powerful camera system a display so responsive, every interaction feels new again.The world’s fastest smartphone chip exceptional durability and a huge leap in battery life.</p>
 					<h5>Let’s Pro.</h5>
-					<button class="btn btn-blue px-4 mt-4 open-form"> Get It Now</button>
+					<div class="text-center text-lg-left">
+						<button class="btn btn-blue px-4 mt-4 open-form"> Get It Now</button>
+					</div>
 				</div>
 			</div>
 		</div>
@@ -80,7 +84,9 @@
 					<p>The high quality display with Dynamic AMOLED 2X delivers vibrant color and brightness, even in bright sunlight.</p>
 					<h5 class="mb-1">Pro-grade Camera</h5>
 					<p>The powerful pro-grade camera delivers high-quality photos and videos, with a Rear Camera that boasts 12MP Ultra Wide, Wide-angle cameras and a 8MP Telephoto Camera. It also features a Front Camera that includes a 32MP Selfie camera.</p>
-					<button class="btn btn-blue px-4 my-4 open-form"> Get Now</button>
+					<div class="text-lg-left text-center">
+						<button class="btn btn-blue px-4 my-4 open-form"> Get Now</button>						
+					</div>
 				</div>
 			</div>
 		</div>

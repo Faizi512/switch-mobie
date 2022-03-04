@@ -12,7 +12,7 @@
 		min-width: 7.875rem;
     height: 36px;
     font-size: 1rem;
-    background-color: #01cebf;
+    background-color: #2d0194;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -57,8 +57,11 @@
     right: 141px;
     display: block;
     top: 0px;
-    border-top: 36px solid #01cebf;
+    border-top: 36px solid #2d0194;
     border-left: 50px solid transparent;
+	}
+	.shadow {
+	    box-shadow: 0 0.5rem 1rem #6b96c766 !important;
 	}
 
 	.bg-light-head{
@@ -66,7 +69,7 @@
 		border: 3px solid white !important;
 	}
 	.text-blu{
-		color:  #01cebf;
+		color:  #2d0194;
 	}
 	.bg-green{
 		background-color: #06decea1 !important;
@@ -77,15 +80,15 @@
     padding: 8px 0;
 	}
 	.btn-blue{
-		background-color: #01cebf !important;
-		border: 2px solid #01cebf !important;
+		background-color: #2d0194 !important;
+		border: 2px solid #2d0194 !important;
 		font-size: 22px !important;
 		color: white !important;
 		font-weight: 500;
     width: 80%;
 		&:hover{
 			background-color: transparent !important;
-			color: #01cebf !important;
+			color: #2d0194 !important;
 		}
 	}
 	.btn-purple {
@@ -157,7 +160,7 @@
     border-color: #06b4a7 !important;
 	}
 	.onoffswitch-inner:before {
-    background-color: #01cebf;
+    background-color: #2d0194;
 	}
 
 	/*Hide all except first fieldset*/
@@ -194,7 +197,7 @@
     -moz-box-shadow: none !important;
     -webkit-box-shadow: none !important;
     box-shadow: none !important;
-    border: 1px solid #01cebf;
+    border: 1px solid #2d0194;
     outline-width: 0;
     transition: All 0.5s ease-in;
     -webkit-transition: All 0.5s ease-in;
@@ -205,7 +208,7 @@
 	/*buttons*/
 	#msform .action-button {
     width: 140px;
-    background: #01cebf;
+    background: #2d0194;
     font-weight: bold;
     color: white;
     border: 0 none;
@@ -216,7 +219,7 @@
 	}
 
 	#msform .action-button:hover, #msform .action-button:focus {
-	  box-shadow: 0 0 0 2px white, 0 0 0 3px #01cebf;
+	  box-shadow: 0 0 0 2px white, 0 0 0 3px #2d0194;
 	}
 
 	#msform .action-button-previous {
@@ -264,14 +267,14 @@
 	.progress {
     background-color: #f0f8ff;
     border-radius: 1.25rem;
-    border: 1px solid #01cebf;
+    border: 1px solid #2d0194;
     height: 25px;
 	}
 	.progress-percent{
-		color: #01cebf;
+		color: #2d0194;
 	}
 	.bg-grcolor{
-		background-image: linear-gradient(to left, #01cebf, #00b3dc);
+		background-image: linear-gradient(to left, #2d0194, #00b3dc);
 		height: 100%;
 	}
 	.rounded-right {
@@ -324,7 +327,7 @@
 	}
 
 	#progressbar li.active:before, #progressbar li.active:after {
-    background: #01cebf;
+    background: #2d0194;
     color: white;
 	}
 	.img-div{
@@ -352,11 +355,14 @@
 	}
 
 	@media only screen and (max-width: 540px) {
+		.fs-sm-30{
+			font-size: 30px !important
+		}
 		.top-head-deal:before {
 	    right: 151px;
 		}
 		.fs-55{
-			font-size: 35px !important;
+			font-size: 30px !important;
 		}
   	#msform fieldset {
 	    padding: 0px;
