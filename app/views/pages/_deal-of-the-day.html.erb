@@ -1,0 +1,99 @@
+<%= javascript_pack_tag 'day-deals', 'data-turbolinks-track': 'reload', defer: true %>
+<%= render 'layouts/sp-exit/header' %>
+<div id="deal-of-day">
+	<div class="bg-header">
+		<%= image_tag("day-deals/banner1.png", class: "w-25 banner1-phone", alt: "iPhone 13" ) %>
+		<%= image_tag("day-deals/galaxy-s22.png", class: "w-25 banner-phone", alt: "Samsung S22" ) %>
+		<div class="container">
+			<div class="row my-md-5 my-4">
+				<div class="col-lg-7 col-12 mx-auto align-self-center">
+					<h1 class="font-weight-bold text-white fs-55 text-center text-lg-left mb-3"> <span class="text-blu font-border">Don't</span> Miss Out <br> The  <span class="text-blu font-border">Deal</span> of the Day</h1>
+					<p class="text-white text-center text-xl-left">Its time to unbox your favourite smartphone without any upfront charges</p>
+				</div>
+				<div class="col-lg-5 col-11 open-form mx-auto">
+          
+          <div class="text-white text-center pb-4 shadow-lg rounded bg-light-head">
+          	<div class="top-head-deal w-25 ml-auto text-center font-weight-bold text-white">
+							Exclusive Deal
+						</div>
+          	<h3 class="font-weight-bold text-blu">iPhone 13 Pro Max</h3>
+          	<%= image_tag("phone/apple-iphone-13-pro.png", class: "iphone-deals w-40", alt: "iPhone 13 Pro Max" ) %>
+          	<p class="small mb-1 text-center text-white mt-3">All Variants & Colors Available</p>
+          	<h4 class="text-white font-weight-bold">Unlimited</h4>
+          	<p class="text-center text-white">Calls | Data | SMS</p>
+          	<button class="btn btn-purple open-form  py-2 fs-24 mt-4 rounded-pill">Continue</button>     
+          </div>
+        </div>
+			</div>
+		</div>
+	</div>
+	<div class="bg-light">
+		<div class="container">
+			<div class="row py-md-5 mb-5">
+				<h1 class="text-blu font-weight-bold mb-md-5 mb-4 w-100 text-center mt-3 mt-md-0 fs-sm-30">Select Your Favourite Smartphone</h1>
+				<% @phones.each do |phone| %>
+					<div class="col-lg-4 col-md-6 mb-4">
+						<div class="rounded shadow bg-white">
+							<div class="header-deal w-25 ml-auto text-center font-weight-bold text-white">
+								<%= phone[:top_text] %>
+							</div>
+							<div class="p-3 text-center phone-list">
+								<h4><%= phone[:name] %></h4>
+								<div class="img-div mx-auto">
+									<%= image_tag(phone[:image], class: "w-100" ) %>									
+								</div>
+								<p class="font-weight-light small text-blu text-center mb-1">All Variants & Colors Available</p>
+								<p class="mb-1">£0 Upfornt</p>
+								<h6 class="font-weight-bold text-center">Unlimited</h6>
+								<p class="text-center text-blu">Calls | SMS | Data</p>
+								<button class="btn btn-blue  px-4 mt-4 open-form"><%= phone[:btn_text] %></button>
+							</div>
+						</div>
+					</div>
+				<% end %>
+			</div>
+		</div>
+	</div>
+	<div class="bg-feature">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-6 d-md-none d-block">
+					<%= image_tag("day-deals/newiPhone-d1.png", class: "w-100" ) %>
+				</div>
+				<div class="col-md-6 align-self-center pb-md-5 py-4">
+					<h1 class="text-blu font-weight-bold">UPGRADE</h1>
+					<h1 class="fw-100">Get a Great New Phone</h1>
+					<p>A dramatically more powerful camera system a display so responsive, every interaction feels new again.The world’s fastest smartphone chip exceptional durability and a huge leap in battery life.</p>
+					<h5>Let’s Pro.</h5>
+					<div class="text-center text-lg-left">
+						<button class="btn btn-blue px-4 mt-4 open-form"> Get It Now</button>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="bg-light">
+		<div class="container">
+			<div class="row mt-md-5 pt-5">
+				<div class="col-md-6">
+					<%= image_tag("day-deals/galaxy-S21-FEd.png", class: "w-100" ) %>
+				</div>
+				<div class="col-md-6 mt-md-0 mt-4">
+					<h1 class="text-blu font-weight-bold">Galaxy S21 FE 5G</h1>
+					<h5 class="mb-1">Real display vision</h5>
+					<p>The high quality display with Dynamic AMOLED 2X delivers vibrant color and brightness, even in bright sunlight.</p>
+					<h5 class="mb-1">Pro-grade Camera</h5>
+					<p>The powerful pro-grade camera delivers high-quality photos and videos, with a Rear Camera that boasts 12MP Ultra Wide, Wide-angle cameras and a 8MP Telephoto Camera. It also features a Front Camera that includes a 32MP Selfie camera.</p>
+					<div class="text-lg-left text-center">
+						<button class="btn btn-blue px-4 my-4 open-form"> Get Now</button>						
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+<%= render 'layouts/day-deal/step-form' %>
+</div>
+<%= render 'layouts/common/footer' %>
+<%= render 'layouts/common/waiting_loader' %>
+<%= render 'layouts/common/share_domain_iframes' %>
+

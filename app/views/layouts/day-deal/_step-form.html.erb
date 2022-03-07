@@ -1,0 +1,180 @@
+<div class="modal fade" id="deal-form-modal" tabindex="-1" role="dialog" aria-labelledby="ModalCenterTitle" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+    <div class="modal-content deal-form-box min-h-form">
+      <div class="modal-header p-0 border-0 pr-3">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body pt-0">
+        <!-- MultiStep Form -->
+        <div class="row">
+          <div class="col-md-12">
+            <form id="msform" data-details="<%= @details %>" data-parsley-validate="">
+              <!-- progressbar -->
+              <div class="row w-100 mx-0 justify-content-end">
+                <div class="col-12 col-lg-9 mx-auto">
+                  <div class="progressbar-info px-0">
+                    <div>
+                      <p class="progress-percent m-0 fw-bold mb-1">0% Complete</p>
+                    </div>
+                  </div>
+                  <div class="progress p-0">
+                    <div id="progressBar" class="progress-bar bg-grcolor" role="progressbar" aria-valuemin="0" aria-valuemax="100"></div>
+                  </div>
+                </div>
+              </div>
+              <!-- fieldsets -->
+              <fieldset>
+                <div class="row justify-content-center mt-4">
+                  <div class="form-group col-lg-8 col-12">
+                    <label class=" w-100 text-left mb-1 form-label">First Name</label>
+                    <input
+                    name="first_name"
+                    required
+                    data-parsley-required="true"
+                    data-parsley-required-message="Please Enter First Name" data-parsley-pattern-message="First Name Must Be Alphabetic"data-parsley-pattern="/^[a-zA-Z ]*$/"
+                    data-parsley-group="block-0"
+                    type="text"
+                    class="first_name form-control hero-input ignoreStep3"
+                    placeholder="First Name" >
+                  </div>
+                  <div class="form-group col-lg-8  col-12">
+                    <label class=" w-100 text-left mb-1 form-label">Last Name</label>
+                    <input
+                    name="last_name"
+                    required
+                    data-parsley-required="true"
+                    data-parsley-required-message="Please Enter Last Name"
+                    data-parsley-group="block-0"
+                    data-parsley-pattern-message="Last Name Must Be Alphabetic" data-parsley-pattern="/^[a-zA-Z ]*$/"
+                    type="text"
+                    class="form-control ignoreStep3 last_name"
+                    placeholder="Last Name" >
+                  </div>
+                </div>
+                <input type="button" name="next" class="next action-button" value="Next"/>
+              </fieldset>
+              <fieldset>
+                <div class="row justify-content-center mt-4">
+                  <!-- postcode -->
+                  <div class="form-group col-lg-8  col-12">
+                    <div class="w-100 justify-content-center position-relative">
+                      <label class=" w-100 text-left mb-1 form-label">Postcode</label>
+                      <input
+                      name="postcode"
+                      required
+                      data-parsley-required="true"
+                      data-parsley-required-message="Please Enter Postcode"
+                      data-parsley-group="block-1"
+                      data-parsley-validapipostcode
+                      type="text"
+                      class="postcode form-control"
+                      placeholder="Postcode">
+                      <button type="button" class="btn btn-success rounded-right left-0r findAddress-btn">Find Address</button>
+                    </div>
+                    <div class="postcode-error"></div>
+                  </div>
+                  <div class="form-group col-lg-8 col-12 property-div display-none">
+                    <label class="text-left  w-100 mb-1 form-label">Your Property</label>
+                    <input type="hidden" name="towncity" class="towncity" >
+                    <input type="hidden" name="street1" class="street1" >
+                    <input type="hidden" name="county" class="county" >
+                    <input type="hidden" name="houseNumber" class="houseNumber" >
+                    <input type="hidden" name="street2" class="street2" >
+                    <input type="hidden" name="building" class="building" >
+                    <select
+                      id="property"
+                      name="property"
+                      class="property w-100 form-control  text-dark"
+                      data-parsley-required="true"
+                      data-parsley-required-message="Please Select Your property"
+                      data-parsley-group="block-1"
+                      required>
+                    </select>
+                  </div>
+
+                  <div class="form-group col-lg-8 col-12  address-div display-none">
+                    <label class=" w-100 text-left mb-1 form-label">Address</label>
+                    <input
+                      placeholder="Address"
+                      id="address"
+                      name="address"
+                      class="address form-control "
+                      data-parsley-required="true"
+                      data-parsley-required-message="Please Enter Your Address"
+                      data-parsley-group="block-1"
+                      type="text"
+                      >
+                  </div>
+                </div>
+                <input type="button" name="previous" class="previous action-button-previous" value="Previous"/>
+                <input type="button" name="next" class="next action-button" value="Next"/>
+              </fieldset>
+              <fieldset>
+                <div class="row justify-content-center mt-4">
+                  <div class="input-group col-lg-8 col-12 mb-3">
+                    <label class=" w-100 text-left mb-1 form-label">Phone Number</label>
+                    <input
+                    type="number"
+                    name="telephone"
+                    required
+                    data-parsley-required="true"
+                    data-parsley-required-message="Please Enter Valid Uk Phone Number"
+                    data-parsley-type="number"
+                    data-parsley-group="block-2"
+                    data-parsley-validphone
+                    class="form-control phone telephone"
+                    placeholder="Mobile Number">
+                  </div>
+                  <div class="input-group col-lg-8 col-12  mb-3 email-div">
+                    <label class=" w-100 text-left mb-1 form-label">Email</label>
+                    <div class="clearfix"></div>
+                    <input
+                    type="email"
+                    name="email"
+                    required
+                    data-parsley-required="true"
+                    data-parsley-required-message="Please Enter Valid Email Address"
+                    data-parsley-type="email"
+                    data-parsley-type-message="Please Enter Valid Email Address"
+                    data-parsley-group="block-2"
+                    data-parsley-validemail
+                    value=""
+                    class="form-control nme_inpu email"
+                    placeholder="Email Address">
+                  </div>
+                  <div class="custom-checkbox col-lg-8 col-12 ">
+                    <label class="text-center form-label">Accept</label>
+                    <div class="onoffswitch mx-auto">
+                      <input type="hidden" name="c1">
+                      <input
+                        type="checkbox"
+                        name="agree"
+                        class="onoffswitch-checkbox approve"
+                        id="myonoffswitch"
+                        data-parsley-required="true"
+                        data-parsley-group="block-2"
+                        data-parsley-required-message="Please accept our terms and conditions"
+                        >
+                      <label class="onoffswitch-label" for="myonoffswitch">
+                          <span class="onoffswitch-inner"></span>
+                          <span class="onoffswitch-switch"></span>
+                      </label>
+                    </div>
+                    <div class="error-checkbox"></div>
+                    <%= render 'layouts/common/accept_terms'%>
+                  </div>
+                </div>
+                <input type="button" name="previous" class="previous action-button-previous" value="Previous"/>
+                <input type="button" name="next" class="next action-button" value="Continue"/>
+              </fieldset>
+            </form>
+          </div>
+        </div>
+        <!-- /.MultiStep Form -->
+      </div>
+    </div>
+  </div>
+</div>
+
