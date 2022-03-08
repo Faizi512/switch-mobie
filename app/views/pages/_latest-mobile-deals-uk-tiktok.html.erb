@@ -1,0 +1,908 @@
+<%= javascript_pack_tag 'iphone-samsung-deals', 'data-turbolinks-track': 'reload', defer: true %>
+<%= render 'layouts/sp-exit/header' %>
+
+<div id="samsung-deals" class="border-top">
+	<div class="bg-header position-relative">
+		<div class="snow-img-div w-100 position-absolute">
+			<%= image_tag("snow-bottom2.png", class: "w-100" ) %>
+		</div>
+		<div class="container">
+			<div class="row pt-md-4">
+				<h1 class="font-weight-bold w-100 py-md-4 pt-4 mb-0 text-center text-white">Click & Go Exclusive Mobile Deals</h1>
+				<div class="col-md-6 d-none d-md-block">
+					<h3 class="font-weight-bold text-center text-md-left text-warning">With <span class="text-white">Switch Mobile</span> find the perfect combination of mobile phone and sim plan exclusive for your needs!</h3>
+					<div class="row py-4 d-none d-md-flex">
+						<div class="col-md-4 mb-4 mb-md-0 text-center">
+							<div class="rounded-lg div-shadow p-3 bg-light">
+								<%= image_tag("effortlessly.png", class: "icon1 mb-2" ) %>
+								<h5 class="font-weight-bold">Effortlessly</h5>
+							</div>
+						</div>
+						<div class="col-md-4 mb-4 mb-md-0 text-center">
+							<div class="rounded-lg div-shadow p-3 bg-light">
+								<%= image_tag("fast.png", class: "icon2 mb-2" ) %>
+								<h5 class="font-weight-bold">Fast</h5>
+							</div>
+						</div>
+						<div class="col-md-4 mb-4 mb-md-0 text-center">
+							<div class="rounded-lg div-shadow p-3 bg-light">
+								<%= image_tag("price.png", class: "icon1 mb-2" ) %>
+								<h5 class="font-weight-bold">Best price</h5>
+							</div>
+						</div>
+					</div>
+					<div class="d-md-none d-block py-3">
+						<p class="mb-0 d-flex align-items-center justify-content-center text-white">
+							<%= image_tag("effortlessly.png", class: "icon1 mb-2" ) %>
+							Effortlessly
+						</p>
+						<p class="mb-0 d-flex align-items-center justify-content-center text-white">
+							<%= image_tag("fast.png", class: "icon2 mb-2" ) %>
+							Fast
+						</p>
+						<p class="mb-0 d-flex align-items-center justify-content-center text-white">
+							<%= image_tag("price.png", class: "icon1 mr-2" ) %>
+							At the best price
+						</p>
+					</div>
+					<p class="text-md-left text-center text-white">Avoid wasting your time scrolling through, switching over, and waiting for hundreds of websites to load. The best mobile deal in the UK that fits your needs is just a click away.</p>
+					<h3 class="text-center font-weight-bold py-2 text-warning">Take the first step in less than 10 seconds.</h3>
+					<div class="w-100 mx-auto text-center mb-4">
+						<button type="button" class="btn btn-orange-header open-form div-shadow font-weight-bold px-4 py-2">COUNTINUE</button>
+					</div>
+				</div>
+				<div class="col-md-6 text-center align-self-end">
+					<%= image_tag("new-sale-2.png", class: "w-75" ) %>
+					<h2 class="text-center text-warning">Grab Limited Time Sale Discounts Before Ends</h2>
+					<%= image_tag("s21-iphone.png", class: "w-100" ) %>
+					<div class="w-100 mx-auto text-center mb-4 d-md-none d-block">
+						<button type="button" class="btn btn-orange-header open-form div-shadow font-weight-bold px-4 py-2">COUNTINUE</button>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="bg-light">
+		<div class="container">
+			<div class="row w-100 mx-0">
+				<h1 class="text-center text-orang py-4 w-100 font-weight-bold">Get Latest Deals</h1>
+				<% @phones.each do |phone| %>
+					<div class="col-lg-4 col-md-6 px-0 px-md-3">
+						<div class="deal-div div-shadow rounded-lg p-3 my-4">
+							<h5 class="font-weight-bold text-center text-orang"><%= phone[:name]%></h5>
+							<div class="row w-100 mx-0">
+								<div class="col-7 px-0">
+										<div id="<%= phone[:carouselid]%>" class="carousel slide" data-ride="false">
+										  <div class="carousel-inner">
+											<% phone[:image].each_with_index do |phoneimage,index| %>
+										    <div class="carousel-item <% if index == 0 %>active<% end %>">
+										      <%= image_tag(phoneimage, class: "phone-img w-100" ) %>
+										    </div>
+											<% end %>
+										  </div>
+											<ol class="carousel-indicators position-relative w-100 mx-auto">
+									    	<% phone[:color].each_with_index do |color,index| %>
+											    <li data-target="#<%= phone[:carouselid]%>" data-slide-to="<%= index %>" class="<% if index == 0 %>active <% end %>">
+								            <div class="color border border-secondary" style="background-color: <%= color %>; width: 22px; height: 22px; border-radius: 50px;">
+								            </div>
+											    </li>
+							          <% end %>
+										  </ol>
+										</div>
+								</div>
+								<div class="col-5 px-1 text-center">
+									<p class="small mb-0 font-weight-bold">Long battery life</p>
+									<p class="small mb-0"> <strong>Memory Spec </strong> <%= phone[:memory]%> <br> <%= phone[:ram]%> RAM</p>
+									<p class="small mb-0 mt-3"><strong>£0 </strong> Upfront Cost</p>
+									<p class="small mb-0"><strong>Unlimited</strong> Data</p>
+									<p class="small mb-0"><strong>Unlimited</strong> Calls</p>
+									<p class="small mb-0"><strong>Unlimited</strong> SMS</p>
+								</div>
+							</div>
+							<div class="w-100 mx-auto text-center pt-3">
+								<button type="button" class="btn btn-orange open-form div-shadow font-weight-bold px-4">Get Phone Now</button>
+							</div>
+						</div>
+					</div>
+				<% end %>
+			</div>
+		</div>
+	</div>
+	<div class="">
+		<div class="container">
+			<div class="row w-100 mx-0 align-items-center flex-sm-row-reverse">
+				<h1 class="text-center font-weight-bold text-orang py-4 w-100">How do you benefit from our mobile deals?</h1>
+				<div class="col-md-6 mb-4 align-self-center">
+					<h3 class="font-weight-bold text-center text-md-left">The newest models</h3>
+					<p class="text-md-left text-center">
+						Taking a mobile deal with Switch Mobile, you can get the latest mobile phone with top cutting-edge features so that you can browse the Internet with confidence, take high-quality photos, enjoy clearer resolution, better sound, and many more. 
+					</p>
+				</div>
+				<div class="col-md-6 mb-4 align-self-center text-center">
+					<%= image_tag("Galaxy-fold-phones.png", class: "mx-w w-75" ) %>
+				</div>
+			</div>
+			<div class="row w-100 mx-0 align-items-center">
+				<div class="col-md-6 mb-4 align-self-center">
+					<h3 class="font-weight-bold text-center text-md-left">No need to pay the full price at once</h3>
+					<p class="text-md-left text-center">
+						A mobile contract allows you to take advantage of all the benefits a newest phone model offers, without the need to invest a fortune. Why should you wait till you save the whole sum when you can have it right now for a matter of pennies a day?
+					</p>
+				</div>
+				<div class="col-md-6 mb-4 align-self-center text-center">
+					<%= image_tag("no-full-price.png", class: "mx-w w-75" ) %>
+				</div>
+			</div>
+			<div class="row w-100 mx-0 align-items-center flex-sm-row-reverse">
+				<div class="col-md-6 mb-4 align-self-center">
+					<h3 class="font-weight-bold text-center text-md-left">Take advantage of free offers</h3>
+					<p class="text-md-left text-center">
+						You can benefit from free offers like handsets, accessories, special discounts, cashback offers etc from our prtners. Switch Mobile maximises your chances to find the perfect combination of mobile phone and plan you are looking for. 
+					</p>
+				</div>
+				<div class="col-md-6 mb-4 align-self-center text-center">
+					<%= image_tag("free-mobile-offers.png", class: "mx-w w-75" ) %>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="bg-light-bl">
+		<div class="container">
+			<div class="row py-4 align-items-center justify-content-center">
+				<div class="pb-3">
+					<h3 class="font-weight-bold d-md-flex d-none align-items-center w-100 justify-content-center">
+						Our expert consultants would love to help you  <%= image_tag("call-agent.png", class: "call-agent-img" ) %>find your best mobile deal.
+					</h3>
+					<div class="col text-center d-md-none d-block">
+						<h3 class="font-weight-bold d-flex align-items-center w-100 justify-content-center">
+							Our expert consultants would love to help you find your best mobile deal.
+						</h3>
+						<%= image_tag("call-agent.png", class: "call-agent-img" ) %>
+					</div>
+					<div class="w-100 mx-auto text-center pt-3">
+						<button type="button" class="btn btn-orange open-form div-shadow font-weight-bold px-4 py-2">Get Fast Help</button>
+					</div>
+				</div>
+				<div class="col-md-3 align-self-center">
+					<p class="d-flex align-items-center justify-content-center font-weight-bold mb-4 mb-md-0"><%= image_tag("save-money1.png", class: "sav-mny mr-2" ) %>Enjoy your savings</p>
+				</div>
+				<div class="col-md-3 align-self-center">
+					<p class="d-flex align-items-center justify-content-center font-weight-bold mb-0"><%= image_tag("risk-free.png", class: "risk-fre mr-2" ) %>Risk-free guaranteed</p>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="container">
+		<div class="row py-md-5">
+			<h1 class="font-weight-bold text-center text-orang w-100 pb-4">Get Highly Cost-Effective Samsung Deals of UK?</h1>
+			<h3 class="font-weight-bold text-center text-orang w-100 pb-4">Why Samsung?</h3>
+			<div class="col-md-4 text-center mb-4">
+				<div class="text-center div-shadow rounded-lg div-why p-3">
+					<%= image_tag("excelent-perform.png", class: "mx-w w-25 mb-2" ) %>
+					<h4 class="text-center">Excellent Performance and Versatile Features</h4>
+					<p>All the cutting-edge technologies incorporated in Samsung ensure fast, powerful, and reliable operation.</p>
+				</div>
+			</div>
+			<div class="col-md-4 text-center mb-4">
+				<div class="text-center div-shadow rounded-lg div-why p-3">
+					<%= image_tag("stylish.png", class: "mx-w w-50 mb-2" ) %>
+					<h4 class="text-center">Sleek and Stylish</h4>
+					<p>Samsung is a real gem in your hand. Just browse & talk to impress.</p>
+				</div>
+			</div>
+			<div class="col-md-4 text-center mb-4">
+				<div class="text-center div-shadow rounded-lg div-why p-3">
+					<%= image_tag("best-value.png", class: "mx-w w-50 mb-2" ) %>
+					<h4 class="text-center">The Best Value</h4>
+					<p>With Samsung, you have all the smart features modern technology offers at a good price.</p>
+				</div>
+			</div>
+			<div class="w-100 mx-auto text-center pt-3">
+				<button type="button" class="btn btn-orange open-form div-shadow font-weight-bold px-4 py-2">Get Your Discount Now</button>
+			</div>
+		</div>
+	</div>
+	<div class="bg-light-bl">
+		<div class="container">
+			<div class="row w-100 mx-0 py-4 py-md-5">
+				<h1 class="text-center text-orang py-4 w-100 font-weight-bold">Which is the perfect Samsung for you?</h1>
+				<div class="col-md-8">
+					<h3 class="font-weight-bold">Samsung Galaxy S21 Deals</h3>
+					<ul>
+						<li>
+							WITH ITS POWERFUL PRO-GRADE 64 MP camera, it allows you to capture your once-in-a-lifetime moments in 8K high-quality videos and offers a 30X Space Zoom function so that you never miss a detail.
+						</li>
+						<li>
+							WITH ITS SMART AND POWERFUL PERFORMANCE, this model lets you enjoy fast operation.
+						</li>
+						<li>
+							THE 6.2-INCH AMOLED DISPLAY is equipped with a neat punch-hole selfie camera with improved performance. It’s conveniently located in the top middle of the screen. 
+						</li>
+						<li>
+							THE EXCELLENT DYNAMIC 120HZ DISPLAY creates a smooth and sharper image so you can enjoy watching videos and scrolling pictures. 
+						</li>
+						<li>
+							THE REFINED DESIGN completes your style everywhere you go.
+						</li>
+						<li>
+							<strong class="text-orang">SAMSUNG GALAXY S21</strong> IS SPECIALLY DESIGNED to conserve energy with its smart battery, so you can stay tuned all day without charging.
+						</li>
+					</ul>
+					<p class="mb-0">Explore all <strong class="text-orang">Samsung Galaxy S21 Deals</strong></p>
+					<div class="w-100 mx-auto text-center pt-3">
+						<button type="button" class="btn btn-orange open-form div-shadow font-weight-bold px-4 py-2">Get Your Discount</button>
+					</div>
+				</div>
+				<% @samsungs21.each do |phone| %>
+					<div class="col-md-4">
+						<div class="deal-div div-shadow rounded-lg p-3 my-4 bg-white">
+							<h5 class="font-weight-bold text-center text-orang"><%= phone[:name]%></h5>
+							<div class="row w-100 mx-0">
+								<div class="col-7 px-0">
+										<div id="<%= phone[:carouselid]%>" class="carousel slide" data-ride="false">
+										  <div class="carousel-inner">
+											<% phone[:image].each_with_index do |phoneimage,index| %>
+										    <div class="carousel-item <% if index == 0 %>active<% end %>">
+										      <%= image_tag(phoneimage, class: "phone-img w-100" ) %>
+										    </div>
+											<% end %>
+										  </div>
+											<ol class="carousel-indicators position-relative w-100 mx-auto">
+									    	<% phone[:color].each_with_index do |color,index| %>
+											    <li data-target="#<%= phone[:carouselid]%>" data-slide-to="<%= index %>" class="<% if index == 0 %>active <% end %>">
+								            <div class="color border border-secondary" style="background-color: <%= color %>; width: 22px; height: 22px; border-radius: 50px;">
+								            </div>
+											    </li>
+							          <% end %>
+										  </ol>
+										</div>
+								</div>
+								<div class="col-5 px-1 text-center">
+									<p class="small mb-0 font-weight-bold">Long battery life</p>
+									<p class="small mb-0"> <strong>Memory Spec </strong> <%= phone[:memory]%> <br>  <%= phone[:ram]%> RAM</p>
+									<p class="small mb-0 mt-3"><strong>£0 </strong> Upfront Cost</p>
+									<p class="small mb-0"><strong>Unlimited</strong> Data</p>
+									<p class="small mb-0"><strong>Unlimited</strong> Calls</p>
+									<p class="small mb-0"><strong>Unlimited</strong> SMS</p>
+								</div>
+							</div>
+							<div class="w-100 mx-auto text-center pt-3">
+								<button type="button" class="btn btn-orange open-form div-shadow font-weight-bold px-4">Get Phone Now</button>
+							</div>
+						</div>
+					</div>
+				<% end %>
+			</div>
+			<!--  -->
+			<div class="row w-100 mx-0 py-4 py-md-5 flex-sm-row-reverse">
+				<div class="col-md-8">
+					<h3 class="font-weight-bold">Samsung Galaxy S21+ Deals</h3>
+					<ul>
+						<li>
+							THE POWERFUL PRO-GRADE 64 MP CAMERA enables you to zoom in close with 30X Space Zoom and capture your once-in-a-lifetime moments with 8K high-quality videos.
+						</li>
+						<li>
+							WITH ITS SMART AND POWERFUL PERFORMANCE, this model lets you enjoy fast operation.
+						</li>
+						<li>
+							THE 6.7-INCH AMOLED DISPLAY offers Full HD+ and 48Hz to 120Hz variable refresh rates for your best experience.
+						</li>
+						<li>
+							THE EXCELLENT DYNAMIC 120HZ DISPLAY creates a smooth and sharper image so you can enjoy watching videos and scrolling pictures.
+						</li>
+						<li>
+							THE POWERFUL STEREO SPEAKERS make Samsung Galaxy S21+ a great choice for listening to music and entertainment.
+						</li>
+						<li>
+							THE GORGEOUS DESIGN will make you stand out with this stylish addition to your look.
+						</li>
+						<li>
+							THE SUPERFAST IN-DISPLAY FINGERPRINT SENSOR offers convenience and functionality.
+						</li>
+						<li>
+							<strong class="text-orang">SAMSUNG GALAXY S21+</strong> IS SPECIALLY DESIGNED to conserve energy with its smart battery, so you can stay tuned all day without charging.
+						</li>
+
+					</ul>
+					<p class="mb-0">Explore all <strong class="text-orang">Samsung Galaxy S21+ Deals</strong></p>
+					<div class="w-100 mx-auto text-center pt-3">
+						<button type="button" class="btn btn-orange open-form div-shadow font-weight-bold px-4 py-2">Get Your Discount</button>
+					</div>
+				</div>
+				<% @samsungs21plus.each do |phone| %>
+					<div class="col-md-4">
+						<div class="deal-div div-shadow rounded-lg p-3 my-4 bg-white">
+							<h5 class="font-weight-bold text-center text-orang"><%= phone[:name]%></h5>
+							<div class="row w-100 mx-0">
+								<div class="col-7 px-0">
+										<div id="<%= phone[:carouselid]%>" class="carousel slide" data-ride="false">
+										  <div class="carousel-inner">
+											<% phone[:image].each_with_index do |phoneimage,index| %>
+										    <div class="carousel-item <% if index == 0 %>active<% end %>">
+										      <%= image_tag(phoneimage, class: "phone-img w-100" ) %>
+										    </div>
+											<% end %>
+										  </div>
+											<ol class="carousel-indicators position-relative w-100 mx-auto">
+									    	<% phone[:color].each_with_index do |color,index| %>
+											    <li data-target="#<%= phone[:carouselid]%>" data-slide-to="<%= index %>" class="<% if index == 0 %>active <% end %>">
+								            <div class="color border border-secondary" style="background-color: <%= color %>; width: 22px; height: 22px; border-radius: 50px;">
+								            </div>
+											    </li>
+							          <% end %>
+										  </ol>
+										</div>
+								</div>
+								<div class="col-5 px-1 text-center">
+									<p class="small mb-0 font-weight-bold">Long battery life</p>
+									<p class="small mb-0"> <strong>Memory Spec </strong> <%= phone[:memory]%> <br>  <%= phone[:ram]%> RAM</p>
+									<p class="small mb-0 mt-3"><strong>£0 </strong> Upfront Cost</p>
+									<p class="small mb-0"><strong>Unlimited</strong> Data</p>
+									<p class="small mb-0"><strong>Unlimited</strong> Calls</p>
+									<p class="small mb-0"><strong>Unlimited</strong> SMS</p>
+								</div>
+							</div>
+							<div class="w-100 mx-auto text-center pt-3">
+								<button type="button" class="btn btn-orange open-form div-shadow font-weight-bold px-4">Get Phone Now</button>
+							</div>
+						</div>
+					</div>
+				<% end %>
+			</div>
+			<!--  -->
+			<div class="row w-100 mx-0 py-4 py-md-5">
+				<div class="col-md-8">
+					<h3 class="font-weight-bold">Samsung Galaxy S21 Ultra 5G Deals</h3>
+					<ul>
+						<li>
+							WITH ITS POWERFUL PRO-GRADE 108 MP camera, this Samsung model allows you to capture your once-in-a-lifetime moments in 8K high-quality videos and offers a 100X Space Zoom function so that you never miss a detail.
+						</li>
+						<li>
+							NOW IT COMES WITH an S PEN to add a high level of precision and creativity.
+						</li>
+						<li>
+							WITH ITS SMART AND POWERFUL PERFORMANCE and Galaxy's fastest processor yet, this model lets you enjoy fast operation.
+						</li>
+						<li>
+							THE 6.8-INCH AMOLED DISPLAY is equipped with a neat punch-hole 40 MP selfie camera with improved performance. It’s conveniently located in the top middle of the screen. 
+						</li>
+						<li>
+							THE EXCELLENT DYNAMIC 2X, 120HZ DISPLAY creates a smooth and sharper image so you can enjoy watching videos and scrolling pictures. 
+						</li>
+						<li>
+							THE STRIKING NEW DESIGN completes your style everywhere you go.
+						</li>
+					</ul>
+					<p class="mb-0">Explore all <strong class="text-orang">Samsung Galaxy S21 Ultra 5G Deals</strong></p>
+					<div class="w-100 mx-auto text-center pt-3">
+						<button type="button" class="btn btn-orange open-form div-shadow font-weight-bold px-4 py-2">Get Your Discount</button>
+					</div>
+				</div>
+				<% @samsungs21ultra.each do |phone| %>
+					<div class="col-md-4">
+						<div class="deal-div div-shadow rounded-lg p-3 my-4 bg-white">
+							<h5 class="font-weight-bold text-center text-orang"><%= phone[:name]%></h5>
+							<div class="row w-100 mx-0">
+								<div class="col-7 px-0">
+										<div id="<%= phone[:carouselid]%>" class="carousel slide" data-ride="false">
+										  <div class="carousel-inner">
+											<% phone[:image].each_with_index do |phoneimage,index| %>
+										    <div class="carousel-item <% if index == 0 %>active<% end %>">
+										      <%= image_tag(phoneimage, class: "phone-img w-100" ) %>
+										    </div>
+											<% end %>
+										  </div>
+											<ol class="carousel-indicators position-relative w-100 mx-auto">
+									    	<% phone[:color].each_with_index do |color,index| %>
+											    <li data-target="#<%= phone[:carouselid]%>" data-slide-to="<%= index %>" class="<% if index == 0 %>active <% end %>">
+								            <div class="color border border-secondary" style="background-color: <%= color %>; width: 22px; height: 22px; border-radius: 50px;">
+								            </div>
+											    </li>
+							          <% end %>
+										  </ol>
+										</div>
+								</div>
+								<div class="col-5 px-1 text-center">
+									<p class="small mb-0 font-weight-bold">Long battery life</p>
+									<p class="small mb-0"> <strong>Memory Spec </strong> <%= phone[:memory]%> <br>  <%= phone[:ram]%> RAM</p>
+									<p class="small mb-0 mt-3"><strong>£0 </strong> Upfront Cost</p>
+									<p class="small mb-0"><strong>Unlimited</strong> Data</p>
+									<p class="small mb-0"><strong>Unlimited</strong> Calls</p>
+									<p class="small mb-0"><strong>Unlimited</strong> SMS</p>
+								</div>
+							</div>
+							<div class="w-100 mx-auto text-center pt-3">
+								<button type="button" class="btn btn-orange open-form div-shadow font-weight-bold px-4">Get Phone Now</button>
+							</div>
+						</div>
+					</div>
+				<% end %>
+			</div>
+			<!--  -->
+			<div class="row w-100 mx-0 py-4 py-md-5 flex-sm-row-reverse">
+				<div class="col-md-8">
+					<h3 class="font-weight-bold">Samsung Galaxy Z Fold 3 Deals</h3>
+					<ul>
+						<li>
+							BIG AND BEAUTIFUL 7.6-INCH AMOLED 2X SCREEN offering the utmost folding mobile phone screen so you can have a dynamic viewing experience.
+						</li>
+						<li>
+							WITH ITS SMART AND POWERFUL PERFORMANCE and Galaxy's fastest processor yet, this model lets you enjoy fast operation.
+						</li>
+						<li>
+							<strong class="text-orang">SAMSUNG GALAXY Z FOLD 3</strong> IS SPECIALLY DESIGNED to conserve energy with its smart battery, so you can stay tuned all day without charging.
+						</li>
+						<li>
+							THE STRIKING NEW DESIGN completes your style everywhere you go.
+						</li>
+					</ul>
+					<p class="mb-0">Explore all <strong class="text-orang">Samsung Galaxy Z Fold 3 Deals</strong></p>
+					<div class="w-100 mx-auto text-center pt-3">
+						<button type="button" class="btn btn-orange open-form div-shadow font-weight-bold px-4 py-2">Get Your Discount</button>
+					</div>
+				</div>
+				<% @samsungzfold.each do |phone| %>
+					<div class="col-md-4">
+						<div class="deal-div div-shadow rounded-lg p-3 my-4 bg-white">
+							<h5 class="font-weight-bold text-center text-orang"><%= phone[:name]%></h5>
+							<div class="row w-100 mx-0">
+								<div class="col-7 px-0">
+										<div id="<%= phone[:carouselid]%>" class="carousel slide" data-ride="false">
+										  <div class="carousel-inner">
+											<% phone[:image].each_with_index do |phoneimage,index| %>
+										    <div class="carousel-item <% if index == 0 %>active<% end %>">
+										      <%= image_tag(phoneimage, class: "phone-img w-100" ) %>
+										    </div>
+											<% end %>
+										  </div>
+											<ol class="carousel-indicators position-relative w-100 mx-auto">
+									    	<% phone[:color].each_with_index do |color,index| %>
+											    <li data-target="#<%= phone[:carouselid]%>" data-slide-to="<%= index %>" class="<% if index == 0 %>active <% end %>">
+								            <div class="color border border-secondary" style="background-color: <%= color %>; width: 22px; height: 22px; border-radius: 50px;">
+								            </div>
+											    </li>
+							          <% end %>
+										  </ol>
+										</div>
+								</div>
+								<div class="col-5 px-1 text-center">
+									<p class="small mb-0 font-weight-bold">Long battery life</p>
+									<p class="small mb-0"> <strong>Memory Spec </strong> <%= phone[:memory]%> <br>  <%= phone[:ram]%> RAM</p>
+									<p class="small mb-0 mt-3"><strong>£0 </strong> Upfront Cost</p>
+									<p class="small mb-0"><strong>Unlimited</strong> Data</p>
+									<p class="small mb-0"><strong>Unlimited</strong> Calls</p>
+									<p class="small mb-0"><strong>Unlimited</strong> SMS</p>
+								</div>
+							</div>
+							<div class="w-100 mx-auto text-center pt-3">
+								<button type="button" class="btn btn-orange open-form div-shadow font-weight-bold px-4">Get Phone Now</button>
+							</div>
+						</div>
+					</div>
+				<% end %>
+			</div>
+			<!--  -->
+			<div class="row w-100 mx-0 py-4 py-md-5">
+				<div class="col-md-8">
+					<h3 class="font-weight-bold">Samsung Galaxy Z Flip 3 Deals</h3>
+					<ul>
+						<li>
+							BIG AND BEAUTIFUL 6.7-INCH AMOLED 2X SCREEN offering the utmost folding mobile phone screen so you can have a dynamic viewing experience.
+						</li>
+						<li>
+							WORK SMARTER with three multi-windows allowing you to take notes with the S Pen and make presentations in a snap.
+						</li>
+						<li>
+							WITH ITS SMART AND POWERFUL PERFORMANCE and Galaxy's fastest processor yet, this model lets you enjoy fast operation.
+						</li>
+						<li>
+							THE STRIKING NEW DESIGN completes your style everywhere you go.
+						</li>
+					</ul>
+					<p class="mb-0">Explore all <strong class="text-orang">Samsung Galaxy Z Flip 3 Deals</strong></p>
+					<div class="w-100 mx-auto text-center pt-3">
+						<button type="button" class="btn btn-orange open-form div-shadow font-weight-bold px-4 py-2">Get Your Discount</button>
+					</div>
+				</div>
+				<% @samsungzflip.each do |phone| %>
+					<div class="col-md-4">
+						<div class="deal-div div-shadow rounded-lg p-3 my-4 bg-white">
+							<h5 class="font-weight-bold text-center text-orang"><%= phone[:name]%></h5>
+							<div class="row w-100 mx-0">
+								<div class="col-7 px-0">
+										<div id="<%= phone[:carouselid]%>" class="carousel slide" data-ride="false">
+										  <div class="carousel-inner">
+											<% phone[:image].each_with_index do |phoneimage,index| %>
+										    <div class="carousel-item <% if index == 0 %>active<% end %>">
+										      <%= image_tag(phoneimage, class: "phone-img w-100" ) %>
+										    </div>
+											<% end %>
+										  </div>
+											<ol class="carousel-indicators position-relative w-100 mx-auto">
+									    	<% phone[:color].each_with_index do |color,index| %>
+											    <li data-target="#<%= phone[:carouselid]%>" data-slide-to="<%= index %>" class="<% if index == 0 %>active <% end %>">
+								            <div class="color border border-secondary" style="background-color: <%= color %>; width: 22px; height: 22px; border-radius: 50px;">
+								            </div>
+											    </li>
+							          <% end %>
+										  </ol>
+										</div>
+								</div>
+								<div class="col-5 px-1 text-center">
+									<p class="small mb-0 font-weight-bold">Long battery life</p>
+									<p class="small mb-0"> <strong>Memory Spec </strong> <%= phone[:memory]%> <br>  <%= phone[:ram]%> RAM</p>
+									<p class="small mb-0 mt-3"><strong>£0 </strong> Upfront Cost</p>
+									<p class="small mb-0"><strong>Unlimited</strong> Data</p>
+									<p class="small mb-0"><strong>Unlimited</strong> Calls</p>
+									<p class="small mb-0"><strong>Unlimited</strong> SMS</p>
+								</div>
+							</div>
+							<div class="w-100 mx-auto text-center pt-3">
+								<button type="button" class="btn btn-orange open-form div-shadow font-weight-bold px-4">Get Phone Now</button>
+							</div>
+						</div>
+					</div>
+				<% end %>
+			</div>
+			<!--  -->
+			<div class="row w-100 mx-0 py-4 py-md-5 flex-sm-row-reverse">
+				<div class="col-md-8">
+					<h3 class="font-weight-bold">Samsung Note 20 Deals</h3>
+					<ul>
+						<li>
+							ITS PRO-GRADE CAMERA features high-powered pro lenses for beautiful photographs in any light with 3X optical zoom.
+						</li>
+						<li>
+							THE 30X SPACE ZOOM feature lets you zoom in close from afar or magnify the details of nearby objects.
+						</li>
+						<li>
+							WITH THE NIGHT MODE, you can capture crisp images, vibrant videos, and high-quality content in low light.
+						</li>
+						<li>
+							THE SINGLE-TAKE AI enables you to capture multiple images and videos all at once with just one tap.
+						</li>
+						<li>
+							THE POWER OF 5G gets you to the next level with more sharing, more gaming, and more experiences.
+						</li>
+						<li>
+							SAMSUNG NOTE 20 COMES IN SIX colourful hues in a sleek matte finish to suit your style.
+						</li>
+					</ul>
+					<p class="mb-0">Explore all <strong class="text-orang">Samsung Note 20 Deals</strong></p>
+					<div class="w-100 mx-auto text-center pt-3">
+						<button type="button" class="btn btn-orange open-form div-shadow font-weight-bold px-4 py-2">Get Your Discount</button>
+					</div>
+				</div>
+				<% @samsungnote20.each do |phone| %>
+					<div class="col-md-4">
+						<div class="deal-div div-shadow rounded-lg p-3 my-4 bg-white">
+							<h5 class="font-weight-bold text-center text-orang"><%= phone[:name]%></h5>
+							<div class="row w-100 mx-0">
+								<div class="col-7 px-0">
+										<div id="<%= phone[:carouselid]%>" class="carousel slide" data-ride="false">
+										  <div class="carousel-inner">
+											<% phone[:image].each_with_index do |phoneimage,index| %>
+										    <div class="carousel-item <% if index == 0 %>active<% end %>">
+										      <%= image_tag(phoneimage, class: "phone-img w-100" ) %>
+										    </div>
+											<% end %>
+										  </div>
+											<ol class="carousel-indicators position-relative w-100 mx-auto">
+									    	<% phone[:color].each_with_index do |color,index| %>
+											    <li data-target="#<%= phone[:carouselid]%>" data-slide-to="<%= index %>" class="<% if index == 0 %>active <% end %>">
+								            <div class="color border border-secondary" style="background-color: <%= color %>; width: 22px; height: 22px; border-radius: 50px;">
+								            </div>
+											    </li>
+							          <% end %>
+										  </ol>
+										</div>
+								</div>
+								<div class="col-5 px-1 text-center">
+									<p class="small mb-0 font-weight-bold">Long battery life</p>
+									<p class="small mb-0"> <strong>Memory Spec </strong> <%= phone[:memory]%> <br>  <%= phone[:ram]%> RAM</p>
+									<p class="small mb-0 mt-3"><strong>£0 </strong> Upfront Cost</p>
+									<p class="small mb-0"><strong>Unlimited</strong> Data</p>
+									<p class="small mb-0"><strong>Unlimited</strong> Calls</p>
+									<p class="small mb-0"><strong>Unlimited</strong> SMS</p>
+								</div>
+							</div>
+							<div class="w-100 mx-auto text-center pt-3">
+								<button type="button" class="btn btn-orange open-form div-shadow font-weight-bold px-4">Get Phone Now</button>
+							</div>
+						</div>
+					</div>
+				<% end %>
+			</div>
+			<!--  -->
+			<div class="row w-100 mx-0 py-4 py-md-5">
+				<div class="col-md-8">
+					<h3 class="font-weight-bold">Samsung Note 20 Ultra Deals</h3>
+					<ul>
+						<li>
+							WITH ITS S PEN PRECISION, Samsung Notes reaches PC power.
+						</li>
+						<li>
+							THE INTELLIGENT BATTERY learns how to optimize battery life, and the super-fast charging boosts your battery in minutes.
+						</li>
+						<li>
+							THE ADAPTIVE DYNAMIC AMOLED 2X DISPLAY, the breathtaking screen refresh rate, and the advanced processor allow for a smooth gaming experience.
+						</li>
+						<li>
+							THE FASTEST NOTE PROCESSOR delivers your gaming and binging with less interruption.
+						</li>
+						<li>
+							NOTE 20 ULTRA’s POINT-TO-SHARE feature allows you to share information directly with other compatible Samsung devices.
+						</li>
+						<li>
+							THE POWER OF 5G gets you to the next level and lets you share, play, and experience more.
+						</li>
+					</ul>
+					<p class="mb-0">Explore all <strong class="text-orang">Samsung Note 20 Ultra Deals</strong></p>
+					<div class="w-100 mx-auto text-center pt-3">
+						<button type="button" class="btn btn-orange open-form div-shadow font-weight-bold px-4 py-2">Get Your Discount</button>
+					</div>
+				</div>
+				<% @samsungnote20ultra.each do |phone| %>
+					<div class="col-md-4">
+						<div class="deal-div div-shadow rounded-lg p-3 my-4 bg-white">
+							<h5 class="font-weight-bold text-center text-orang"><%= phone[:name]%></h5>
+							<div class="row w-100 mx-0">
+								<div class="col-7 px-0">
+										<div id="<%= phone[:carouselid]%>" class="carousel slide" data-ride="false">
+										  <div class="carousel-inner">
+											<% phone[:image].each_with_index do |phoneimage,index| %>
+										    <div class="carousel-item <% if index == 0 %>active<% end %>">
+										      <%= image_tag(phoneimage, class: "phone-img w-100" ) %>
+										    </div>
+											<% end %>
+										  </div>
+											<ol class="carousel-indicators position-relative w-100 mx-auto">
+									    	<% phone[:color].each_with_index do |color,index| %>
+											    <li data-target="#<%= phone[:carouselid]%>" data-slide-to="<%= index %>" class="<% if index == 0 %>active <% end %>">
+								            <div class="color border border-secondary" style="background-color: <%= color %>; width: 22px; height: 22px; border-radius: 50px;">
+								            </div>
+											    </li>
+							          <% end %>
+										  </ol>
+										</div>
+								</div>
+								<div class="col-5 px-1 text-center">
+									<p class="small mb-0 font-weight-bold">Long battery life</p>
+									<p class="small mb-0"> <strong>Memory Spec </strong> <%= phone[:memory]%> <br>  <%= phone[:ram]%> RAM</p>
+									<p class="small mb-0 mt-3"><strong>£0 </strong> Upfront Cost</p>
+									<p class="small mb-0"><strong>Unlimited</strong> Data</p>
+									<p class="small mb-0"><strong>Unlimited</strong> Calls</p>
+									<p class="small mb-0"><strong>Unlimited</strong> SMS</p>
+								</div>
+							</div>
+							<div class="w-100 mx-auto text-center pt-3">
+								<button type="button" class="btn btn-orange open-form div-shadow font-weight-bold px-4">Get Phone Now</button>
+							</div>
+						</div>
+					</div>
+				<% end %>
+			</div>
+		</div>
+	</div>
+	<div class="container">
+		<div class="row py-4 py-md-5">
+			<h1 class="text-orang text-center w-100">Choose the best Mobile Phone deal tailored to your needs</h1>
+			<p class="w-100 text-center mb-0">Take control over your mobile spends and enjoy your savings</p>
+			<p class="w-100 text-center">The best mobile deal in the UK that fits your needs is just a click away.</p>
+			<h3 class="w-100 text-center text-orang">Take the first step in less than 10 seconds.</h3>
+			<div class="w-100 mx-auto text-center pt-3">
+				<button type="button" class="btn btn-orange open-form div-shadow font-weight-bold px-4 py-2">Get Your Quote</button>
+			</div>
+		</div>
+	</div>
+</div>
+
+<%= render 'layouts/common/footer' %>
+  <!-- Form -->
+<div class="modal fade" id="deal-form-modal" tabindex="-1" role="dialog" aria-labelledby="ModalCenterTitle" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+    <div class="modal-content deal-form-box">
+      <div class="modal-header">
+         <h1 id="ModalCenterTitle"><span class="text-blue">You are just</span> 30 seconds <span class="text-blue"> away from your dream phone</span></h1>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <form class="form" id="dealform" data-details="<%= @details %>" method="post" action="javascript:;">
+          <div class="progress mb-5">
+            <div class="progress-bar w-0 fs-10" id="progressBar"></div>
+          </div>
+          <div  class="tab display-none" id="slide1">
+            <div class="row justify-content-center">
+              <div class="form-group col-lg-7 col-12">
+                <label>First Name*</label>
+                <input
+                name="first_name"
+                required
+                data-parsley-required="true"
+                data-parsley-required-message="Please Enter First Name" data-parsley-pattern-message="First Name Must Be Alphabetic" data-parsley-pattern="/^[a-zA-Z ]*$/"
+                data-parsley-group="block-0"
+                type="text"
+                class="first_name form-control hero-input ignoreStep3"
+                placeholder="First Name" >
+                 <i class="validate success fa fa-check-circle"></i>
+                <i class="validate error fa fa-times-circle"></i>
+              </div>
+              <div class="form-group col-lg-7  col-12">
+                <label>Last Name*</label>
+                <input
+                name="last_name"
+                required
+                data-parsley-required="true"
+                data-parsley-required-message="Please Enter Last Name"
+                data-parsley-group="block-0"
+                data-parsley-pattern-message="Last Name Must Be Alphabetic" data-parsley-pattern="/^[a-zA-Z ]*$/"
+                type="text"
+                class="form-control ignoreStep3 last_name"
+                placeholder="Surname" >
+                 <i class="validate success fa fa-check-circle"></i>
+                <i class="validate error fa fa-times-circle"></i>
+              </div>
+            </div>
+          </div>
+          <div  class="tab display-none" id="slide2">
+            <div class="row justify-content-center">
+              <!-- postcode -->
+              <div class="form-group col-lg-7  col-12">
+                <label>Postcode*</label>
+                <div class="w-100 justify-content-center">
+                  <input
+                  name="postcode"
+                  required
+                  data-parsley-required="true"
+                  data-parsley-required-message="Please Enter Postcode"
+                  data-parsley-group="block-1"
+                  data-parsley-validapipostcode
+                  type="text"
+                  class="postcode form-control ignoreStep4 approve"
+                  placeholder="Postcode">
+                  <button type="button" class="btn btn-success rounded-right left-0r findAddress-btn">Find Address</button>
+                </div>
+                <div class="error-checkbox"></div>
+              </div>
+
+
+              <div class="form-group col-lg-7 col-12 property-div display-none">
+                <label>Your Property*</label>
+                <input type="hidden" name="towncity" class="towncity" >
+                <input type="hidden" name="street1" class="street1" >
+                <input type="hidden" name="county" class="county" >
+                <input type="hidden" name="houseNumber" class="houseNumber" >
+                <input type="hidden" name="street2" class="street2" >
+                <input type="hidden" name="building" class="building" >
+                <select
+                  id="property"
+                  name="property"
+                  class="property w-100 form-control ignoreStep4 text-dark"
+                  data-parsley-required="true"
+                  data-parsley-required-message="Please Select Your property"
+                  data-parsley-group="block-1"
+                  required>
+                </select>
+              </div>
+
+              <div class="form-group col-lg-7 col-12 address-div display-none">
+                <label class="d-flex justify-content-start  text-black f-25 mb-2">
+                  First Line Of Address
+                </label>
+                <input
+                  placeholder="Address"
+                  id="address"
+                  name="address"
+                  class="address form-control ignoreStep4"
+                  data-parsley-required="true"
+                  data-parsley-required-message="Please Enter Your Address"
+                  data-parsley-group="block-1"
+                  type="text"
+                  >
+              </div>
+            </div>
+          </div>
+          <div  class="tab phoneEmailTab display-none" id="slide3">
+            <div class="row justify-content-center">
+              <div class="input-group  mb-3  col-lg-7 phone-div">
+                <label class="w-100">Mobile Number*</label>
+                <input
+                type="number"
+                name="telephone"
+                required
+                data-parsley-required="true"
+                data-parsley-required-message="Please Enter Valid Uk Phone Number"
+                data-parsley-type="number"
+                data-parsley-group="block-2"
+                data-parsley-validphone
+                class="form-control phone telephone"
+                placeholder="Mobile Number">
+                <div class="input-group-append">
+                  <span class="input-group-text">
+                     <%= image_tag("privacy.png", class: "privcy pull-right", alt: "Privacy image" ) %>
+                  </span>
+                </div>
+              </div>
+              <div class="input-group mb-3  col-lg-7 email-div">
+                <label class="w-100">Email Address*</label>
+                <div class="clearfix"></div>
+                <input
+                type="email"
+                name="email"
+                required
+                data-parsley-required="true"
+                data-parsley-required-message="Please Enter Valid Email Address"
+                data-parsley-type="email"
+                data-parsley-type-message="Please Enter Valid Email Address"
+                data-parsley-group="block-2"
+                data-parsley-validemail
+                value=""
+                class="form-control nme_inpu email"
+                placeholder="Email Address">
+                <div class="input-group-append">
+                  <span class="input-group-text">
+                    <%= image_tag("privacy.png", class: "privcy pull-right", alt: "Privacy image") %>
+                  </span>
+                </div>
+              </div>
+              <div class="custom-checkbox col-lg-7">
+                <label>Accept</label>
+                <div class="onoffswitch">
+                  <input type="hidden" name="c1">
+                  <input
+                    type="checkbox"
+                    name="agree"
+                    class="onoffswitch-checkbox approve"
+                    id="myonoffswitch"
+                    data-parsley-required="true"
+                    data-parsley-group="block-2"
+                    data-parsley-required-message="Please accept our terms and conditions"
+                    >
+                  <label class="onoffswitch-label" for="myonoffswitch">
+                      <span class="onoffswitch-inner"></span>
+                      <span class="onoffswitch-switch"></span>
+                  </label>
+                </div>
+                <div class="error-checkbox"></div>
+                <%= render 'layouts/common/accept_terms'%>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-7 col-12 btn-div justify-content-center">
+            <div class="row justify-content-center">
+              <div class="col-lg-6 col-md-6 col-sm-6 col-6">
+                <button id="btn-back" type="button" class="btn btn-primary btn-lg o-btn">Back</button>
+              </div>
+              <div class="col-lg-6 col-md-6 col-sm-6 col-6 text-center">
+                <i class="lodr but_loader display-none position-absolute">
+                  <%= image_tag("button-ajax-loader.gif", alt: "loader image") %>
+                </i>
+                <button id="btn-continue" type="button" class="btn btn-success btn-lg o-btn nextStep" >Continue</button>
+              </div>
+            </div>
+          </div>
+
+          <div class="mt-2 text-center securityInfo">
+            <ul>
+              <li>
+              <%= image_tag("lock.png", alt: "privacy lock") %>
+              </li>
+              <li>Safe</li>
+              <li>Secure</li>
+              <li>Privacy Protected</li>
+            </ul>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+<%= render 'layouts/common/waiting_loader' %>
+<%= render 'layouts/common/share_domain_iframes' %>
+
+
+
+
+
