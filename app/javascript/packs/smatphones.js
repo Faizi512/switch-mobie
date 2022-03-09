@@ -46,6 +46,7 @@ class SmartPhones extends Common {
       }).done(function() {
         var ctr = $(".container");
         ctr.addClass("center slider-two-active").removeClass("full slider-one-active");
+        $('.slider-two-active').removeClass("top-first");
         $('.slider-three').addClass("d-none");
         $('.slider-two').addClass("secondstep");
         $('.slider-two').removeClass("d-none");

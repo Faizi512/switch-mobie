@@ -64,14 +64,17 @@
   width: 180px;
   object-fit: contain;
 }
+.rounded-m{
+  border-radius: 0.5rem !important;
+}
 .deal-shadow{
-  box-shadow: 0 0.5rem 1rem #92dada6b !important;
+  box-shadow: 0 0.5rem 0.7rem #92dada6b !important;
 }
 .deal-border{
   border: 2px solid #FA6E47 !important;
 }
 .min-h{
-  min-height: 560px;
+  min-height: 670px;
 }
 .img-header{
   position: absolute;
@@ -104,14 +107,14 @@
   .container {
     width: 500px;
     position: absolute;
-    top: 40%;
+    top: 45%;
     left: 50%;
     -webkit-transform: translate(-50%, -40%);
     -ms-transform: translate(-50%, -40%);
     transform: translate(-50%, -40%);
   }
-  .container.slider-one-active {
-    top: 50% !important;
+  .top-first {
+    top: 60% !important;
   }
 
   .steps {
@@ -139,8 +142,7 @@
     line-height: 25px;
     height: 25px;
     margin: 0;
-    color: #777;
-    font-family: 'Roboto', sans-serif;
+    color: #fa6e47;
     font-size: .9rem;
     font-weight: 300;
   }
@@ -344,10 +346,10 @@
     font-weight: 300;
   }
   .onoffswitch-inner:before {
-    background-color: #fa6e47;
+    background-color: green;
   }
   input:checked ~ label {
-    border-color: #fa6e47 !important;
+    border-color: green !important;
   }
 
   .slider-form [type="text"]:focus, [type="email"]:focus, [type="number"]:focus {
