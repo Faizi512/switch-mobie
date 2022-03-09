@@ -30,8 +30,8 @@ class SmartPhones extends Common {
       $('.slider-three').removeClass("d-none");
       $('.slider-three').addClass("threestep");
       $('.slider-two').addClass("d-none");
-      this.ctr = $(".container");
-      this.ctr.addClass("full slider-three-active").removeClass("center slider-two-active slider-one-active");
+      var ctr = $(".container");
+      ctr.addClass("full slider-three-active").removeClass("center slider-two-active slider-one-active");
       $('.towncity').val($(this).find("option:selected").data("city"))
       $('.street1').val($(this).find("option:selected").data("street"))
       $('.county').val($(this).find("option:selected").data("province"))
@@ -44,14 +44,12 @@ class SmartPhones extends Common {
       $('.slider-one').parsley().whenValidate({
           group: 'block-0'
       }).done(function() {
-        $(CI).text("Saving...").delay(900).queue(function(){
-          this.ctr = $(".container");
-          this.ctr.addClass("center slider-two-active").removeClass("full slider-one-active");
-          $('.slider-three').addClass("d-none");
-          $('.slider-two').addClass("secondstep");
-          $('.slider-two').removeClass("d-none");
-          $('.slider-one').removeClass("first-div");
-        });
+        var ctr = $(".container");
+        ctr.addClass("center slider-two-active").removeClass("full slider-one-active");
+        $('.slider-three').addClass("d-none");
+        $('.slider-two').addClass("secondstep");
+        $('.slider-two').removeClass("d-none");
+        $('.slider-one').removeClass("first-div");
       })
       e.preventDefault();
     });
@@ -60,33 +58,31 @@ class SmartPhones extends Common {
       $('.slider-two').parsley().whenValidate({
           group: 'block-1'
       }).done(function() {
-        $(CI).text("Saving...").delay(900).queue(function(){
-          $('.slider-three').removeClass("d-none");
-          $('.slider-three').addClass("threestep");
-          $('.slider-two').addClass("d-none");
-          this.ctr = $(".container");
-          this.ctr.addClass("full slider-three-active").removeClass("center slider-two-active slider-one-active");
-        });
+        $('.slider-three').removeClass("d-none");
+        $('.slider-three').addClass("threestep");
+        $('.slider-two').addClass("d-none");
+        var ctr = $(".container");
+        ctr.addClass("full slider-three-active").removeClass("center slider-two-active slider-one-active");
       })
       e.preventDefault();
     });
 
-    // this.firstBackButton.on("click", function(e){
-    //   this.ctr = $(".container");
-    //   this.ctr.addClass("center slider-one-active").removeClass("full slider-two-active");
-    //   $('.slider-one').addClass("first-div");
-    //   $('.slider-two').addClass("d-none");
-    //   e.preventDefault();
-    // });
+    this.firstBackButton.on("click", function(e){
+      var ctr = $(".container");
+      ctr.addClass("center slider-one-active").removeClass("full slider-two-active");
+      $('.slider-one').addClass("first-div");
+      $('.slider-two').addClass("d-none");
+      e.preventDefault();
+    });
 
-    // this.secondBackButton.on("click", function(e){
-    //   $('.slider-three').addClass("d-none");
-    //   $('.slider-three').removeClass("threestep");
-    //   $('.slider-two').removeClass("d-none");
-    //   this.ctr = $(".container");
-    //   this.ctr.addClass("center slider-two-active").removeClass("full slider-three-active");
-    //   e.preventDefault();
-    // });
+    this.secondBackButton.on("click", function(e){
+      $('.slider-three').addClass("d-none");
+      $('.slider-three').removeClass("threestep");
+      $('.slider-two').removeClass("d-none");
+      var ctr = $(".container");
+      ctr.addClass("center slider-two-active").removeClass("full slider-three-active");
+      e.preventDefault();
+    });
 
 
     this.thirdButton.on("click", function(e){
