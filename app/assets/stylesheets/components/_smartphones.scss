@@ -107,6 +107,9 @@
     -ms-transform: translate(-50%, -40%);
     transform: translate(-50%, -40%);
   }
+  .container.slider-one-active {
+    top: 50% !important;
+  }
 
   .steps {
     margin-bottom: 10px;
