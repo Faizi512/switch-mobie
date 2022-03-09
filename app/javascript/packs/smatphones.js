@@ -19,7 +19,12 @@ class SmartPhones extends Common {
     this.more = $(".more");
     this.yourname = $(".yourname");
     this.reset = $(".reset");
-    // this.ctr = $(".container");
+    this.firstBackButton = $(".first-back");
+    this.secondBackButton = $(".second-back");
+
+    $('.carousel').carousel({
+      interval: 2000
+    })
 
     $( ".property" ).change(function() {
       $('.slider-three').removeClass("d-none");
@@ -44,6 +49,8 @@ class SmartPhones extends Common {
           this.ctr.addClass("center slider-two-active").removeClass("full slider-one-active");
           $('.slider-three').addClass("d-none");
           $('.slider-two').addClass("secondstep");
+          $('.slider-two').removeClass("d-none");
+          $('.slider-one').removeClass("first-div");
         });
       })
       e.preventDefault();
@@ -63,6 +70,24 @@ class SmartPhones extends Common {
       })
       e.preventDefault();
     });
+
+    // this.firstBackButton.on("click", function(e){
+    //   this.ctr = $(".container");
+    //   this.ctr.addClass("center slider-one-active").removeClass("full slider-two-active");
+    //   $('.slider-one').addClass("first-div");
+    //   $('.slider-two').addClass("d-none");
+    //   e.preventDefault();
+    // });
+
+    // this.secondBackButton.on("click", function(e){
+    //   $('.slider-three').addClass("d-none");
+    //   $('.slider-three').removeClass("threestep");
+    //   $('.slider-two').removeClass("d-none");
+    //   this.ctr = $(".container");
+    //   this.ctr.addClass("center slider-two-active").removeClass("full slider-three-active");
+    //   e.preventDefault();
+    // });
+
 
     this.thirdButton.on("click", function(e){
       $('.slider-three').parsley().whenValidate({

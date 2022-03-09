@@ -9,6 +9,7 @@
 		</div>
 		<div class="row w-100 mx-0 pb-5">
 			<div class="col-md-6">
+
 				<h1 class="font-weight-bold text-white mb-1 fs-65 text-md-left text-center">Exclusive Smartphone Deals</h1>
 				<h2 class="font-weight-bold text-white fs-sm-23 text-center text-md-left">Just 2 steps away</h2>
 				<p class="text-white fs-18 text-md-left text-center">
@@ -16,15 +17,43 @@
 				</p>
 				<%= image_tag("phone/p1hone13-cam.png", class: "w-65 img-header d-none d-md-block" ) %>
 			</div>
-			<div class="col-md-6 text-center">
-				<div class="rounded top-shadow py-md-5 py-4">
-					<h2 class="text-center text-orng">Galaxy S21 Plus</h2>
-					<%= image_tag("phone/galaxy-s21plus.png", class: "w-50" ) %>
-					<h4 class="text-center text-orng mt-3">Unlimited</h4>
-					<p class="text-orng text-center">SMS | Data | Minutes</p>
-					<button class="btn px-md-5 px-4 btn-orang font-weight-bold w-auto open-form">Continue</button>
-				</div>
-			</div>
+			<div class="col-md-6 text-center open-form">
+        <div class="rounded top-shadow py-md-5 py-4">
+          <div class="row mx-0 w-100 justify-content-center">
+            <div id="carouselControls" class="carousel slide w-100" data-ride="carousel">
+              <div class="carousel-inner">
+                <div class="carousel-item active">
+                  <div class="">
+										<h2 class="text-center text-orng">Galaxy S21 Plus</h2>
+										<%= image_tag("phone/galaxy-s21plus.png", class: "w-50" ) %>
+										<h4 class="text-center text-orng mt-3">Unlimited</h4>
+										<p class="text-orng text-center">SMS | Data | Minutes</p>
+										<button class="btn px-md-5 px-4 btn-orang font-weight-bold w-auto open-form">Continue</button>
+									</div>
+                </div>
+                <div class="carousel-item">
+                  <div class="">
+										<h2 class="text-center text-orng">iPhone 13 Pro Max</h2>
+										<%= image_tag("phone/apple-iphone-13-pro.png", class: "w-50" ) %>
+										<h4 class="text-center text-orng mt-3">Unlimited</h4>
+										<p class="text-orng text-center">SMS | Data | Minutes</p>
+										<button class="btn px-md-5 px-4 btn-orang font-weight-bold w-auto open-form">Continue</button>
+									</div>
+                </div>
+                <div class="carousel-item">
+                	<div class="">
+										<h2 class="text-center text-orng">Galaxy Z Flip3</h2>
+										<%= image_tag("glaxyz-flip3.png", class: "w-50" ) %>
+										<h4 class="text-center text-orng mt-3">Unlimited</h4>
+										<p class="text-orng text-center">SMS | Data | Minutes</p>
+										<button class="btn px-md-5 px-4 btn-orang font-weight-bold w-auto open-form">Continue</button>
+									</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
 		</div>
 	</div>
 </div>
@@ -50,7 +79,7 @@
 
 <div class="bg-white py-md-5 py-4">
 	<div class="container">
-		<h1 class="text-orng text-center mb-4 fs-sm-27">Top Exclusive Deals Only</h1>
+		<h1 class="text-orng text-center mb-4 fs-sm-27">Top Deals</h1>
 		<div class="row w-100 mx-0">
 			<% @phones.each do |phone| %>
 				<div class="col-lg-4 col-md-6 mb-4">
@@ -70,8 +99,9 @@
 								<p><strong>£0</strong> Upfront</p>
 							</div>
 						</div>
-						<p class="text-orng text-center">* All Varients Available</p>
-						<button class="btn px-md-5 px-4 btn-orang font-weight-bold w-auto open-form"><%= phone[:btn_text] %></button>
+						<p class="text-orng text-center">*All Varients Available</p>
+						<button class="btn btn-orang w-100 open-form">Apply now - it's free!</button>
+						<button class="btn btn-info w-100 open-form mt-3 fs-23">More Info</button>
 					</div>
 				</div>
 			<% end %>	

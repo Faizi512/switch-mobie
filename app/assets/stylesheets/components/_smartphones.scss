@@ -75,6 +75,10 @@
   left: -33%;
   bottom: -49px;
 }
+.first-div{
+  left: 37%;
+  position: relative;
+}
 #form-div{
   input:focus,
   button:focus {
@@ -84,6 +88,9 @@
   button:hover,
   .reset:hover {
     opacity: .8;
+  }
+  button.back{
+    background-color: darkgrey !important;
   }
 
   button:active,

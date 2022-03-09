@@ -104,7 +104,10 @@
                         type="text">
                     </div>
                   </div>
-                  <button type="button" class="second next">Next Step</button>
+                  <div class="row align-items-center justify-content-around">
+                    <!-- <button type="button" class="btn back first-back">Back</button> -->
+                    <button type="button" class="second next">Next Step</button>                    
+                  </div>
                 </form>
                 <form class="slider-form pt-2 px-3 slider-three" data-parsley-validate="">
                   <label class="input w-100">
@@ -153,7 +156,10 @@
                     </div>
                     <div class="error-checkbox"></div>
                     <%= render 'layouts/common/accept_terms'%>
-                  <button type="button" class="third next reset mt-3">Submit</button>
+                    <div class="row align-items-center justify-content-around mt-3">
+                      <!-- <button type="button" class="btn back  second-back">Back</button> -->
+                      <button type="button" class="third next reset">Submit</button>
+                    </div>
                   </div>
                 </form>
               </div>
