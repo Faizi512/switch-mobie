@@ -18,7 +18,7 @@
 					<%= image_tag("phone/p1hone13-cam.png", class: "w-65 img-header d-none d-md-block" ) %>
 				</div>
 				<div class="col-md-6 text-center open-form">
-	        <div class="rounded top-shadow py-md-5 py-4">
+	        <div class="rounded-m top-shadow py-md-5 py-4">
 	          <div class="row mx-0 w-100 justify-content-center">
 	            <div id="carouselControls" class="carousel slide w-100" data-ride="carousel">
 	              <div class="carousel-inner">
@@ -28,7 +28,7 @@
 											<%= image_tag("phone/galaxy-s21plus.png", class: "w-50" ) %>
 											<h4 class="text-center text-orng mt-3">Unlimited</h4>
 											<p class="text-orng text-center">SMS | Data | Minutes</p>
-											<button class="btn px-md-5 px-4 btn-orang font-weight-bold w-auto open-form rounded-m mb-1">Continue</button>
+											<button class="btn px-md-5 px-4 btn-orang font-weight-bold w-auto open-form rounded-m mb-3">Continue</button>
 										</div>
 	                </div>
 	                <div class="carousel-item">
@@ -37,7 +37,7 @@
 											<%= image_tag("phone/apple-iphone-13-pro.png", class: "w-50" ) %>
 											<h4 class="text-center text-orng mt-3">Unlimited</h4>
 											<p class="text-orng text-center">SMS | Data | Minutes</p>
-											<button class="btn px-md-5 px-4 btn-orang font-weight-bold w-auto open-form rounded-m mb-1">Continue</button>
+											<button class="btn px-md-5 px-4 btn-orang font-weight-bold w-auto open-form rounded-m mb-3">Continue</button>
 										</div>
 	                </div>
 	                <div class="carousel-item">
@@ -46,7 +46,7 @@
 											<%= image_tag("glaxyz-flip3.png", class: "w-50" ) %>
 											<h4 class="text-center text-orng mt-3">Unlimited</h4>
 											<p class="text-orng text-center">SMS | Data | Minutes</p>
-											<button class="btn px-md-5 px-4 btn-orang font-weight-bold w-auto open-form rounded-m mb-1">Continue</button>
+											<button class="btn px-md-5 px-4 btn-orang font-weight-bold w-auto open-form rounded-m mb-3">Continue</button>
 										</div>
 	                </div>
 	              </div>
@@ -82,7 +82,7 @@
 			<div class="row w-100 mx-0 align-items-center justify-content-center">
 				<% @phones.each do |phone| %>
 					<div class="col-lg-4 col-md-6 mb-4">
-						<div class="deals-div p-3 deal-border deal-shadow rounded text-center position-relative">
+						<div class="deals-div p-3 deal-shadow rounded text-center position-relative">
 							<div class="ready-box"></div>
 							<h4 class="text-orng"><%= phone[:name] %></h4>
 							<div class="row">
@@ -100,7 +100,7 @@
 							</div>
 							<p class="text-orng text-center">*All Varients Available</p>
 							<button class="btn btn-orang w-100 open-form rounded-m">Apply now - it's free!</button>
-							<button class="btn btn-info w-100 open-form mt-3 fs-23 rounded-m">More Info</button>
+							<button class="btn btn-info w-100 open-form mt-3 fs-23 rounded-m btn-shadow">More Info</button>
 						</div>
 					</div>
 				<% end %>	
