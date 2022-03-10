@@ -24,7 +24,7 @@ class PagesController < ApplicationController
     end
 	end
 
-  def smart_phones
+  def deals
     home_deals
   end
 

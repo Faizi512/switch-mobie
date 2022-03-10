@@ -1,0 +1,14 @@
+<%= javascript_pack_tag 'deals', 'data-turbolinks-track': 'reload', defer: true %>
+<div id="deals">
+  <div class="bg-strip text-white">
+    <%= render 'layouts/deals/top-section' %>
+    <div class="container my-5 smart-body">
+      <%= render 'layouts/deals/first-section' %>
+      <%= render 'layouts/deals/second-section' %>
+      <%= render 'layouts/deals/third-section' %>
+    </div>
+    <%= render 'layouts/deals/network-logos' %>
+    <%= render 'layouts/deals/footer' %>
+    <%= render 'layouts/deals/form' %>
+  </div>
+</div>
