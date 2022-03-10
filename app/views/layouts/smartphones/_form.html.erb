@@ -1,0 +1,226 @@
+<div class="modal fade" id="deal-form-modal" tabindex="-1" role="dialog" aria-labelledby="ModalCenterTitle" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+    <div class="modal-content rounded-2 py-5  deal-form-box">
+      <div class="d-flex">
+        <div class="col-11 pr-0">
+          <%= render 'layouts/smartphones/form_network_logo'%>
+        </div>
+        <div class="col-1 pl-0">
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+      </div>
+
+      <div class="my-4">
+        <div class="mx-auto rotate progress mt-mid" id="ModalCenterTitle">
+          <div class="progress-bar w-0 fs-10" id="progressBar"></div>
+        </div>
+
+        <div class="col rotate-2 d-flex justify-content-between position-absolute">
+          <div class="circle-p-1 shadow"></div>
+          <div class="circle-p-2 shadow"></div>
+          <div class="circle-p-3 shadow"></div>
+          <div class="circle-p-4 shadow"></div>
+        </div>
+      </div>
+
+      <div class="modal-body d-md-flex justify-content-center align-items-center px-md-0 px-5">
+        <div class="col-md-3 d-md-none d-block px-0">
+          <h1 class="bg-dark mx-auto rounded-pill shadow text-center text-warning w-75"> <span id="step-header"></span>/3</h1>
+        </div>
+
+        <div class="col-md-12 px-md-4 px-0">
+          <form class="form" id="dealform" data-details="<%= @details %>" method="post" action="javascript:;">
+            <div  class="tab display-none" id="slide1">
+              <div class="row justify-content-center">
+                <div class="form-group col-lg-10 col-12">
+                  <label>First Name</label>
+                  <input
+                  name="first_name"
+                  required
+                  data-parsley-required="true"
+                  data-parsley-required-message="Please Enter First Name" data-parsley-pattern-message="First Name Must Be Alphabetic" data-parsley-pattern="/^[a-zA-Z ]*$/"
+                  data-parsley-group="block-0"
+                  type="text"
+                  class="first_name form-control hero-input ignoreStep3"
+                  placeholder="First Name" >
+                  <i class="validate success fa fa-check-circle"></i>
+                  <i class="validate error fa fa-times-circle"></i>
+                </div>
+                <div class="form-group col-lg-10  col-12">
+                  <label>Surname</label>
+                  <input
+                  name="last_name"
+                  required
+                  data-parsley-required="true"
+                  data-parsley-required-message="Please Enter Last Name"
+                  data-parsley-group="block-0"
+                  data-parsley-pattern-message="Last Name Must Be Alphabetic" data-parsley-pattern="/^[a-zA-Z ]*$/"
+                  type="text"
+                  class="form-control ignoreStep3 last_name"
+                  placeholder="Surname" >
+                  <i class="validate success fa fa-check-circle"></i>
+                  <i class="validate error fa fa-times-circle"></i>
+                </div>
+              </div>
+            </div>
+
+            <div  class="tab display-none" id="slide2">
+              <div class="row justify-content-center">
+                <!-- postcode -->
+                <div class="form-group col-lg-10 col-12">
+                  <label>Postcode</label>
+                  <div class="w-100 justify-content-center">
+                    <input
+                    name="postcode"
+                    required
+                    data-parsley-required="true"
+                    data-parsley-required-message="Please Enter Postcode"
+                    data-parsley-group="block-1"
+                    data-parsley-validapipostcode
+                    type="text"
+                    class="postcode form-control ignoreStep4 approve"
+                    placeholder="Postcode">
+                    <button type="button" class="btn btn-success rounded-right left-0r findAddress-btn">Find Address</button>
+                  </div>
+                  <div class="error-checkbox"></div>
+                </div>
+
+                <div class="form-group col-lg-10 col-12 property-div display-none">
+                  <label>Your Property</label>
+                  <input type="hidden" name="towncity" class="towncity" >
+                  <input type="hidden" name="street1" class="street1" >
+                  <input type="hidden" name="county" class="county" >
+                  <input type="hidden" name="houseNumber" class="houseNumber" >
+                  <input type="hidden" name="street2" class="street2" >
+                  <input type="hidden" name="building" class="building" >
+                  <select
+                    id="property"
+                    name="property"
+                    class="property w-100 form-control ignoreStep4 text-dark"
+                    data-parsley-required="true"
+                    data-parsley-required-message="Please Select Your property"
+                    data-parsley-group="block-1"
+                    required>
+                  </select>
+                </div>
+
+                <div class="form-group col-lg-10 col-12 address-div display-none">
+                  <label class="d-flex justify-content-start  text-black f-25 mb-2">
+                    First Line Of Address
+                  </label>
+                  <input
+                    placeholder="Address"
+                    id="address"
+                    name="address"
+                    class="address form-control ignoreStep4"
+                    data-parsley-required="true"
+                    data-parsley-required-message="Please Enter Your Address"
+                    data-parsley-group="block-1"
+                    type="text"
+                    >
+                </div>
+              </div>
+            </div>
+            <div  class="tab phoneEmailTab display-none" id="slide3">
+              <div class="row justify-content-center">
+                <div class="input-group  mb-3  col-lg-10 phone-div">
+                  <label class="w-100">Mobile Number</label>
+                  <input
+                  type="number"
+                  name="telephone"
+                  required
+                  data-parsley-required="true"
+                  data-parsley-required-message="Please Enter Valid Uk Phone Number"
+                  data-parsley-type="number"
+                  data-parsley-group="block-2"
+                  data-parsley-validphone
+                  class="form-control phone telephone"
+                  placeholder="Mobile Number">
+                  <div class="input-group-append">
+                    <span class="input-group-text">
+                      <%= image_tag("privacy.png", class: "privcy pull-right", alt: "Privacy image" ) %>
+                    </span>
+                  </div>
+                </div>
+                <div class="input-group mb-3  col-lg-10 email-div">
+                  <label class="w-100">Email Address</label>
+                  <div class="clearfix"></div>
+                  <input
+                  type="email"
+                  name="email"
+                  required
+                  data-parsley-required="true"
+                  data-parsley-required-message="Please Enter Valid Email Address"
+                  data-parsley-type="email"
+                  data-parsley-type-message="Please Enter Valid Email Address"
+                  data-parsley-group="block-2"
+                  data-parsley-validemail
+                  value=""
+                  class="form-control nme_inpu email"
+                  placeholder="Email Address">
+                  <div class="input-group-append">
+                    <span class="input-group-text">
+                      <%= image_tag("privacy.png", class: "privcy pull-right", alt: "Privacy image") %>
+                    </span>
+                  </div>
+                </div>
+                <div class="custom-checkbox col-lg-10">
+                  <label>Accept</label>
+                  <div class="onoffswitch">
+                    <input type="hidden" name="c1">
+                    <input
+                      type="checkbox"
+                      name="agree"
+                      class="onoffswitch-checkbox approve"
+                      id="myonoffswitch"
+                      data-parsley-required="true"
+                      data-parsley-group="block-2"
+                      data-parsley-required-message="Please accept our terms and conditions"
+                      >
+                    <label class="onoffswitch-label" for="myonoffswitch">
+                        <span class="onoffswitch-inner"></span>
+                        <span class="onoffswitch-switch"></span>
+                    </label>
+                  </div>
+                  <div class="error-checkbox"></div>
+                  <%= render 'layouts/common/accept_terms'%>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-10 col-12 btn-div justify-content-center">
+              <div class="row justify-content-center">
+                <div class="col-lg-6 col-md-6 col-sm-6 col-6">
+                  <button id="btn-back" type="button" class="btn btn-primary btn-lg o-btn d-flex justify-content-center align-items-center" >
+                    <i class="fa-solid fa-arrow-left-long"></i> Back 
+                  </button>
+                </div>
+                <div class="col-lg-6 col-md-6 col-sm-6 col-6 text-center">
+                  <i class="lodr but_loader display-none position-absolute">
+                    <%= image_tag("button-ajax-loader.gif", alt: "loader image") %>
+                  </i>
+                  <button id="btn-continue" type="button" class="btn btn-success btn-lg o-btn nextStep d-flex justify-content-center align-items-center" >
+                    Continue <i class="fa-solid fa-arrow-right-long"></i>
+                  </button>
+                </div>
+              </div>
+            </div>
+
+          </form>
+        </div>
+
+      </div>
+            <div class="py-4 text-center securityInfo">
+              <ul>
+                <li>
+                <%= image_tag("lock.png", alt: "privacy lock") %>
+                </li>
+                <li>Safe</li>
+                <li>Secure</li>
+                <li>Privacy Protected</li>
+              </ul>
+            </div>
+    </div>
+  </div>
+</div>

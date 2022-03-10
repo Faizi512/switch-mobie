@@ -1,0 +1,31 @@
+<div class="second-section pt-5 blue-gradient-double mt-5 rounded-2">
+  <div class="">
+    <p class="text-center fs-40"> Horrific Switch Deals <span class="text-warning fw-bold">Discount</span> </p>
+  </div>
+  <div class="products-append ">
+    <div class="row text-center mx-0 justify-content-center">
+      <% @phoneshome.each do |phone| %>
+
+        <div class="col-md-4 col-mdm-6 h-100 my-5">
+          <div class="mx-3 cursor-p open-form border-disp">
+            <div class=" px-md-4 px-3 py-4 d-flex flex-column h-100-px justify-content-between">
+              <div class="image mx-auto">
+                <%= image_tag(phone[:image], class: "", width: "120" ) %>
+              </div>
+
+              <div class="name my-3">
+                <%= phone[:name] %>
+              </div>
+
+              <div class="price">
+                <%= phone[:bluetext] %>
+              </div>
+            
+            </div>
+          </div>
+
+        </div>
+      <% end %>
+    </div>
+  </div>
+</div>
