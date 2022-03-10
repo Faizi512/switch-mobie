@@ -30,6 +30,7 @@ class SmartPhones extends Common {
       $('.slider-three').removeClass("d-none");
       $('.slider-three').addClass("threestep");
       $('.slider-two').addClass("d-none");
+      $('.logos-div').addClass("d-none");
       var ctr = $(".container");
       ctr.addClass("full slider-three-active").removeClass("center slider-two-active slider-one-active");
       $('.towncity').val($(this).find("option:selected").data("city"))
@@ -51,6 +52,7 @@ class SmartPhones extends Common {
         $('.slider-two').addClass("secondstep");
         $('.slider-two').removeClass("d-none");
         $('.slider-one').removeClass("first-div");
+        CI.fixStepIndicator(1)
       })
       e.preventDefault();
     });
@@ -62,8 +64,10 @@ class SmartPhones extends Common {
         $('.slider-three').removeClass("d-none");
         $('.slider-three').addClass("threestep");
         $('.slider-two').addClass("d-none");
+        $('.logos-div').addClass("d-none");
         var ctr = $(".container");
         ctr.addClass("full slider-three-active").removeClass("center slider-two-active slider-one-active");
+        CI.fixStepIndicator(2)
       })
       e.preventDefault();
     });
@@ -73,6 +77,7 @@ class SmartPhones extends Common {
       ctr.addClass("center slider-one-active").removeClass("full slider-two-active");
       $('.slider-one').addClass("first-div");
       $('.slider-two').addClass("d-none");
+      CI.fixStepIndicator(-1)
       e.preventDefault();
     });
 
@@ -80,7 +85,9 @@ class SmartPhones extends Common {
       $('.slider-three').addClass("d-none");
       $('.slider-three').removeClass("threestep");
       $('.slider-two').removeClass("d-none");
+      $('.logos-div').removeClass("d-none");
       var ctr = $(".container");
+      CI.fixStepIndicator(-1)
       ctr.addClass("center slider-two-active").removeClass("full slider-three-active");
       e.preventDefault();
     });
@@ -108,6 +115,14 @@ class SmartPhones extends Common {
       }
     });
 
+  }
+
+  fixStepIndicator(num) {
+    var progress = document.getElementById('progressBar');
+    if(num > 0) {
+      progress.style.width = (num * 50)+"%";
+      $('.progress-percent').text((num * 50) + "%" + " Complete");
+    }
   }
   postMMDData() {
     var CI = this;
