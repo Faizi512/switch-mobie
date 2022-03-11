@@ -385,6 +385,7 @@
     }
     input:checked ~ label {
       border-color: #0b4c0b !important;
+      background-color: green !important;
     }
 
     .slider-form [type="text"]:focus, [type="email"]:focus, [type="number"]:focus {
