@@ -303,6 +303,72 @@ module PagesHelper
     }.to_json
   end
 
+  def smartphones
+    @details = {
+      camp_id: 'MEGA-MOBILE-DEALS',
+      success_url: 'https://mtrk5.co.uk/?a=14118&c=33110',
+      bad_success_url: 'https://mtrk5.co.uk/?a=14118&c=33110',
+      form_name: 'smartphones',
+      optin_url: '/smartphones',
+      sid: nil,
+      ssid: nil,
+      source:'smartphones',
+      quick_submit: false,
+      submit_on_load: false,
+      uu_id: @cookie_uuid,
+      token: @randon_token,
+      ipaddress: request.remote_ip,
+    }.to_json
+
+    @phones = [
+      {
+        name: "iPhone 13 Pro Max",
+        btn_text: "Exclusive Deal",
+        image: view_context.image_url("phone/apple-iphone-13-pro-max.png"),  
+      },
+      {
+        name: "Galaxy Z Fold3 5G",
+        btn_text: "Exclusive Deal",
+        image: view_context.image_url("z-fold3.png"),
+      },
+      {
+        name: "iPhone 13 Pro",
+        btn_text: "Exclusive Deal",
+        image: view_context.image_url("phone/apple-iphone-13-pro.png"),
+      },
+      {
+        name: "Galaxy S21 Ultra 5G",
+        btn_text: "Get Deal",
+        image: "phone/galaxy-s21-ultra.png"
+      },
+      {
+        name: "Galaxy Z Flip3 5G",
+        btn_text: "Exclusive Deal",
+        image: view_context.image_url("z-flip3.png"),
+      },
+      {
+        name: "iPhone 13",
+        btn_text: "Exclusive Deal",
+        image: view_context.image_url("phone/apple-iphone-13.png"),
+      },
+      {
+        name: "Glaxy S21 Plus 5G",
+        btn_text: "Get Deal",
+        image: "phone/galaxy-s21plus.png",
+      },
+      {
+        name: "iPhone 13 Mini",
+        btn_text: "Exclusive Deal",
+        image: view_context.image_url("phone/apple-iphone-13-mini.png"),
+      },
+      {
+        name: "Galaxy S21 5G",
+        btn_text: "Exclusive Deal",
+        image: "phone/galaxy-s21.png"
+      },
+    ]
+  end
+
   def home_deals
     @details = {
       camp_id: 'MEGA-MOBILE-DEALS',
