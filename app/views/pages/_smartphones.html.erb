@@ -1,0 +1,140 @@
+<%= javascript_pack_tag 'smatphones', 'data-turbolinks-track': 'reload', defer: true %>
+<div id="smartphones">
+	<div class="bg-clip font-poppins">
+		<div class="container">
+			<div class="w-100 py-4 text-md-left text-center">
+				<a class="w-100 text-md-left text-center" href="javascript:;">
+		      <%= image_tag("logo.png", class: "open-form logo-img" ) %>
+		    </a>
+			</div>
+			<div class="row w-100 mx-0 pb-5">
+				<div class="col-md-6">
+
+					<h1 class="font-weight-bold text-white mb-1 fs-65 text-md-left text-center">Exclusive Smartphone Deals</h1>
+					<h2 class="font-weight-bold text-white fs-sm-23 text-center text-md-left">Just 2 steps away</h2>
+					<p class="text-white fs-18 text-md-left text-center">
+						Its time to unbox the most affordable smartphone deals without any upfront charges
+					</p>
+					<%= image_tag("phone/p1hone13-cam.png", class: "w-65 img-header d-none d-md-block" ) %>
+				</div>
+				<div class="col-md-6 text-center open-form">
+	        <div class="rounded-m top-shadow py-md-5 py-4">
+	          <div class="row mx-0 w-100 justify-content-center">
+	            <div id="carouselControls" class="carousel slide w-100" data-ride="carousel">
+	              <div class="carousel-inner">
+	                <div class="carousel-item active">
+	                  <div class="">
+											<h2 class="text-center text-orng">Galaxy S21 Plus</h2>
+											<%= image_tag("phone/galaxy-s21plus.png", class: "w-50" ) %>
+											<h4 class="text-center text-orng mt-3">Unlimited</h4>
+											<p class="text-orng text-center">SMS | Data | Minutes</p>
+											<button class="btn px-md-5 px-4 btn-orang font-weight-bold w-auto open-form rounded-m mb-3">Continue</button>
+										</div>
+	                </div>
+	                <div class="carousel-item">
+	                  <div class="">
+											<h2 class="text-center text-orng">iPhone 13 Pro Max</h2>
+											<%= image_tag("phone/apple-iphone-13-pro.png", class: "w-50" ) %>
+											<h4 class="text-center text-orng mt-3">Unlimited</h4>
+											<p class="text-orng text-center">SMS | Data | Minutes</p>
+											<button class="btn px-md-5 px-4 btn-orang font-weight-bold w-auto open-form rounded-m mb-3">Continue</button>
+										</div>
+	                </div>
+	                <div class="carousel-item">
+	                	<div class="">
+											<h2 class="text-center text-orng">Galaxy Z Flip3</h2>
+											<%= image_tag("glaxyz-flip3.png", class: "w-50" ) %>
+											<h4 class="text-center text-orng mt-3">Unlimited</h4>
+											<p class="text-orng text-center">SMS | Data | Minutes</p>
+											<button class="btn px-md-5 px-4 btn-orang font-weight-bold w-auto open-form rounded-m mb-3">Continue</button>
+										</div>
+	                </div>
+	              </div>
+	            </div>
+	          </div>
+	        </div>
+	      </div>
+			</div>
+		</div>
+	</div>
+	<div class="bg-light font-poppins">
+		<div class="container">
+			<div class="row py-md-5 py-4">
+				<h1 class="text-orng text-center mb-4 w-100 fs-sm-27">Our Simple Process</h1>
+				<div class="col-md-4 mb-3 text-center">
+					<%= image_tag("easy.png", class: "w-25" ) %>
+					<h4 class="mt-3">Effortlessly</h4>
+				</div>
+				<div class="col-md-4 text-center mb-3">
+					<%= image_tag("fast1.png", class: "w-25" ) %>
+					<h4 class="mt-3">Fast</h4>
+				</div>
+				<div class="col-md-4 text-center mb-3">
+					<%= image_tag("best-price.png", class: "w-25" ) %>
+					<h4 class="mt-3">Best Price</h4>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="bg-white py-md-5 py-4 font-poppins">
+		<div class="container">
+			<h1 class="text-orng text-center mb-4 fs-sm-27">Top Deals</h1>
+			<div class="row w-100 mx-0 align-items-center justify-content-center">
+				<% @phones.each do |phone| %>
+					<div class="col-lg-4 col-md-6 mb-4">
+						<div class="deals-div p-3 deal-shadow rounded-m text-center position-relative">
+							<div class="ready-box"></div>
+							<h4 class="text-orng"><%= phone[:name] %></h4>
+							<div class="row">
+								<div class="col-md-7 text-center">
+									<div class="phone-header mx-auto">
+										<%= image_tag(phone[:image], class: "w-75" ) %>															
+									</div>
+								</div>
+								<div class="col-md-5 align-self-center px-2 pl-md-0 pr-ms-2 text-md-left">
+									<p class="mb-1">Unlimited <strong>Data</strong></p>
+									<p class="mb-1">Unlimited <strong>Min</strong></p>
+									<p class="mb-1">Unlimited <strong>SMS</strong></p>
+									<p><strong>£0</strong> Upfront</p>
+								</div>
+							</div>
+							<p class="text-orng text-center">*All Varients Available</p>
+							<button class="btn btn-orang w-100 open-form rounded-m">Apply now - it's free!</button>
+							<button class="btn btn-info w-100 open-form mt-3 fs-23 rounded-m btn-shadow">More Info</button>
+						</div>
+					</div>
+				<% end %>	
+			</div>
+		</div>
+	</div>
+	<!-- Footer Section -->
+	<footer class="bg-light-blu pt-4 font-poppins">
+	  <div class="container">
+	    <div class="row">
+	      <div class="col-12 text-center">
+	        <p class="mb-1">
+	          Switch-mobile.co.uk is the property and trading style of Duke Leads - FZCO
+	        </p>
+	        <p>
+	          Registered: DSO-IFZA, Dubai Silicon Oasis, Dubai, UAE
+	          Licence Number 6245
+	        </p>
+	        <p>*Switch-mobile.co.uk does not perform a credit check but you may be asked to complete one if you apply for a mobile phone contract with our partners.</p>
+	      </div>
+	    </div>
+	  </div>
+	  <div class="bg-light-blu py-3 border-top">
+	    <div class="container">
+	      <div class="row w-100 mx-0 align-items-center justify-content-between">
+	        <p class="mb-0 text-secondary">© 2020 Switch-Mobile. All rights reserved.</p>
+	        <p class="text-secondary m-0">
+	          <a href="/privacy-policy" class="mr-md-2 text-secondary"> Privacy Policy </a> | <a href="/cookie-policy" class="mx-md-2 text-secondary"> Cookie Policy</a> | <a href="/terms-and-conditions" class="mx-md-2 text-secondary">Terms and conditions</a>
+	        </p>
+	      </div>
+	    </div>
+	  </div>
+	</footer>
+	<%= render 'layouts/common/waiting_loader' %>
+	<%= render 'layouts/common/share_domain_iframes' %>
+	<%= render 'layouts/smartphones/step-form' %>
+</div>

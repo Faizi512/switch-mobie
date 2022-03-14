@@ -98,6 +98,12 @@
     color: white;
   }
 
+  .mob-clock {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 2rem;
+  }
+
   .blue-gradient{
     background-image: linear-gradient(to top right,#2E8D81, #244691,#244691);
   }
@@ -179,7 +185,9 @@
       }
     }
   }
-
+  .w-40{
+    width: 40%
+  }
   .progress-bar {
     background-color: black;
     background-image: linear-gradient(to top right, #2E8D81,#144341,#244691) !important;

@@ -19,6 +19,10 @@ class Smartphones extends Common {
       }
     );
 
+    $('.carousel').carousel({
+      interval: 2000
+    })
+
     $( ".property" ).change(function() {
       var tabs = $(".tab");
       tabs[CI.currentTab].style.display = "none";

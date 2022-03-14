@@ -303,6 +303,72 @@ module PagesHelper
     }.to_json
   end
 
+  def smartphones
+    @details = {
+      camp_id: 'MEGA-MOBILE-DEALS',
+      success_url: 'https://mtrk5.co.uk/?a=14118&c=33110',
+      bad_success_url: 'https://mtrk5.co.uk/?a=14118&c=33110',
+      form_name: 'smartphones',
+      optin_url: '/smartphones',
+      sid: nil,
+      ssid: nil,
+      source:'smartphones',
+      quick_submit: false,
+      submit_on_load: false,
+      uu_id: @cookie_uuid,
+      token: @randon_token,
+      ipaddress: request.remote_ip,
+    }.to_json
+
+    @phones = [
+      {
+        name: "iPhone 13 Pro Max",
+        btn_text: "Exclusive Deal",
+        image: view_context.image_url("phone/apple-iphone-13-pro-max.png"),  
+      },
+      {
+        name: "Galaxy Z Fold3 5G",
+        btn_text: "Exclusive Deal",
+        image: view_context.image_url("z-fold3.png"),
+      },
+      {
+        name: "iPhone 13 Pro",
+        btn_text: "Exclusive Deal",
+        image: view_context.image_url("phone/apple-iphone-13-pro.png"),
+      },
+      {
+        name: "Galaxy S21 Ultra 5G",
+        btn_text: "Get Deal",
+        image: "phone/galaxy-s21-ultra.png"
+      },
+      {
+        name: "Galaxy Z Flip3 5G",
+        btn_text: "Exclusive Deal",
+        image: view_context.image_url("z-flip3.png"),
+      },
+      {
+        name: "iPhone 13",
+        btn_text: "Exclusive Deal",
+        image: view_context.image_url("phone/apple-iphone-13.png"),
+      },
+      {
+        name: "Glaxy S21 Plus 5G",
+        btn_text: "Get Deal",
+        image: "phone/galaxy-s21plus.png",
+      },
+      {
+        name: "iPhone 13 Mini",
+        btn_text: "Exclusive Deal",
+        image: view_context.image_url("phone/apple-iphone-13-mini.png"),
+      },
+      {
+        name: "Galaxy S21 5G",
+        btn_text: "Exclusive Deal",
+        image: "phone/galaxy-s21.png"
+      },
+    ]
+  end
+
   def home_deals
     @details = {
       camp_id: 'MEGA-MOBILE-DEALS',
@@ -1768,7 +1834,7 @@ module PagesHelper
       {
         name: "Samsung Galaxy Note 20 Ultra 5G",
         data: "Unlimited",
-        image: "phone/note-20-b.png",
+        image: "phone/note-20-b1.png",
         calls: "Unlimited",
         texts: "Unlimited",
         url:"/success",
@@ -1823,7 +1889,7 @@ module PagesHelper
       {
         name: "iPhone SE 128GB",
         data: "Unlimited",
-        image: "phone/iphonese.jpg",
+        image: "phone/iphonese.png",
         calls: "Unlimited",
         texts: "Unlimited",
         url:"/success",
@@ -1834,7 +1900,7 @@ module PagesHelper
       {
         name: "Samsung A10",
         data: "Unlimited",
-        image: "phone/samsung-a10.jpg",
+        image: "phone/samsung-a10.png",
         calls: "Unlimited",
         texts: "Unlimited",
         url:"/success",
@@ -1845,7 +1911,7 @@ module PagesHelper
       {
         name: "Huawei Y7",
         data: "Unlimited",
-        image: "phone/huaweiy7.jpg",
+        image: "phone/huaweiy71.png",
         calls: "Unlimited",
         texts: "Unlimited",
         url:"/success",
@@ -1911,7 +1977,7 @@ module PagesHelper
       {
         name: "iPhone 11 Pro Max",
         data: "Unlimited",
-        image: "phone/1iphone-11-pro-max.png",
+        image: "phone/iphone-11-pro-max.png",
         calls: "Unlimited",
         texts: "Unlimited",
         url:"/success",
@@ -1933,7 +1999,7 @@ module PagesHelper
       {
         name: "Samsung Galaxy S10e",
         data: "30GB",
-        image: "phone/samsung-galaxy-s10e.png",
+        image: "phone/samsung-galaxy-s10e1.png",
         calls: "Unlimited",
         texts: "Unlimited",
         url:"/success",

@@ -1,0 +1,205 @@
+<!-- Form -->
+<div class="modal fade" id="smart-phones-from" tabindex="-1" role="dialog" aria-labelledby="ModalCenterTitle" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+    <div class="modal-content deal-form-box min-h">
+      <div class="modal-header p-0 border-info pr-3">
+        <div class="w-100 col">
+        <h1 id="ModalCenterTitle" class="text-center w-100 text-blu fs-38">Almost There!</h1>
+        <p class="mb-2 w-100 text-orng text-center">You are just <strong class="text-blu">5 Seconds</strong> away from your phone</p>
+          
+        </div>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body font-poppins">
+        <div id="form-div">
+          <div class="container slider-one-active top-first">
+            <!-- <div class="steps mx-auto">
+              <div class="step step-one">
+                <div class="liner"></div>
+                <span>Name</span>
+              </div>
+              <div class="step step-two">
+                <div class="liner"></div>
+                <span>Address</span>
+              </div>
+              <div class="step step-three">
+                <div class="liner"></div>
+                <span>Contact</span>
+              </div>
+            </div>
+            <div class="line mx-auto">
+              <div class="dot-move"></div>
+              <div class="dot zero"></div>
+              <div class="dot center"></div>
+              <div class="dot full"></div>
+            </div> -->
+             <div class="row w-100 mx-0 justify-content-end mb-2 mb-lg-4">
+              <div class="col mx-auto">
+                <div class="progressbar-info px-0">
+                  <div>
+                    <p class="progress-percent m-0 fw-bold mb-1 text-center text-blu">0% Complete</p>
+                  </div>
+                </div>
+                <div class="progress p-0">
+                  <div id="progressBar" class="progress-bar bg-grcolor" role="progressbar" aria-valuemin="0" aria-valuemax="100"></div>
+                </div>
+              </div>
+            </div>
+            <div class="slider-ctr">
+              <div class="slider">
+                <form class="slider-form pt-2 px-3 slider-one" data-parsley-validate="" data-details="<%= @details %>">
+                  <label class="input w-100">
+                    <label class="fw-500 text-blu text-left w-100">First Name</label>
+                    <input
+                    name="first_name"
+                    required
+                    data-parsley-required="true"
+                    data-parsley-required-message="Please Enter First Name" data-parsley-pattern-message="First Name Must Be Alphabetic"data-parsley-pattern="/^[a-zA-Z ]*$/"
+                    data-parsley-group="block-0"
+                    type="text"
+                    class="first_name form-control hero-input ignoreStep3"
+                    placeholder="First Name">
+                  </label>
+                  <label class="input w-100">
+                    <label class="fw-500 text-blu text-left w-100">Last Name</label>
+                    <input
+                    name="last_name"
+                    required
+                    data-parsley-required="true"
+                    data-parsley-required-message="Please Enter Last Name"
+                    data-parsley-group="block-0"
+                    data-parsley-pattern-message="Last Name Must Be Alphabetic" data-parsley-pattern="/^[a-zA-Z ]*$/"
+                    type="text"
+                    class="form-control ignoreStep3 last_name"
+                    placeholder="Last Name" >
+                  </label>
+                    <button type="button" class="first next mb-3">Next Step</button>                    
+                </form>
+                <form class="slider-form pt-2 px-3 slider-two" data-parsley-validate="">
+                  <div class="">
+                    <label class="input w-100">
+                      <label class="fw-500 text-blu text-left w-100">Postcode</label>
+                      <input
+                      name="postcode"
+                      required
+                      data-parsley-required="true"
+                      data-parsley-required-message="Please Enter Postcode"
+                      data-parsley-group="block-1"
+                      data-parsley-validapipostcode
+                      type="text"
+                      class="postcode form-control ignoreStep4 approve"
+                      placeholder="Postcode">
+                    </label>
+                    <div class="form-group property-div display-none">
+                      <label class="fw-500 text-blu text-left w-100">Your Property</label>
+                      <input type="hidden" name="towncity" class="towncity" >
+                      <input type="hidden" name="street1" class="street1" >
+                      <input type="hidden" name="county" class="county" >
+                      <input type="hidden" name="houseNumber" class="houseNumber" >
+                      <input type="hidden" name="street2" class="street2" >
+                      <input type="hidden" name="building" class="building" >
+                      <select
+                        id="property"
+                        name="property"
+                        class="property w-100 form-control ignoreStep4 text-dark"
+                        data-parsley-required="true"
+                        data-parsley-required-message="Please Select Your property"
+                        data-parsley-group="block-1"
+                        required>
+                      </select>
+                    </div>
+                    <div class="form-group col-lg-7 col-12 address-div display-none">
+                      <label class="d-flex justify-content-start  text-black f-25 mb-2">
+                        First Line Of Address
+                      </label>
+                      <input
+                        placeholder="Address"
+                        id="address"
+                        name="address"
+                        class="address form-control ignoreStep4"
+                        data-parsley-required="true"
+                        data-parsley-required-message="Please Enter Your Address"
+                        data-parsley-group="block-1"
+                        type="text">
+                    </div>
+                  </div>
+                  <div class="row align-items-center justify-content-around mb-3">
+                    <button type="button" class="btn back first-back">Back</button>
+                    <button type="button" class="second next">Next Step</button>                    
+                  </div>
+                </form>
+                <form class="slider-form pt-2 px-3 slider-three" data-parsley-validate="">
+                  <label class="input w-100">
+                    <label class="fw-500 text-blu text-left w-100">Phone Number</label>
+                    <input
+                    type="number"
+                    name="telephone"
+                    required
+                    data-parsley-required="true"
+                    data-parsley-required-message="Please Enter Valid Uk Phone Number"
+                    data-parsley-type="number"
+                    data-parsley-group="block-2"
+                    data-parsley-validphone
+                    class="form-control phone telephone"
+                    placeholder="Mobile Number">
+                  </label>
+                  <label class="input w-100">
+                    <label class="fw-500 text-blu text-left w-100">Email</label>
+                    <input
+                    type="email"
+                    name="email"
+                    required
+                    data-parsley-required="true"
+                    data-parsley-required-message="Please Enter Valid Email Address"
+                    data-parsley-type="email"
+                    data-parsley-type-message="Please Enter Valid Email Address"
+                    data-parsley-group="block-2"
+                    data-parsley-validemail
+                    class="form-control email"
+                    placeholder="Email Address">
+                  </label>
+                  <div class="custom-checkbox">
+                    <label class="font-weight-bold text-blu">Accept</label>
+                    <div class="onoffswitch mx-auto">
+                      <input
+                        type="checkbox"
+                        name="agree"
+                        class="onoffswitch-checkbox approve"
+                        id="myonoffswitch"
+                        data-parsley-required="true"
+                        data-parsley-group="block-2"
+                        data-parsley-required-message="Please accept our terms and conditions"
+                        >
+                      <label class="onoffswitch-label" for="myonoffswitch">
+                          <span class="onoffswitch-inner"></span>
+                          <span class="onoffswitch-switch"></span>
+                      </label>
+                    </div>
+                    <div class="error-checkbox"></div>
+                    <%= render 'layouts/common/accept_terms'%>
+                    <div class="row align-items-center justify-content-around my-3">
+                      <button type="button" class="btn back  second-back">Back</button>
+                      <button type="button" class="third next reset">Submit</button>
+                    </div>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+          <div class="logos-div w-100">
+            <div class="row align-items-center justify-content-around w-100 mx-0">
+              <%= image_tag("company/ee.png", class: "network-log1", alt: "EE-network logo" ) %>
+              <%= image_tag("company/vodafone.png", class: "network-log2", alt: "vodafone-network logo" ) %>
+              <%= image_tag("company/id.png", class: "network-log", alt: "id-network logo") %>
+              <%= image_tag("company/three.png", class: "network-log", alt: "three-network logo") %>
+              <%= image_tag("company/02.png", class: "network-log", alt: "O2-network logo") %>
+            </div>            
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
