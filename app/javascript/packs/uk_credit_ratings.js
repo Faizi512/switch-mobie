@@ -8,6 +8,7 @@ class UkCreditRatings extends Common {
     this.getFormDetails('#dealform')
     this.showToolTip()
     this.showTab(this.currentTab);
+    this.checkCookieExist()
 
     $( ".property" ).change(function() {
       $('.towncity').val($(this).find("option:selected").data("city"))

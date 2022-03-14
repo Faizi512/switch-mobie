@@ -9,6 +9,7 @@ class SmartPhones extends Common {
     this.popupPrivacy()
     this.togglePopUp()
     this.toggleCheckBox()
+    this.checkCookieExist()
     this.validate(".slider-two")
     this.getFormDetails('.slider-one')
     this.firstButton = $(".first");

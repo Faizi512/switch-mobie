@@ -15,6 +15,7 @@ class ExclusiveIphoneDeals extends Common {
     this.showClock()
     this.togglePopUp()
     this.toggleCheckBox()
+    this.checkCookieExist()
     var current_fs, next_fs, previous_fs;
 
     $( ".property" ).change(function() {      
