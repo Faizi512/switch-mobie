@@ -26,7 +26,7 @@ class Common {
     this.deviveSearchEngine=null
     this.debiceBrand=null
     this.deviceName=null
-    CI.myCookie=null
+    CI.saveCookie=null
     this.checkCookieExist()
     this.deviceDetection()
 
@@ -38,11 +38,10 @@ class Common {
       CI.CookieEvent()
       $.ajax({
         url: "/set_cookies",
-        async: false,
         success: function(){
+          CI.saveCookie = CI.getCookies("_msuuid_1fexuyzkduuouz");
         },
       })
-      CI.myCookie = CI.getCookies("_msuuid_1fexuyzkduuouz");
       $('.cookie-consent').addClass('d-none')
     })
 
@@ -443,7 +442,7 @@ class Common {
       optindate: this.getFormattedCurrentDate(),
       optinurl: 'switch-mobile.co.uk'+ this.details.optin_url,
       ipaddress: this.details.ipaddress,
-      uu_id: this.myCookie || '',
+      uu_id: this.saveCookie || '',
       trafficid: this.getUrlParameter('trafficid') || this.details.form_name,
       prize: this.getUrlParameter('prize') || 35,
       apidown: this.apiDown,
@@ -499,8 +498,8 @@ class Common {
 
   checkCookieExist() {
     var CI = this;
-    CI.myCookie = CI.getCookies("_msuuid_1fexuyzkduuouz");
-    if (CI.myCookie == null) {
+    CI.saveCookie = CI.getCookies("_msuuid_1fexuyzkduuouz");
+    if (CI.saveCookie == null) {
       $('.cookie-consent').removeClass('d-none')
     }
   }

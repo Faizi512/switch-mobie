@@ -127,7 +127,7 @@ class ExclusiveIphoneDeals extends Common {
       var data = this.getData();
       var item = {county: this.getUrlParameter("county") || $(".county").val()}
       data = _.mergeWith(item,data, (data, item))
-      if (CI.myCookie != null)
+      if (CI.save_cookie != null)
       {
         CI.setItemToStorage("user_data", data)
       }

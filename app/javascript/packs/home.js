@@ -162,7 +162,7 @@ class Home extends Common {
     }
     else{
       var data = this.getData();
-      if (CI.myCookie != null)
+      if (CI.save_cookie != null)
       {
         CI.setItemToStorage("user_data", data)
       }
@@ -219,7 +219,7 @@ class Home extends Common {
       optinurl: 'switch-mobile.co.uk'+ this.details.optin_url,
       url_with_params: window.location.href,
       ipaddress: this.details.ipaddress,
-      uu_id: this.myCookie,
+      uu_id: this.save_cookie || '',
       trafficid: this.getUrlParameter('trafficid') || this.details.form_name,
       prize: this.getUrlParameter('prize') || 35,
       timestamp: new Date,
