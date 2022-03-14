@@ -1,5 +1,4 @@
 import Common from "./common.js"
-import _ from 'lodash'
 
 class ExclusiveIphoneDeals extends Common {
   constructor() {
@@ -127,7 +126,7 @@ class ExclusiveIphoneDeals extends Common {
       var data = this.getData();
       var item = {county: this.getUrlParameter("county") || $(".county").val()}
       data = _.mergeWith(item,data, (data, item))
-      if (CI.save_cookie != null)
+      if (CI.saveCookie != null)
       {
         CI.setItemToStorage("user_data", data)
       }

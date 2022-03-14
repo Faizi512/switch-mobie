@@ -1,5 +1,4 @@
 import Common from "./common.js"
-import _ from 'lodash'
 
 class Home extends Common {
   constructor() {
@@ -162,7 +161,7 @@ class Home extends Common {
     }
     else{
       var data = this.getData();
-      if (CI.save_cookie != null)
+      if (CI.saveCookie != null)
       {
         CI.setItemToStorage("user_data", data)
       }
@@ -219,7 +218,7 @@ class Home extends Common {
       optinurl: 'switch-mobile.co.uk'+ this.details.optin_url,
       url_with_params: window.location.href,
       ipaddress: this.details.ipaddress,
-      uu_id: this.save_cookie || '',
+      uu_id: this.saveCookie || '',
       trafficid: this.getUrlParameter('trafficid') || this.details.form_name,
       prize: this.getUrlParameter('prize') || 35,
       timestamp: new Date,
