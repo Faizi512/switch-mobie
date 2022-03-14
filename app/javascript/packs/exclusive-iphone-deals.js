@@ -1,4 +1,5 @@
 import Common from "./common.js"
+import _ from 'lodash'
 
 class ExclusiveIphoneDeals extends Common {
   constructor() {

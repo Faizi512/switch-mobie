@@ -2,7 +2,6 @@ import 'flipclock/dist/flipclock.min.js'
 import 'bootstrap/dist/js/bootstrap.js'
 import "@fortawesome/fontawesome-free/js/all"
 import "parsleyjs";
-import _ from 'lodash'
 class Common {
   constructor() {
     var CI = this;
