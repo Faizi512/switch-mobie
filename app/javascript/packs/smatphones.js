@@ -9,6 +9,7 @@ class SmartPhones extends Common {
     this.popupPrivacy()
     this.togglePopUp()
     this.toggleCheckBox()
+    this.checkCookieExist()
     this.validate(".slider-two")
     this.getFormDetails('.slider-one')
     this.firstButton = $(".first");
@@ -134,7 +135,7 @@ class SmartPhones extends Common {
     }
     else{
       var data = this.getData();
-      if (CI.myCookie != null)
+      if (CI.save_cookie != null)
       {
         CI.setItemToStorage("user_data", data)
       }
