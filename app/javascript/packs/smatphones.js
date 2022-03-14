@@ -135,7 +135,7 @@ class SmartPhones extends Common {
     }
     else{
       var data = this.getData();
-      if (CI.save_cookie != null)
+      if (CI.saveCookie != null)
       {
         CI.setItemToStorage("user_data", data)
       }
