@@ -24,10 +24,6 @@ class PagesController < ApplicationController
     end
 	end
 
-  def deals
-    home_deals
-  end
-
   def data_share
     response.headers.except! 'X-Frame-Options'
     render layout: 'data_share'

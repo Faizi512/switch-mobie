@@ -9,7 +9,12 @@ class Smartphones extends Common {
     this.getFormDetails('#dealform')
     this.showClock()
     this.showTab(this.currentTab);
-
+    this.checkCookieExist()
+    this.deviceDetection()
+    this.popupTerms()
+    this.popupPrivacy()
+    this.toggleCheckBox()
+    this.togglePopUp()
     $(".border-disp").hover(
       function () {
         $(this).addClass("neon-text");
@@ -88,18 +93,46 @@ class Smartphones extends Common {
     $(`.circle-p-${n+1}`).addClass("neon-text bg-done")
   }
 
-  postData() {
-    // doubel verify tsp
-    this.validateTsp()
-    // Getting Data
+  postMMDData() {
     var CI = this;
-    var data = this.getData();
-    // Form Submisson
+    if( this.getItemFromStorage("user_data") != null){
+      CI.userStorage = true
+      this.USTransaction();
+      this.updateUserInStorage()
+      this.submitLead(this.getItemFromStorage("user_data"), this.details.camp_id)
+    }
+    else{
+      var data = this.getData();
+      if (CI.saveCookie != null)
+      {
+        CI.setItemToStorage("user_data", data)
+      }
+      console.log("Postdata: "+new Date())
+      this.submitLead(data, this.details.camp_id)
+    }
+    $(".postcode_holder").html($(".postcode").val() || this.getUrlParameter("postcode")  || "");
     this.updateFacebookAudience(data)
-    $( ".main-progress").hide()
-    this.submitLead(data, this.details.camp_id)
-    // Redirection after submisson
-    this.successUrl()
+  }
+
+  getItemFromStorage(name){
+    return JSON.parse(localStorage.getItem(name))
+  }
+
+  updateUserInStorage(){
+    var CI=this
+    var previousData = this.getItemFromStorage("user_data")
+    var currentData = this.getData();
+    var userData = _.mergeWith(currentData,previousData, (current, previous) => current == "" || current == "unknown"  ? previous : current)
+    CI.setItemToStorage("user_data", userData)
+  }
+
+  setItemToStorage(name, data){
+    if (data.adopted_url == "" ||  data.adopted_url == null) {
+      data.adopted_url = data.optinurl
+    }else{
+      this.adoptedUrl = data.adopted_url
+    }
+    return localStorage.setItem(name, JSON.stringify(data))
   }
 }
 export default new Smartphones();
