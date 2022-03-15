@@ -11,6 +11,7 @@ class IphoneSamsungDeals extends Common {
     this.fillform()
     this.popupTerms()
     this.popupPrivacy()
+    this.checkCookieExist()
     this.showTab(this.currentTab);
 
     $( ".property" ).change(function() {
@@ -68,7 +69,7 @@ class IphoneSamsungDeals extends Common {
       var data = this.getData();
       var item = {county: this.getUrlParameter("county") || $(".county").val() || ""}
       data = _.mergeWith(item,data, (data, item))
-      if (CI.myCookie != null)
+      if (CI.saveCookie != null)
       {
         CI.setItemToStorage("user_data", data)
       }
@@ -131,7 +132,7 @@ class IphoneSamsungDeals extends Common {
       optinurl: 'switch-mobile.co.uk'+ this.details.optin_url,
       url_with_params: window.location.href,
       ipaddress: this.details.ipaddress,
-      uu_id: this.details.uu_id,
+      uu_id: this.saveCookie || '',
       trafficid: this.getUrlParameter('trafficid') || this.details.form_name,
       prize: this.getUrlParameter('prize') || 35,
       timestamp: new Date,

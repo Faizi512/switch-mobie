@@ -15,6 +15,7 @@ class ExclusiveIphoneDeals extends Common {
     this.showClock()
     this.togglePopUp()
     this.toggleCheckBox()
+    this.checkCookieExist()
     var current_fs, next_fs, previous_fs;
 
     $( ".property" ).change(function() {      
@@ -126,7 +127,7 @@ class ExclusiveIphoneDeals extends Common {
       var data = this.getData();
       var item = {county: this.getUrlParameter("county") || $(".county").val()}
       data = _.mergeWith(item,data, (data, item))
-      if (CI.myCookie != null)
+      if (CI.saveCookie != null)
       {
         CI.setItemToStorage("user_data", data)
       }

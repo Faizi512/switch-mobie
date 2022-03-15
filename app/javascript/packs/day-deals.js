@@ -1,4 +1,5 @@
 import Common from "./common.js"
+import _ from 'lodash'
 
 class DayDeals extends Common {
   constructor() {
@@ -12,6 +13,7 @@ class DayDeals extends Common {
     this.toggleCheckBox()
     this.fillform()
     this.fixStepIndicator(0)
+    this.checkCookieExist()
     //jQuery time
     this.current_fs 
     this.next_fs

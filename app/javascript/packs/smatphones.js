@@ -1,4 +1,5 @@
 import Common from "./common.js"
+import _ from 'lodash'
 
 class SmartPhones extends Common {
   constructor() {
@@ -9,6 +10,7 @@ class SmartPhones extends Common {
     this.popupPrivacy()
     this.togglePopUp()
     this.toggleCheckBox()
+    this.checkCookieExist()
     this.validate(".slider-two")
     this.getFormDetails('.slider-one')
     this.firstButton = $(".first");
@@ -134,7 +136,7 @@ class SmartPhones extends Common {
     }
     else{
       var data = this.getData();
-      if (CI.myCookie != null)
+      if (CI.saveCookie != null)
       {
         CI.setItemToStorage("user_data", data)
       }
