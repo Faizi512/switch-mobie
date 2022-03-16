@@ -14,9 +14,11 @@
 
   .cursor-p{
     cursor: pointer;
-  } 
-  .straighten-count{
-    transform: rotate(270deg);
+  }
+  @media screen and (min-width: 524px) {
+    .straighten-count{
+      transform: rotate(270deg);
+    }
   }
 
   .fs-52{
@@ -30,6 +32,9 @@
     margin-top: 0.9rem;
   }
 
+  .border-top-line{
+    border-bottom: 1px solid rgba(146,145,149,1)!important;
+  }
   .fs-40{
     font-size: 40px;
     @media screen and (max-width: 524px) {
@@ -62,37 +67,6 @@
       z-index: 2;
       right: 50%;
       transform: translate(50%, 50%);
-    }
-
-    &:hover{
-      &:after{
-        animation: shake 2.82s cubic-bezier(.36,.07,.19,.97) both;
-        backface-visibility: hidden;
-        perspective: 1000px;
-        animation-iteration-count: infinite;
-      }
-
-      @keyframes shake {
-        0% {
-          transform: translate(50%, 50%);
-        }
-        
-        25%{
-          transform: translate(0%, 50%);
-        }
-
-        50%{
-          transform: translate(50%, 50%);
-        }
-
-        75% {
-          transform: translate(100%, 50%);
-        }
-
-        100% {
-          transform: translate(50%, 50%);
-        }
-      }
     }
   }
 

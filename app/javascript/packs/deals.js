@@ -15,18 +15,11 @@ class Smartphones extends Common {
     this.popupPrivacy()
     this.toggleCheckBox()
     this.togglePopUp()
-    $(".border-disp").hover(
-      function () {
-        $(this).addClass("neon-text");
-      },
-      function () {
-        $(this).removeClass("neon-text");
-      }
-    );
+
 
     $('.carousel').carousel({
       interval: 2000
-    })
+    });
 
     $( ".property" ).change(function() {
       var tabs = $(".tab");
@@ -81,6 +74,27 @@ class Smartphones extends Common {
       this.showTab(this.currentTab);
     }
   }
+  nextStep(n) {
+    var CI = this;
+    $('#dealform').parsley().whenValidate({
+      group: 'block-' + this.currentTab
+    }).done(() =>{
+      var tabs = $(".tab");
+      tabs[CI.currentTab].style.display = "none";
+      CI.currentTab = CI.currentTab + n;
+      if (CI.currentTab >= tabs.length) {
+        if (CI.customValidator('#dealform') == true && CI.isPhone == true && CI.isEmail == true){
+          $('.but_loader').show()
+          $('.nextStep').prop('disabled', true);
+          CI.postMMDData()
+        }else{
+          $('#dealform').parsley().validate()
+        }
+        return true
+      }
+      CI.showTab(CI.currentTab);
+    })
+  }
 
   showTab(n=0) {
     var tabs = $(".tab");
@@ -91,6 +105,13 @@ class Smartphones extends Common {
     $(".postcode").focus();
     $("#step-header").text(n+1) 
     $(`.circle-p-${n+1}`).addClass("neon-text bg-done")
+  }
+
+  fixStepIndicator(num) {
+    var progress = document.getElementById('progressBar');
+    if(num >= 0) {
+      progress.style.width = (num*50)+"%";
+    }
   }
 
   postMMDData() {
