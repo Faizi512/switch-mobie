@@ -16,6 +16,11 @@ class Smartphones extends Common {
     this.toggleCheckBox()
     this.togglePopUp()
 
+    var date = new Date();
+    var options = { month: 'long'};
+    var currentMonth = new Intl.DateTimeFormat('en-US', options).format(date)
+    console.log(currentMonth);
+    $(".current-month").html(currentMonth)
 
     $('.carousel').carousel({
       interval: 2000

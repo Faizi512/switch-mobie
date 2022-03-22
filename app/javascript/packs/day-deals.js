@@ -70,7 +70,6 @@ class DayDeals extends Common {
     });
 
     $(document).on("click", '.open-form', function() {
-      var CI = this
       var user = localStorage.getItem("user_data")
       if (user != null) {
         $("#loaderPopup").css('height', '100%')
@@ -96,7 +95,7 @@ class DayDeals extends Common {
         
         if (CI.currentTab == 3) {
           if (CI.isPhone == true && CI.isEmail == true){
-            CI.postData()
+            CI.postMMDData()
           }else{
             $('#msform').parsley().validate()
           }
@@ -172,16 +171,16 @@ class DayDeals extends Common {
     });
   }
 
+  getItemFromStorage(name){
+    return JSON.parse(localStorage.getItem(name))
+  }
+
   updateUserInStorage(){
     var CI=this
     var previousData = this.getItemFromStorage("user_data")
     var currentData = this.getData();
     var userData = _.mergeWith(currentData,previousData, (current, previous) => current == "" || current == "unknown"  ? previous : current)
     CI.setItemToStorage("user_data", userData)
-  }
-
-  getItemFromStorage(name){
-    return JSON.parse(localStorage.getItem(name))
   }
 
   setItemToStorage(name, data){
@@ -201,6 +200,7 @@ class DayDeals extends Common {
     }, 2000)
   }
   postMMDData() {
+    $("#loaderPopup").css('height', '100%')
     var CI = this;
     if( this.getItemFromStorage("user_data") != null){
       CI.userStorage = true
@@ -209,8 +209,12 @@ class DayDeals extends Common {
       this.submitLead(this.getItemFromStorage("user_data"), this.details.camp_id)
     }
     else{
-      var data = this.getData();
-      this.setItemToStorage("user_data", data)
+       var data = this.getData();
+      $("#loaderPopup").css('height', '100%')
+      if (CI.saveCookie != null)
+      {
+        CI.setItemToStorage("user_data", data)
+      }
       console.log("Postdata: "+new Date())
       this.submitLead(data, this.details.camp_id)
     }

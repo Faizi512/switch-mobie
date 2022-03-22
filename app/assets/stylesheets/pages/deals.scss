@@ -36,9 +36,9 @@
     border-bottom: 1px solid rgba(146,145,149,1)!important;
   }
   .fs-40{
-    font-size: 40px;
+    font-size: 37px;
     @media screen and (max-width: 524px) {
-      font-size: 25px;
+      font-size: 21px;
     }
     @media screen and (max-width: 1024px) and (min-width: 768px) {
       font-size: 21px;
@@ -416,8 +416,34 @@
     }
   }
 
-  @media screen and (max-width: 375px) {
+  @media screen and (max-width: 540px) {
+    .flip-clock-divider .flip-clock-label {
+      top: 5em;
+    }
+    .flip-clock-dot.top {
+      top: 20px;
+    }
+    .flip-clock-dot.bottom {
+      bottom: 43px;
+    }
+    .flip-clock-dot {
+      left: -3px;
+    }
 
+    .flip-clock-wrapper ul {
+      height: 65px;
+    }
+    .flip-clock-wrapper ul li{
+      line-height: 64px;
+    }
+    .flip-clock-wrapper ul li a div div.inn{
+      font-size: 50px;
+    }
+  }
+
+
+
+  @media screen and (max-width: 375px) {
     .rotate-2 {
       left: -132px;
     }

@@ -53,6 +53,25 @@ module PagesHelper
       ipaddress: request.remote_ip,
     }.to_json
   end
+
+  def deals
+    @details = {
+      camp_id: 'MEGA-MOBILE-DEALS',
+      success_url: 'https://bill-switchers.com/sp-exit?exit=1',
+      bad_success_url: 'https://mtrk5.co.uk/?a=14118&c=33110',
+      form_name: 'deals',
+      optin_url: '/deals',
+      sid: 1,
+      ssid: nil,
+      source:'',
+      quick_submit: false,
+      submit_on_load: false,
+      uu_id: @cookie_uuid,
+      token: @randon_token,
+      ipaddress: request.remote_ip,
+    }.to_json
+  end
+
   def e_deals_awin
     @details = {
       camp_id: 'MEGA-MOBILE-DEALS',
