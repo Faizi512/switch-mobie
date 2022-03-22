@@ -439,25 +439,36 @@
     .flip-clock-wrapper ul li a div div.inn{
       font-size: 50px;
     }
+    .rotate-2{
+      left: 20px !important;
+      .circle-p-1{
+        left: -5%;
+        
+      }
+      .circle-p-2{
+        left: 50%;
+
+      }
+      .circle-p-3{
+        left: 103%;
+      }
+    }
   }
 
 
 
   @media screen and (max-width: 375px) {
-    .rotate-2 {
-      left: -132px;
-    }
     
     .circle-p-1{
-      left: -8%;
+      left: -5%;
       
     }
     .circle-p-2{
-      left: 31%;
+      left: 50%;
 
     }
-    .circle-p-4{
-      left: 105%;
+    .circle-p-3{
+      left: 103%;
     }
   }
 }
