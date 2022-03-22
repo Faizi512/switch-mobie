@@ -117,6 +117,7 @@ class Smartphones extends Common {
   postMMDData() {
     var CI = this;
     if( this.getItemFromStorage("user_data") != null){
+      $("#loaderPopup").css('height', '100%')
       CI.userStorage = true
       this.USTransaction();
       this.updateUserInStorage()
@@ -124,6 +125,7 @@ class Smartphones extends Common {
     }
     else{
       var data = this.getData();
+      $("#loaderPopup").css('height', '100%')
       if (CI.saveCookie != null)
       {
         CI.setItemToStorage("user_data", data)
