@@ -11,6 +11,11 @@
   .fw-bold{
     font-weight: 500;
   }
+  .glow {
+    color: #CFC547;
+    text-align: center;
+    text-shadow: 10px 10px 25px #766017, -10px 10px 25px #675417, -10px -10px 25px #685518, 10px -10px 25px #64531d;
+  }
 
   .cursor-p{
     cursor: pointer;
