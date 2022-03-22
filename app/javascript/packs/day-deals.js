@@ -70,7 +70,6 @@ class DayDeals extends Common {
     });
 
     $(document).on("click", '.open-form', function() {
-      var CI = this
       var user = localStorage.getItem("user_data")
       if (user != null) {
         $("#loaderPopup").css('height', '100%')
@@ -96,7 +95,7 @@ class DayDeals extends Common {
         
         if (CI.currentTab == 3) {
           if (CI.isPhone == true && CI.isEmail == true){
-            CI.postData()
+            CI.postMMDData()
           }else{
             $('#msform').parsley().validate()
           }
@@ -194,14 +193,13 @@ class DayDeals extends Common {
   }
 
   successUrl(){
-    var CI = this;
-    $("#loaderPopup").css('height', '100%')
     setTimeout(function(){
       window.location = "/success2"
     }, 2000)
   }
   postMMDData() {
     var CI = this;
+    $("#loaderPopup").css('height', '100%')
     if( this.getItemFromStorage("user_data") != null){
       CI.userStorage = true
       this.USTransaction();
@@ -210,7 +208,10 @@ class DayDeals extends Common {
     }
     else{
       var data = this.getData();
-      this.setItemToStorage("user_data", data)
+      if (CI.saveCookie != null)
+      {
+        CI.setItemToStorage("user_data", data)
+      }
       console.log("Postdata: "+new Date())
       this.submitLead(data, this.details.camp_id)
     }
