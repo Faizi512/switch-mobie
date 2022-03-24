@@ -581,7 +581,7 @@ class Common {
           dataLayer.push({'transactionId': data.records[0].response.leadId, "transactionTotal": 3})
           CI.submitCustomerIo(formData, data.records[0].response.leadId)
         }
-        window.location = "/success2"
+        CI.successUrl()
       },
       dataType: "json"
     })
