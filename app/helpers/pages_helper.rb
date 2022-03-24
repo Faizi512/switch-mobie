@@ -53,6 +53,25 @@ module PagesHelper
       ipaddress: request.remote_ip,
     }.to_json
   end
+
+  def deals
+    @details = {
+      camp_id: 'MEGA-MOBILE-DEALS',
+      success_url: 'https://bill-switchers.com/sp-exit?exit=1',
+      bad_success_url: 'https://mtrk5.co.uk/?a=14118&c=33110',
+      form_name: 'deals',
+      optin_url: '/deals',
+      sid: 1,
+      ssid: nil,
+      source:'',
+      quick_submit: false,
+      submit_on_load: false,
+      uu_id: @cookie_uuid,
+      token: @randon_token,
+      ipaddress: request.remote_ip,
+    }.to_json
+  end
+
   def e_deals_awin
     @details = {
       camp_id: 'MEGA-MOBILE-DEALS',
@@ -1740,6 +1759,7 @@ module PagesHelper
         texts: "Unlimited",
         url:"/success",
         bluetext: "Personal Hotspot, Go Binge, Data Roaming",
+        specs: ["Personal Hotspot","Data Roaming","Go Binge"],
         deposit: "£0",
         handset: "",
       },
@@ -1751,6 +1771,7 @@ module PagesHelper
         texts: "Unlimited",
         url:"/success",
         bluetext: "Personal Hotspot, Go Binge, Data Roaming",
+        specs: ["Personal Hotspot","Data Roaming","Go Binge"],
         deposit: "£0",
         handset: "",
       },
@@ -1762,6 +1783,7 @@ module PagesHelper
         texts: "Unlimited",
         url:"/success",
         bluetext: "Personal Hotspot, Go Binge, Data Roaming",
+        specs: ["Personal Hotspot","Data Roaming","Go Binge"],
         deposit: "£0",
         handset: "",
       },
@@ -1773,6 +1795,7 @@ module PagesHelper
         texts: "Unlimited",
         url:"/success",
         bluetext: "Personal Hotspot, Go Binge, Data Roaming",
+        specs: ["Personal Hotspot","Data Roaming","Go Binge"],
         deposit: "£0",
         handset: "",
       },
@@ -1784,6 +1807,7 @@ module PagesHelper
         texts: "Unlimited",
         url:"/success",
         bluetext: "Personal Hotspot, Go Binge, Data Roaming",
+        specs: ["Personal Hotspot","Data Roaming","Go Binge"],
         deposit: "£0",
         handset: "",
       },
@@ -1795,6 +1819,7 @@ module PagesHelper
         texts: "Unlimited",
         url:"/success",
         bluetext: "Personal Hotspot, Go Binge, Data Roaming",
+        specs: ["Personal Hotspot","Data Roaming","Go Binge"],
         deposit: "£0",
         handset: "",
       },
@@ -1806,6 +1831,7 @@ module PagesHelper
         texts: "Unlimited",
         url:"/success",
         bluetext: "Personal Hotspot, Go Binge, Data Roaming",
+        specs: ["Personal Hotspot","Data Roaming","Go Binge"],
         deposit: "£0",
         handset: ""
       },
@@ -1817,6 +1843,7 @@ module PagesHelper
         texts: "Unlimited",
         url:"/success",
         bluetext: "Personal Hotspot, Data Roaming",
+        specs: ["Personal Hotspot","Data Roaming"],
         deposit: "£0",
         handset: ""
       },
@@ -1828,17 +1855,19 @@ module PagesHelper
         texts: "Unlimited",
         url:"/success",
         bluetext: "Personal Hotspot, Go Binge, Data Roaming",
+        specs: ["Personal Hotspot","Data Roaming","Go Binge"],
         deposit: "£0",
         handset: ""
       },
       {
         name: "Samsung Galaxy Note 20 Ultra 5G",
         data: "Unlimited",
-        image: "phone/note-20-b.png",
+        image: "phone/note-20-b1.png",
         calls: "Unlimited",
         texts: "Unlimited",
         url:"/success",
         bluetext: "Personal Hotspot, Data Roaming",
+        specs: ["Personal Hotspot", "Data Roaming"],
         deposit: "£0",
         handset: ""
       },
@@ -1850,6 +1879,7 @@ module PagesHelper
         texts: "Unlimited",
         url:"/success",
         bluetext: "Personal Hotspot, Go Binge, Data Roaming, 5G Ready",
+        specs: ["Personal Hotspot", "Data Roaming", "5G Ready"],
         deposit: "£0",
         handset: ""
       },
@@ -1861,6 +1891,7 @@ module PagesHelper
         texts: "Unlimited",
         url:"/success",
         bluetext: "Personal Hotspot, Data Roaming, 5G Ready",
+        specs: ["Personal Hotspot", "5G Ready", "Data Roaming"],
         deposit: "£0",
         handset: ""
       },
@@ -1872,6 +1903,7 @@ module PagesHelper
         texts: "Unlimited",
         url:"/success",
         bluetext: "Personal Hotspot, Data Roaming",
+        specs: ["Personal Hotspot", "Data Roaming"],
         deposit: "£0",
         handset: "Samsung A20"
       },
@@ -1883,39 +1915,43 @@ module PagesHelper
         texts: "Unlimited",
         url:"/success",
         bluetext: "Personal Hotspot, Go Binge, Data Roaming",
+        specs: ["Personal Hotspot","Data Roaming","Go Binge"],
         deposit: "£0",
         handset: ""
       },
       {
         name: "iPhone SE 128GB",
         data: "Unlimited",
-        image: "phone/iphonese.jpg",
+        image: "phone/iphonese.png",
         calls: "Unlimited",
         texts: "Unlimited",
         url:"/success",
         bluetext: "Personal Hotspot, Data Roaming",
+        specs: ["Personal Hotspot", "Data Roaming"],
         deposit: "£0",
         handset: "iPhone SE"
       },
       {
         name: "Samsung A10",
         data: "Unlimited",
-        image: "phone/samsung-a10.jpg",
+        image: "phone/samsung-a10.png",
         calls: "Unlimited",
         texts: "Unlimited",
         url:"/success",
         bluetext: "Personal Hotspot, Data Roaming",
+        specs: ["Personal Hotspot", "Data Roaming"],
         deposit: "£0",
         handset: "Samsung A10"
       },
       {
         name: "Huawei Y7",
         data: "Unlimited",
-        image: "phone/huaweiy7.jpg",
+        image: "phone/huaweiy71.png",
         calls: "Unlimited",
         texts: "Unlimited",
         url:"/success",
         bluetext: "Personal Hotspot, Data Roaming",
+        specs: ["Personal Hotspot", "Data Roaming"],
         deposit: "£0",
         handset: "Huawei Y7"
       },
@@ -1927,6 +1963,7 @@ module PagesHelper
         texts: "Unlimited",
         url:"/success",
         bluetext: "Personal Hotspot, Go Binge, Data Roaming, 5G Ready",
+        specs: ["Personal Hotspot","Data Roaming","Go Binge"],
         deposit: "£0",
         handset: ""
       },
@@ -1938,6 +1975,7 @@ module PagesHelper
         texts: "Unlimited",
         url:"/success",
         bluetext: "Personal Hotspot, Go Binge, Data Roaming",
+        specs: ["Personal Hotspot","Data Roaming","Go Binge"],
         deposit: "£0",
         handset: ""
       },
@@ -1949,6 +1987,7 @@ module PagesHelper
         texts: "Unlimited",
         url:"/success",
         bluetext: "Best Sim Only Deals, 5G Ready",
+        specs: ["Best Sim Only Deals", "5G Ready"],
         deposit: "£0",
         handset: ""
       },
@@ -1960,6 +1999,7 @@ module PagesHelper
         texts: "Unlimited",
         url:"/success",
         bluetext: "Personal Hotspot, Data Roaming, 5G Ready",
+        specs: ["Personal Hotspot","Data Roaming","Go Binge"],
         deposit: "£0",
         handset: ""
       },
@@ -1971,17 +2011,19 @@ module PagesHelper
         texts: "Unlimited",
         url:"/success",
         bluetext: "Personal Hotspot, Data Roaming, 5G Ready",
+        specs: ["Personal Hotspot","Data Roaming","Go Binge"],
         deposit: "£0",
         handset: ""
       },
       {
         name: "iPhone 11 Pro Max",
         data: "Unlimited",
-        image: "phone/1iphone-11-pro-max.png",
+        image: "phone/iphone-11-pro-max.png",
         calls: "Unlimited",
         texts: "Unlimited",
         url:"/success",
         bluetext: "Personal Hotspot, Go Binge, Data Roaming",
+        specs: ["Personal Hotspot","Data Roaming","Go Binge"],
         deposit: "£0",
         handset: ""
       },
@@ -1993,17 +2035,19 @@ module PagesHelper
         texts: "Unlimited",
         url:"/success",
         bluetext: "Personal Hotspot, Go Binge, Data Roaming",
+        specs: ["Personal Hotspot","Data Roaming","Go Binge"],
         deposit: "£0",
         handset: ""
       },
       {
         name: "Samsung Galaxy S10e",
         data: "30GB",
-        image: "phone/samsung-galaxy-s10e.png",
+        image: "phone/samsung-galaxy-s10e1.png",
         calls: "Unlimited",
         texts: "Unlimited",
         url:"/success",
         bluetext: "Personal Hotspot, Go Binge, Data Roaming",
+        specs: ["Personal Hotspot","Data Roaming","Go Binge"],
         deposit: "£0",
         handset: ""
       },
@@ -2016,6 +2060,7 @@ module PagesHelper
         texts: "Unlimited",
         url:"/success",
         bluetext: "Personal Hotspot, Go Binge, Data Roaming",
+        specs: ["Personal Hotspot","Data Roaming","Go Binge"],
         deposit: "£0",
         handset: ""
       },
@@ -2027,6 +2072,7 @@ module PagesHelper
         texts: "Unlimited",
         url:"/success",
         bluetext: "Personal Hotspot, Go Binge, Data Roaming",
+        specs: ["Personal Hotspot","Data Roaming","Go Binge"],
         deposit: "£0",
         handset: ""
       },

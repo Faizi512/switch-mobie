@@ -113,7 +113,11 @@ class Common {
 
   showClock(){
     var clockElement = $(".clock");
+    var clockMobileElement = $(".mob-clock");
     var clock = new FlipClock(clockElement, 198000, {
+        countdown: true
+    })
+    var clock = new FlipClock(clockMobileElement, 198000, {
         countdown: true
     })
   }
@@ -581,7 +585,7 @@ class Common {
           dataLayer.push({'transactionId': data.records[0].response.leadId, "transactionTotal": 3})
           CI.submitCustomerIo(formData, data.records[0].response.leadId)
         }
-        CI.successUrl()
+        CI.successUrl();
       },
       dataType: "json"
     })

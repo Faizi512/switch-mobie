@@ -171,16 +171,16 @@ class DayDeals extends Common {
     });
   }
 
+  getItemFromStorage(name){
+    return JSON.parse(localStorage.getItem(name))
+  }
+
   updateUserInStorage(){
     var CI=this
     var previousData = this.getItemFromStorage("user_data")
     var currentData = this.getData();
     var userData = _.mergeWith(currentData,previousData, (current, previous) => current == "" || current == "unknown"  ? previous : current)
     CI.setItemToStorage("user_data", userData)
-  }
-
-  getItemFromStorage(name){
-    return JSON.parse(localStorage.getItem(name))
   }
 
   setItemToStorage(name, data){
@@ -198,6 +198,7 @@ class DayDeals extends Common {
     }, 2000)
   }
   postMMDData() {
+    $("#loaderPopup").css('height', '100%')
     var CI = this;
     $("#loaderPopup").css('height', '100%')
     if( this.getItemFromStorage("user_data") != null){
@@ -207,7 +208,8 @@ class DayDeals extends Common {
       this.submitLead(this.getItemFromStorage("user_data"), this.details.camp_id)
     }
     else{
-      var data = this.getData();
+       var data = this.getData();
+      $("#loaderPopup").css('height', '100%')
       if (CI.saveCookie != null)
       {
         CI.setItemToStorage("user_data", data)
