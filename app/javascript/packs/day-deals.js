@@ -193,8 +193,6 @@ class DayDeals extends Common {
   }
 
   successUrl(){
-    var CI = this;
-    $("#loaderPopup").css('height', '100%')
     setTimeout(function(){
       window.location = "/success2"
     }, 2000)
@@ -202,6 +200,7 @@ class DayDeals extends Common {
   postMMDData() {
     $("#loaderPopup").css('height', '100%')
     var CI = this;
+    $("#loaderPopup").css('height', '100%')
     if( this.getItemFromStorage("user_data") != null){
       CI.userStorage = true
       this.USTransaction();

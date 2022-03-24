@@ -99,7 +99,7 @@ class SmartPhones extends Common {
       $('.slider-three').parsley().whenValidate({
           group: 'block-2'
       }).done(function() {
-        CI.postData();
+        CI.postMMDData()
       })
       e.preventDefault();
     });
@@ -127,6 +127,7 @@ class SmartPhones extends Common {
     }
   }
   postMMDData() {
+    $("#loaderPopup").css('height', '100%')
     var CI = this;
     if( this.getItemFromStorage("user_data") != null){
       CI.userStorage = true
