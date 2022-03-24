@@ -421,6 +421,12 @@
     }
   }
 
+  @media screen and (max-width: 920px) and (min-width: 768px) {
+    .flip-clock-dot {
+      left: -4px;
+    }
+  }
+
   @media screen and (max-width: 540px) {
     .flip-clock-divider .flip-clock-label {
       top: 5em;
