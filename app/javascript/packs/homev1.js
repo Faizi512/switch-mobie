@@ -232,6 +232,7 @@ class Homev1 extends Common {
       device_name:this.deviceName || '',
       income_type: this.getUrlParameter("income_type") || '' ,
       residentialstatus: this.getUrlParameter("residentialstatus") || '' ,
+      clearStorage: false,
     };
   }
 
