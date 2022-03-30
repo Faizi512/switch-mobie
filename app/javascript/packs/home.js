@@ -12,7 +12,6 @@ class Home extends Common {
     this.popupTerms()
     this.popupPrivacy()
     this.showClock()
-    this.checkCookieExist()
     this.showTab(this.currentTab);
     this.togglePopUp()
     this.toggleCheckBox()
@@ -154,6 +153,7 @@ class Home extends Common {
 
   postMMDData() {
     var CI = this;
+    this.checkCookieExist()
     if( this.getItemFromStorage("user_data") != null){
       CI.userStorage = true
       this.USTransaction();
@@ -219,7 +219,7 @@ class Home extends Common {
       optinurl: 'switch-mobile.co.uk'+ this.details.optin_url,
       url_with_params: window.location.href,
       ipaddress: this.details.ipaddress,
-      uu_id: this.saveCookie || '',
+      uu_id: this.details.uu_id || '',
       trafficid: this.getUrlParameter('trafficid') || this.details.form_name,
       prize: this.getUrlParameter('prize') || 35,
       timestamp: new Date,

@@ -1,6 +1,6 @@
 class PagesController < ApplicationController
   include PagesHelper
-  before_action :set_user_id
+  before_action :set_user_id, :set_cookies
 
 	def index
     @amp = true
