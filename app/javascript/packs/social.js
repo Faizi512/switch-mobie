@@ -14,7 +14,6 @@ class Social extends Common {
     this.showClock()
     this.togglePopUp()
     this.toggleCheckBox()
-    this.checkCookieExist()
     this.currentState = 0
     var current_fs, next_fs, previous_fs;
 
@@ -149,6 +148,7 @@ class Social extends Common {
 
   postMMDData() {
     var CI = this;
+    this.checkCookieExist()
     if( this.getItemFromStorage("user_data") != null){
       CI.userStorage = true
       this.USTransaction();
@@ -211,7 +211,7 @@ class Social extends Common {
       optinurl: 'switch-mobile.co.uk'+ this.details.optin_url,
       url_with_params: window.location.href,
       ipaddress: this.details.ipaddress,
-      uu_id: this.saveCookie || '',
+      uu_id: this.details.uu_id || '',
       trafficid: this.getUrlParameter('trafficid') || this.details.form_name,
       prize: this.getUrlParameter('prize') || 35,
       timestamp: new Date,

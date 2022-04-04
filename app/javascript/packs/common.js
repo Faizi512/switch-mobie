@@ -26,7 +26,6 @@ class Common {
     this.debiceBrand=null
     this.deviceName=null
     CI.saveCookie=null
-    this.checkCookieExist()
     this.deviceDetection()
 
     $('#deal-form-modal').on('hide.bs.modal', function (e) {
@@ -46,22 +45,6 @@ class Common {
         }
       }
     })
-
-    $( ".accept-cooky" ).click(function() {
-      CI.CookieEvent()
-      $.ajax({
-        url: "/set_cookies",
-        success: function(){
-          CI.saveCookie = CI.getCookies("_msuuid_1fexuyzkduuouz");
-        },
-      })
-      $('.cookie-consent').addClass('d-none')
-    })
-
-    $('.reject-cookie').click(function(){
-      $('.cookie-consent').addClass('d-none')
-    })
-
     window.FontAwesomeConfig = {
       searchPseudoElements: true
     }
@@ -459,7 +442,7 @@ class Common {
       optindate: this.getFormattedCurrentDate(),
       optinurl: 'switch-mobile.co.uk'+ this.details.optin_url,
       ipaddress: this.details.ipaddress,
-      uu_id: this.saveCookie || '',
+      uu_id: this.details.uu_id || '',
       trafficid: this.getUrlParameter('trafficid') || this.details.form_name,
       prize: this.getUrlParameter('prize') || 35,
       apidown: this.apiDown,
@@ -515,15 +498,10 @@ class Common {
   }
 
   checkCookieExist() {
-    var CI = this;
-    CI.saveCookie = CI.getCookies("_msuuid_1fexuyzkduuouz");
-    if (CI.saveCookie == null) {
-      $('.cookie-consent').removeClass('d-none')
+    if (this.getCookie("klaro") != null && this.getCookie("klaro") != '') {
+      this.saveCookie = this.getCookie("klaro");
+      this.saveCookie = JSON.parse(decodeURIComponent(this.saveCookie))['Local Storage']
     }
-  }
-
-  CookieEvent(){
-    dataLayer.push({'event': 'cookieconsent'})
   }
 
   postData() {
@@ -531,6 +509,7 @@ class Common {
     this.validateTsp()
     // Getting Data
     var CI = this;
+    this.checkCookieExist()
     var data = this.getData();
     // Form Submisson
     this.updateFacebookAudience(data)
