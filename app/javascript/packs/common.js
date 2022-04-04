@@ -32,6 +32,19 @@ class Common {
       $('.clock').show()
     });
 
+    $(window).on("load", function(){
+      if (localStorage.getItem('user_data') != null) {
+        var adopted_url = JSON.parse(localStorage.getItem('user_data')).adopted_url.split(/[: /]+/)
+        adopted_url = adopted_url.length > 1 ? adopted_url[1] : adopted_url[0]
+        if (adopted_url == '') {
+          adopted_url = adopted_url[0]
+        }
+        var clearStorgaeData = JSON.parse(localStorage.getItem('user_data')).clearStorage
+        if( (adopted_url == 'switch-mobile.co.uk' || adopted_url == 'bill-switchers.com') && ( clearStorgaeData == undefined)){
+          localStorage.removeItem('user_data')
+        }
+      }
+    })
     window.FontAwesomeConfig = {
       searchPseudoElements: true
     }
@@ -448,6 +461,7 @@ class Common {
       device_name:this.deviceName || '',
       income_type: this.getUrlParameter("income_type") || '' ,
       residentialstatus: this.getUrlParameter("residentialstatus") || '' ,
+      clearStorage: false,
     };
   }
 
@@ -486,7 +500,7 @@ class Common {
   checkCookieExist() {
     if (this.getCookie("klaro") != null) {
       this.saveCookie = this.getCookie("klaro");
-      this.saveCookie = JSON.parse(decodeURIComponent(this.saveCookie))['User Storage']
+      this.saveCookie = JSON.parse(decodeURIComponent(this.saveCookie))['Local Storage']
     }
   }
 
