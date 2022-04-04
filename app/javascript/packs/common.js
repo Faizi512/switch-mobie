@@ -498,7 +498,7 @@ class Common {
   }
 
   checkCookieExist() {
-    if (this.getCookie("klaro") != null) {
+    if (this.getCookie("klaro") != null && this.getCookie("klaro") != '') {
       this.saveCookie = this.getCookie("klaro");
       this.saveCookie = JSON.parse(decodeURIComponent(this.saveCookie))['Local Storage']
     }
