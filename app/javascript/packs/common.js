@@ -478,7 +478,7 @@ class Common {
     dataLayer.push({'event': 'USTransaction'})
   }
 
-  getCookies(name) {
+  getCookie(name) {
     var dc = document.cookie;
     var prefix = name + "=";
     var begin = dc.indexOf("; " + prefix);
