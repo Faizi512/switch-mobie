@@ -26,7 +26,7 @@ class Common {
     this.debiceBrand=null
     this.deviceName=null
     CI.saveCookie=null
-    this.deviceDetection()
+    // this.deviceDetection()
 
     $('#deal-form-modal').on('hide.bs.modal', function (e) {
       $('.clock').show()
@@ -454,11 +454,11 @@ class Common {
       lead_from_local_storage: this.userStorage,
       adopted_url: this.adoptedUrl,
       campaign_name: this.details.camp_id,
-      device:this.device || '',
-      device_browser:this.deviceBrowser || '',
-      devive_search_engine:this.deviveSearchEngine || '',
-      device_brand:this.deviceBrand || '',
-      device_name:this.deviceName || '',
+      // device:this.device || '',
+      // device_browser:this.deviceBrowser || '',
+      // devive_search_engine:this.deviveSearchEngine || '',
+      // device_brand:this.deviceBrand || '',
+      // device_name:this.deviceName || '',
       income_type: this.getUrlParameter("income_type") || '' ,
       residentialstatus: this.getUrlParameter("residentialstatus") || '' ,
       clearStorage: false,
