@@ -2170,6 +2170,10 @@ module PagesHelper
       {
         class_id: "go4discounts",
         name: "Go4Discounts"
+      },
+      {
+        class_id: "debtcleartoday",
+        name: "DebtClear Today"
       }
     ]
   end
